@@ -13,6 +13,7 @@
 
 
 /*Llamadas al controlador Auth*/
+Route::get('/','HomeController@showWelcome');
 Route::get('login', 'AuthController@showLogin'); // Mostrar login
 Route::post('login', 'AuthController@postLogin'); // Verificar datos
 Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
@@ -20,5 +21,7 @@ Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
 /*Rutas privadas solo para usuarios autenticados*/
 Route::group(['before' => 'auth'], function()
 {
-    Route::get('/', 'HomeController@showWelcome'); // Vista de inicio
+    Route::get('/Admin/productos', 'AdminController@ShowProductos'); // Vista de inicio de productos
+    Route::get('/Admin/pedidos', 'AdminController@ShowPedidos'); // Vista de inicio de productos
+
 });

@@ -8,7 +8,7 @@ class AuthController extends BaseController {
         if (Auth::check())
         {
             // Si tenemos sesión activa mostrará la página de inicio
-            return Redirect::to('/');
+            return Redirect::to('/Admin/productos');
         }
         // Si no hay sesión activa mostramos el formulario
         return View::make('login');
@@ -26,7 +26,7 @@ class AuthController extends BaseController {
         if (Auth::attempt($data, Input::get('remember'))) // Como segundo parámetro pasámos el checkbox para sabes si queremos recordar la contraseña
         {
             // Si nuestros datos son correctos mostramos la página de inicio
-            return Redirect::intended('/');
+            return Redirect::intended('/login');
         }
         // Si los datos no son los correctos volvemos al login y mostramos un error
         return Redirect::back()->with('error_message', 'Credenciales Invalidas')->withInput();
