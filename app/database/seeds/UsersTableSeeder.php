@@ -6,20 +6,24 @@ class UsersTableSeeder extends Seeder {
 
     public function run()
     {
-        User::create([
-            'nombre'        => 'Angel',
-            'ap_paterno'    => 'Gurrola',
-            'ap_materno'    => 'Candia',
-            'direccion'     => 'Martires de Chicago 106 Asentamientos Humanos',
-            'codigo_postal' =>  34180,
-            'edad'          =>  23,
-            'sexo'          => 'masculino',
-            'telefono'      => '618 806 4903',
-            'correo'        => 'angel_gurrolac@outlook.com',
+        User::create(
+        [
+            'nombre'        => 'Zayra',
+            'ap_paterno'    => 'Chávez',
+            'ap_materno'    => 'Bautista',
+            'direccion'     => 'San Francisco 150 San José 1',
+            'codigo_postal' =>  34204,
+            'edad'          =>  22,
+            'sexo'          => 'Femenino',
+            'telefono'      => '618 110 6616',
+            'correo'        => 'zayra@hotmail.com',
             'password'      =>  Hash::make('admin'),
             'rol'           =>  'admin',
             'estatus'       =>  '1'
-        ]);
+        ]
+        );
+
+
     }
 
 }

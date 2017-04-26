@@ -6,33 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 
   <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery-ui.min.css') }}">
     <title>RM Ingredientes -Admin-</title>
 </head>
-<body>
+<body class="back-conocenos">
     <div class="container">
-        {{ Form::open(['url' => 'login']) }}
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+      {{ Form::open(['url' => 'login']) }}
 
             @if(Session::has('error_message'))
                 {{ Session::get('error_message') }}
             @endif
 
-            <h2>Inicio de Sesión</h2>
+            <img class="img-responsive center-block logo-portada" src="assets/img/logo-portada-rmingredientes.png" alt="Logo RM Ingredientes">
+            <br>
 
-            {{ Form::label('email', 'Correo Electrónico:') }}
-            {{ Form::email('correo','',array('id'=>'','class'=>'form-control span6','placeholder' => 'Ingrese su usuario')) }}
+        
+            {{ Form::email('correo','',array('id'=>'','class'=>'without-radius form-control text-center','placeholder' => 'USUARIO')) }}
             <br>
-            {{ Form::label('password', 'Contraseña:') }}
-            {{ Form::password('password',array('class'=>'form-control span6', 'placeholder' => 'Ingrese su contraseña')) }}
+            {{ Form::password('password',array('class'=>'without-radius form-control  text-center', 'placeholder' => 'CONTRASEÑA')) }}
             <br>
-            <label>
-                {{ Form::checkbox('remember', true) }} Recordarme
+            <label class="type-font">
+                {{ Form::checkbox('remember', true )  }} Recordarme
             </label>
             <br>
-            {{ Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) }}
+            {{ Form::submit('INGRESAR', ['class' => 'btn btn-primary pull-right btn-verde']) }}
     
         {{ Form::close() }}
+        
+      </div>
+      <div class="col-md-4"></div>
     </div>
+        
+    </div>
+      <div class="row row-white"></div>
+    <div class="row color-degradado"> </div>
       <!-- jQuery -->
   <script src="{{ URL::asset('assets/js/jquery.js') }}"></script>
 
