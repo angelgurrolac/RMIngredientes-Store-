@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Usuarios</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -95,7 +95,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">ENVÍOS</h1>
+                    <h1 class="page-header">USUARIOS</h1>
                 </div>
                 <div class="input-group custom-search-form">
                 	<button class="btn btn-default" type="button">
@@ -115,19 +115,23 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>IDENTIFICADOR</th>
-                                            <th>DETALLES DEL PEDIDO</th>
-                                            <th>CLIENTE</th>
-                                            <th>PRECIO TOTAL</th>
-                                            <th>DIRECCIÓN</th>
-                                            <th>ESTATUS</th>
-                                            <th>FECHA</th>
+                                            <th>Nombre</th>
+                                            <th>Apellidos</th>
+                                            <th>Dirección</th>
+                                            <th>C.P.</th>
+                                            <th>TELÉFONO</th>
+                                            <th>CORREO</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($pedidos as $key => $value)
+                                        @foreach($usuarios as $key => $value)
 							             <tr>
-							                <td>{{$value->id}}</td>
+                                            <td>{{$value->nombre}}</td>
+							                <td>{{$value->ap_paterno}} {{$value->ap_materno}}</td>
+                                            <td>{{$value->direccion}}</td>
+                                            <td>{{$value->codigo_postal}}</td>
+                                            <td>{{$value->telefono}}</td>
+                                            <td>{{$value->correo}}</td>
 							           </tr>
 							           @endforeach
 									</tbody>

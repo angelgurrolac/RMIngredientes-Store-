@@ -25,5 +25,15 @@ class AdminController extends \BaseController {
 		$pedidos=Pedidos::All();
 		return View::make('Admin.pedidos',compact('pedidos'));
 	}
+	public function ShowUsuarios()
+	{
+		$usuarios=User::where('rol','=','1')->get();
+		return View::make('Admin.usuarios',compact('usuarios'));
+	}	
+	public function ShowEstadisticas()
+	{
+		$estadisticas=Productos::MasVendido()->get();
+		return View::make('Admin.estadisticas',compact('estadisticas'));
+	}
 
 }

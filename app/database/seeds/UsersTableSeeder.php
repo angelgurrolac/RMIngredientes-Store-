@@ -7,17 +7,17 @@ class UsersTableSeeder extends Seeder {
     public function run()
     {
         User::create([
-            'nombre'        => 'Angel',
-            'ap_paterno'    => 'Gurrola',
-            'ap_materno'    => 'Candia',
+            'nombre'        => 'Angel2',
+            'ap_paterno'    => 'Gurrola2',
+            'ap_materno'    => 'Candia2',
             'direccion'     => 'Martires de Chicago 106 Asentamientos Humanos',
             'codigo_postal' =>  34180,
             'edad'          =>  23,
             'sexo'          => 'masculino',
             'telefono'      => '618 806 4903',
-            'correo'        => 'angel_gurrolac@outlook.com',
+            'correo'        => 'angel@outlook.com',
             'password'      =>  Hash::make('admin'),
-            'rol'           =>  'admin',
+            'rol'           =>  '2',
             'estatus'       =>  '1'
         ]);
     }

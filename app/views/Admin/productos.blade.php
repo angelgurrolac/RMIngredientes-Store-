@@ -74,16 +74,16 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="{{URL::to('/Admin/productos') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> PRODUCTOS</a>
+                            <a href="{{URL::to('/Admin/productos') }}"><i class="fa fa-dashboard fa-fw"></i> PRODUCTOS</a>
                         </li>
                         <li>
                             <a href="{{URL::to('/Admin/pedidos') }}"><i class="fa fa-dashboard fa-fw"></i> ENVÍOS</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> USUARIOS</a>
+                            <a href="{{URL::to('/Admin/usuarios') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> USUARIOS</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> ESTADÍSTICAS</a>
+                            <a href="{{URL::to('/Admin/estadisticas') }}"><i class="fa fa-dashboard fa-fw"></i> ESTADÍSTICAS</a>
                         </li>
                     </ul>
                 </div>
