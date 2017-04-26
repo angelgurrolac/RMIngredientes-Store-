@@ -9,9 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Productos - RMIngredientes</title>
 
     <!-- Bootstrap Core CSS -->
+      <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
+
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
@@ -48,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">LOGO</a>
+                <a class="navbar-brand" href="index.html"><img src="{{asset('assets/img/logo-rmingredientes.png')}}" alt=""></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -69,6 +71,8 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
+<!-- <div class="row row-white2"></div>
+<div class="row color-degradado2"> </div> -->
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
