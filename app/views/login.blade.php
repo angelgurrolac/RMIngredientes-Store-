@@ -9,6 +9,29 @@
   <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery-ui.min.css') }}">
     <title>RM Ingredientes -Admin-</title>
+    <style>
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #EA881E !important;
+  font-size: 22px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #EA881E !important;
+  font-size: 22px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #EA881E !important;
+  font-size: 22px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #EA881E !important;
+  font-size: 22px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+      
+    </style>
 </head>
 <body class="back-conocenos">
     <div class="container">
