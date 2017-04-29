@@ -35,14 +35,38 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #7A7A7A !important;
+  font-size: 14px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #7A7A7A !important;
+  font-size: 14px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #7A7A7A !important;
+  font-size: 14px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #7A7A7A !important;
+  font-size: 14px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+      
+    </style>
+
 </head>
 
-<body>
+<body class="body-gris">
 
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -50,16 +74,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="{{asset('assets/img/logo-rmingredientes.png')}}" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt=""></a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>Administrador <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle estilo-user" data-toggle="dropdown" href="#">
+                        <i class="glyphicon glyphicon-user"></i> Administrador <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
+                    <ul class="dropdown-menu dropdown-user estilo-list-user">
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
                         </li>
                         <li class="divider"></li>
@@ -71,23 +95,23 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-<!-- <div class="row row-white2"></div>
-<div class="row color-degradado2"> </div> -->
+<div class="row row-white"></div>
+<div class="row color-degradado"> </div>
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar sidebar-height" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
+                    <ul class="nav " id="side-menu">
                         <li>
-                            <a href="{{URL::to('/Admin/productos') }}"><i class="fa fa-dashboard fa-fw"></i> PRODUCTOS</a>
+                            <a class="lista-menu" href="{{URL::to('/Admin/productos') }}"> PRODUCTOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/pedidos') }}"><i class="fa fa-dashboard fa-fw"></i> ENVÍOS</a>
+                            <a class="lista-menu"  href="{{URL::to('/Admin/pedidos') }}">ENVÍOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/usuarios') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> USUARIOS</a>
+                            <a class="lista-menu"  href="{{URL::to('/Admin/usuarios') }}" >USUARIOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/estadisticas') }}"><i class="fa fa-dashboard fa-fw"></i> ESTADÍSTICAS</a>
+                            <a class="lista-menu"  href="{{URL::to('/Admin/estadisticas') }}">ESTADÍSTICAS</a>
                         </li>
                     </ul>
                 </div>
@@ -97,34 +121,51 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">PRODUCTOS</h1>
+           <!--  <div class="row">
+                <div class="col-lg-3">
+                    <h1 class=" titulos-secciones">PRODUCTOS</h1>
                 </div>
-                <div class="input-group custom-search-form">
-                	<button class="btn btn-default" type="button">
-                			<i class="fa fa-search"></i>
-                	</button>
-                	<input type="text" class="form-control" placeholder="BUSCAR PRODUCTO">
-                	<span class="input-group-btn">
-                	</span>
+                <div class="col-lg-4">
+                <div class="input-group">
+  <span class="input-group-addon " id="basic-addon1">a</span>
+  <input type="text" class="form-control" placeholder="BUSCAR PRODUCTO" aria-describedby="basic-addon1">
+</div>
                 </div>
-            </div>
+                <div class="col-lg-2"></div>
+            </div> -->
+            <div class="row align-items-center">
+  <div class="col-lg-4">
+    <h1 class=" titulos-secciones">PRODUCTOS</h1>
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6  ">
+   <div class="input-group margen-elementos">
+      <span class="input-group-btn btn-buscar ">
+        <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
+      </span>
+      <input type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-2">
+    
+    <button type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
+    <button type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
+    <button type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
+    
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
             <!-- /.row -->
              <div class="row">
-                    <div class="panel panel-default">
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
+                   
                             <div class="table-responsive">
                                 <table class="table table-striped">
-                                    <thead>
+                                    <thead class="encabezados-tabla">
                                         <tr>
-                                            <th>PRODUCTO</th>
-                                            <th>DESCRIPCIÓN</th>
-                                            <th>MODO DE EMPLEO</th>
-                                            <th>BENEFICIOS</th>
-                                            <th>PRECIOS</th>
-                                            <th>IMAGEN</th>
+                                            <th class="text-center">PRODUCTO</th>
+                                            <th class="text-center">DESCRIPCIÓN</th>
+                                            <th class="text-center">MODO DE EMPLEO</th>
+                                            <th class="text-center">BENEFICIOS</th>
+                                            <th class="text-center">PRECIOS</th>
+                                            <th class="text-center">IMAGEN</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -134,7 +175,7 @@
 							                <td>{{$value->detalles}}</td>
 							                <td>{{$value->modo_empleo}}</td>
 							                <td>{{$value->beneficios}}</td>
-							                <td>{{$value->precio_unitario}}</td>
+							                <td class="text-center">${{$value->precio_unitario}}</td>
 							                <td>{{$value->imagen}}</td>
 							           </tr>
 							           @endforeach
@@ -142,10 +183,7 @@
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                      
             </div>
             <!-- /.row -->
         </div>
