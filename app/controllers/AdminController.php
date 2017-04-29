@@ -32,7 +32,7 @@ class AdminController extends \BaseController {
 	}	
 	public function ShowEstadisticas()
 	{
-		$estadisticas=Productos::MasVendido()->get();
+		$estadisticas=Productos::where('id','=',1)->get();
 		return View::make('Admin.estadisticas',compact('estadisticas'));
 	}
 

@@ -77,13 +77,13 @@
                             <a href="{{URL::to('/Admin/productos') }}"><i class="fa fa-dashboard fa-fw"></i> PRODUCTOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/pedidos') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> ENVÍOS</a>
+                            <a href="{{URL::to('/Admin/pedidos') }}"><i class="fa fa-dashboard fa-fw"></i> ENVÍOS</a>
                         </li>
                         <li>
                             <a href="{{URL::to('/Admin/usuarios') }}"><i class="fa fa-dashboard fa-fw"></i> USUARIOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/estadisticas') }}"><i class="fa fa-dashboard fa-fw"></i> ESTADÍSTICAS</a>
+                            <a href="{{URL::to('/Admin/estadisticas') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> ESTADÍSTICAS</a>
                         </li>
                     </ul>
                 </div>
@@ -94,52 +94,71 @@
 
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">ENVÍOS</h1>
-                </div>
-                <div class="input-group custom-search-form">
-                	<button class="btn btn-default" type="button">
-                			<i class="fa fa-search"></i>
-                	</button>
-                	<input type="text" class="form-control" placeholder="BUSCAR PRODUCTO">
-                	<span class="input-group-btn">
-                	</span>
-                </div>
-            </div>
-            <!-- /.row -->
-             <div class="row">
-                    <div class="panel panel-default">
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
+                <div class="col-lg-6">
+                    <h1>ESTADÍSTICAS</h1>
+                    <br>
+                    <div style="display:inline-block;">
+                        <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
+                    </div>
+                    <div style="display:inline-block;">
+                            <h3>PRODUCTO MÁS VENDIDO</h3>
+                            <h3>ACEITE OLEINA DE PALMA</h3>
+                    </div>
+                    <div>
+                        <h3>RESUMEN DE VENTAS DEL MES PASADO</h3>
+                        <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>IDENTIFICADOR</th>
-                                            <th>DETALLES DEL PEDIDO</th>
-                                            <th>CLIENTE</th>
-                                            <th>PRECIO TOTAL</th>
-                                            <th>DIRECCIÓN</th>
-                                            <th>ESTATUS</th>
-                                            <th>FECHA</th>
+                                            <th>#</th>
+                                            <th>NOMBRE</th>
+                                            <th>ESTADO</th>
+                                            <th>PRODUCTOS COMPRADOS</th>
+                                            <th>$</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($pedidos as $key => $value)
-							             <tr>
-							                <td>{{$value->id}}</td>
-							           </tr>
-							           @endforeach
-									</tbody>
+                                         <tr>
+                                            <td>1</td>
+                                            <td>Joél Díaz</td>
+                                            <td>Durango</td>
+                                            <td>Benzoato, Blancoplus</td>
+                                            <td>$12,456.00</td>
+                                       </tr>
+                                    </tbody>
                                 </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
+                </div>
+                <div class="col-lg-6">
+                    <div style="display:inline-block;">
+                        <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
+                    </div>
+                    <div style="display:inline-block;">
+                            <h3>PRODUCTO MENOS VENDIDO</h3>
+                            <h3>ACEITE OLEINA DE PALMA</h3>
+                    </div>
+                    <div style="display:inline-block;">
+                        <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
+                    </div>
+                    <div>
+                        <h2 style="display:inline-block;">2345</h2><span> VISITAS A LA PÁGINA</span>
+                    </div>
+                    <div style="display:inline-block;">
+                            <h3>CLIENTE CON MÁS COMPRAS</h3>
+                            <h3>Joél Ramirez</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li style="display:inline-block;"><img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png"><p>23%</p></li>
+                            <li style="display:inline-block;"><img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png"><p>34%</p></li>
+                            <li style="display:inline-block;"><img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png"><p>43%</p></li>
+                       </ul>
+                    </div>
+                    <div style="display:inline-block;">
+                            <h3>TORTILLAS DE MAÍZ</h3>
+                            <h3>SECCIÓN MÁS VISITADA</h3>
+                    </div>
+                </div>
             </div>
-            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 

@@ -23,4 +23,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
+	public function scopeUsuarios(){
+
+		$usuarios = DB::table('users')
+
+		->where('rol','=',3)
+		->orWhere('rol','=',2)
+		->orderBy('id','desc');
+
+		return $usuarios;
+
+		
+	}
+
 }

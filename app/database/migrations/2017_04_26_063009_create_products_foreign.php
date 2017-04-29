@@ -14,8 +14,8 @@ class CreateProductsForeign extends Migration {
 	{
 		Schema::table('productos', function(Blueprint $table)
 		{
-			   $table->integer('id_categoria')->unsigned();
-  			   $table->foreign('id_categoria')->references('id')->on('categorias');
+			   // $table->integer('id_categoria')->unsigned();
+  			 //   $table->foreign('id_categoria')->references('id')->on('categorias');
 		});
 	}
 
@@ -26,7 +26,7 @@ class CreateProductsForeign extends Migration {
 	 */
 	public function down()
 	{
-		$table->dropForeign('productos_id_categoria_foreign');
+		// $table->dropForeign('productos_id_categoria_foreign');
 
 	}
 
