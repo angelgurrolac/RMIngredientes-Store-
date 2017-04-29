@@ -83,7 +83,7 @@
                     <a class="dropdown-toggle estilo-user" data-toggle="dropdown" href="#">
                         <i class="glyphicon glyphicon-user"></i> Administrador <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
+                    <ul class="dropdown-menu dropdown-user estilo-list-user">
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
                         </li>
                         <li class="divider"></li>
@@ -175,7 +175,7 @@
 							                <td>{{$value->detalles}}</td>
 							                <td>{{$value->modo_empleo}}</td>
 							                <td>{{$value->beneficios}}</td>
-							                <td>{{$value->precio_unitario}}</td>
+							                <td class="text-center">${{$value->precio_unitario}}</td>
 							                <td>{{$value->imagen}}</td>
 							           </tr>
 							           @endforeach

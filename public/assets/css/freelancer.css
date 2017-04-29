@@ -131,4 +131,9 @@
     font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
     font-weight: bold !important;
 }
+.estilo-list-user{
+    background-color: #EA881E !important;
+    color: white !important;
+    font-size: 20px !important;
+    font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
