@@ -32,8 +32,12 @@ class AdminController extends \BaseController {
 	}	
 	public function ShowEstadisticas()
 	{
-		$estadisticas=Productos::where('id','=',1)->get();
-		return View::make('Admin.estadisticas',compact('estadisticas'));
+		$productos = Productos::MasVendido()->take(1)->get();
+		$productosm = Productos::MenosVendido()->take(1)->get();
+		$pedidos = Pedidos::Ventas()->get();
+		$cliente = User::MasCompras()->take(1)->get();
+		$pagos = Pedidos::TipoPago()->get();
+		return View::make('Admin.estadisticas',compact('productos','productosm','pedidos','cliente','pagos'));
 	}
 
 }
