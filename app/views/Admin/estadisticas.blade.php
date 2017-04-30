@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
-
+    
+     <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 

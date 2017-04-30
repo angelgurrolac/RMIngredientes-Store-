@@ -11,8 +11,9 @@
 
     <title>Productos - RMIngredientes</title>
 
+   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
     <!-- Bootstrap Core CSS -->
-      <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
 
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -33,30 +34,48 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
-    <style>
-    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #7A7A7A !important;
-  font-size: 14px;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #7A7A7A !important;
-  font-size: 14px;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #7A7A7A !important;
-  font-size: 14px;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #7A7A7A !important;
-  font-size: 14px;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
-}
-      
+        <style>
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          ::-moz-placeholder { /* Firefox 19+ */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          :-ms-input-placeholder { /* IE 10+ */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          :-moz-placeholder { /* Firefox 18- */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
+          table {
+            border:none;
+            border-collapse: collapse;
+        }
+
+        table td {
+            border-left: 5px solid #ffffff;
+            border-right: 5px solid #ffffff;
+            border-bottom: 5px solid #eaeaea;
+        }
+
+        table td:first-child {
+            border-left: none;
+        }
+
+        table td:last-child {
+            border-right: none;
+        }
     </style>
 
 </head>
@@ -74,20 +93,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
+            <ul class="nav navbar-top-links navbar-right bajar-barra">
                 <li class="dropdown">
                     <a class="dropdown-toggle estilo-user" data-toggle="dropdown" href="#">
                         <i class="glyphicon glyphicon-user"></i> Administrador <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user estilo-list-user">
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
+                        <li><a class="estilo-lista text-center" href="#"> Configuración</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="{{ action('AuthController@logOut') }}"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
+                        <li><a class="estilo-lista text-center" href="{{ action('AuthController@logOut') }}"> Cerrar Sesión</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -95,8 +114,8 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-<div class="row row-white"></div>
-<div class="row color-degradado"> </div>
+            <div class="row row-white"></div>
+            <div class="row color-degradado"> </div>
 
             <div class="navbar-default sidebar sidebar-height" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -121,94 +140,229 @@
         </nav>
 
         <div id="page-wrapper">
-           <!--  <div class="row">
-                <div class="col-lg-3">
-                    <h1 class=" titulos-secciones">PRODUCTOS</h1>
-                </div>
-                <div class="col-lg-4">
-                <div class="input-group">
-  <span class="input-group-addon " id="basic-addon1">a</span>
-  <input type="text" class="form-control" placeholder="BUSCAR PRODUCTO" aria-describedby="basic-addon1">
-</div>
-                </div>
-                <div class="col-lg-2"></div>
-            </div> -->
             <div class="row align-items-center">
-  <div class="col-lg-4">
-    <h1 class=" titulos-secciones">PRODUCTOS</h1>
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-6  ">
-   <div class="input-group margen-elementos">
-      <span class="input-group-btn btn-buscar ">
-        <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
-      </span>
-      <input type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-2">
-    
-    <button type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
-    <button type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
-    <button type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
-    
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-            <!-- /.row -->
-             <div class="row">
-                   
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead class="encabezados-tabla">
-                                        <tr>
-                                            <th class="text-center">PRODUCTO</th>
-                                            <th class="text-center">DESCRIPCIÓN</th>
-                                            <th class="text-center">MODO DE EMPLEO</th>
-                                            <th class="text-center">BENEFICIOS</th>
-                                            <th class="text-center">PRECIOS</th>
-                                            <th class="text-center">IMAGEN</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($productos as $key => $value)
-							             <tr>
-							                <td>{{$value->nombre}}</td>
-							                <td>{{$value->detalles}}</td>
-							                <td>{{$value->modo_empleo}}</td>
-							                <td>{{$value->beneficios}}</td>
-							                <td class="text-center">${{$value->precio_unitario}}</td>
-							                <td>{{$value->imagen}}</td>
-							           </tr>
-							           @endforeach
-									</tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                      
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+              <div class="col-lg-4">
+                <h1 class=" titulos-secciones">PRODUCTOS</h1>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+               <div class="input-group margen-elementos">
+                  <span class="input-group-btn btn-buscar ">
+                    <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
+                </span>
+                <input type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-2">
 
+            <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
+            <button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
+            <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
+
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <!-- /.row -->
+    <div class="row">
+
+        <div class="table-responsive" style="overflow: hidden;">
+            <table class="table ">
+                <thead class="encabezados-tabla">
+                    <tr>
+                        <th class="text-center">PRODUCTO</th>
+                        <th class="text-center">DESCRIPCIÓN</th>
+                        <th class="text-center">MODO DE EMPLEO</th>
+                        <th class="text-center">BENEFICIOS</th>
+                        <th class="text-center">PRECIOS</th>
+                        <th class="text-center">IMAGEN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($productos as $key => $value)
+                    <tr>
+                       <td>{{$value->nombre}}</td>
+                       <td>{{$value->detalles}}</td>
+                       <td>{{$value->modo_empleo}}</td>
+                       <td>{{$value->beneficios}}</td>
+                       <td class="text-center">${{$value->precio_unitario}}</td>
+                       <td>{{$value->imagen}}</td>
+                   </tr>
+                   @endforeach
+               </tbody>
+           </table>
+       </div>
+       <!-- /.table-responsive -->
+
+   </div>
+   <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+
+<!-- Modal agregar-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content contenido-modal">
+      <div class="modal-header">
+        <h5 class="modal-title titulo-modal" id="exampleModalLabel">Agregar nuevo producto</h5>
     </div>
+    <div class="modal-body cuerpo-modal">
+      <div class="container-fluid">
+          <div class="row"> 
+              <div class="col-xs-2"></div>
+              <div class="col-xs-8">
 
-    <!-- /#wrapper -->
+                  <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+              </div>
+              <div class="col-xs-2"></div>
+          </div>
+          <br>
+          <div class="row"> 
+              <div class="col-xs-6">
+                  <input class="form-control" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+                  <input class="btn btn-verde-modal" type="submit" value="Subir foto">
+              </div>
+              <div class="col-xs-6">
+                 <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
+                 <br>
+                 <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
+                 <br>
+                 <select class="form-control without-radius" name="" >
+                    <option value="volvo">Presentación</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <br>
+                <input class="without-radius" type="number" name="" placeholder="PRECIO">
+                <br>
 
-    <!-- jQuery -->
-    <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+            </div>
+        </div>
+        <br>
+              <div class="row"> 
+              <div class="col-xs-12">
+                  <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" id="" cols="30" rows="4"></textarea>
+                  <br>
+                  <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="" cols="30" rows="4"></textarea>
+              </div>
+        </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    </div>  
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
+</div>
+<div class="modal-footer inferior-modal">
+    <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
+    <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal modificar-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content contenido-modal">
+      <div class="modal-header">
+        <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar producto</h5>
+    </div>
+    <div class="modal-body cuerpo-modal">
+      <div class="container-fluid">
+          <div class="row"> 
+              <div class="col-xs-2"></div>
+              <div class="col-xs-8">
 
-    <!-- Morris Charts JavaScript -->
-    <script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
+                  <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+              </div>
+              <div class="col-xs-2"></div>
+          </div>
+          <br>
+          <div class="row"> 
+              <div class="col-xs-6">
+                  <input class="form-control" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+                  <input class="btn btn-verde-modal" type="submit" value="Subir foto">
+              </div>
+              <div class="col-xs-6">
+                 <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
+                 <br>
+                 <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
+                 <br>
+                 <select class="form-control without-radius" name="" >
+                    <option value="volvo">Presentación</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <br>
+                <input class="without-radius" type="number" name="" placeholder="PRECIO">
+                <br>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+            </div>
+        </div>
+        <br>
+              <div class="row"> 
+              <div class="col-xs-12">
+                  <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" id="" cols="30" rows="4"></textarea>
+                  <br>
+                  <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="" cols="30" rows="4"></textarea>
+              </div>
+        </div>
+
+    </div>  
+
+</div>
+<div class="modal-footer inferior-modal">
+    <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
+    <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Eliminar-->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content contenido-modal">
+      <div class="modal-header encabezado-modal">
+        <h5 class="modal-title titulo-modal-eliminar" id="exampleModalLabel">Eliminar producto</h5>
+    </div>
+    <div class="modal-body cuerpo-modal-elimnar">
+      <div class="container-fluid">
+<p class="texto-eliminar">¿Está seguro que desea eliminar el producto Benzoato de Sodio?</p>
+
+    </div>  
+
+</div>
+<div class="modal-footer inferior-modal-eliminar text-center ">
+    <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button>
+    <button type="button" class="btn btn-naranja-modal">SI</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
+<script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
+<script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
 
 </body>
 

@@ -9,9 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
-
+    <title>ENVÍOS - RMIngredientes</title>
+   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
     <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
+
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
@@ -31,16 +33,58 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
+
+        <style>
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          ::-moz-placeholder { /* Firefox 19+ */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          :-ms-input-placeholder { /* IE 10+ */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          :-moz-placeholder { /* Firefox 18- */
+              color: #7A7A7A !important;
+              font-size: 14px;
+              font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
+          table {
+            border:none;
+            border-collapse: collapse;
+        }
+
+        table td {
+            border-left: 5px solid #ffffff;
+            border-right: 5px solid #ffffff;
+            border-bottom: 5px solid #eaeaea;
+        }
+
+        table td:first-child {
+            border-left: none;
+        }
+
+        table td:last-child {
+            border-right: none;
+        }
+    </style>
 
 </head>
 
-<body>
+<body class="body-gris">
 
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -48,20 +92,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">LOGO</a>
+                <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
+            <ul class="nav navbar-top-links navbar-right bajar-barra">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>Administrador <i class="fa fa-caret-down"></i>
+                    <a class="dropdown-toggle estilo-user" data-toggle="dropdown" href="#">
+                        <i class="glyphicon glyphicon-user"></i> Administrador <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
+                    <ul class="dropdown-menu dropdown-user estilo-list-user">
+                        <li><a class="estilo-lista text-center" href="#"> Configuración</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="{{ action('AuthController@logOut') }}"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
+                        <li><a class="estilo-lista text-center" href="{{ action('AuthController@logOut') }}"> Cerrar Sesión</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -69,21 +113,23 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
+            <div class="row row-white"></div>
+            <div class="row color-degradado"> </div>
 
-            <div class="navbar-default sidebar" role="navigation">
+            <div class="navbar-default sidebar sidebar-height" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
+                    <ul class="nav " id="side-menu">
                         <li>
-                            <a href="{{URL::to('/Admin/productos') }}"><i class="fa fa-dashboard fa-fw"></i> PRODUCTOS</a>
+                            <a class="lista-menu" href="{{URL::to('/Admin/productos') }}"> PRODUCTOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/pedidos') }}" class="active"><i class="fa fa-dashboard fa-fw"></i> ENVÍOS</a>
+                            <a class="lista-menu"  href="{{URL::to('/Admin/pedidos') }}">ENVÍOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/usuarios') }}"><i class="fa fa-dashboard fa-fw"></i> USUARIOS</a>
+                            <a class="lista-menu"  href="{{URL::to('/Admin/usuarios') }}" >USUARIOS</a>
                         </li>
                         <li>
-                            <a href="{{URL::to('/Admin/estadisticas') }}"><i class="fa fa-dashboard fa-fw"></i> ESTADÍSTICAS</a>
+                            <a class="lista-menu"  href="{{URL::to('/Admin/estadisticas') }}">ESTADÍSTICAS</a>
                         </li>
                     </ul>
                 </div>
@@ -93,76 +139,76 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">ENVÍOS</h1>
-                </div>
-                <div class="input-group custom-search-form">
-                	<button class="btn btn-default" type="button">
-                			<i class="fa fa-search"></i>
-                	</button>
-                	<input type="text" class="form-control" placeholder="BUSCAR PRODUCTO">
-                	<span class="input-group-btn">
-                	</span>
-                </div>
-            </div>
-            <!-- /.row -->
-             <div class="row">
-                    <div class="panel panel-default">
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>IDENTIFICADOR</th>
-                                            <th>DETALLES DEL PEDIDO</th>
-                                            <th>CLIENTE</th>
-                                            <th>PRECIO TOTAL</th>
-                                            <th>DIRECCIÓN</th>
-                                            <th>ESTATUS</th>
-                                            <th>FECHA</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($pedidos as $key => $value)
-							             <tr>
-							                <td>{{$value->id}}</td>
-							           </tr>
-							           @endforeach
-									</tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+            <div class="row align-items-center">
+              <div class="col-lg-3">
+                <h1 class=" titulos-secciones">ENVÍOS</h1>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+               <div class="input-group margen-elementos">
+                  <span class="input-group-btn btn-buscar ">
+                    <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
+                </span>
+                <input type="text" class="form-control input-buscar" placeholder="BUSCAR ENVÍO">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-3">
 
-    </div>
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <!-- /.row -->
+    <div class="row">
 
-    <!-- /#wrapper -->
+        <div class="table-responsive" style="overflow: hidden;">
+            <table class="table ">
+                <thead class="encabezados-tabla">
+                    <tr>
+                        <th class="text-center">IDENTIFICADOR</th>
+                        <th class="text-center">DETALLES DEL PEDIDO</th>
+                        <th class="text-center">CLIENTE</th>
+                        <th class="text-center">PRECIO TOTAL</th>
+                        <th class="text-center">DIRECCIÓN</th>
+                        <th class="text-center">ESTATUS</th>
+                        <th class="text-center">FECHA</th>
 
-    <!-- jQuery -->
-    <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+                    </tr>
+                </thead>
+                <tbody>
+                     @foreach($pedidos as $key => $value)
+                           <tr>
+                              <td>{{$value->id}}</td>
+                         </tr>
+                         @endforeach
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+               </tbody>
+           </table>
+       </div>
+       <!-- /.table-responsive -->
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
+   </div>
+   <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
 
-    <!-- Morris Charts JavaScript -->
-    <script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
+</div>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
+<script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
+<script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
 
 </body>
 
