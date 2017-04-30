@@ -13,6 +13,16 @@ class Productos extends Eloquent
 
 		 return $productos;
 
+	}
+
+	public function scopeMenosVendido(){
+
+		 $productos = DB::table('productos')
+
+		 ->select('*')
+		 ->orderBy('contador','asc');
+
+		 return $productos;
 
 	}
 

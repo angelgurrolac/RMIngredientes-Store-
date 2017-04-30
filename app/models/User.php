@@ -35,5 +35,23 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 		
 	}
+	public function scopeMasCompras(){
+
+		$usuarios = DB::table('users as u')
+
+		->select(DB::raw('COUNT(p.id), u.id, u.nombre, u.ap_paterno, u.ap_materno'))
+
+		->join('pedidos as p',function($join){
+						$join->on('p.id_user','=','u.id');
+					})
+		->groupBy('u.id')
+
+		->orderBy(DB::raw('COUNT(p.id)'),'desc');
+
+		return $usuarios;
+
+		
+	}
+
 
 }

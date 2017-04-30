@@ -55,7 +55,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>Administrador <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i>{{ Session::get('nombre') }} <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
@@ -102,7 +102,9 @@
                     </div>
                     <div style="display:inline-block;">
                             <h3>PRODUCTO MÁS VENDIDO</h3>
-                            <h3>ACEITE OLEINA DE PALMA</h3>
+                        @foreach($productos as $key => $value)
+                            <h3>{{$value->nombre}}</h3>
+                        @endforeach
                     </div>
                     <div>
                         <h3>RESUMEN DE VENTAS DEL MES PASADO</h3>
@@ -111,19 +113,22 @@
                                         <tr>
                                             <th>#</th>
                                             <th>NOMBRE</th>
-                                            <th>ESTADO</th>
                                             <th>PRODUCTOS COMPRADOS</th>
                                             <th>$</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                         <tr>
-                                            <td>1</td>
-                                            <td>Joél Díaz</td>
-                                            <td>Durango</td>
-                                            <td>Benzoato, Blancoplus</td>
-                                            <td>$12,456.00</td>
-                                       </tr>
+                                         
+
+                                @foreach($pedidos as $key => $value)
+                                <tr>
+                                        <td>{{$value->id}}</td>
+                                        <td>{{$value->nombre}} {{$value->ap_paterno}} {{$value->ap_materno}}</td>
+                                        <td>{{$value->pnombre}}</td>
+                                        <td>{{$value->total}}</td>
+                                </tr>
+                                 @endforeach
+                                      
                                     </tbody>
                                 </table>
                     </div>
@@ -134,7 +139,9 @@
                     </div>
                     <div style="display:inline-block;">
                             <h3>PRODUCTO MENOS VENDIDO</h3>
-                            <h3>ACEITE OLEINA DE PALMA</h3>
+                            @foreach($productosm as $key => $value)
+                            <h3>{{$value->nombre}}</h3>
+                            @endforeach
                     </div>
                     <div style="display:inline-block;">
                         <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
@@ -144,13 +151,36 @@
                     </div>
                     <div style="display:inline-block;">
                             <h3>CLIENTE CON MÁS COMPRAS</h3>
-                            <h3>Joél Ramirez</h3>
+                            @foreach($cliente as $key => $value)
+                            <h3>{{$value->nombre}} {{$value->ap_paterno}} {{$value->ap_materno}}</h3>
+                            @endforeach
                     </div>
                     <div>
                         <ul>
-                            <li style="display:inline-block;"><img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png"><p>23%</p></li>
-                            <li style="display:inline-block;"><img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png"><p>34%</p></li>
-                            <li style="display:inline-block;"><img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png"><p>43%</p></li>
+                            <li style="display:inline-block;">
+                                <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
+                                <p> 
+                                @foreach($pagos as $key => $value)
+                                    <h3>{{$value->tarjeta}}%</h3>
+                                @endforeach
+                                </p>
+                            </li>
+                            <li style="display:inline-block;">
+                                <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
+                                 <p> 
+                                @foreach($pagos as $key => $value)
+                                    <h3>{{$value->efectivo}}%</h3>
+                                @endforeach
+                                </p>
+                            </li>
+                            <li style="display:inline-block;">
+                                <img style="width:30%;" class="img-responsive" src="../assets/img/logo-portada-rmingredientes.png">
+                                 <p> 
+                                @foreach($pagos as $key => $value)
+                                    <h3>{{$value->oxxo}}%</h3>
+                                @endforeach
+                                </p>
+                            </li>
                        </ul>
                     </div>
                     <div style="display:inline-block;">
