@@ -2,6 +2,27 @@
 /*Placeholder formularios*/
 
 /* Fin Placeholder formularios*/
+.icono-usuario{
+    font-size: 42px;
+    padding-top: 15px;
+}
+
+.estilo-estadistica{
+font-family: Tahoma, Verdana, Segoe, sans-serif;
+color: #444444 !important;
+font-size: 18px;
+text-align: center;
+}
+.fondo-paneles{
+  background-color: #F9F9F9 !important;
+}
+.producto-vendido{
+    color: #FD9C1C !important;
+    font-weight: bold !important;
+    font-size: 22px;
+    text-align: center;
+}
+
 .back-conocenos{
     background-color: #FD9C1C;
     padding: 100px 0 0 0 !important;
@@ -60,6 +81,24 @@
     background: -ms-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* ie10+ */
     background: linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB300', endColorstr='#FD9C1C',GradientType=1 ); /* ie6-9 */
+}
+    #fixed-bar {
+    background: -moz-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(253,156,28,1)), color-stop(57%, rgba(253,156,28,1)), color-stop(100%, rgba(139,179,0,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB300', endColorstr='#FD9C1C',GradientType=1 ); /* ie6-9 */
+    padding: 10px 0 !important;
+    bottom: 0;
+    height: 10px;
+    padding: 13px 0 4px;
+    position: fixed;
+    width: 100%;
+    z-index: 5000;
+    margin-left: 0 !important;
+    margin-right: 0 !important;   
 }
 .row-white{
     padding: 10px 0;
