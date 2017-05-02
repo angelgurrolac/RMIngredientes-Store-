@@ -36,8 +36,8 @@ class Pedidos extends Eloquent
 	public function scopeTipoPago(){
 		$pedidos = DB::table('pedidos as p')
 
-		->select(DB::raw('ROUND((((SELECT COUNT(*) FROM pedidos WHERE tipo_pago="tarjeta")*100)/count(*)),2) AS tarjeta,
-			ROUND((((SELECT COUNT(*) FROM pedidos WHERE tipo_pago="efectivo")*100)/count(*)),2) AS efectivo,
+		->select(DB::raw('ROUND((((SELECT COUNT(*) FROM pedidos WHERE tipo_pago="visa")*100)/count(*)),2) AS visa,
+			ROUND((((SELECT COUNT(*) FROM pedidos WHERE tipo_pago="mastercard")*100)/count(*)),2) AS mastercard,
 			ROUND((((SELECT COUNT(*) FROM pedidos WHERE tipo_pago="oxxo")*100)/count(*)),2) AS oxxo'));
 
 		return $pedidos;

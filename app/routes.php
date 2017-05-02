@@ -17,6 +17,7 @@ Route::get('/','HomeController@showWelcome');
 Route::get('login', 'AuthController@showLogin'); // Mostrar login
 Route::post('login', 'AuthController@postLogin'); // Verificar datos
 Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+
  
 /*Rutas privadas solo para usuarios autenticados*/
 Route::group(['before' => 'auth'], function()
@@ -25,6 +26,7 @@ Route::group(['before' => 'auth'], function()
     Route::get('/Admin/pedidos', 'AdminController@ShowPedidos'); // Vista de inicio de pedidos
     Route::get('/Admin/usuarios', 'AdminController@ShowUsuarios'); // Vista de inicio de usuarios
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
+    Route::post('/Admin/configuracion', 'AdminController@ChangePassword');
 
 });
 

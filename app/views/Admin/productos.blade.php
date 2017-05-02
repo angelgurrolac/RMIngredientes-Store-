@@ -76,6 +76,27 @@
           table td:last-child {
             border-right: none;
           }
+
+          .btn-verde-modal input[type=file] {
+    color: #ffffff;
+    font-weight: bold !important;
+    background-color: #A4BD31 !important;
+    border-color: #A4BD31 !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+       .btn-verde-modal:hover input[type=file] {
+    color: #ffffff;
+    font-weight: bold !important;
+    background-color: #A4BD31 !important;
+    border-color: #A4BD31 !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
         </style>
 
       </head>
@@ -155,8 +176,7 @@
             <div class="col-lg-2">
 
               <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
-              <button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
-              <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
+              
 
             </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
@@ -173,6 +193,7 @@
                     <th class="text-center">BENEFICIOS</th>
                     <th class="text-center">PRECIOS</th>
                     <th class="text-center">IMAGEN</th>
+                    <th class="text-center">ACCIONES</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -184,26 +205,93 @@
                    <td>{{$value->beneficios}}</td>
                    <td class="text-center">${{$value->precio_unitario}}</td>
                    <td>{{$value->imagen}}</td>
-                 </tr>
-                 @endforeach
-               </tbody>
-             </table>
-           </div>
-           <!-- /.table-responsive -->
+                   <td><button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
+                    <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button></td>
+                  </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+            <!-- /.table-responsive -->
 
-         </div>
-         <!-- /.row -->
-       </div>
-       <!-- /#page-wrapper -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
 
-     </div>
+      </div>
 
-     <!-- Modal agregar-->
-     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Modal agregar-->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content contenido-modal">
+            <div class="modal-header">
+              <h5 class="modal-title titulo-modal" id="exampleModalLabel">Agregar nuevo producto</h5>
+            </div>
+            <div class="modal-body cuerpo-modal">
+              <div class="container-fluid">
+                <div class="row"> 
+                  <div class="col-xs-2"></div>
+                  <div class="col-xs-8">
+                    <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+                  </div>
+                  <div class="col-xs-2"></div>
+                </div>
+                <br>
+                <div class="row"> 
+                  <div class="col-xs-6">
+                    <form id="form1" runat="server">
+                    <div style="width: 200px; height: 165px; background-color: white;">
+                     <img id="blah" src="#" width="200px" height="165px" alt="" />
+                     </div>
+                     <br>
+                 <label class="btn btn-verde-modal2">
+                    SUBIR FOTO <input type='file' id="imgInp" style="display: none;" />
+                </label>
+                   </form>
+                 </div>
+                 <div class="col-xs-6">
+                   <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
+                   <br>
+                   <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
+                   <br>
+                   <select class="form-control without-radius" name="" >
+                    <option value="volvo">Presentación</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                  <br>
+                  <input class="without-radius" type="number" name="" placeholder="PRECIO">
+                  <br>
+
+                </div>
+              </div>
+              <br>
+              <div class="row"> 
+                <div class="col-xs-12">
+                  <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" id="" cols="30" rows="4"></textarea>
+                  <br>
+                  <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="" cols="30" rows="4"></textarea>
+                </div>
+              </div>
+
+            </div>  
+
+          </div>
+          <div class="modal-footer inferior-modal">
+            <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
+            <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal modificar-->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content contenido-modal">
           <div class="modal-header">
-            <h5 class="modal-title titulo-modal" id="exampleModalLabel">Agregar nuevo producto</h5>
+            <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar producto</h5>
           </div>
           <div class="modal-body cuerpo-modal">
             <div class="container-fluid">
@@ -218,8 +306,15 @@
               <br>
               <div class="row"> 
                 <div class="col-xs-6">
-                  <input class="form-control" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
-                  <input class="btn btn-verde-modal" type="submit" value="Subir foto">
+                   <form id="form2" runat="server">
+                    <div style="width: 200px; height: 165px; background-color: white;">
+                     <img id="blah2" src="#" width="200px" height="165px" alt="" />
+                     </div>
+                     <br>
+                 <label class="btn btn-verde-modal2">
+                    SUBIR FOTO <input type='file' id="imgInp2" style="display: none;" />
+                </label>
+                   </form>
                 </div>
                 <div class="col-xs-6">
                  <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
@@ -257,108 +352,83 @@
       </div>
     </div>
   </div>
-  <!-- Modal modificar-->
-  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Eliminar-->
+  <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content contenido-modal">
-        <div class="modal-header">
-          <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar producto</h5>
+        <div class="modal-header encabezado-modal">
+          <h5 class="modal-title titulo-modal-eliminar" id="exampleModalLabel">Eliminar producto</h5>
         </div>
-        <div class="modal-body cuerpo-modal">
+        <div class="modal-body cuerpo-modal-elimnar">
           <div class="container-fluid">
-            <div class="row"> 
-              <div class="col-xs-2"></div>
-              <div class="col-xs-8">
+            <p class="texto-eliminar">¿Está seguro que desea eliminar el producto Benzoato de Sodio?</p>
 
-                <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
-              </div>
-              <div class="col-xs-2"></div>
-            </div>
-            <br>
-            <div class="row"> 
-              <div class="col-xs-6">
-                <input class="form-control" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
-                <input class="btn btn-verde-modal" type="submit" value="Subir foto">
-              </div>
-              <div class="col-xs-6">
-               <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
-               <br>
-               <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
-               <br>
-               <select class="form-control without-radius" name="" >
-                <option value="volvo">Presentación</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-              </select>
-              <br>
-              <input class="without-radius" type="number" name="" placeholder="PRECIO">
-              <br>
+          </div>  
 
-            </div>
-          </div>
-          <br>
-          <div class="row"> 
-            <div class="col-xs-12">
-              <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" id="" cols="30" rows="4"></textarea>
-              <br>
-              <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="" cols="30" rows="4"></textarea>
-            </div>
-          </div>
-
-        </div>  
-
-      </div>
-      <div class="modal-footer inferior-modal">
-        <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-        <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+        </div>
+        <div class="modal-footer inferior-modal-eliminar text-center ">
+          <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button>
+          <button type="button" class="btn btn-naranja-modal">SI</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Modal Eliminar-->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content contenido-modal">
-      <div class="modal-header encabezado-modal">
-        <h5 class="modal-title titulo-modal-eliminar" id="exampleModalLabel">Eliminar producto</h5>
-      </div>
-      <div class="modal-body cuerpo-modal-elimnar">
-        <div class="container-fluid">
-          <p class="texto-eliminar">¿Está seguro que desea eliminar el producto Benzoato de Sodio?</p>
-
-        </div>  
-
-      </div>
-      <div class="modal-footer inferior-modal-eliminar text-center ">
-        <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button>
-        <button type="button" class="btn btn-naranja-modal">SI</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-<div  id="fixed-bar"> </div>
+  <div  id="fixed-bar"> </div>
 
-<!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+  <!-- /#wrapper -->
 
-<!-- Metis Menu Plugin JavaScript -->
-<script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
+  <!-- jQuery -->
+  <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
-<script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
+
+  <!-- Morris Charts JavaScript -->
+  <script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
+  <script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
+  <script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+   <script type="text/javascript">
+   function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imgInp").change(function(){
+    readURL(this);
+});
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah2').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imgInp2").change(function(){
+    readURL(this);
+});
+  </script>
 
 </body>
 
