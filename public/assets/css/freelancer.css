@@ -2,6 +2,9 @@
 /*Placeholder formularios*/
 
 /* Fin Placeholder formularios*/
+.pagos{
+    padding-top: 5px;
+}
 .icono-usuario{
     font-size: 42px;
     padding-top: 15px;
@@ -135,8 +138,17 @@ text-align: center;
     top: 0px !important;
 }
 
-
-
+.tabla-est{
+font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
+font-size: 10px;
+}
+.tabla-estadisticas{
+    background-color: #FD9C1C;
+    font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
 .encabezados-tabla{
     background-color: #FD9C1C;
     font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
@@ -278,6 +290,27 @@ text-align: center;
     border-color: #83A40D !important;
     border-radius: 0px !important;
     padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+.btn-verde-modal2{
+    color: #ffffff;
+    font-weight: bold !important;
+    background-color: #A4BD31 !important;
+    border-color: #A4BD31 !important;
+    border-radius: 0px !important;
+    padding: 8px 50px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.btn-verde-modal2:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #83A40D !important;
+    border-color: #83A40D !important;
+    border-radius: 0px !important;
+    padding: 8px 50px !important;
     font-size: 16px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
