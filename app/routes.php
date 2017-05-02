@@ -27,3 +27,7 @@ Route::group(['before' => 'auth'], function()
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
 
 });
+
+
+// Rutas para tienda
+Route::get('/Tienda/productos','TiendaController@ShowProductos');

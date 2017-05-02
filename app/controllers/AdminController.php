@@ -37,7 +37,8 @@ class AdminController extends \BaseController {
 		$pedidos = Pedidos::Ventas()->get();
 		$cliente = User::MasCompras()->take(1)->get();
 		$pagos = Pedidos::TipoPago()->get();
-		return View::make('Admin.estadisticas',compact('productos','productosm','pedidos','cliente','pagos'));
+		$visitas = Visitas::VisitasTotal()->get();
+		return View::make('Admin.estadisticas',compact('productos','productosm','pedidos','cliente','pagos','visitas'));
 	}
 
 }
