@@ -16,14 +16,8 @@
 
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="{{ asset('assets/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="{{ asset('assets/dist/css/sb-admin-2.css') }}" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="{{ asset('assets/vendor/morrisjs/morris.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -104,7 +98,7 @@
                     <ul class="nav " id="side-menu">
                         @foreach($categorias as $key => $value)
                              <li>
-                                <a href=""> {{$value->nombre}}</a>
+                                <a id="{{$value->id}}" href=""> {{$value->nombre}}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -115,12 +109,19 @@
         </nav>
 
         <div id="page-wrapper">
-
-    <div class="row">
-
-   </div>
+            <div class="row">
+                @foreach($productos as $key => $value)
+                     <div class="col-md-2">
+                    <img class="img-responsive" src="{{asset($value->imagen)}}"/>
+                    <h3>{{$value->nombre}}</h3>
+                    <P>{{$value->detalles}}</P>
+                    <h4>{{$value->precio_unitario}}</h4>
+                    </div>
+                @endforeach
+            </div>
+            <div class="row" id="categoria"></div>
    <!-- /.row -->
-</div>
+        </div>
 <!-- /#page-wrapper -->
 
 </div>
@@ -133,16 +134,42 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
-<!-- Metis Menu Plugin JavaScript -->
-<script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
-<script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
-
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    @foreach($categorias as $key => $value)
+        $("#{{$value->id}}").click(function(){
+    $.ajax({
+   url: '/Tienda/productos',
+   type: 'POST',
+   data: {categoria:'{{$value->id}}'},
+   dataType: 'JSON',
+   error: function() {
+      console.error("error");
+   },
+   success: function(respuesta) {
+      console.log(JSON.stringify(respuesta));
+    
+      if (respuesta) {
+                      var html = '<div>';
+                      html += '<ul>';
+                      html += '<li> Legajo: ' + respuesta.nombre + ' </li>';
+                      html += '<li> Nombre: ' + respuesta.detalles + ' </li>';
+                      html += '</ul>';
+                      html += '</div>';
+                      $("#respuesta").html(html);
+                   } else {
+                      $("#respuesta").html('<div> No hay ningún empleado con ese legajo. </div>');
+                   }
+   }
+})
+});
+        alert('enter');
+    @endforeach
+});
+</script>
 
 </body>
 

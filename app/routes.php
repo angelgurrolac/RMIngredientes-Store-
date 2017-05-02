@@ -31,3 +31,4 @@ Route::group(['before' => 'auth'], function()
 
 // Rutas para tienda
 Route::get('/Tienda/productos','TiendaController@ShowProductos');
+Route::post('/Tienda/productos','TiendaController@ProductosC');

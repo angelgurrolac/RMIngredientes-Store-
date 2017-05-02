@@ -17,8 +17,16 @@ class TiendaController extends \BaseController {
 
 	public function ShowProductos()
 	{
-		$categorias=Categorias::All();
-		return View::make('Tienda.productos',compact('categorias'));
+		$categorias = Categorias::All();
+		$productos = Productos::All();
+		return View::make('Tienda.productos',compact('categorias','productos'));
+	}
+
+	public function productosC()
+	{
+		$productos = Productos::where('id_categoria','=',Input::get('categoria'))->get();
+		// $categorias = Categorias::All();
+		return Response::json($productos);	
 	}
 
 }
