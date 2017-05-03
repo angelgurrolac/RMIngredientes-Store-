@@ -127,8 +127,39 @@ text-align: center;
     font-size: 18px;
     padding: 20px 15px !important;
 }
+.titulo-categoria{
+ font-family: Tahoma, Verdana, Segoe, sans-serif;
+ font-size: 25px !important;
+ color: #FD9C1C !important;
+ font-weight: bold !important;
+  padding: 10px 10px !important;
+}
+.menu-tienda{
+    font-size: 24px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+}
+.menu-tienda:hover{
+    font-size: 24px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+}
 .lista-menu:hover{
     color: #FD9C1C;
+}
+.lista-categoria{
+    color: #444444 !important;
+    font-size: 25px !important;
+    padding: 10px 10px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+}
+.lista-categoria:hover{
+    background-color: transparent !important;
+    padding: 10px 10px !important;
+    color: #444444 !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
 }
 .margen-elementos{
     margin-top: 30px;
@@ -198,6 +229,9 @@ font-size: 10px;
 }
 .bajar-barra{
         margin-top: 45px !important;
+}
+.bajar-barra-nav2{
+        margin-top: 100px !important;
 }
 .estilo-lista:hover{
     background-color: #FD9C1C !important;

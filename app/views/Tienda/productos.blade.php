@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>TIENDA - RMIngredientes</title>
+
    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
@@ -76,11 +77,10 @@
 <body class="body-gris">
 
     <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+  
+        <nav class="navbar navbar-width navbar-fixed-top navbar-inverse " style="margin-bottom: 0">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -88,44 +88,85 @@
                 </button>
                 <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
             </div>
-            <!-- /.navbar-header -->
-            <div class="row row-white"></div>
+            <!-- navbar header -->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav text-center" role="menu">
+                    <li><a class="menu-tienda text-center" href="#">Conocenos</a></li>
+                    <li><a class="menu-tienda text-center" href="#">Productos</a></li>
+                    <li><a class="menu-tienda text-center" href="#">Demostraciones</a></li>
+             <!--        <li class="divider"></li> -->
+                    <li><a class="menu-tienda text-center" href="#">Contacto</a></li>
+                    <li class="glyphicon glyphicon-shopping-cart"><a href="#"></a></li>
+                </ul>
+                  <div class="row row-white"></div>
             <div class="row color-degradado"> </div>
-
-            <div class="navbar-default sidebar sidebar-height" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <h3>CATEGORÍAS</h3>
-                    <ul class="nav " id="side-menu">
-                        @foreach($categorias as $key => $value)
-                             <li>
-                                <a id="{{$value->id}}" href=""> {{$value->nombre}}</a>
-                            </li>
-                        @endforeach
+               <!--  <div class="pull-right navbar-logo">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Presentation<span class="glyphicon glyphicon-shopping-cart"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="divider"></li>
+                                <li><a href="http://192.168.151.3:1000" target="_blank">Sahuta Community Development</a></li>
+                                <li><a href="http://192.168.151.3:1000/lippo.html" target="_blank">Lippo At a Glance</a></li>
+                                <li><a href="http://192.168.151.3:1000/rpa.html" target="_blank">What is Around us</a></li>
+                                <li><a href="/documents/person-entity-manager.html" target="_blank">Global Presentation</a></li>
+                                <li class="divider"></li>
+                            </ul>
+                        </li>
                     </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
+                </div> -->
             </div>
-            <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
-            <div class="row">
-                @foreach($productos as $key => $value)
-                     <div class="col-md-2">
-                    <img class="img-responsive" src="{{asset($value->imagen)}}"/>
-                    <h3>{{$value->nombre}}</h3>
-                    <P>{{$value->detalles}}</P>
-                    <h4>{{$value->precio_unitario}}</h4>
-                    </div>
-                @endforeach
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-3 bajar-barra-nav2">
+                <h3 class="titulo-categoria">CATEGORÍAS</h3>
+                <ul class="nav" role="menu">
+                    <li><a class="lista-categoria" href="#">Tortillas de Maíz</a></li>
+                    <li><a class="lista-categoria" href="#">Tortillas de Harina</a></li>
+                    <li><a class="lista-categoria" href="#">Panificadoras</a></li>
+                    <li><a class="lista-categoria" href="#">Especializado</a></li>
+                </ul>
             </div>
-            <div class="row" id="categoria"></div>
+           <!--  <div class="col-md-9">
+                <br />
+                <h2>Body</h2>
+            </div> -->
+            <div id="page-wrapper">
+            <div class="row align-items-center">
+              <div class="col-lg-3">
+                <h1 class=" titulos-secciones">ENVÍOS</h1>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+               <div class="input-group margen-elementos">
+                  <span class="input-group-btn btn-buscar ">
+                    <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
+                </span>
+                <input type="text" class="form-control input-buscar" placeholder="BUSCAR ENVÍO">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-3">
+
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <!-- /.row -->
+    <div class="row">
+
+        
+       <!-- /.table-responsive -->
+
+   </div>
    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
         </div>
+    
+
+      
 <!-- /#page-wrapper -->
 
 </div>
-
+<div  id="fixed-bar"> </div>
 <!-- /#wrapper -->
 
 <!-- jQuery -->
@@ -166,7 +207,7 @@ $(document).ready(function(){
    }
 })
 });
-        alert('enter');
+        // alert('enter');
     @endforeach
 });
 </script>
