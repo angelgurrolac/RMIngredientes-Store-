@@ -26,7 +26,7 @@ Route::group(['before' => 'auth'], function()
     Route::get('/Admin/pedidos', 'AdminController@ShowPedidos'); // Vista de inicio de pedidos
     Route::get('/Admin/usuarios', 'AdminController@ShowUsuarios'); // Vista de inicio de usuarios
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
-    Route::post('/Admin/configuracion', 'AdminController@ChangePassword');
+    Route::get('/Admin/configuracion', 'AdminController@ChangePassword'); //vista de configuración de usuario
 
 });
 

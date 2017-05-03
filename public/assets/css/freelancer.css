@@ -271,7 +271,29 @@ font-size: 10px;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 
 }
+.btn-verde-confi{
+    margin-bottom: 20px !important;
+    color: #ffffff;
+    font-weight: bold !important;
+    background-color: #A4BD31 !important;
+    border-color: #A4BD31 !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
 
+}
+.btn-verde-confi:hover{
+    margin-bottom: 20px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #83A40D !important;
+    border-color: #83A40D !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
 .btn-verde-modal{
     color: #ffffff;
     font-weight: bold !important;

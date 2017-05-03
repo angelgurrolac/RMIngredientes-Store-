@@ -84,7 +84,7 @@
                                     <i class="glyphicon glyphicon-user"></i> {{ Session::get('nombre')}} <i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user estilo-list-user">
-                                    <li><a class="estilo-lista text-center" href="#"> Configuración</a>
+                                    <li><a class="estilo-lista text-center" href="{{URL::to('/Admin/configuracion') }}"> Configuración</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><a class="estilo-lista text-center" href="{{ action('AuthController@logOut') }}"> Cerrar Sesión</a>

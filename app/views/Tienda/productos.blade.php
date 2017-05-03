@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ENVÍOS - RMIngredientes</title>
+    <title>TIENDA - RMIngredientes</title>
    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
