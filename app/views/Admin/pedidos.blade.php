@@ -167,8 +167,10 @@
                         <th class="text-center">CLIENTE</th>
                         <th class="text-center">PRECIO TOTAL</th>
                         <th class="text-center">DIRECCIÓN</th>
-                        <th class="text-center">ESTATUS</th>
                         <th class="text-center">FECHA</th>
+                        <th class="text-center">ESTATUS</th>
+                        <th class="text-center">ACCIÓN</th>
+                        
 
                     </tr>
                 </thead>
@@ -176,6 +178,14 @@
                      @foreach($pedidos as $key => $value)
                            <tr>
                               <td>{{$value->id}}</td>
+                              <td>{{$value->id}}</td>
+                              <td>{{$value->id}}</td>
+                              <td>{{$value->total}}</td>
+                              <td>{{$value->domicilio}}</td>
+                              <td>{{$value->created_at}}</td>
+                              <td>{{$value->estatus}}</td>
+                              <td><button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button></td>
+
                          </tr>
                          @endforeach
 
@@ -192,6 +202,42 @@
 </div>
  <div  id="fixed-bar"> </div>
 <!-- /#wrapper -->
+
+<!-- Modal modificar-->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content contenido-modal">
+          <div class="modal-header">
+            <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar estatus</h5>
+          </div>
+          <div class="modal-body cuerpo-modal">
+            <div class="container-fluid">
+              <div class="row"> 
+              <div class="col-xs-3"></div>
+                 <div class="col-xs-6"></div>
+              <select class="form-control without-radius" name="" >
+                  <option value="volvo">Estatus</option>
+                  <option value="saab">Pendiente</option>
+                  <option value="saab">Enviado</option>
+                  <option value="saab">Entregado</option>
+                  <option value="saab">Cancelado</option>
+                </select>
+                <div class="col-xs-3"></div>
+                
+              </div>
+          
+
+          </div>  
+
+        </div>
+        <div class="modal-footer inferior-modal">
+          <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
+          <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <!-- jQuery -->
 <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
