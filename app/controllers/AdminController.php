@@ -17,7 +17,7 @@ class AdminController extends \BaseController {
 
 	public function ShowProductos()
 	{
-		$productos=Productos::All();
+		$productos=Productos::Productos()->get();
 		return View::make('Admin.productos',compact('productos'));
 	}
 	public function ShowPedidos()
@@ -43,6 +43,38 @@ class AdminController extends \BaseController {
 	public function ChangePassword(){
 		$datos = User::where('nombre','=','Zayra');
 		return View::make('Admin.configuracion',compact('datos'));
+	}
+
+	public function AgregarP(){
+		$nombre = Input::get('nombre');
+		$imagen = Input::file('imagen');
+		$breved = Input::get('breved');
+		$brevec = Input::get('brevec');
+		$presentacion = Input::get('presentacion');
+		$precio = Input::get('precio');
+		$empleo = Input::get('empleo');
+		$beneficios = Input::get('beneficios');
+
+		$producto = new Productos;
+		if($imagen!=null){
+		$name_image = $imagen -> getClientOriginalName();	
+		$image_final = 'assets/img/' .$name_image;
+		$imagen -> move('assets/img/', $name_image );
+		$producto->imagen = $image_final;
+		}
+		$producto->nombre = $nombre;
+		$producto->descripcion_corta = $breved;
+		$producto->descripcion_completa = $brevec;
+		$producto->presentacion = $presentacion;
+		$producto->precio_unitario = $precio;
+		$producto->modo_empleo = $empleo;
+		$producto->beneficios = $beneficios;
+		$producto->estado = 1;
+		$producto->contador = 0;
+		$producto->id_categoria = 1;
+		$producto->save();
+
+		return Redirect::to('Admin/productos');
 	}
 
 }

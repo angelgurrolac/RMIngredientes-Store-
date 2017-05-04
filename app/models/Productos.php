@@ -4,6 +4,20 @@ class Productos extends Eloquent
 {
 	protected $table = "productos";
 
+
+	public function scopeProductos(){
+		$productos = DB::table('productos as p')
+
+		->join('categorias as cat',function($join){
+							$join->on('p.id_categoria','=','cat.id');
+					})
+
+		->select('p.id','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
+			'p.imagen','cat.nombre as nombreC');
+
+		return $productos;
+	}
+
 	public function scopeMasVendido(){
 
 		 $productos = DB::table('productos')

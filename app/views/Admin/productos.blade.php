@@ -192,6 +192,7 @@
                     <th class="text-center">MODO DE EMPLEO</th>
                     <th class="text-center">BENEFICIOS</th>
                     <th class="text-center">PRECIOS</th>
+                    <th class="text-center">CATEGORIA</th>
                     <th class="text-center">IMAGEN</th>
                     <th class="text-center">ACCIONES</th>
                   </tr>
@@ -200,13 +201,19 @@
                   @foreach($productos as $key => $value)
                   <tr>
                    <td>{{$value->nombre}}</td>
-                   <td>{{$value->detalles}}</td>
+                   <td>{{$value->descripcion_completa}}</td>
                    <td>{{$value->modo_empleo}}</td>
                    <td>{{$value->beneficios}}</td>
                    <td class="text-center">${{$value->precio_unitario}}</td>
-                   <td>{{$value->imagen}}</td>
+                   <td>{{$value->nombreC}}</td>
+                   <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
                    <td><button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
-                    <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button></td>
+                    <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
+                <!--   {{Form::open(array('url'=>'/admin/editarA', 'id' => $value->id))}}
+                {{ Form::submit('Editar', array('name'=> 'Editar','class' => 'btn btn-success direccionar')) }} 
+                {{ Form::submit('Eliminar', array('name'=> 'Eliminar','class' => 'btn btn-danger')) }}</td> 
+                <input type="hidden" name="id_producto" value="{{$value->id}}">
+                {{Form::close()}} --></td>
                   </tr>
                   @endforeach
                 </tbody>
@@ -229,60 +236,54 @@
               <h5 class="modal-title titulo-modal" id="exampleModalLabel">Agregar nuevo producto</h5>
             </div>
             <div class="modal-body cuerpo-modal">
+                  {{ Form::open(['url' => 'Admin/agregarP','files'=>'true']) }}
               <div class="container-fluid">
                 <div class="row"> 
                   <div class="col-xs-2"></div>
                   <div class="col-xs-8">
-                    <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+                     {{ Form::text('nombre','',array('class'=>'form-control without-radius','placeholder' => 'NOMBRE DEL PRODUCTO')) }}
+                    <!-- <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO"> -->
                   </div>
                   <div class="col-xs-2"></div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-6">
-                    <form id="form1" runat="server">
                     <div style="width: 200px; height: 165px; background-color: white;">
                      <img id="blah" src="#" width="200px" height="165px" alt="" />
                      </div>
                      <br>
                  <label class="btn btn-verde-modal2">
-                    SUBIR FOTO <input type='file' id="imgInp" style="display: none;" />
+                    SUBIR FOTO <input name="imagen" type='file' id="imgInp" style="display: none;" />
                 </label>
-                   </form>
                  </div>
                  <div class="col-xs-6">
-                   <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
+                   <input class="form-control without-radius" type="text" name="breved" placeholder="BREVE DESCRIPCIÓN">
                    <br>
-                   <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
+                   <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="brevec" id="" cols="30" rows="3"></textarea>
                    <br>
-                   <select class="form-control without-radius" name="" >
-                    <option value="volvo">Presentación</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
-                  </select>
+                  <input class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
                   <br>
-                  <input class="without-radius" type="number" name="" placeholder="PRECIO">
+                  <input class="without-radius" type="number" name="precio" placeholder="PRECIO">
                   <br>
-
                 </div>
               </div>
               <br>
               <div class="row"> 
                 <div class="col-xs-12">
-                  <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" id="" cols="30" rows="4"></textarea>
+                  <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="empleo" id="" cols="30" rows="4"></textarea>
                   <br>
-                  <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="" cols="30" rows="4"></textarea>
+                  <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="beneficios" id="" cols="30" rows="4"></textarea>
                 </div>
               </div>
-
             </div>  
-
           </div>
           <div class="modal-footer inferior-modal">
             <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-            <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+            <!-- <button type="button" class="btn btn-verde-modal">GUARDAR</button> -->
+            {{ Form::submit('GUARDAR', ['class' => 'btn btn-verde-modal']) }}
           </div>
+            {{ Form::close() }}
         </div>
       </div>
     </div>
@@ -306,7 +307,7 @@
               <br>
               <div class="row"> 
                 <div class="col-xs-6">
-                   <form id="form2" runat="server">
+                   <form>
                     <div style="width: 200px; height: 165px; background-color: white;">
                      <img id="blah2" src="#" width="200px" height="165px" alt="" />
                      </div>
@@ -413,7 +414,7 @@
 $("#imgInp").change(function(){
     readURL(this);
 });
-function readURL(input) {
+function readURL1(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -426,7 +427,7 @@ function readURL(input) {
 }
 
 $("#imgInp2").change(function(){
-    readURL(this);
+    readURL1(this);
 });
   </script>
 

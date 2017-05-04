@@ -23,6 +23,7 @@ Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
 Route::group(['before' => 'auth'], function()
 {
     Route::get('/Admin/productos', 'AdminController@ShowProductos'); // Vista de inicio de productos
+    Route::post('/Admin/agregarP', 'AdminController@AgregarP'); // Vista de inicio de productos
     Route::get('/Admin/pedidos', 'AdminController@ShowPedidos'); // Vista de inicio de pedidos
     Route::get('/Admin/usuarios', 'AdminController@ShowUsuarios'); // Vista de inicio de usuarios
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
