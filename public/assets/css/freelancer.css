@@ -1,7 +1,22 @@
+/*menu tienda*/
+.li-separation{
+    padding: 0 28px !important;
+    margin-top: 30px !important;
+}
 
-/*Placeholder formularios*/
-
-/* Fin Placeholder formularios*/
+.menu-tienda{
+    font-size: 24px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+}
+.menu-tienda:hover{
+    font-weight: bold !important;
+    font-size: 24px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+}
+/*Fin menu tienda*/
 .pagos{
     padding-top: 5px;
 }
@@ -134,16 +149,7 @@ text-align: center;
  font-weight: bold !important;
   padding: 10px 10px !important;
 }
-.menu-tienda{
-    font-size: 24px !important;
-    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
-    color: white !important;
-}
-.menu-tienda:hover{
-    font-size: 24px !important;
-    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
-    color: #444444 !important;
-}
+
 .lista-menu:hover{
     color: #FD9C1C;
 }
