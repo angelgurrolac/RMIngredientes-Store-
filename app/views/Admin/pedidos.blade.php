@@ -178,11 +178,11 @@
                      @foreach($pedidos as $key => $value)
                            <tr>
                               <td>{{$value->id}}</td>
-                              <td>{{$value->id}}</td>
-                              <td>{{$value->id}}</td>
+                              <td>{{$value->pnombre}}</td>
+                              <td>{{$value->nombre}} {{$value->ap_paterno}} {{$value->ap_materno}}</td>
                               <td>{{$value->total}}</td>
                               <td>{{$value->domicilio}}</td>
-                              <td>{{$value->created_at}}</td>
+                              <td>{{$value->fecha}}</td>
                               <td>{{$value->estatus}}</td>
                               <td><button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button></td>
 

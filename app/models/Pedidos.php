@@ -4,6 +4,31 @@ class Pedidos extends Eloquent
 {
 	protected $table = "pedidos";
 
+	public function scopePedidos(){
+
+		$pedidos = DB::table('pedidos as p')
+
+		->join('detalle_pedidos as detalle',function($join){
+							$join->on('detalle.id_pedido','=','p.id');
+					})
+		->join('productos as productos',function($join){
+							$join->on('detalle.id_producto','=','productos.id');
+					})
+		->join('users as u',function($join){
+						$join->on('p.id_user','=','u.id');
+					}) 
+
+		->select(DB::raw('p.id as id, u.nombre, u.ap_paterno , u.ap_materno, 
+			 GROUP_CONCAT(productos.nombre) as pnombre, p.total, p.domicilio as domicilio, DATE(p.created_at) as fecha,
+			 p.estatus'))
+
+		->orderBy('p.id','asc')
+		->groupBy('u.id');
+
+
+		return $pedidos;
+	}
+
 
 	public function scopeVentas(){
 

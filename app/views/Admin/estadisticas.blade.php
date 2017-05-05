@@ -133,12 +133,12 @@
                 </div><!-- /.row -->
                 <div class="row">
                     <div class="col-lg-5 fondo-paneles">
+                        @foreach($productos as $key => $value)
                         <div class="col-lg-2">
-                            <img width="60px" height="100px" src="../assets/img/demolpan-rmingredientes.png" alt="producto">
+                            <img width="60px" height="100px" src="{{asset($value->imagen)}}" alt="producto">
                         </div>
                         <div class="col-lg-10">
                             <p class="estilo-estadistica">PRODUCTO(S) MÁS VENDIDO(S)</p>
-                            @foreach($productos as $key => $value)
                             <p class="producto-vendido">{{$value->nombre}}</p>
                             @endforeach
                         </div>                
@@ -146,12 +146,13 @@
                     <div class="col-lg-1"></div>
 
                     <div class="col-lg-5 fondo-paneles">
+                        @foreach($productosm as $key => $value)
                      <div class="col-lg-2">
-                        <img width="60px" height="100px" src="../assets/img/demolpan-rmingredientes.png" alt="producto">
+                        <img width="60px" height="100px" src="{{asset($value->imagen)}}" alt="producto">
                     </div>
                     <div class="col-lg-10">
                         <p class="estilo-estadistica">PRODUCTO(S) MENOS VENDIDO(S)</p>
-                        @foreach($productosm as $key => $value)
+                        
                         <p class="producto-vendido">{{$value->nombre}}</p>
                         @endforeach
                     </div> 

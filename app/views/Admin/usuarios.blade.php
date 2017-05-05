@@ -201,6 +201,7 @@
       <!-- Modal Nuevo usuario-->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
+          {{ Form::open(['url' => 'Admin/AgregarU']) }}
           <div class="modal-content contenido-modal">
             <div class="modal-header">
               <h5 class="modal-title titulo-modal" id="exampleModalLabel">Agregar nuevo usuario</h5>
@@ -208,33 +209,51 @@
             <div class="modal-body cuerpo-modal">
               <div class="container-fluid">
                 <div class="row"> 
+                  <div class="col-xs-12">
+                  <input class="form-control without-radius" type="text" name="nombre" placeholder="NOMBRE(S)">
+                  </div>
+                </div>
+                <br>
+                <div class="row"> 
                   <div class="col-xs-6">
-
-                    <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE(S)">
+                    <input class="form-control without-radius" type="text" name="a_paterno" placeholder="APELLIDO PATERNO">
                   </div>
                   <div class="col-xs-6">
-                    <input class="form-control without-radius" type="text" name="" placeholder="APELLIDO(S)">
+                    <input class="form-control without-radius" type="text" name="a_materno" placeholder="APELLIDO MATERNO">
                   </div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-12">
-                  <input class="form-control without-radius" type="text" name="" placeholder="DIRECCIÓN">
+                  <input class="form-control without-radius" type="text" name="direccion" placeholder="DIRECCIÓN">
                   </div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-3">
-                    <input class="form-control without-radius" type="number" name="" placeholder="C.P.">
+                    <input class="form-control without-radius" type="number" name="cp" placeholder="C.P.">
                   </div>
                   <div class="col-xs-9">
-                    <input class="form-control without-radius" type="text" name="" placeholder="TELÉFONO">
+                    <input class="form-control without-radius" type="text" name="telefono" placeholder="TELÉFONO">
+                  </div>
+                </div>
+                <br>
+                <div class="row"> 
+                  <div class="col-xs-3">
+                    <input class="form-control without-radius" type="number" name="edad" placeholder="EDAD">
+                  </div>
+                  <div class="col-xs-9">
+                    <select class="form-control without-radius" placeholder="SEXO" name="sexo">
+  <option value="volvo">FEMENINO</option>
+  <option value="saab">MASCULINO</option>
+tion>
+</select>
                   </div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-12">
-                    <input class="form-control without-radius" type="email" name="" placeholder="CORREO ELECTRÓNICO">
+                    <input class="form-control without-radius" type="email" name="correo" placeholder="CORREO ELECTRÓNICO">
                   </div>
                 </div>
 
@@ -243,7 +262,10 @@
             </div>
             <div class="modal-footer inferior-modal">
               <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-              <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+              <!-- <button type="button" class="btn btn-verde-modal">GUARDAR</button> -->
+              {{ Form::submit('GUARDAR', ['class' => 'btn btn-verde-modal']) }}
+          </div>
+            {{ Form::close() }}
             </div>
           </div>
         </div>

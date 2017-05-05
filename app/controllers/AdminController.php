@@ -22,12 +22,12 @@ class AdminController extends \BaseController {
 	}
 	public function ShowPedidos()
 	{
-		$pedidos=Pedidos::All();
+		$pedidos=Pedidos::Pedidos()->get();
 		return View::make('Admin.pedidos',compact('pedidos'));
 	}
 	public function ShowUsuarios()
 	{
-		$usuarios=User::where('rol','=','1')->get();
+		$usuarios=User::where('rol','=','2')->get();
 		return View::make('Admin.usuarios',compact('usuarios'));
 	}	
 	public function ShowEstadisticas()
@@ -75,6 +75,34 @@ class AdminController extends \BaseController {
 		$producto->save();
 
 		return Redirect::to('Admin/productos');
+	}
+
+	public function AgregarU(){
+		$nombre = Input::get('nombre');
+		$a_paterno = Input::get('a_paterno');
+		$a_materno = Input::get('a_materno');
+		$direccion = Input::get('direccion');
+		$cp = Input::get('cp');
+		$telefono = Input::get('telefono');
+		$edad = Input::get('edad');
+		$sexo = Input::get('sexo');
+		$correo = Input::get('correo');
+
+		$user = new User;
+		$user->nombre = $nombre;
+		$user->ap_paterno = $a_paterno;
+		$user->ap_materno = $a_materno;
+		$user->direccion = $direccion;
+		$user->codigo_postal = $cp;
+		$user->edad = $edad;
+		$user->sexo = $sexo;
+		$user->telefono = $telefono;
+		$user->correo = $correo;
+		$user->rol = 2;
+		$user->estatus = 1;
+		$user->save();
+
+		return Redirect::to('Admin/usuarios');
 	}
 
 }
