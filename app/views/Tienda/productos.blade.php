@@ -91,12 +91,12 @@
             <!-- navbar header -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav text-center" role="menu">
-                    <li><a class="menu-tienda text-center" href="#">Conocenos</a></li>
-                    <li><a class="menu-tienda text-center" href="#">Productos</a></li>
-                    <li><a class="menu-tienda text-center" href="#">Demostraciones</a></li>
+                    <li class="li-separation" ><a class="menu-tienda text-center" href="#">CONÓCENOS</a></li>
+                    <li class="li-separation"><a class="menu-tienda text-center" href="#">PRODUCTOS</a></li>
+                    <li class="li-separation"><a class="menu-tienda text-center" href="#">DEMOSTRACIONES</a></li>
              <!--        <li class="divider"></li> -->
-                    <li><a class="menu-tienda text-center" href="#">Contacto</a></li>
-                    <li class="glyphicon glyphicon-shopping-cart"><a href="#"></a></li>
+                    <li class="li-separation"><a class="menu-tienda text-center" href="#">CONTACTO</a></li>
+                    <li class=" li-separation glyphicon glyphicon-shopping-cart"><a class="menu-tienda text-center" href="#"></a></li>
                 </ul>
                   <div class="row row-white"></div>
             <div class="row color-degradado"> </div>
