@@ -76,101 +76,144 @@
 
 <body class="body-gris">
 
-    <div id="wrapper">
-  
-        <nav class="navbar navbar-width navbar-fixed-top navbar-inverse " style="margin-bottom: 0">
-            <div class="navbar-header">
-                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
-            </div>
-            <!-- navbar header -->
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav text-center" role="menu">
-                    <li class="li-separation" ><a class="menu-tienda text-center" href="#">CONÓCENOS</a></li>
-                    <li class="li-separation"><a class="menu-tienda text-center" href="#">PRODUCTOS</a></li>
-                    <li class="li-separation"><a class="menu-tienda text-center" href="#">DEMOSTRACIONES</a></li>
-             <!--        <li class="divider"></li> -->
-                    <li class="li-separation"><a class="menu-tienda text-center" href="#">CONTACTO</a></li>
-                    <li class=" li-separation glyphicon glyphicon-shopping-cart"><a class="menu-tienda text-center" href="#"></a></li>
-                </ul>
-                  <div class="row row-white"></div>
-            <div class="row color-degradado"> </div>
-               <!--  <div class="pull-right navbar-logo">
-                    <ul class="nav navbar-nav pull-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Presentation<span class="glyphicon glyphicon-shopping-cart"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="divider"></li>
-                                <li><a href="http://192.168.151.3:1000" target="_blank">Sahuta Community Development</a></li>
-                                <li><a href="http://192.168.151.3:1000/lippo.html" target="_blank">Lippo At a Glance</a></li>
-                                <li><a href="http://192.168.151.3:1000/rpa.html" target="_blank">What is Around us</a></li>
-                                <li><a href="/documents/person-entity-manager.html" target="_blank">Global Presentation</a></li>
-                                <li class="divider"></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div> -->
-            </div>
-        </nav>
-
-        <div class="row" style="margin-top: 30px;">
-            <div class="col-md-3 bajar-barra-nav2">
-                <h3 class="titulo-categoria">CATEGORÍAS</h3>
-                <ul class="nav" role="menu">
-                    <li><a class="lista-categoria" href="#">Tortillas de Maíz</a></li>
-                    <li><a class="lista-categoria" href="#">Tortillas de Harina</a></li>
-                    <li><a class="lista-categoria" href="#">Panificadoras</a></li>
-                    <li><a class="lista-categoria" href="#">Especializado</a></li>
-                </ul>
-            </div>
-           <!--  <div class="col-md-9">
-                <br />
-                <h2>Body</h2>
-            </div> -->
-            <div id="page-wrapper">
-            <div class="row align-items-center">
-              <div class="col-lg-3">
-                <h1 class=" titulos-secciones">ENVÍOS</h1>
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-               <div class="input-group margen-elementos">
-                  <span class="input-group-btn btn-buscar ">
-                    <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
-                </span>
-                <input type="text" class="form-control input-buscar" placeholder="BUSCAR ENVÍO">
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-3">
-
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-    <!-- /.row -->
-    <div class="row">
-
-        
-       <!-- /.table-responsive -->
-
-   </div>
-   <!-- /.row -->
-</div>
-<!-- /#page-wrapper -->
-        </div>
     
+        <div id="wrapper">
 
-      
-<!-- /#page-wrapper -->
+          <!-- Navigation -->
+          <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
+            </div>
+            <!-- /.navbar-header -->
 
-</div>
+            <ul class="nav navbar-top-links navbar-right bajar-barra2">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll li-separation ">
+                        <a class="menu-tienda" id="conocenos" href="#conocenos2">CONÓCENOS</a>
+                        <hr id="hr-conocenos" class="menutext">
+
+                    </li>
+                    <li class="page-scroll li-separation">
+                        <a class="menu-tienda" id="productos" href="#portfolio">PRODUCTOS</a>
+                        <hr id="hr-productos" class="menutext">
+                    </li>
+                    <li class="page-scroll li-separation">
+                        <a class="menu-tienda" id="demostraciones" href="#demostracion">DEMOSTRACIONES</a>
+                        <hr id="hr-demostraciones" class="menutext">
+                    </li>
+                    <li class="page-scroll li-separation">
+                        <a class="menu-tienda" id="contacto" href="#contactanos">CONTACTO</a>
+                        <hr id="hr-contacto" class="menutext">
+                    </li>
+                      <li class="page-scroll li-separation glyphicon glyphicon-shopping-cart size-cart">
+                        <a class="menu-tienda" id="#" href="#"></a>
+                        
+                    </li>
+
+                <li>
+               
+                
+                <!-- /.dropdown-user -->
+              </li>
+              <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="row row-white"></div>
+            <div class="row color-degradado"> </div>
+
+            <div class="navbar-default sidebar sidebar-height" role="navigation">
+              <div class="sidebar-nav navbar-collapse">
+                <ul class="nav " id="side-menu">
+                  <li>
+                   CATEGORÍAS
+                  </li>
+                  <li>
+                    <a class="lista-menu" href=""> Tortillas de Maíz</a>
+                  </li>
+                  <li>
+                    <a class="lista-menu"  href="">Tortillas de Harina</a>
+                  </li>
+                  <li>
+                    <a class="lista-menu"  href="" >Panificadoras</a>
+                  </li>
+                  <li>
+                    <a class="lista-menu"  href="">Especializado</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+          </nav>
+
+          <div id="page-wrapper">
+            <div class="row align-items-center">
+              <div class="col-lg-4">
+                <h1 class=" titulos-secciones">PRODUCTOS</h1>
+              </div><!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+               <div class="input-group margen-elementos">
+                <span class="input-group-btn btn-buscar ">
+                  <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
+                </span>
+                <input type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-2">
+
+              <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
+              
+
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+          <!-- /.row -->
+          <div class="row">
+
+            <div class="table-responsive" style="overflow: hidden;">
+              <table class="table ">
+                <thead class="encabezados-tabla">
+                  <tr>
+                    <th class="text-center">PRODUCTO</th>
+                    <th class="text-center">DESCRIPCIÓN</th>
+                    <th class="text-center">MODO DE EMPLEO</th>
+                    <th class="text-center">BENEFICIOS</th>
+                    <th class="text-center">PRECIOS</th>
+                    <th class="text-center">CATEGORIA</th>
+                    <th class="text-center">IMAGEN</th>
+                    <th class="text-center">ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                </tbody>
+              </table>
+            </div>
+            <!-- /.table-responsive -->
+
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+      </div>
+    
 <div  id="fixed-bar"> </div>
 <!-- /#wrapper -->
 
+<script src="{{ URL::asset('assets/js/menu.js') }}"></script>
 <!-- jQuery -->
 <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+
+
+<script src="{{ URL::asset('assets/js/menu.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
