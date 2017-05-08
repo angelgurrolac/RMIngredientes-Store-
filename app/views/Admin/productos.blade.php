@@ -119,6 +119,12 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right bajar-barra">
+              <!-- <li class="dropdown">
+                <a href="">Hola</a>
+              </li>
+              <li class="dropdown">
+                <a href="Hola">Adiós</a>
+              </li> -->
               <li class="dropdown">
                 <a class="dropdown-toggle estilo-user" data-toggle="dropdown" href="#">
                   <i class="glyphicon glyphicon-user"></i> {{ Session::get('nombre')}} <i class="fa fa-caret-down"></i>
