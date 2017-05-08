@@ -12,7 +12,7 @@ class Productos extends Eloquent
 							$join->on('p.id_categoria','=','cat.id');
 					})
 
-		->select('p.id','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
+		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
 			'p.imagen','cat.nombre as nombreC');
 
 		return $productos;

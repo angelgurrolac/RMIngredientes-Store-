@@ -18,7 +18,8 @@ class AdminController extends \BaseController {
 	public function ShowProductos()
 	{
 		$productos=Productos::Productos()->get();
-		return View::make('Admin.productos',compact('productos'));
+		$categorias = Categorias::All();
+		return View::make('Admin.productos',compact('productos','categorias'));
 	}
 	public function ShowPedidos()
 	{
@@ -54,12 +55,13 @@ class AdminController extends \BaseController {
 		$precio = Input::get('precio');
 		$empleo = Input::get('empleo');
 		$beneficios = Input::get('beneficios');
+		$categoria = Input::get('categoria');
 
 		$producto = new Productos;
 		if($imagen!=null){
 		$name_image = $imagen -> getClientOriginalName();	
-		$image_final = 'assets/img/' .$name_image;
-		$imagen -> move('assets/img/', $name_image );
+		$image_final = 'public/assets/img/' .$name_image;
+		$imagen -> move('public/assets/img/', $name_image );
 		$producto->imagen = $image_final;
 		}
 		$producto->nombre = $nombre;
@@ -71,10 +73,27 @@ class AdminController extends \BaseController {
 		$producto->beneficios = $beneficios;
 		$producto->estado = 1;
 		$producto->contador = 0;
-		$producto->id_categoria = 1;
+		$producto->id_categoria = $categoria;
 		$producto->save();
 
 		return Redirect::to('Admin/productos');
+	}
+
+	public function EditarP(){
+			if(Input::has('Editar'))
+		{
+			$productoE = Productos::find(Input::get('id_producto'));
+			$cat =  Categorias::find($producto->id_categoria)->lists('nombre','id');
+	    	// $categorias = Categorias::where('activa','=','1')->lists('nombre','id');		
+			return View::make('Admin.productos',compact('productoE','cat'));
+		}
+		elseif (Input::has('Eliminar')) 
+		{
+			$producto = Productos::find(Input::get('id_producto'));
+			$producto->delete();
+			return Redirect::to('/Admin/productos');
+		}
+
 	}
 
 	public function AgregarU(){

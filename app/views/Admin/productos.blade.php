@@ -17,14 +17,8 @@
 
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
-  <!-- MetisMenu CSS -->
-  <link href="{{ asset('assets/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
-
   <!-- Custom CSS -->
   <link href="{{ asset('assets/dist/css/sb-admin-2.css') }}" rel="stylesheet">
-
-  <!-- Morris Charts CSS -->
-  <link href="{{ asset('assets/vendor/morrisjs/morris.css') }}" rel="stylesheet">
 
   <!-- Custom Fonts -->
   <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -207,13 +201,15 @@
                    <td class="text-center">${{$value->precio_unitario}}</td>
                    <td>{{$value->nombreC}}</td>
                    <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
-                   <td><button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
-                    <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
-                <!--   {{Form::open(array('url'=>'/admin/editarA', 'id' => $value->id))}}
-                {{ Form::submit('Editar', array('name'=> 'Editar','class' => 'btn btn-success direccionar')) }} 
-                {{ Form::submit('Eliminar', array('name'=> 'Eliminar','class' => 'btn btn-danger')) }}</td> 
-                <input type="hidden" name="id_producto" value="{{$value->id}}">
-                {{Form::close()}} --></td>
+                   <td><input name="Editar" data-toggle="modal" data-target="#myModal2"
+                   data-productide="{{$value->id}}" data-productnamee="{{$value->nombre}}"
+                   data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
+                   data-productdesc="{{$value->descripcion_corta}}" data-productmodo = "{{$value->modo_empleo}}"
+                   data-productben = "{{$value->beneficios}}" data-productprecio = "{{$value->precio_unitario}}"
+                   data-productcat = "{{$value->nombreC}}" data-productimage = "{{asset($value->imagen)}}"
+                    type="button" class="btn btn-crud btn-sm margen-elementos">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                  <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span>
                   </tr>
                   @endforeach
                 </tbody>
@@ -266,6 +262,22 @@
                   <br>
                   <input class="without-radius" type="number" name="precio" placeholder="PRECIO">
                   <br>
+                  <select name="categoria">
+                    @foreach($categorias as $key1 => $value1)
+                    <?php
+                        if ($value->id == $value1->id) {
+                           $valor = 'Si';
+                          }
+                          else
+                          {
+                             $valor = 'No';
+                          }
+                        
+                     ?>
+                     <option value="{{$value1->id}}">{{$value1->nombre}} {{$valor}}</option>
+
+                     @endforeach
+                  </select>
                 </div>
               </div>
               <br>
@@ -287,6 +299,9 @@
         </div>
       </div>
     </div>
+
+
+
     <!-- Modal modificar-->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -299,8 +314,7 @@
               <div class="row"> 
                 <div class="col-xs-2"></div>
                 <div class="col-xs-8">
-
-                  <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE DEL PRODUCTO">
+                  <input id="pName2" class="form-control without-radius" type="text" placeholder="NOMBRE DEL PRODUCTO">
                 </div>
                 <div class="col-xs-2"></div>
               </div>
@@ -309,7 +323,7 @@
                 <div class="col-xs-6">
                    <form>
                     <div style="width: 200px; height: 165px; background-color: white;">
-                     <img id="blah2" src="#" width="200px" height="165px" alt="" />
+                     <img id="blah2" src="" width="200px" height="165px" alt="" />
                      </div>
                      <br>
                  <label class="btn btn-verde-modal2">
@@ -318,28 +332,38 @@
                    </form>
                 </div>
                 <div class="col-xs-6">
-                 <input class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
+                 <input id="breved" class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
                  <br>
-                 <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
+                 <textarea id="completad" class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
                  <br>
-                 <select class="form-control without-radius" name="" >
-                  <option value="volvo">Presentación</option>
-                  <option value="saab">Saab</option>
-                  <option value="fiat">Fiat</option>
-                  <option value="audi">Audi</option>
-                </select>
+                 <input id="presentacion" class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
                 <br>
-                <input class="without-radius" type="number" name="" placeholder="PRECIO">
+                <input id="precio" class="without-radius" type="number" name="" placeholder="PRECIO">
                 <br>
+                <select id="categoria">
+                   @foreach($categorias as $key1 => $value1)
+                    <?php
+                        if ($value->id == $value1->id) {
+                           $valor = 'Si';
+                          }
+                          else
+                          {
+                             $valor = 'No';
+                          }
+                        
+                     ?>
+                     <option value="{{$value1->id}}">{{$value1->nombre}} {{$valor}}</option>
 
+                     @endforeach
+                  </select>
               </div>
             </div>
             <br>
             <div class="row"> 
               <div class="col-xs-12">
-                <textarea class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" id="" cols="30" rows="4"></textarea>
+                <textarea id="productmodo" class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" cols="30" rows="4"></textarea>
                 <br>
-                <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="" cols="30" rows="4"></textarea>
+                <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="productben" cols="30" rows="4"></textarea>
               </div>
             </div>
 
@@ -362,14 +386,18 @@
         </div>
         <div class="modal-body cuerpo-modal-elimnar">
           <div class="container-fluid">
-            <p class="texto-eliminar">¿Está seguro que desea eliminar el producto Benzoato de Sodio?</p>
+            <p class="texto-eliminar">¿Está seguro que desea eliminar el producto <span id="pName"></span>?</p>
 
           </div>  
 
         </div>
         <div class="modal-footer inferior-modal-eliminar text-center ">
           <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button>
-          <button type="button" class="btn btn-naranja-modal">SI</button>
+            {{Form::open(array('url'=>'/Admin/editarP', 'id' => $value->id))}}
+                {{ Form::submit('SÍ', array('name'=> 'Eliminar','class' => 'btn btn-naranja-modal')) }}</td> 
+                <input id="value" type="hidden" name="id_producto">
+                {{Form::close()}}
+          <!-- <button type="button" class="btn btn-naranja-modal">SI</button> -->
         </div>
       </div>
     </div>
@@ -388,17 +416,47 @@
   <!-- Bootstrap Core JavaScript -->
   <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
-  <!-- Metis Menu Plugin JavaScript -->
-  <script src="{{ URL::asset('assets/vendor/metisMenu/metisMenu.min.js') }}"></script>
-
-  <!-- Morris Charts JavaScript -->
-  <script src="{{ URL::asset('assets/vendor/raphael/raphael.min.js') }}"></script>
-  <script src="{{ URL::asset('assets/vendor/morrisjs/morris.min.js') }}"></script>
-  <script src="{{ URL::asset('assets/data/morris-data.js') }}"></script>
-
   <!-- Custom Theme JavaScript -->
   <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+
    <script type="text/javascript">
+   $(document).ready(function(){
+   //triggered when modal is about to be shown
+       // modificar
+    $('#myModal2').on('show.bs.modal', function(e) {
+    //get data-id attribute of the clicked element
+        var productId2 = $(e.relatedTarget).data('productide');
+        var productName2 = $(e.relatedTarget).data('productnamee');
+        var productdesco = $(e.relatedTarget).data('productdesco');
+        var productdesc = $(e.relatedTarget).data('productdesc');
+        var productmodo = $(e.relatedTarget).data('productmodo');
+        var productben = $(e.relatedTarget).data('productben');
+        var productprecio = $(e.relatedTarget).data('productprecio');
+        var productimagen = $(e.relatedTarget).data('productimage');
+        var productpresentacion = $(e.relatedTarget).data('productpresentacion');
+        var productcat = $(e.relatedTarget).data('productcat');
+        $("#myModal2 #pName2").val(productName2);
+        $("#myModal2 #completad").val(productdesco);
+        $("#myModal2 #breved").val(productdesc);
+        $("#myModal2 #productmodo").val(productmodo);
+        $("#myModal2 #productben").val(productben);
+        $("#myModal2 #precio").val(productprecio);
+        $("#myModal2 #presentacion").val(productpresentacion);
+        $("#myModal2 #categoria").val(productcat);
+        $('#blah2').attr('src', productimagen);
+    // $("#value").val(productId);
+});
+   // eliminar
+  $('#myModal3').on('show.bs.modal', function(e) {
+    //get data-id attribute of the clicked element
+        var productId = $(e.relatedTarget).data('productid');
+        var productName = $(e.relatedTarget).data('productname');
+    $("#myModal3 #pName").text(productName);
+    $("#value").val(productId);
+    // $("#delForm").attr('action', 'put your action here with productId');
+});
+
+});
    function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();

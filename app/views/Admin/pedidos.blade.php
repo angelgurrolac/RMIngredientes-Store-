@@ -162,7 +162,7 @@
             <table class="table ">
                 <thead class="encabezados-tabla">
                     <tr>
-                        <th class="text-center">IDENTIFICADOR</th>
+                        <th class="text-center">ID</th>
                         <th class="text-center">DETALLES DEL PEDIDO</th>
                         <th class="text-center">CLIENTE</th>
                         <th class="text-center">PRECIO TOTAL</th>
@@ -170,8 +170,6 @@
                         <th class="text-center">FECHA</th>
                         <th class="text-center">ESTATUS</th>
                         <th class="text-center">ACCIÓN</th>
-                        
-
                     </tr>
                 </thead>
                 <tbody>
