@@ -214,7 +214,7 @@
                    data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
                    data-productdesc="{{$value->descripcion_corta}}" data-productmodo = "{{$value->modo_empleo}}"
                    data-productben = "{{$value->beneficios}}" data-productprecio = "{{$value->precio_unitario}}"
-                   data-productcat = "{{$value->nombreC}}" data-productimage = "{{asset($value->imagen)}}"
+                   data-productcat = "{{$value->idC}}" data-productimage = "{{asset($value->imagen)}}"
                     type="button" class="btn btn-crud btn-sm margen-elementos">
                     <span class="glyphicon glyphicon-pencil"></span>
 
@@ -304,7 +304,7 @@
     <!-- Modal modificar-->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-      {{ Form::open(['url' => 'Admin/EditarP','files'=>'true']) }}
+      {{ Form::open(['url' => 'Admin/editarP','files'=>'true']) }}
         <div class="modal-content contenido-modal">
           <div class="modal-header">
             <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar producto</h5>
@@ -340,20 +340,11 @@
                 <br>
                 <input name="precioE" id="precio" class="without-radius" type="number" placeholder="PRECIO">
                 <br>
-                <select id="categoria">
-                   @foreach($categorias as $key1 => $value1)
-                    <?php
-                        if ($value->id == $value1->id) {
-                           $valor = 'Si';
-                          }
-                          else
-                          {
-                             $valor = 'No';
-                          }
-                     ?>
-                     <option name="categoriaE" value="{{$value1->id}}">{{$value1->nombre}} {{$valor}}</option>
+                <select id="categoria" name="categoriaE">
+                   @foreach($categorias as $key2 => $value2)
+                     <option value="{{$value2->id}}">{{$value2->nombre}}</option>
                     @endforeach
-                  </select>
+                </select>
               </div>
             </div>
             <br>
@@ -371,9 +362,10 @@
         <div class="modal-footer inferior-modal">
           <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
           {{ Form::submit('GUARDAR', array('name'=> 'Editar','class' => 'btn btn-verde-modal')) }}</td> 
-                <input id="value" type="hidden" name="id_producto">
+                <input id="value2" type="hidden" name="id_productoE">
         </div>
       </div>
+      {{Form::close()}}
     </div>
   </div>
   <!-- Modal Eliminar-->
@@ -443,6 +435,7 @@
         $("#myModal2 #presentacion").val(productpresentacion);
         $("#myModal2 #categoria").val(productcat);
         $('#blah2').attr('src', productimagen);
+        $("#value2").val(productId2);
     // $("#value").val(productId);
 });
    // eliminar

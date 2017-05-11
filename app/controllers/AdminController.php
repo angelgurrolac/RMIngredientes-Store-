@@ -60,7 +60,7 @@ class AdminController extends \BaseController {
 		$producto = new Productos;
 		if($imagen!=null){
 		$name_image = $imagen -> getClientOriginalName();	
-		$image_final = 'public/assets/img/' .$name_image;
+		$image_final = 'assets/img/' .$name_image;
 		$imagen -> move('public/assets/img/', $name_image );
 		$producto->imagen = $image_final;
 		}
@@ -82,10 +82,36 @@ class AdminController extends \BaseController {
 	public function EditarP(){
 			if(Input::has('Editar'))
 		{
-			$productoE = Productos::find(Input::get('id_producto'));
-			$cat =  Categorias::find($producto->id_categoria)->lists('nombre','id');
-	    	// $categorias = Categorias::where('activa','=','1')->lists('nombre','id');		
-			return View::make('Admin.productos',compact('productoE','cat'));
+			$nombre = Input::get('nombreE');
+		$imagen = Input::file('imagenE');
+		$breved = Input::get('brevedE');
+		$brevec = Input::get('brevecE');
+		$presentacion = Input::get('presentacionE');
+		$precio = Input::get('precioE');
+		$empleo = Input::get('empleoE');
+		$beneficios = Input::get('beneficiosE');
+		$categoria = Input::get('categoriaE');
+		$productoE = Productos::find(Input::get('id_productoE'));
+
+			if($imagen!=null){
+		$name_image = $imagen -> getClientOriginalName();	
+		$image_final = 'assets/img/' .$name_image;
+		$imagen -> move('public/assets/img/', $name_image );
+		$productoE->imagen = $image_final;
+		}
+
+		$productoE->nombre = $nombre;
+		$productoE->descripcion_corta = $breved;
+		$productoE->descripcion_completa = $brevec;
+		$productoE->presentacion = $presentacion;
+		$productoE->precio_unitario = $precio;
+		$productoE->modo_empleo = $empleo;
+		$productoE->beneficios = $beneficios;
+		$productoE->estado = 1;
+		$productoE->contador = 0;
+		$productoE->id_categoria = $categoria;
+		$productoE->save();
+			return Redirect::to('/Admin/productos');
 		}
 		elseif (Input::has('Eliminar')) 
 		{

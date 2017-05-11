@@ -13,7 +13,7 @@ class Productos extends Eloquent
 					})
 
 		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
-			'p.imagen','cat.nombre as nombreC');
+			'p.imagen','cat.nombre as nombreC','cat.id as idC');
 
 		return $productos;
 	}
