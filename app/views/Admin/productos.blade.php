@@ -207,7 +207,9 @@
                    <td class="text-center">${{$value->precio_unitario}}</td>
                    <td>{{$value->nombreC}}</td>
                    <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
-                   <td><input name="Editar" data-toggle="modal" data-target="#myModal2"
+                   <td>
+<div>
+                   <input style="" name="Editar" data-toggle="modal" data-target="#myModal2"
                    data-productide="{{$value->id}}" data-productnamee="{{$value->nombre}}"
                    data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
                    data-productdesc="{{$value->descripcion_corta}}" data-productmodo = "{{$value->modo_empleo}}"
@@ -215,7 +217,9 @@
                    data-productcat = "{{$value->nombreC}}" data-productimage = "{{asset($value->imagen)}}"
                     type="button" class="btn btn-crud btn-sm margen-elementos">
                     <span class="glyphicon glyphicon-pencil"></span>
-                  <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span>
+
+                  <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn btn-crud btn-sm margen-elementos ">
+                  <span class="glyphicon glyphicon-trash">   </span>
                   </tr>
                   @endforeach
                 </tbody>
@@ -270,18 +274,7 @@
                   <br>
                   <select name="categoria">
                     @foreach($categorias as $key1 => $value1)
-                    <?php
-                        if ($value->id == $value1->id) {
-                           $valor = 'Si';
-                          }
-                          else
-                          {
-                             $valor = 'No';
-                          }
-                        
-                     ?>
-                     <option value="{{$value1->id}}">{{$value1->nombre}} {{$valor}}</option>
-
+                     <option value="{{$value1->id}}">{{$value1->nombre}}</option>
                      @endforeach
                   </select>
                 </div>
@@ -311,6 +304,7 @@
     <!-- Modal modificar-->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
+      {{ Form::open(['url' => 'Admin/EditarP','files'=>'true']) }}
         <div class="modal-content contenido-modal">
           <div class="modal-header">
             <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar producto</h5>
@@ -320,7 +314,7 @@
               <div class="row"> 
                 <div class="col-xs-2"></div>
                 <div class="col-xs-8">
-                  <input id="pName2" class="form-control without-radius" type="text" placeholder="NOMBRE DEL PRODUCTO">
+                  <input name="nombreE" id="pName2" class="form-control without-radius" type="text" placeholder="NOMBRE DEL PRODUCTO">
                 </div>
                 <div class="col-xs-2"></div>
               </div>
@@ -333,18 +327,18 @@
                      </div>
                      <br>
                  <label class="btn btn-verde-modal2">
-                    SUBIR FOTO <input type='file' id="imgInp2" style="display: none;" />
+                    SUBIR FOTO <input name="imagenE" type='file' id="imgInp2" style="display: none;" />
                 </label>
                    </form>
                 </div>
                 <div class="col-xs-6">
-                 <input id="breved" class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
+                 <input name="brevedE" id="breved" class="form-control without-radius" type="text" name="" placeholder="BREVE DESCRIPCIÓN">
                  <br>
-                 <textarea id="completad" class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="" id="" cols="30" rows="3"></textarea>
+                 <textarea id="completad" class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="brevecE" id="" cols="30" rows="3"></textarea>
                  <br>
-                 <input id="presentacion" class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
+                 <input name="presentacionE" id="presentacion" class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
                 <br>
-                <input id="precio" class="without-radius" type="number" name="" placeholder="PRECIO">
+                <input name="precioE" id="precio" class="without-radius" type="number" placeholder="PRECIO">
                 <br>
                 <select id="categoria">
                    @foreach($categorias as $key1 => $value1)
@@ -356,20 +350,18 @@
                           {
                              $valor = 'No';
                           }
-                        
                      ?>
-                     <option value="{{$value1->id}}">{{$value1->nombre}} {{$valor}}</option>
-
-                     @endforeach
+                     <option name="categoriaE" value="{{$value1->id}}">{{$value1->nombre}} {{$valor}}</option>
+                    @endforeach
                   </select>
               </div>
             </div>
             <br>
             <div class="row"> 
               <div class="col-xs-12">
-                <textarea id="productmodo" class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" cols="30" rows="4"></textarea>
+                <textarea name="empleoE" id="productmodo" class="form-control without-radius"  placeholder="MODO DE EMPLEO" name="" cols="30" rows="4"></textarea>
                 <br>
-                <textarea class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="productben" cols="30" rows="4"></textarea>
+                <textarea name="beneficiosE" class="form-control without-radius"  placeholder="BENEFICIOS" name="" id="productben" cols="30" rows="4"></textarea>
               </div>
             </div>
 
@@ -378,7 +370,8 @@
         </div>
         <div class="modal-footer inferior-modal">
           <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-          <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+          {{ Form::submit('GUARDAR', array('name'=> 'Editar','class' => 'btn btn-verde-modal')) }}</td> 
+                <input id="value" type="hidden" name="id_producto">
         </div>
       </div>
     </div>

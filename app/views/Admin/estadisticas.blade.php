@@ -179,10 +179,7 @@
             <div class="col-lg-1"></div>
 
             <div class="col-lg-5 fondo-paneles">
-             <div class="col-lg-2">
-                <img width="60px" height="100px" src="../assets/img/demolpan-rmingredientes.png" alt="producto">
-            </div>
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <p class="estilo-estadistica">SECCIÓN MÁS VISITADA</p>
 
                 <p class="producto-vendido">TORTILLAS DE MAÍZ</p>
@@ -253,14 +250,11 @@
             </div> 
 
         </div>
-     
-
-        <!-- /#page-wrapper -->
-
     </div>   
+    <br>
     <div class="row ">
        
-                <div class="col-lg-5 fondo-paneles">
+                <div class="col-lg-5 ">
            
         </div>
 
