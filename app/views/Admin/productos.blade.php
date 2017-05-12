@@ -170,7 +170,7 @@
                 <span class="input-group-btn btn-buscar ">
                   <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
                 </span>
-                <input type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
+                <input id="buscar" type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-2">
@@ -412,9 +412,42 @@
 
    <script type="text/javascript">
    $(document).ready(function(){
+    // buscar
+    $("#buscar").keypress(function(){
+  $.ajax({
+   url: '/Tienda/productos',
+   type: 'POST',
+   data: {categoria:'{{$value->id}}'},
+   dataType: 'JSON',
+   error: function() {
+      console.error("error");
+   },
+   success: function(respuesta) {
+      console.log(JSON.stringify(respuesta));
+    
+      if (respuesta) {
+                      var html = '<div>';
+                      html += '<ul>';
+                      html += '<li> Legajo: ' + respuesta.nombre + ' </li>';
+                      html += '<li> Nombre: ' + respuesta.detalles + ' </li>';
+                      html += '</ul>';
+                      html += '</div>';
+                      $("#respuesta").html(html);
+                   } else {
+                      $("#respuesta").html('<div> No hay ningún empleado con ese legajo. </div>');
+                   }
+   }
+})
+        
+    });
+
+
+
    //triggered when modal is about to be shown
        // modificar
     $('#myModal2').on('show.bs.modal', function(e) {
+
+
     //get data-id attribute of the clicked element
         var productId2 = $(e.relatedTarget).data('productide');
         var productName2 = $(e.relatedTarget).data('productnamee');
