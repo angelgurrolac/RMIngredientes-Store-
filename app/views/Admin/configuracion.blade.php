@@ -147,26 +147,28 @@
       <br>
         <p class="estilo-estadistica">CAMBIAR CONTRASEÑA</p>
         <br>
-         <form>
-  <div class="form-group">
+         {{Form::open(array('url' => '/admin/publicidad','files' => 'true'))}}
+           <div class="form-group">
    
-    <input type="password" class="form-control" id="formGroupExampleInput" placeholder="CONTRASEÑA ACTUAL">
+    <input type="password" class="form-control" placeholder="CONTRASEÑA ACTUAL">
+    @foreach($datos as $key => $value)
+    {{ Form::password('pass1', Input::old('password'), array('class' => 'form-control', 'id' => 'pass1', 'placeholder' => 'CONTRASEÑA ACTUAL')) }}
+    @endforeach
   </div>
   <div class="form-group">
  
-    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="NUEVA CONTRASEÑA">
+    <input type="password" class="form-control" placeholder="NUEVA CONTRASEÑA">
   </div>
    <div class="form-group">
  
-    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="CONFIRMAR NUEVA CONTRASEÑA">
+    <input type="password" class="form-control" placeholder="CONFIRMAR NUEVA CONTRASEÑA">
   </div>
   <br>
 
   <input type="submit" value="CAMBIAR" class="btn btn-verde-confi pull-right">
 
   
-
-</form>
+{{Form::close()}}
         
       </div>
       <div class="col-md-4"></div>

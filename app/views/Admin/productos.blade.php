@@ -16,12 +16,14 @@
   <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
 
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  
 
   <!-- Custom CSS -->
   <link href="{{ asset('assets/dist/css/sb-admin-2.css') }}" rel="stylesheet">
 
   <!-- Custom Fonts -->
   <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('assets/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -184,21 +186,21 @@
           <div class="row">
 
             <div class="table-responsive" style="overflow: hidden;">
-              <table class="table ">
-                <thead class="encabezados-tabla">
-                  <tr>
-                    <th class="text-center">PRODUCTO</th>
-                    <th class="text-center">DESCRIPCIÓN</th>
-                    <th class="text-center">MODO DE EMPLEO</th>
-                    <th class="text-center">BENEFICIOS</th>
-                    <th class="text-center">PRECIOS</th>
-                    <th class="text-center">CATEGORIA</th>
-                    <th class="text-center">IMAGEN</th>
-                    <th class="text-center">ACCIONES</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach($productos as $key => $value)
+              <table id="tabla" class="table table-striped">
+    <thead class="encabezados-tabla">
+        <tr>
+            <th class="text-center">PRODUCTO</th>
+            <th class="text-center">DESCRIPCIÓN</th>
+            <th class="text-center">MODO DE EMPLEO</th>
+            <th class="text-center">BENEFICIOS</th>
+            <th class="text-center">PRECIOS</th>
+            <th class="text-center">CATEGORIA</th>
+            <th class="text-center">IMAGEN</th>
+            <th class="text-center">ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+      @foreach($productos as $key => $value)
                   <tr>
                    <td>{{$value->nombre}}</td>
                    <td>{{$value->descripcion_completa}}</td>
@@ -207,8 +209,7 @@
                    <td class="text-center">${{$value->precio_unitario}}</td>
                    <td>{{$value->nombreC}}</td>
                    <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
-                   <td>
-<div>
+                   <td><div>
                    <input style="" name="Editar" data-toggle="modal" data-target="#myModal2"
                    data-productide="{{$value->id}}" data-productnamee="{{$value->nombre}}"
                    data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
@@ -217,13 +218,12 @@
                    data-productcat = "{{$value->idC}}" data-productimage = "{{asset($value->imagen)}}"
                     type="button" class="btn btn-crud btn-sm margen-elementos">
                     <span class="glyphicon glyphicon-pencil"></span>
-
                   <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn btn-crud btn-sm margen-elementos ">
                   <span class="glyphicon glyphicon-trash">   </span>
                   </tr>
                   @endforeach
-                </tbody>
-              </table>
+    </tbody>
+</table>
             </div>
             <!-- /.table-responsive -->
 
@@ -403,6 +403,7 @@
 
   <!-- jQuery -->
   <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ URL::asset('assets/js/jquery.dataTables.min.js') }}"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -412,37 +413,52 @@
 
    <script type="text/javascript">
    $(document).ready(function(){
-    // buscar
-    $("#buscar").keypress(function(){
-  $.ajax({
-   url: '/Tienda/productos',
-   type: 'POST',
-   data: {categoria:'{{$value->id}}'},
-   dataType: 'JSON',
-   error: function() {
-      console.error("error");
-   },
-   success: function(respuesta) {
-      console.log(JSON.stringify(respuesta));
-    
-      if (respuesta) {
-                      var html = '<div>';
-                      html += '<ul>';
-                      html += '<li> Legajo: ' + respuesta.nombre + ' </li>';
-                      html += '<li> Nombre: ' + respuesta.detalles + ' </li>';
-                      html += '</ul>';
-                      html += '</div>';
-                      $("#respuesta").html(html);
-                   } else {
-                      $("#respuesta").html('<div> No hay ningún empleado con ese legajo. </div>');
-                   }
-   }
-})
-        
+
+      var table = $('#tabla').DataTable({
+        "language": {
+            "lengthMenu": "Mostrando _MENU_ registros por página",
+            "zeroRecords": "No encontrado",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+            "infoEmpty": "No encontrado",
+            "infoFiltered": "(Filtrado de _MAX_ registros)",
+            "search":         "Buscar:",
+            "paginate": {
+                "first":      "Primero",
+                "last":       "Último",
+                "next":       "Siguiente",
+                "previous":   "Anterior"
+            }
+        }
     });
 
-
-
+//     // buscar
+//     $("#buscar").keypress(function(){
+//   $.ajax({
+//    url: '/Tienda/productos',
+//    type: 'POST',
+//    data: {categoria:'{{$value->id}}'},
+//    dataType: 'JSON',
+//    error: function() {
+//       console.error("error");
+//    },
+//    success: function(respuesta) {
+//       console.log(JSON.stringify(respuesta));
+    
+//       if (respuesta) {
+//                       var html = '<div>';
+//                       html += '<ul>';
+//                       html += '<li> Legajo: ' + respuesta.nombre + ' </li>';
+//                       html += '<li> Nombre: ' + respuesta.detalles + ' </li>';
+//                       html += '</ul>';
+//                       html += '</div>';
+//                       $("#respuesta").html(html);
+//                    } else {
+//                       $("#respuesta").html('<div> No hay ningún empleado con ese legajo. </div>');
+//                    }
+//    }
+// })
+        
+//     });
    //triggered when modal is about to be shown
        // modificar
     $('#myModal2').on('show.bs.modal', function(e) {

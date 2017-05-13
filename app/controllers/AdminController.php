@@ -41,8 +41,9 @@ class AdminController extends \BaseController {
 		$visitas = Visitas::VisitasTotal()->get();
 		return View::make('Admin.estadisticas',compact('productos','productosm','pedidos','cliente','pagos','visitas'));
 	}
+	
 	public function ChangePassword(){
-		$datos = User::where('nombre','=','Zayra');
+		$datos = User::where('nombre','=',Auth::user()->id);
 		return View::make('Admin.configuracion',compact('datos'));
 	}
 
