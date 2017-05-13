@@ -91,6 +91,22 @@
     font-size: 16px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
+/*input[type="button"]  {
+float: left;
+margin: 45px 0 15px 20px;
+width: 225px;
+height: 32px;
+color: white;
+background-color: transparent;
+background-image: url(../assets/img/whatsapp-rmingredientes.png);
+background-position: 50% 50%;
+background-repeat: no-repeat;
+border: 0 none;
+text-indent: 5px;
+}
+*/
+
+
         </style>
 
       </head>
@@ -209,17 +225,17 @@
                    <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
                    <td>
 <div>
-                   <input style="" name="Editar" data-toggle="modal" data-target="#myModal2"
+                   <input name="Editar" data-toggle="modal" data-target="#myModal2"
                    data-productide="{{$value->id}}" data-productnamee="{{$value->nombre}}"
                    data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
                    data-productdesc="{{$value->descripcion_corta}}" data-productmodo = "{{$value->modo_empleo}}"
                    data-productben = "{{$value->beneficios}}" data-productprecio = "{{$value->precio_unitario}}"
                    data-productcat = "{{$value->idC}}" data-productimage = "{{asset($value->imagen)}}"
-                    type="button" class="btn btn-crud btn-sm margen-elementos">
-                    <span class="glyphicon glyphicon-pencil"></span>
+                    type="button" class="btn btn-sm " style="background-image: url(../assets/img/editar.png); width: 40px; height: 40px; ">
+                   
 
-                  <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn btn-crud btn-sm margen-elementos ">
-                  <span class="glyphicon glyphicon-trash">   </span>
+                  <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn eliminar btn-sm " style="background-image: url(../assets/img/eliminar.png); width: 40px; height: 40px; " >
+                
                   </tr>
                   @endforeach
                 </tbody>

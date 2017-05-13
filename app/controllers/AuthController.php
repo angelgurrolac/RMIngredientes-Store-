@@ -38,7 +38,7 @@ class AuthController extends BaseController {
         // Cerramos la sesión
         Auth::logout();
         // Volvemos al login y mostramos un mensaje indicando que se cerró la sesión
-        return Redirect::to('login')->with('error_message', 'Nos vemos luego');
+        return Redirect::to('login')->with('error_message', '');
     }
 
 }
