@@ -19,7 +19,8 @@ class TiendaController extends \BaseController {
 	{
 		$categorias = Categorias::All();
 		$productos = Productos::All();
-		return View::make('Tienda.productos',compact('categorias','productos'));
+		$mensaje = 0;
+		return View::make('Tienda.productos',compact('categorias','productos','mensaje'));
 	}
 
 	public function productosC()
@@ -27,6 +28,14 @@ class TiendaController extends \BaseController {
 		$productos = Productos::where('id_categoria','=',Input::get('categoria'))->get();
 		// $categorias = Categorias::All();
 		return Response::json($productos);	
+	}
+
+	public function maiz(){
+		$categoria = Input::get('cat');
+		$maiz = Productos::maiz($categoria)->get();
+		$categorias = Categorias::All();
+		$mensaje = 1;
+		return View::make('Admin.productos',compact('maiz','categorias','mensaje'));
 	}
 
 }

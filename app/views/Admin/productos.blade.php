@@ -270,12 +270,12 @@ text-indent: 5px;
                 <br>
                 <div class="row"> 
                   <div class="col-xs-6">
-                    <div style="width: 200px; height: 165px; background-color: white;">
-                     <img id="blah" src="#" width="200px" height="165px" alt="" />
+                    <div style="width: 250px; height: 220px; background-color: white;">
+                     <img id="blah" src="#" width="250px" height="220px" alt="" />
                      </div>
                      <br>
-                 <label class="btn btn-verde-modal2">
-                    SUBIR FOTO <input name="imagen" type='file' id="imgInp" style="display: none;" />
+                 <label class="btn btn-verde-modal2" >
+                    SUBIR FOTO <input name="imagen" class="form-control"  type='file' id="imgInp" style="display: none;" />
                 </label>
                  </div>
                  <div class="col-xs-6">
@@ -284,14 +284,15 @@ text-indent: 5px;
                    <textarea class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="brevec" id="" cols="30" rows="3"></textarea>
                    <br>
                   <input class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
+                  
                   <br>
-                  <input class="without-radius" type="number" name="precio" placeholder="PRECIO">
-                  <br>
-                  <select name="categoria">
+                  <select name="categoria" class="form-control without-radius" >
                     @foreach($categorias as $key1 => $value1)
                      <option value="{{$value1->id}}">{{$value1->nombre}}</option>
                      @endforeach
                   </select>
+                  <br>
+                  <input class="without-radius" type="number" name="precio" placeholder="PRECIO">
                 </div>
               </div>
               <br>
@@ -337,8 +338,8 @@ text-indent: 5px;
               <div class="row"> 
                 <div class="col-xs-6">
                    <form>
-                    <div style="width: 200px; height: 165px; background-color: white;">
-                     <img id="blah2" src="" width="200px" height="165px" alt="" />
+                    <div style="width: 250px; height: 220px; background-color: white;">
+                     <img id="blah2" src="" width="250px" height="220px" alt="" />
                      </div>
                      <br>
                  <label class="btn btn-verde-modal2">
@@ -352,14 +353,15 @@ text-indent: 5px;
                  <textarea id="completad" class="form-control without-radius"  placeholder="DESCRIPCIÓN COMPLETA" name="brevecE" id="" cols="30" rows="3"></textarea>
                  <br>
                  <input name="presentacionE" id="presentacion" class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
+                
                 <br>
-                <input name="precioE" id="precio" class="without-radius" type="number" placeholder="PRECIO">
-                <br>
-                <select id="categoria" name="categoriaE">
+                <select id="categoria" name="categoriaE" class="form-control without-radius">
                    @foreach($categorias as $key2 => $value2)
                      <option value="{{$value2->id}}">{{$value2->nombre}}</option>
                     @endforeach
                 </select>
+                <br>
+                <input name="precioE" id="precio" class="without-radius" type="number" placeholder="PRECIO">
               </div>
             </div>
             <br>
@@ -398,11 +400,20 @@ text-indent: 5px;
 
         </div>
         <div class="modal-footer inferior-modal-eliminar text-center ">
-          <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button>
-            {{Form::open(array('url'=>'/Admin/editarP', 'id' => $value->id))}}
-                {{ Form::submit('SÍ', array('name'=> 'Eliminar','class' => 'btn btn-naranja-modal')) }}</td> 
+        <div class="row">
+        <div class="col-xs-3"></div>
+          <div class="col-xs-3 ">
+             {{Form::open(array('url'=>'/Admin/editarP', 'id' => $value->id))}}
+                {{ Form::submit('SI', array('name'=> 'Eliminar','class' => 'btn btn-naranja-modal')) }}</td> 
                 <input id="value" type="hidden" name="id_producto">
                 {{Form::close()}}
+          </div>
+          <div class="col-xs-3"> <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button></div>
+          <div class="col-xs-3"></div>
+        </div>
+           
+         
+
           <!-- <button type="button" class="btn btn-naranja-modal">SI</button> -->
         </div>
       </div>

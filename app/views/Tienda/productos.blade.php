@@ -132,20 +132,14 @@
             <div class="navbar-default sidebar sidebar-height" role="navigation">
               <div class="sidebar-nav navbar-collapse">
                 <ul class="nav " id="side-menu">
-                  <li>
+                  <li class="estilo-categoria-titulo">
                    CATEGORÍAS
                   </li>
                   <li>
-                    <a class="lista-menu" href=""> Tortillas de Maíz</a>
-                  </li>
-                  <li>
-                    <a class="lista-menu"  href="">Tortillas de Harina</a>
-                  </li>
-                  <li>
-                    <a class="lista-menu"  href="" >Panificadoras</a>
-                  </li>
-                  <li>
-                    <a class="lista-menu"  href="">Especializado</a>
+                {{Form::open(array('url'=>'/Tienda/maiz', 'id' => 'maiz'))}}
+                <input value="1" type="hidden" name="cat">
+                {{ Form::submit('Tortillas de Maíz', array('name'=> 'maiz','class' => 'lista-menu')) }}
+                {{Form::close()}}
                   </li>
                 </ul>
               </div>
@@ -156,49 +150,32 @@
 
           <div id="page-wrapper">
             <div class="row align-items-center">
-              <div class="col-lg-4">
-                <h1 class=" titulos-secciones">PRODUCTOS</h1>
-              </div><!-- /.col-lg-6 -->
-              <div class="col-lg-6">
-               <div class="input-group margen-elementos">
-                <span class="input-group-btn btn-buscar ">
-                  <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
-                </span>
-                <input type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
-              </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-2">
-
-              <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
+             <p class=" titulo-categorias-tienda">TORTILLAS DE HARINA </p>
               
-
-            </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
           <!-- /.row -->
-          <div class="row">
-
-            <div class="table-responsive" style="overflow: hidden;">
-              <table class="table ">
-                <thead class="encabezados-tabla">
-                  <tr>
-                    <th class="text-center">PRODUCTO</th>
-                    <th class="text-center">DESCRIPCIÓN</th>
-                    <th class="text-center">MODO DE EMPLEO</th>
-                    <th class="text-center">BENEFICIOS</th>
-                    <th class="text-center">PRECIOS</th>
-                    <th class="text-center">CATEGORIA</th>
-                    <th class="text-center">IMAGEN</th>
-                    <th class="text-center">ACCIONES</th>
-                  </tr>
-                </thead>
-                <tbody>
-                 
-                </tbody>
-              </table>
-            </div>
-            <!-- /.table-responsive -->
-
-          </div>
+          <div class="row"> 
+          @if ($mensaje == 0)
+                @foreach($productos as $key => $value) 
+                     <div class="col-md-2"> 
+                    <img class="img-responsive" src="{{asset($value->imagen)}}"/> 
+                    <h3>{{$value->nombre}}</h3> 
+                    <P>{{$value->detalles}}</P> 
+                    <h4>{{$value->precio_unitario}}</h4> 
+                    </div> 
+                @endforeach 
+          @endif
+          @if ($mensaje == 1)
+                @foreach($maiz as $key3 => $value3) 
+                     <div class="col-md-2"> 
+                    <img class="img-responsive" src="{{asset($value3->imagen)}}"/> 
+                    <h3>{{$value3->nombre}}</h3> 
+                    <P>{{$value3->detalles}}</P> 
+                    <h4>{{$value3->precio_unitario}}</h4> 
+                    </div> 
+                @endforeach 
+          @endif
+            </div> 
           <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->

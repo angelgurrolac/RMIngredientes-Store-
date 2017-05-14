@@ -31,9 +31,16 @@ Route::group(['before' => 'auth'], function()
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
     Route::get('/Admin/configuracion', 'AdminController@ChangePassword'); //vista de configuración de usuario
 
+
+
+
+
 });
 
 
 // Rutas para tienda
 Route::get('/Tienda/productos','TiendaController@ShowProductos');
 Route::post('/Tienda/productos','TiendaController@ProductosC');
+
+   // rutas para categorias
+Route::post('Tienda/maiz','TiendaController@maiz');
