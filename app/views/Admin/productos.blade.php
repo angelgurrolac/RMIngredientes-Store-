@@ -222,7 +222,7 @@ text-indent: 5px;
                    <td>{{$value->descripcion_completa}}</td>
                    <td>{{$value->modo_empleo}}</td>
                    <td>{{$value->beneficios}}</td>
-                   <td class="text-center">${{$value->precio_unitario}}</td>
+                   <td class="text-center">${{number_format($value->precio_unitario,2)}}</td>
                    <td>{{$value->nombreC}}</td>
                    <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
                    <td><div>
@@ -292,7 +292,7 @@ text-indent: 5px;
                      @endforeach
                   </select>
                   <br>
-                  <input class="without-radius" type="number" name="precio" placeholder="PRECIO">
+                  <input class="without-radius" type="number" name="precio" placeholder="PRECIO" step="any">
                 </div>
               </div>
               <br>
@@ -361,7 +361,7 @@ text-indent: 5px;
                     @endforeach
                 </select>
                 <br>
-                <input name="precioE" id="precio" class="without-radius" type="number" placeholder="PRECIO">
+                <input name="precioE" id="precio" class="without-radius" type="number" step="any" placeholder="PRECIO">
               </div>
             </div>
             <br>

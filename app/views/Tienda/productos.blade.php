@@ -113,7 +113,7 @@
                         <a class="menu-tienda" id="contacto" href="#contactanos">CONTACTO</a>
                         <hr id="hr-contacto" class="menutext">
                     </li>
-                      <li class="page-scroll li-separation glyphicon glyphicon-shopping-cart size-cart">
+                      <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
                         <a class="menu-tienda" id="#" href="#"></a>
                         
                     </li>
@@ -132,31 +132,31 @@
             <div class="navbar-default sidebar sidebar-height" role="navigation">
               <div class="sidebar-nav navbar-collapse">
                 <ul class="nav " id="side-menu">
-                  <li class="estilo-categoria-titulo">
+                  <li class="estilo-categoria-titulo sin-borde-li">
                    CATEGORÍAS
                   </li>
-                  <li>
+                  <li class="sin-borde-li">
                 {{Form::open(array('url'=>'/Tienda/maiz', 'id' => 'maiz'))}}
-                <input value="1" type="hidden" name="cat">
-                {{ Form::submit('Tortillas de Maíz', array('name'=> 'maiz','class' => 'lista-menu')) }}
+                <input value="1" type="hidden" name="cat" >
+                {{ Form::submit('Tortillas de Maíz', array('name'=> 'maiz','class' => 'lista-menu-tienda estilo-input')) }}
                 {{Form::close()}}
                   </li>
-                  <li>
+                  <li class="sin-borde-li">
                 {{Form::open(array('url'=>'/Tienda/harina', 'id' => 'harina'))}}
-                <input value="2" type="hidden" name="cat">
-                {{ Form::submit('Tortillas de Harina', array('name'=> 'harina','class' => 'lista-menu')) }}
+                <input value="2" type="hidden" name="cat"  >
+                {{ Form::submit('Tortillas de Harina', array('name'=> 'harina','class' => 'lista-menu-tienda estilo-input')) }}
                 {{Form::close()}}
                   </li>
-                  <li>
+                  <li class="sin-borde-li">
                 {{Form::open(array('url'=>'/Tienda/panificadoras', 'id' => 'panificadoras'))}}
-                <input value="3" type="hidden" name="cat">
-                {{ Form::submit('Panificadoras', array('name'=> 'panificadoras','class' => 'lista-menu')) }}
+                <input value="3" type="hidden" name="cat" >
+                {{ Form::submit('Panificadoras', array('name'=> 'panificadoras','class' => 'lista-menu-tienda estilo-input')) }}
                 {{Form::close()}}
                   </li>
-                  <li>
+                  <li class="sin-borde-li">
                 {{Form::open(array('url'=>'/Tienda/especializado', 'id' => 'especializado'))}}
-                <input value="4" type="hidden" name="cat">
-                {{ Form::submit('Especializado', array('name'=> 'especializado','class' => 'lista-menu')) }}
+                <input value="4" type="hidden" name="cat"  >
+                {{ Form::submit('Especializado', array('name'=> 'especializado','class' => 'lista-menu-tienda estilo-input')) }}
                 {{Form::close()}}
                   </li>
                 </ul>
@@ -181,7 +181,7 @@
                        data-image = "{{$value->imagen}}" data-modo = "{{$value->modo_empleo}}"
                        data-beneficios ="{{$value->beneficios}}" data-id="{{$value->id}}"
                        data-precio = "{{$value->precio_unitario}}">
-                    <img class="img-responsive" src="{{asset($value->imagen)}}"/> 
+                    <img class="img-responsive fondo-paneles" src="{{asset($value->imagen)}}"/> 
                     </a>
                     <h3>{{$value->nombre}}</h3> 
                     <p>{{$value->descripcion_corta}}</p> 
@@ -191,13 +191,13 @@
           @endif
           @if ($mensaje == 1)
                 @foreach($maiz as $key3 => $value3) 
-                     <div class="col-md-2"> 
+                     <div class="col-md-2 "> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value3->nombre}}"
                        data-desc = "{{$value3->descripcion_completa}}" data-presentacion = "{{$value3->presentacion}}"
                        data-image = "{{$value3->imagen}}" data-modo = "{{$value3->modo_empleo}}"
                        data-beneficios ="{{$value3->beneficios}}" data-id="{{$value3->id}}"
                        data-precio = "{{$value3->precio_unitario}}">
-                    <img class="img-responsive" src="{{asset($value3->imagen)}}"/> 
+                    <img class="img-responsive fondo-paneles" src="{{asset($value3->imagen)}}"/> 
                     </a>
                     <h3>{{$value3->nombre}}</h3> 
                     <p>{{$value3->descripcion_corta}}</p> 
