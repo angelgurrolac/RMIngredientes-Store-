@@ -153,9 +153,8 @@
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-2">
 
-              <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-crud btn-sm margen-elementos"><span class="glyphicon glyphicon-plus"></span></button>
-              <button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button>
-              <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-crud   btn-sm margen-elementos"><span class="glyphicon glyphicon-trash"></span></button>
+              <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-crud btn-sm margen-elementos">
+                <span class="glyphicon glyphicon-plus"></span></button>
 
             </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
@@ -172,6 +171,7 @@
                     <th class="text-center">C.P.</th>
                     <th class="text-center">TLÉFONO</th>
                     <th class="text-center">CORREO</th>
+                    <th class="text-center">ACCIÓN</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -183,6 +183,17 @@
                     <td>{{$value->codigo_postal}}</td>
                     <td>{{$value->telefono}}</td>
                     <td>{{$value->correo}}</td>
+                     <td>
+                   <input name="Editar" data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-sm"
+                   data-idE = "{{$value->id}}" data-nombreE = "{{$value->nombre}}" data-app = "{{$value->ap_paterno}}"
+                   data-apm = "{{$value->ap_materno}}" data-direccion = "{{$value->direccion}}"
+                   data-cp = "{{$value->codigo_postal}}" data-telefono = "{{$value->telefono}}"
+                   data-edad = "{{$value->edad}}" data-correo = "{{$value->correo}}" data-sexo = "{{$value->sexo}}"
+                   style="background-image: url(../assets/img/editar.png); width: 40px; height: 40px; " >
+                  <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-id="{{ $value->id }}" 
+                  data-nombre="{{ $value->nombre }}" type="button" class="btn eliminar btn-sm"
+                   style="background-image: url(../assets/img/eliminar.png); width: 40px; height: 40px;">
+                 </td>
                   </tr>
                   @endforeach
 
@@ -244,10 +255,10 @@
                   </div>
                   <div class="col-xs-9">
                     <select class="form-control without-radius" placeholder="SEXO" name="sexo">
-  <option value="volvo">FEMENINO</option>
-  <option value="saab">MASCULINO</option>
-tion>
-</select>
+                      <option value="volvo">FEMENINO</option>
+                      <option value="saab">MASCULINO</option>
+                    tion>
+                    </select>
                   </div>
                 </div>
                 <br>
@@ -269,56 +280,81 @@ tion>
             </div>
           </div>
         </div>
-      </div>
+
+
       <!-- Modal modificar-->
-      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
+          {{ Form::open(['url' => '/Admin/editarU']) }}
           <div class="modal-content contenido-modal">
             <div class="modal-header">
-              <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar usuario</h5>
+              <h5 class="modal-title titulo-modal" id="exampleModalLabel">Editar Usuario</h5>
             </div>
             <div class="modal-body cuerpo-modal">
               <div class="container-fluid">
-              <div class="row"> 
+                <div class="row"> 
+                  <div class="col-xs-12">
+                  <input id="nombre2" class="form-control without-radius" type="text" name="nombre2" placeholder="NOMBRE(S)">
+                  </div>
+                </div>
+                <br>
+                <div class="row"> 
                   <div class="col-xs-6">
-
-                    <input class="form-control without-radius" type="text" name="" placeholder="NOMBRE(S)">
+                    <input id="a_paterno2" class="form-control without-radius" type="text" name="a_paterno2" placeholder="APELLIDO PATERNO">
                   </div>
                   <div class="col-xs-6">
-                    <input class="form-control without-radius" type="text" name="" placeholder="APELLIDO(S)">
+                    <input id="a_materno2" class="form-control without-radius" type="text" name="a_materno2" placeholder="APELLIDO MATERNO">
                   </div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-12">
-                  <input class="form-control without-radius" type="text" name="" placeholder="DIRECCIÓN">
+                  <input id="direccion2" class="form-control without-radius" type="text" name="direccion2" placeholder="DIRECCIÓN">
                   </div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-3">
-                    <input class="form-control without-radius" type="number" name="" placeholder="C.P.">
+                    <input id="cp2" class="form-control without-radius" type="number" name="cp2" placeholder="C.P.">
                   </div>
                   <div class="col-xs-9">
-                    <input class="form-control without-radius" type="text" name="" placeholder="TELÉFONO">
+                    <input id="telefono2" class="form-control without-radius" type="text" name="telefono2" placeholder="TELÉFONO">
+                  </div>
+                </div>
+                <br>
+                <div class="row"> 
+                  <div class="col-xs-3">
+                    <input id="edad2" class="form-control without-radius" type="number" name="edad2" placeholder="EDAD">
+                  </div>
+                  <div class="col-xs-9">
+                    <select id="sexo2" class="form-control without-radius" placeholder="SEXO" name="sexo2">
+                      <option value="femenino">FEMENINO</option>
+                      <option value="masculino">MASCULINO</option>
+                    tion>
+                    </select>
                   </div>
                 </div>
                 <br>
                 <div class="row"> 
                   <div class="col-xs-12">
-                    <input class="form-control without-radius" type="email" name="" placeholder="CORREO ELECTRÓNICO">
+                    <input id="correo2" class="form-control without-radius" type="email" name="correo2" placeholder="CORREO ELECTRÓNICO">
                   </div>
                 </div>
-            </div>  
 
+              </div>  
+
+            </div>
+            <div class="modal-footer inferior-modal">
+              <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
+              <input id="value2" type="hidden" name="id_user2">
+              {{ Form::submit('GUARDAR', array('name'=> 'Editar','class' => 'btn btn-verde-modal')) }}
           </div>
-          <div class="modal-footer inferior-modal">
-            <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-            <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+            {{ Form::close() }}
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+
+
     <!-- Modal Eliminar-->
     <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -328,25 +364,29 @@ tion>
           </div>
           <div class="modal-body cuerpo-modal-elimnar">
             <div class="container-fluid">
-              <p class="texto-eliminar">¿Está seguro que desea eliminar el usuario Juan?</p>
+              <p class="texto-eliminar">¿Está seguro que desea eliminar el usuario <span id="pName"></span>?</p>
 
             </div>  
 
           </div>
           <div class="modal-footer inferior-modal-eliminar text-center ">
-            <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button>
-            <button type="button" class="btn btn-naranja-modal">SI</button>
+        <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3"> <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button></div>
+          <div class="col-xs-3 ">
+             {{Form::open(array('url'=>'/Admin/editarU', 'id' => $value->id))}}
+                {{ Form::submit('SI', array('name'=> 'Eliminar','class' => 'btn btn-naranja-modal')) }}</td> 
+                <input id="value" type="hidden" name="id_user">
+                {{Form::close()}}
           </div>
+          <div class="col-xs-3"></div>
+        </div>
+        </div>
         </div>
       </div>
     </div>
 
  <div  id="fixed-bar"> </div>
-
-
-
-
-
 
     <!-- /#wrapper -->
 
@@ -366,6 +406,47 @@ tion>
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        // editar
+  $('#myModal2').on('show.bs.modal', function(e) {
+    //get data-id attribute of the clicked element
+        var id2 = $(e.relatedTarget).data('ide');
+        var nombre2 = $(e.relatedTarget).data('nombree');
+        var ap_paterno = $(e.relatedTarget).data('app');
+        var ap_materno = $(e.relatedTarget).data('apm');
+        var direccion = $(e.relatedTarget).data('direccion');
+        var telefono = $(e.relatedTarget).data('telefono');
+        var cp = $(e.relatedTarget).data('cp');
+        var correo = $(e.relatedTarget).data('correo');
+        var edad = $(e.relatedTarget).data('edad');
+        var sexo = $(e.relatedTarget).data('sexo');
+    $("#myModal2 #nombre2").val(nombre2);
+    $("#myModal2 #a_paterno2").val(ap_paterno);
+    $("#myModal2 #a_materno2").val(ap_materno);
+    $("#myModal2 #direccion2").val(direccion);
+    $("#myModal2 #cp2").val(cp);
+    $("#myModal2 #telefono2").val(telefono);
+    $("#myModal2 #edad2").val(edad);
+    $("#myModal2 #sexo2").val(sexo);
+    $("#myModal2 #correo2").val(correo);
+    $("#myModal2 #value2").val(id2);
+    // $("#delForm").attr('action', 'put your action here with productId');
+    });
+
+       // eliminar
+  $('#myModal3').on('show.bs.modal', function(e) {
+    //get data-id attribute of the clicked element
+        var id = $(e.relatedTarget).data('id');
+        var nombre = $(e.relatedTarget).data('nombre');
+    $("#myModal3 #pName").text(nombre);
+    $("#value").val(id);
+    // $("#delForm").attr('action', 'put your action here with productId');
+    });
+  });
+  </script>
 
   </body>
 

@@ -24,16 +24,14 @@ Route::group(['before' => 'auth'], function()
 {
     Route::get('/Admin/productos', 'AdminController@ShowProductos'); // Vista de inicio de productos
     Route::post('/Admin/agregarP', 'AdminController@AgregarP'); // Agregar producto
-    Route::post('/Admin/editarP', 'AdminController@EditarP'); // Agregar producto
+    Route::post('/Admin/editarP', 'AdminController@EditarP'); // Editar producto
     Route::get('/Admin/pedidos', 'AdminController@ShowPedidos'); // Vista de inicio de pedidos
     Route::get('/Admin/usuarios', 'AdminController@ShowUsuarios'); // Vista de inicio de usuarios
+    Route::post('/Admin/editarU', 'AdminController@EditarU'); // Editar usuario
+    Route::post('Admin/EditarPedido', 'AdminController@EditarPedido'); // Editar pedido
     Route::post('/Admin/AgregarU', 'AdminController@AgregarU'); // Agregar usuarios
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
     Route::get('/Admin/configuracion', 'AdminController@ChangePassword'); //vista de configuración de usuario
-
-
-
-
 
 });
 
