@@ -188,7 +188,7 @@ text-indent: 5px;
                 <span class="input-group-btn btn-buscar ">
                   <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
                 </span>
-                <input id="buscar" type="text" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
+                <input id="buscar" type="search" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-2">
