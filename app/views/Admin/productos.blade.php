@@ -411,10 +411,6 @@ text-indent: 5px;
           <div class="col-xs-3"> <button type="button" class="btn btn-naranja-modal" data-dismiss="modal">NO</button></div>
           <div class="col-xs-3"></div>
         </div>
-           
-         
-
-          <!-- <button type="button" class="btn btn-naranja-modal">SI</button> -->
         </div>
       </div>
     </div>

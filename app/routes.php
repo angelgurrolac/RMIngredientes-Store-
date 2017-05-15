@@ -44,3 +44,6 @@ Route::post('/Tienda/productos','TiendaController@ProductosC');
 
    // rutas para categorias
 Route::post('Tienda/maiz','TiendaController@maiz');
+Route::post('Tienda/harina','TiendaController@harina');
+Route::post('Tienda/panificadoras','TiendaController@panificadoras');
+Route::post('Tienda/especializado','TiendaController@especializado');
