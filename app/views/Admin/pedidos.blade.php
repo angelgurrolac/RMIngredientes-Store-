@@ -182,7 +182,9 @@
                               <td>{{$value->domicilio}}</td>
                               <td>{{$value->fecha}}</td>
                               <td>{{$value->estatus}}</td>
-                              <td><button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-crud  btn-sm margen-elementos"><span class="glyphicon glyphicon-pencil"></span></button></td>
+                              <td><input data-toggle="modal" data-target="#myModal"
+                   data-id="{{$value->id}}" data-estatus="{{$value->estatus}}" type="button" class="btn btn-sm"
+                   style="background-image: url(../assets/img/editar.png); width: 40px; height: 40px;"></td>
 
                          </tr>
                          @endforeach
@@ -202,23 +204,23 @@
 <!-- /#wrapper -->
 
 <!-- Modal modificar-->
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content contenido-modal">
           <div class="modal-header">
             <h5 class="modal-title titulo-modal" id="exampleModalLabel">Modificar estatus</h5>
           </div>
           <div class="modal-body cuerpo-modal">
+            {{Form::open(array('url'=>'/Admin/EditarPedido', 'id' => $value->id))}}
             <div class="container-fluid">
               <div class="row"> 
               <div class="col-xs-3"></div>
                  <div class="col-xs-6"></div>
-              <select class="form-control without-radius" name="" >
-                  <option value="volvo">Estatus</option>
-                  <option value="saab">Pendiente</option>
-                  <option value="saab">Enviado</option>
-                  <option value="saab">Entregado</option>
-                  <option value="saab">Cancelado</option>
+              <select id="estatus2" class="form-control without-radius" name="estatus2" >
+                  <option value="pendiente">Pendiente</option>
+                  <option value="enviado">Enviado</option>
+                  <option value="entregado">Entregado</option>
+                  <option value="cancelado">Cancelado</option>
                 </select>
                 <div class="col-xs-3"></div>
                 
@@ -230,7 +232,9 @@
         </div>
         <div class="modal-footer inferior-modal">
           <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-          <button type="button" class="btn btn-verde-modal">GUARDAR</button>
+                {{ Form::submit('GUARDAR', array('name'=> 'Editar','class' => 'btn btn-verde-modal')) }}</td> 
+                <input id="value2" type="hidden" name="id_pedido">
+                {{Form::close()}}
         </div>
       </div>
     </div>
@@ -253,6 +257,22 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+
+
+   <script type="text/javascript">
+   $(document).ready(function(){
+
+         // editar
+  $('#myModal').on('show.bs.modal', function(e) {
+    //get data-id attribute of the clicked element
+        var id = $(e.relatedTarget).data('id');
+        var estatus = $(e.relatedTarget).data('estatus');
+    $("#myModal #estatus2").val(estatus);
+    $("#myModal #value2").val(id);
+});
+    });
+
+   </script>
 
 </body>
 

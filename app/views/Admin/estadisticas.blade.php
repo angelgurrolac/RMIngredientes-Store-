@@ -181,9 +181,9 @@
             <div class="col-lg-5 fondo-paneles">
             <div class="col-lg-12">
                 <p class="estilo-estadistica">SECCIÓN MÁS VISITADA</p>
-
-                <p class="producto-vendido">TORTILLAS DE MAÍZ</p>
-
+                @foreach($secciones as $key => $value)
+                    <p class="producto-vendido">{{$value->nombre}}</p>
+                @endforeach
             </div> 
 
         </div>

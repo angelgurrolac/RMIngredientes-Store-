@@ -225,7 +225,7 @@ text-indent: 5px;
                    <td class="text-center">${{$value->precio_unitario}}</td>
                    <td>{{$value->nombreC}}</td>
                    <td><img class="img-responsive" width="100px;" height="100px;" src="{{asset($value->imagen)}}"></td>
-                   <td><div>
+                   <td>
                    <input name="Editar" data-toggle="modal" data-target="#myModal2"
                    data-productide="{{$value->id}}" data-productnamee="{{$value->nombre}}"
                    data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
@@ -235,6 +235,7 @@ text-indent: 5px;
                    style="background-image: url(../assets/img/editar.png); width: 40px; height: 40px; " >
                   <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn eliminar btn-sm"
                    style="background-image: url(../assets/img/eliminar.png); width: 40px; height: 40px;">
+                 </td>
                   </tr>
                   @endforeach
     </tbody>

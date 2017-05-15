@@ -39,12 +39,25 @@ class AdminController extends \BaseController {
 		$cliente = User::MasCompras()->take(1)->get();
 		$pagos = Pedidos::TipoPago()->get();
 		$visitas = Visitas::VisitasTotal()->get();
-		return View::make('Admin.estadisticas',compact('productos','productosm','pedidos','cliente','pagos','visitas'));
+		$secciones = Categorias::Mas()->take(1)->get();
+		return View::make('Admin.estadisticas',compact('productos','productosm','pedidos','cliente','pagos','visitas','secciones'));
 	}
 	
 	public function ChangePassword(){
 		$datos = User::where('nombre','=',Auth::user()->id);
 		return View::make('Admin.configuracion',compact('datos'));
+	}
+
+	public function EditarPedido(){
+
+		if (Input::has('Editar')) 
+		{
+			$pedidos = Pedidos::find(Input::get('id_pedido'));
+			$estatus = Input::get('estatus2');
+			$pedidos->estatus = $estatus;
+			$pedidos->save();
+			return Redirect::to('/Admin/pedidos');
+		}
 	}
 
 	public function AgregarP(){
@@ -119,6 +132,44 @@ class AdminController extends \BaseController {
 			$producto = Productos::find(Input::get('id_producto'));
 			$producto->delete();
 			return Redirect::to('/Admin/productos');
+		}
+
+	}
+
+	public function EditarU(){
+		if(Input::has('Editar'))
+		{
+		$nombre = Input::get('nombre2');
+		$ap_paterno = Input::get('a_paterno2');
+		$ap_materno = Input::get('a_materno2');
+		$direccion = Input::get('direccion2');
+		$correo = Input::get('correo2');
+		$cp = Input::get('cp2');
+		$telefono = Input::get('telefono2');
+		$edad = Input::get('edad2');
+		$sexo = Input::get('sexo2');
+
+
+		$user = User::find(Input::get('id_user2'));
+		$user->nombre = $nombre;
+		$user->ap_paterno = $ap_paterno;
+		$user->ap_materno = $ap_materno;
+		$user->direccion = $direccion;
+		$user->correo = $correo;
+		$user->codigo_postal = $cp;
+		$user->telefono = $telefono;
+		$user->edad = $edad;
+		$user->sexo = $sexo;
+		$user->rol = 2;
+		$user->estatus = 1;
+		$user->save();
+			return Redirect::to('/Admin/usuarios');
+		}
+		elseif (Input::has('Eliminar')) 
+		{
+			$user = User::find(Input::get('id_user'));
+			$user->delete();
+			return Redirect::to('/Admin/usuarios');
 		}
 
 	}
