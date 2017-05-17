@@ -23,7 +23,7 @@
 
   <!-- Custom Fonts -->
   <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ asset('assets/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+  <!-- <link href="{{ asset('assets/css/jquery.dataTables.min.css') }}" rel="stylesheet"> -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,22 +93,6 @@
     font-size: 16px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
-/*input[type="button"]  {
-float: left;
-margin: 45px 0 15px 20px;
-width: 225px;
-height: 32px;
-color: white;
-background-color: transparent;
-background-image: url(../assets/img/whatsapp-rmingredientes.png);
-background-position: 50% 50%;
-background-repeat: no-repeat;
-border: 0 none;
-text-indent: 5px;
-}
-*/
-
-
         </style>
 
       </head>
@@ -188,7 +172,7 @@ text-indent: 5px;
                 <span class="input-group-btn btn-buscar ">
                   <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
                 </span>
-                <input id="buscar" type="search" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
+                <input id="search" type="search" class="form-control input-buscar" placeholder="BUSCAR PRODUCTO">
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-2">
@@ -202,7 +186,7 @@ text-indent: 5px;
           <div class="row">
 
             <div class="table-responsive" style="overflow: hidden;">
-              <table id="tabla" class="table table-striped">
+              <table id="table" class="table table-striped">
     <thead class="encabezados-tabla">
         <tr>
             <th class="text-center">PRODUCTO</th>
@@ -426,7 +410,7 @@ text-indent: 5px;
 
   <!-- jQuery -->
   <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ URL::asset('assets/js/jquery.dataTables.min.js') }}"></script>
+  
 
   <!-- Bootstrap Core JavaScript -->
   <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -437,52 +421,36 @@ text-indent: 5px;
    <script type="text/javascript">
    $(document).ready(function(){
 
-      var table = $('#tabla').DataTable({
-        "language": {
-            "lengthMenu": "Mostrando _MENU_ registros por página",
-            "zeroRecords": "No encontrado",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
-            "infoEmpty": "No encontrado",
-            "infoFiltered": "(Filtrado de _MAX_ registros)",
-            "search":         "Buscar:",
-            "paginate": {
-                "first":      "Primero",
-                "last":       "Último",
-                "next":       "Siguiente",
-                "previous":   "Anterior"
-            }
-        }
-    });
+    // Write on keyup event of keyword input element
+    $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 
 
-//     // buscar
-//     $("#buscar").keypress(function(){
-//   $.ajax({
-//    url: '/Tienda/productos',
-//    type: 'POST',
-//    data: {categoria:'{{$value->id}}'},
-//    dataType: 'JSON',
-//    error: function() {
-//       console.error("error");
-//    },
-//    success: function(respuesta) {
-//       console.log(JSON.stringify(respuesta));
-    
-//       if (respuesta) {
-//                       var html = '<div>';
-//                       html += '<ul>';
-//                       html += '<li> Legajo: ' + respuesta.nombre + ' </li>';
-//                       html += '<li> Nombre: ' + respuesta.detalles + ' </li>';
-//                       html += '</ul>';
-//                       html += '</div>';
-//                       $("#respuesta").html(html);
-//                    } else {
-//                       $("#respuesta").html('<div> No hay ningún empleado con ese legajo. </div>');
-//                    }
-//    }
-// })
-        
-//     });
-   //triggered when modal is about to be shown
+
+    //   var table = $('#tabla').DataTable({
+    //     "language": {
+    //         "lengthMenu": "Mostrando _MENU_ registros por página",
+    //         "zeroRecords": "No encontrado",
+    //         "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+    //         "infoEmpty": "No encontrado",
+    //         "infoFiltered": "(Filtrado de _MAX_ registros)",
+    //         "search":         "Buscar:",
+    //         "paginate": {
+    //             "first":      "Primero",
+    //             "last":       "Último",
+    //             "next":       "Siguiente",
+    //             "previous":   "Anterior"
+    //         }
+    //     }
+    // });
+
        // modificar
     $('#myModal2').on('show.bs.modal', function(e) {
 

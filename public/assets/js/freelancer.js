@@ -4,6 +4,23 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+ $(function() {
+
+    // Write on keyup event of keyword input element
+    $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 
+
+ });
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
