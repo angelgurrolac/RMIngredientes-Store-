@@ -148,7 +148,7 @@
                 <span class="input-group-btn btn-buscar ">
                   <button class="btn btn-buscar glyphicon glyphicon-search" type="button"></button>
                 </span>
-                <input type="text" class="form-control input-buscar" placeholder="BUSCAR USUARIO">
+                <input id="search" type="search" class="form-control input-buscar" placeholder="BUSCAR USUARIO">
               </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-2">
@@ -162,7 +162,7 @@
           <div class="row">
 
             <div class="table-responsive" style="overflow: hidden;">
-              <table class="table ">
+              <table id="table" class="table ">
                 <thead class="encabezados-tabla">
                   <tr>
                     <th class="text-center">NOMBRE</th>
@@ -410,6 +410,20 @@
     <script type="text/javascript">
 
     $(document).ready(function(){
+
+              // Write on keyup event of keyword input element
+    $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 
+
+
         // editar
   $('#myModal2').on('show.bs.modal', function(e) {
     //get data-id attribute of the clicked element
