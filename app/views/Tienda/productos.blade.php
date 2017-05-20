@@ -191,7 +191,7 @@
           @endif
           @if ($mensaje == 1)
                 @foreach($maiz as $key3 => $value3) 
-                     <div class="col-md-2 "> 
+                     <div class="col-md-2"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value3->nombre}}"
                        data-desc = "{{$value3->descripcion_completa}}" data-presentacion = "{{$value3->presentacion}}"
                        data-image = "{{$value3->imagen}}" data-modo = "{{$value3->modo_empleo}}"
