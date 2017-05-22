@@ -97,7 +97,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll li-separation ">
-                        <a class="menu-tienda" id="conocenos" href="#conocenos2">CONÓCENOS</a>
+                        <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
                         <hr id="hr-conocenos" class="menutext">
 
                     </li>
@@ -106,11 +106,11 @@
                         <hr id="hr-productos" class="menutext">
                     </li>
                     <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="demostraciones" href="#demostracion">DEMOSTRACIONES</a>
+                        <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
                         <hr id="hr-demostraciones" class="menutext">
                     </li>
                     <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="contacto" href="#contactanos">CONTACTO</a>
+                        <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
                         <hr id="hr-contacto" class="menutext">
                     </li>
                       <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
@@ -135,10 +135,10 @@
                   <li class="estilo-categoria-titulo sin-borde-li">
                    CATEGORÍAS
                   </li>
-                  <li class="sin-borde-li">
+                  <li class="sin-borde-li active">
                 {{Form::open(array('url'=>'/Tienda/maiz', 'id' => 'maiz'))}}
                 <input value="1" type="hidden" name="cat" >
-                {{ Form::submit('Tortillas de Maíz', array('name'=> 'maiz','class' => 'lista-menu-tienda estilo-input')) }}
+                {{ Form::submit('Tortillas de Maíz', array('name'=> 'maiz','class' => 'lista-menu-tienda estilo-input ')) }}
                 {{Form::close()}}
                   </li>
                   <li class="sin-borde-li">
@@ -173,86 +173,116 @@
           </div><!-- /.row -->
           <!-- /.row -->
           <div class="row"> 
+          <?php
+          $vuelta = 0;
+          ?>
           @if ($mensaje == 0)
                 @foreach($productos as $key => $value) 
-                     <div class="col-md-2"> 
+                <?php
+                $vuelta++;
+                ?>
+           
+                     <div class="col-sm-3"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value->nombre}}"
                        data-desc = "{{$value->descripcion_completa}}" data-presentacion = "{{$value->presentacion}}"
                        data-image = "{{$value->imagen}}" data-modo = "{{$value->modo_empleo}}"
                        data-beneficios ="{{$value->beneficios}}" data-id="{{$value->id}}"
                        data-precio = "{{$value->precio_unitario}}">
-                    <img class="img-responsive fondo-paneles" src="{{asset($value->imagen)}}"/> 
+                       <div class="fondo-imagenes">
+                    <img class="img-responsive centrar " src="{{asset($value->imagen)}}"/> 
+                    </div>
                     </a>
-                    <h3>{{$value->nombre}}</h3> 
-                    <p>{{$value->descripcion_corta}}</p> 
-                    <h4>${{$value->precio_unitario}}</h4> 
+                    <div class="informacion-producto">
+                    <p class="nombre-producto">{{$value->nombre}}</ph3> 
+                    <p class="corta-producto">{{$value->descripcion_corta}}</p> 
+                    <p class="unitario-producto" >${{$value->precio_unitario}}</p> 
+                    </div>
                     </div> 
+                
                 @endforeach 
           @endif
+
           @if ($mensaje == 1)
                 @foreach($maiz as $key3 => $value3) 
-                     <div class="col-md-2"> 
+                     <div class="col-sm-3"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value3->nombre}}"
                        data-desc = "{{$value3->descripcion_completa}}" data-presentacion = "{{$value3->presentacion}}"
                        data-image = "{{$value3->imagen}}" data-modo = "{{$value3->modo_empleo}}"
                        data-beneficios ="{{$value3->beneficios}}" data-id="{{$value3->id}}"
                        data-precio = "{{$value3->precio_unitario}}">
-                    <img class="img-responsive fondo-paneles" src="{{asset($value3->imagen)}}"/> 
+                        <div class="fondo-imagenes">
+                    <img class="img-responsive centrar" src="{{asset($value3->imagen)}}"/> 
+                    </div>
                     </a>
-                    <h3>{{$value3->nombre}}</h3> 
-                    <p>{{$value3->descripcion_corta}}</p> 
-                    <h4>${{$value3->precio_unitario}}</h4> 
+                    <div class="informacion-producto">
+                    <p class="nombre-producto">{{$value3->nombre}}</p> 
+                    <p class="corta-producto">{{$value3->descripcion_corta}}</p> 
+                    <p class="unitario-producto">${{$value3->precio_unitario}}</p> 
+                    </div>
                     </div> 
                 @endforeach 
           @endif
               @if ($mensaje == 2)
                 @foreach($maiz as $key4 => $value4) 
-                     <div class="col-md-2"> 
+                     <div class="col-sm-3"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value4->nombre}}"
                        data-desc = "{{$value4->descripcion_completa}}" data-presentacion = "{{$value4->presentacion}}"
                        data-image = "{{$value4->imagen}}" data-modo = "{{$value4->modo_empleo}}"
                        data-beneficios ="{{$value4->beneficios}}" data-id="{{$value4->id}}"
                        data-precio = "{{$value4->precio_unitario}}">
-                    <img class="img-responsive" src="{{asset($value4->imagen)}}"/> 
+                        <div class="fondo-imagenes">
+                    <img class="img-responsive centrar" src="{{asset($value4->imagen)}}"/> 
+                    </div>
                     </a>
-                    <h3>{{$value4->nombre}}</h3> 
-                    <p>{{$value4->descripcion_corta}}</p> 
-                    <h4>${{$value4->precio_unitario}}</h4> 
+                    <div class="informacion-producto">
+                    <p class="nombre-producto">{{$value4->nombre}}</p> 
+                    <p class="corta-producto">{{$value4->descripcion_corta}}</p> 
+                    <p class="unitario-producto">${{$value4->precio_unitario}}</p> 
                     </div> 
+                    </div>
                 @endforeach 
           @endif
              @if ($mensaje == 3)
                 @foreach($maiz as $key5 => $value5) 
-                     <div class="col-md-2"> 
+                     <div class="col-sm-3"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value5->nombre}}"
                        data-desc = "{{$value5->descripcion_completa}}" data-presentacion = "{{$value5->presentacion}}"
                        data-image = "{{$value5->imagen}}" data-modo = "{{$value5->modo_empleo}}"
                        data-beneficios ="{{$value5->beneficios}}" data-id="{{$value5->id}}"
                        data-precio = "{{$value5->precio_unitario}}">
-                    <img class="img-responsive" src="{{asset($value5->imagen)}}"/> 
+                       <div class="fondo-imagenes">
+                    <img class="img-responsive centrar" src="{{asset($value5->imagen)}}"/> 
+                    </div>
                     </a>
-                    <h3>{{$value5->nombre}}</h3> 
-                    <p>{{$value5->descripcion_corta}}</p> 
-                    <h4>${{$value5->precio_unitario}}</h4> 
+                    <div class="informacion-producto">
+                    <p class="nombre-producto">{{$value5->nombre}}</p> 
+                    <p class="corta-producto">{{$value5->descripcion_corta}}</p> 
+                    <p  class="unitario-producto">${{$value5->precio_unitario}}</p> 
+                    </div>
                     </div> 
                 @endforeach 
           @endif
              @if ($mensaje == 4)
                 @foreach($maiz as $key6 => $value6) 
-                     <div class="col-md-2"> 
+                     <div class="col-sm-3"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value6->nombre}}"
                        data-desc = "{{$value6->descripcion_completa}}" data-presentacion = "{{$value6->presentacion}}"
                        data-image = "{{$value6->imagen}}" data-modo = "{{$value6->modo_empleo}}"
                        data-beneficios ="{{$value6->beneficios}}" data-id="{{$value6->id}}"
                        data-precio = "{{$value6->precio_unitario}}">
-                    <img class="img-responsive" src="{{asset($value6->imagen)}}"/> 
+                             <div class="fondo-imagenes">
+                    <img class="img-responsive centrar" src="{{asset($value6->imagen)}}"/> 
+                    </div>
                     </a>
-                    <h3>{{$value6->nombre}}</h3> 
-                    <p>{{$value6->descripcion_corta}}</p> 
-                    <h4>${{$value6->precio_unitario}}</h4> 
+                    <div class="informacion-producto">
+                    <p class="nombre-producto">{{$value6->nombre}}</p> 
+                    <p class="corta-producto">{{$value6->descripcion_corta}}</p> 
+                    <p class="unitario-producto">${{$value6->precio_unitario}}</p> 
+                    </div>
                     </div> 
                 @endforeach 
           @endif
+          
             </div> 
           <!-- /.row -->
         </div>
@@ -273,30 +303,32 @@
               <span aria-hidden="true">&times;</span>
             </div>
             <div class="row">
-              <div class="col-md-2"></div>
-              <div class="col-md-8 text-center"><h2 id="nombre"></h2></div>
-              <div class="col-md-2"></div>
+              <div class="col-xs-2"></div>
+              <div class="col-xs-8 text-center"><p class="titulo-m-producto" id="nombre"></p></div>
+              <div class="col-xs-2"></div>
             </div>
             <div class="row">
-              <div class="col-md-6">
-                <img id="imagen" class="img-responsive" src=""/>
+              <div class="col-xs-6">
+               <div class="fondo-imagenes pull-right">
+                <img id="imagen" class="img-responsive centrar" src=""/>
+                </div>
               </div>
-              <div class="col-md-6">
-                  <p id="desc"></p>
-                  <br>
-                  <h3>Presentación:</h3><span id="presentacion"></span>
-                  <br>
-                  <h3>Precio:</h3>
-                  <h3 id="precio"></h3>
+              <div class="col-xs-6">
+                  <p class="texto-descrip" id="desc"></p>
+                 
+                  <p class="texto-presen"><b>Presentación:</b><span class="texto-descrip" id="presentacion"></span></p>
+                 
+                  <p class="texto-presen"><b>Precio:</b></p>
+                  <p class="texto-precio" id="precio"></p>
                   <div class="input-group">
                     <span class="input-group-btn">
-                      <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                      <button style="background-color: #A4BD31; color: white; " type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
                         <span class="glyphicon glyphicon-minus"></span>
                       </button>
                     </span>
                     <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
                     <span class="input-group-btn">
-                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                      <button style="background-color: #A4BD31; color: white; "  type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
                         <span class="glyphicon glyphicon-plus"></span>
                       </button>
                     </span>
@@ -306,15 +338,15 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                   <h3>Modo de Empleo:</h3>
-                   <p id="modo"></p>
+              <div class="col-xs-12">
+                   <p class="texto-presen "><b>Modo de Empleo:</b></p>
+                   <p class="texto-descrip" id="modo"></p>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                   <h3>Beneficios:</h3>
-                   <p id="beneficios"></p>
+              <div class="col-xs-12">
+                   <p class="texto-presen "><b>Beneficios:</b></p>
+                   <p class="texto-descrip" id="beneficios"></p>
               </div>
             </div>
           </div>
@@ -326,7 +358,7 @@
       </div>
     </div>
   </div>
-    
+  <br>  
 <div  id="fixed-bar"> </div>
 <!-- /#wrapper -->
 
