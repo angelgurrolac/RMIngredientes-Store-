@@ -15,6 +15,7 @@
    color: #444444;
    font-size: 18px;
   padding: 5px 14px !important;
+  border: none !important;
 }
 .lista-menu-tienda:hover{
    text-align: center !important;
@@ -22,6 +23,7 @@
    color: #444444;
     font-size: 18px;
    padding: 5px 14px !important;
+   border: none !important;
 }
 .lista-menu-tienda:active{
    text-align: center !important;
@@ -29,6 +31,7 @@
    color: #444444;
     font-size: 18px;
    padding: 5px 14px !important;
+   border: none !important;
 }
 .lista-menu-tienda:focus{
    text-align: center !important;
@@ -36,6 +39,8 @@
    color: #444444;
     font-size: 18px;
    padding: 5px 14px !important;
+   border: none !important;
+    outline-color: transparent !important;
 }
 .size-cart{
     font-size: 26px !important;
@@ -91,6 +96,69 @@
     padding: 0 23px !important;
 }
 /*Fin menu tienda*/
+/*Grid productos*/
+.titulo-m-producto{
+color: #FD9C1C !important;
+font-size: 30px !important;
+ font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+ font-weight: bold !important;
+}
+.texto-descrip{
+    font-size: 16px !important;
+    color: #7A7A7A !important;
+}
+.texto-presen{
+    font-size: 20px !important;
+
+    color: #444444;
+}
+.texto-precio{
+    font-size: 28px;
+    color: #FD9C1C;
+    font-weight: bold;
+}
+.fondo-imagenes{
+width: 200px;
+height: 250px;
+background-color: #F9F9F9 !important;
+  
+}
+.centrar{
+  display:flex;
+  margin:0 auto;  
+  height: 80px;
+  width: 130px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.informacion-producto{
+width: 200px;
+text-align: center;
+}
+.nombre-producto{
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #FD9C1C !important;
+}
+.corta-producto{
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+    line-height: 0px !important;
+}
+.unitario-producto{
+    font-size: 18px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #444444 !important;
+}
+
+
+/*Fin grid productos*/
+
+
+
 .pagos{
     padding-top: 5px;
 }
