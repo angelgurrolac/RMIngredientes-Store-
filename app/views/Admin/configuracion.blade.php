@@ -146,30 +146,39 @@
       <div class="col-md-5 fondo-paneles">
       <br>
         <p class="estilo-estadistica">CAMBIAR CONTRASEÑA</p>
+          @if($respuesta == 0)
+            <h1>Nada</h1>
+        @endif
+        @if($respuesta == 1)
+            <h1>Correcto</h1>
+        @endif
+         @if($respuesta == 2)
+            <h1>Incorrecto</h1>
+        @endif
+         @if($respuesta == 3)
+            <h1>No coinciden</h1>
+        @endif
         <br>
-         {{Form::open(array('url' => '/admin/publicidad','files' => 'true'))}}
            <div class="form-group">
+            {{ Form::open(['url' => '/Admin/GuardarContrasena','files'=>'true']) }}
+
+            <input id="value2" type="hidden" name="id" value="{{ Session::get('nombre')}}">
    
-    <input type="password" class="form-control" placeholder="CONTRASEÑA ACTUAL">
-    @foreach($datos as $key => $value)
-    {{ Form::password('pass1', Input::old('password'), array('class' => 'form-control', 'id' => 'pass1', 'placeholder' => 'CONTRASEÑA ACTUAL')) }}
-    @endforeach
+    <input name="actual" type="password" class="form-control" placeholder="CONTRASEÑA ACTUAL">
   </div>
   <div class="form-group">
  
-    <input type="password" class="form-control" placeholder="NUEVA CONTRASEÑA">
+    <input name="nueva" type="password" class="form-control" placeholder="NUEVA CONTRASEÑA">
   </div>
    <div class="form-group">
  
-    <input type="password" class="form-control" placeholder="CONFIRMAR NUEVA CONTRASEÑA">
+    <input name="nueva2" type="password" class="form-control" placeholder="CONFIRMAR NUEVA CONTRASEÑA">
   </div>
   <br>
 
-  <input type="submit" value="CAMBIAR" class="btn btn-verde-confi pull-right">
+  {{ Form::submit('CAMBIAR', array('name'=> 'save','class' => 'btn btn-verde-confi pull-right')) }}</td> 
+  {{Form::close()}}
 
-  
-{{Form::close()}}
-        
       </div>
       <div class="col-md-4"></div>
     </div>

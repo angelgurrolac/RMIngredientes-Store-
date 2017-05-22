@@ -32,6 +32,7 @@ Route::group(['before' => 'auth'], function()
     Route::post('/Admin/AgregarU', 'AdminController@AgregarU'); // Agregar usuarios
     Route::get('/Admin/estadisticas', 'AdminController@ShowEstadisticas'); // Vista de inicio de estadisticas
     Route::get('/Admin/configuracion', 'AdminController@ChangePassword'); //vista de configuración de usuario
+    Route::post('/Admin/GuardarContrasena', 'AdminController@GuardarContrasena'); //vista de configuración de usuario
 
 });
 

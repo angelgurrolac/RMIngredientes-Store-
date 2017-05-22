@@ -44,8 +44,39 @@ class AdminController extends \BaseController {
 	}
 	
 	public function ChangePassword(){
-		$datos = User::where('nombre','=',Auth::user()->id);
-		return View::make('Admin.configuracion',compact('datos'));
+		$respuesta = 0;
+		return View::make('Admin.configuracion',compact('respuesta'));
+	}
+
+
+	public function GuardarContrasena(){
+
+		$usuario = User::where('nombre','=',Input::get('id'))->first();
+    	$antiguo = Input::get('actual');
+    	$nuevo = Input::get('nueva');
+    	$nuevo2 = Input::get('nueva2');
+    	
+    	if ($nuevo == $nuevo2) {
+		    		if(Hash::check($antiguo,$usuario->password))
+		    	{
+		    		$usuario->password = Hash::make($nuevo);
+		    		$usuario->save();
+		    		$respuesta = 1;
+		    		return View::make('Admin.configuracion',compact('respuesta'));
+		    	}
+		    	else
+		    	{
+		    		$respuesta = 2;
+		    		return View::make('Admin.configuracion',compact('respuesta'));
+		    	}
+    	}
+
+    	else
+		    	{
+		    		$respuesta = 3;
+		    		return View::make('Admin.configuracion',compact('respuesta'));
+		    	}
+    	
 	}
 
 	public function EditarPedido(){

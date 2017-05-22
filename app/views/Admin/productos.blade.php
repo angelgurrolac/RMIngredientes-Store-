@@ -402,7 +402,7 @@
   </div>
 
 
-  <div  id="fixed-bar"> </div>
+  <div id="fixed-bar"> </div>
 
 
 
