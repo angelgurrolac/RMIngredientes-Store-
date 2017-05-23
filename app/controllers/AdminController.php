@@ -101,6 +101,7 @@ class AdminController extends \BaseController {
 		$empleo = Input::get('empleo');
 		$beneficios = Input::get('beneficios');
 		$categoria = Input::get('categoria');
+		$categoria2 = Input::get('categoria2');
 
 		$producto = new Productos;
 		if($imagen!=null){
@@ -119,6 +120,7 @@ class AdminController extends \BaseController {
 		$producto->estado = 1;
 		$producto->contador = 0;
 		$producto->id_categoria = $categoria;
+		$producto->id_categoria2 = $categoria2;
 		$producto->save();
 
 		return Redirect::to('Admin/productos');
@@ -136,6 +138,7 @@ class AdminController extends \BaseController {
 		$empleo = Input::get('empleoE');
 		$beneficios = Input::get('beneficiosE');
 		$categoria = Input::get('categoriaE');
+		$categoria2 = Input::get('categoriaE2');
 		$productoE = Productos::find(Input::get('id_productoE'));
 
 			if($imagen!=null){
@@ -155,6 +158,7 @@ class AdminController extends \BaseController {
 		$productoE->estado = 1;
 		$productoE->contador = 0;
 		$productoE->id_categoria = $categoria;
+		$productoE->id_categoria2 = $categoria2;
 		$productoE->save();
 			return Redirect::to('/Admin/productos');
 		}

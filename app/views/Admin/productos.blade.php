@@ -215,7 +215,8 @@
                    data-productdesco="{{$value->descripcion_completa}}" data-productpresentacion="{{$value->presentacion}}"
                    data-productdesc="{{$value->descripcion_corta}}" data-productmodo = "{{$value->modo_empleo}}"
                    data-productben = "{{$value->beneficios}}" data-productprecio = "{{$value->precio_unitario}}"
-                   data-productcat = "{{$value->idC}}" data-productimage = "{{asset($value->imagen)}}" type="button" class="btn btn-sm"
+                   data-productcat = "{{$value->idC}}" data-productcat2 = "{{$value->id_categoria2}}" 
+                   data-productimage = "{{asset($value->imagen)}}" type="button" class="btn btn-sm"
                    style="background-image: url(../assets/img/editar.png); width: 40px; height: 40px; " >
                   <input name="Eliminar" data-toggle="modal" data-target="#myModal3" data-productid="{{ $value->id }}" data-productname="{{ $value->nombre }}" type="button" class="btn eliminar btn-sm"
                    style="background-image: url(../assets/img/eliminar.png); width: 40px; height: 40px;">
@@ -277,7 +278,7 @@
                      @endforeach
                   </select>
                   <br>
-                  <select name="categoria" class="form-control without-radius" >
+                  <select name="categoria2" class="form-control without-radius" >
                     @foreach($categorias as $key1 => $value1)
                      <option value="{{$value1->id}}">{{$value1->nombre}}</option>
                      @endforeach
@@ -352,7 +353,7 @@
                     @endforeach
                 </select>
                 <br>
-                <select id="categoria" name="categoriaE" class="form-control without-radius">
+                <select id="categoria2" name="categoriaE2" class="form-control without-radius">
                    @foreach($categorias as $key2 => $value2)
                      <option value="{{$value2->id}}">{{$value2->nombre}}</option>
                     @endforeach
@@ -478,6 +479,7 @@
         var productimagen = $(e.relatedTarget).data('productimage');
         var productpresentacion = $(e.relatedTarget).data('productpresentacion');
         var productcat = $(e.relatedTarget).data('productcat');
+        var productcat2 = $(e.relatedTarget).data('productcat2');
         $("#myModal2 #pName2").val(productName2);
         $("#myModal2 #completad").val(productdesco);
         $("#myModal2 #breved").val(productdesc);
@@ -486,6 +488,7 @@
         $("#myModal2 #precio").val(productprecio);
         $("#myModal2 #presentacion").val(productpresentacion);
         $("#myModal2 #categoria").val(productcat);
+        $("#myModal2 #categoria2").val(productcat2);
         $('#blah2').attr('src', productimagen);
         $("#value2").val(productId2);
     // $("#value").val(productId);
