@@ -27,7 +27,8 @@ class Productos extends Eloquent
 		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
 			'p.imagen','cat.nombre as nombreC','cat.id as idC')
 
-		->where('p.id_categoria','=',1);
+		->where('p.id_categoria','=',1)
+		->orWhere('p.id_categoria2','=',1);
 
 		return $productos;
 	}
@@ -42,7 +43,8 @@ class Productos extends Eloquent
 		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
 			'p.imagen','cat.nombre as nombreC','cat.id as idC')
 
-		->where('p.id_categoria','=',2);
+		->where('p.id_categoria','=',2)
+		->orWhere('p.id_categoria2','=',2);
 
 		return $productos;
 	}
@@ -57,7 +59,8 @@ class Productos extends Eloquent
 		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
 			'p.imagen','cat.nombre as nombreC','cat.id as idC')
 
-		->where('p.id_categoria','=',3);
+		->where('p.id_categoria','=',3)
+		->orWhere('p.id_categoria2','=',3);
 
 		return $productos;
 	}
@@ -72,7 +75,8 @@ class Productos extends Eloquent
 		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
 			'p.imagen','cat.nombre as nombreC','cat.id as idC')
 
-		->where('p.id_categoria','=',4);
+		->where('p.id_categoria','=',4)
+		->orWhere('p.id_categoria2','=',4);
 
 		return $productos;
 	}
