@@ -213,12 +213,13 @@
                         <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value3->imagen)}}"/> 
                     </div>
-                    </a>
+                   
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value3->nombre}}</p> 
                     <p class="corta-producto">{{$value3->descripcion_corta}}</p> 
                     <p class="unitario-producto">${{$value3->precio_unitario}}</p> 
                     </div>
+                     </a>
                     </div> 
                 @endforeach 
           @endif
@@ -233,12 +234,13 @@
                         <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value4->imagen)}}"/> 
                     </div>
-                    </a>
+                    
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value4->nombre}}</p> 
                     <p class="corta-producto">{{$value4->descripcion_corta}}</p> 
                     <p class="unitario-producto">${{$value4->precio_unitario}}</p> 
                     </div> 
+                    </a>
                     </div>
                 @endforeach 
           @endif
@@ -253,12 +255,13 @@
                        <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value5->imagen)}}"/> 
                     </div>
-                    </a>
+                  
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value5->nombre}}</p> 
                     <p class="corta-producto">{{$value5->descripcion_corta}}</p> 
                     <p  class="unitario-producto">${{$value5->precio_unitario}}</p> 
                     </div>
+                      </a>
                     </div> 
                 @endforeach 
           @endif
@@ -273,12 +276,13 @@
                              <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value6->imagen)}}"/> 
                     </div>
-                    </a>
+                    
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value6->nombre}}</p> 
                     <p class="corta-producto">{{$value6->descripcion_corta}}</p> 
                     <p class="unitario-producto">${{$value6->precio_unitario}}</p> 
                     </div>
+                    </a>
                     </div> 
                 @endforeach 
           @endif
