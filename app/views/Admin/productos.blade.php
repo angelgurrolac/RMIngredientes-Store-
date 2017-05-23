@@ -255,8 +255,8 @@
                 <br>
                 <div class="row"> 
                   <div class="col-xs-6">
-                    <div style="width: 250px; height: 220px; background-color: white;">
-                     <img id="blah" src="#" width="250px" height="220px" alt="" />
+                    <div style="width: 250px; height: 280px; background-color: white;">
+                     <img id="blah" src="#" width="250px" height="280px" alt="" />
                      </div>
                      <br>
                  <label class="btn btn-verde-modal2" >
@@ -270,6 +270,12 @@
                    <br>
                   <input class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
                   
+                  <br>
+                  <select name="categoria" class="form-control without-radius" >
+                    @foreach($categorias as $key1 => $value1)
+                     <option value="{{$value1->id}}">{{$value1->nombre}}</option>
+                     @endforeach
+                  </select>
                   <br>
                   <select name="categoria" class="form-control without-radius" >
                     @foreach($categorias as $key1 => $value1)
@@ -323,8 +329,8 @@
               <div class="row"> 
                 <div class="col-xs-6">
                    <form>
-                    <div style="width: 250px; height: 220px; background-color: white;">
-                     <img id="blah2" src="" width="250px" height="220px" alt="" />
+                    <div style="width: 250px; height: 280px; background-color: white;">
+                     <img id="blah2" src="" width="250px" height="280px" alt="" />
                      </div>
                      <br>
                  <label class="btn btn-verde-modal2">
@@ -339,6 +345,12 @@
                  <br>
                  <input name="presentacionE" id="presentacion" class="form-control without-radius" type="text" name="presentacion" placeholder="PRESENTACIÓN">
                 
+                <br>
+                <select id="categoria" name="categoriaE" class="form-control without-radius">
+                   @foreach($categorias as $key2 => $value2)
+                     <option value="{{$value2->id}}">{{$value2->nombre}}</option>
+                    @endforeach
+                </select>
                 <br>
                 <select id="categoria" name="categoriaE" class="form-control without-radius">
                    @foreach($categorias as $key2 => $value2)
