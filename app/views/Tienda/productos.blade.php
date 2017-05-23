@@ -19,6 +19,7 @@
 
     <!-- Custom CSS -->
     <link href="{{ asset('assets/dist/css/sb-admin-2.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/js/notiny-master/notiny-master/dist/notiny.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -114,7 +115,7 @@
                         <hr id="hr-contacto" class="menutext">
                     </li>
                       <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-                        <a class="menu-tienda" id="#" href="#"></a>
+                        <a class="menu-tienda" id="#" href="#"><span id="contador" class="badge"></span></a>
                         
                     </li>
 
@@ -181,7 +182,6 @@
                 <?php
                 $vuelta++;
                 ?>
-           
                      <div class="col-sm-3"> 
                     <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value->nombre}}"
                        data-desc = "{{$value->descripcion_completa}}" data-presentacion = "{{$value->presentacion}}"
@@ -315,7 +315,7 @@
               </div>
               <div class="col-xs-6">
                   <p class="texto-descrip" id="desc"></p>
-                 
+                 <input type="hidden" id="id" name="id">
                   <p class="texto-presen"><b>Presentación:</b><span class="texto-descrip" id="presentacion"></span></p>
                  
                   <p class="texto-presen"><b>Precio:</b></p>
@@ -326,7 +326,7 @@
                         <span class="glyphicon glyphicon-minus"></span>
                       </button>
                     </span>
-                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                    <input id="cantidad" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
                     <span class="input-group-btn">
                       <button style="background-color: #A4BD31; color: white; "  type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
                         <span class="glyphicon glyphicon-plus"></span>
@@ -334,7 +334,7 @@
                     </span>
                   </div>
                   <br>
-                  <button type="button" class="btn btn-naranja-modal">AGREGAR AL CARRITO</button>
+                  <button id="agregar" type="button" class="btn btn-naranja-modal">AGREGAR AL CARRITO</button>
               </div>
             </div>
             <div class="row">
@@ -362,12 +362,9 @@
 <div  id="fixed-bar"> </div>
 <!-- /#wrapper -->
 
-<script src="{{ URL::asset('assets/js/menu.js') }}"></script>
+
 <!-- jQuery -->
 <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-
-
-<script src="{{ URL::asset('assets/js/menu.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -375,8 +372,25 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
 
+<script src="{{ URL::asset('assets/js/notiny-master/notiny-master/dist/notiny.js') }}"></script>
+
    <script type="text/javascript">
    $(document).ready(function(){
+
+    $("#contador").text("");
+    var contador = 0;
+
+    $("#agregar").click(function(){
+          contador++;
+          var id = $("#id").text();
+          var cantidad = $("#cantidad").val();
+          localStorage.setItem(id, cantidad);
+          $.notiny({ text: 'Artículo Agregado', position: 'right-top' });
+          $("#contador").text(contador);
+
+    })
+
+
       $('#myModal').on('show.bs.modal', function(e) {
     //get data-id attribute of the clicked element
         var id = $(e.relatedTarget).data('id');
@@ -390,10 +404,11 @@
         $("#myModal #nombre").text(nombre);
         $("#myModal #desc").text(desc);
         $("#myModal #modo").text(modo);
+        $("#myModal #id").text(id);
         $("#myModal #beneficios").text(beneficios);
         $("#myModal #presentacion").text(presentacion);
         $("#myModal #precio").text('$' + precio);
-        $("#myModal #imagen").attr('src','http://localhost:8000/'+imagen);
+        $("#myModal #imagen").attr('src','http://tienda.rmingredientes.com/'+imagen);
         });
 
 
@@ -470,6 +485,41 @@ $(".input-number").keydown(function (e) {
             e.preventDefault();
         }
     });
+
+  // seccion de conocenos
+  $("#conocenos").hover(function(){
+    $("#hr-conocenos").removeClass("menutext");
+    $("#hr-conocenos").addClass("menutext2");
+  }, function(){
+    $("#hr-conocenos").addClass("menutext");
+    $("#hr-conocenos").removeClass("menutext2");
+  });
+  // seccion de productos
+  $("#productos").hover(function(){
+    $("#hr-productos").removeClass("menutext");
+    $("#hr-productos").addClass("menutext2");
+  }, function(){
+    $("#hr-productos").addClass("menutext");
+    $("#hr-productos").removeClass("menutext2");
+  });
+  // seccion de demostraciones
+  $("#demostraciones").hover(function(){
+    $("#hr-demostraciones").removeClass("menutext");
+    $("#hr-demostraciones").addClass("menutext2");
+  }, function(){
+    $("#hr-demostraciones").addClass("menutext");
+    $("#hr-demostraciones").removeClass("menutext2");
+  });
+  // seccion de contacto
+  $("#contacto").hover(function(){
+    $("#hr-contacto").removeClass("menutext");
+    $("#hr-contacto").addClass("menutext2");
+  }, function(){
+    $("#hr-contacto").addClass("menutext");
+    $("#hr-contacto").removeClass("menutext2");
+  });
+
+
    });
 
     </script>
