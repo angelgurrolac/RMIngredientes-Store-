@@ -115,7 +115,7 @@
                         <hr id="hr-contacto" class="menutext">
                     </li>
                       <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-                        <a class="menu-tienda" id="#" href="#"><span id="contador" class="badge"></span></a>
+                        <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}"><span id="contador" class="badge"></span></a>
                         
                     </li>
 

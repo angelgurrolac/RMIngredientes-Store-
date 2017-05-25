@@ -46,3 +46,9 @@ Route::post('Tienda/maiz','TiendaController@maiz');
 Route::post('Tienda/harina','TiendaController@harina');
 Route::post('Tienda/panificadoras','TiendaController@panificadoras');
 Route::post('Tienda/especializado','TiendaController@especializado');
+
+
+// rutas para proceso de compras 
+Route::get('Tienda/cart','TiendaController@cart'); //ruta del carrito de compras
+Route::post('Tienda/ProductsCart','TiendaController@ProductsCart'); //ruta del carrito de compras
+

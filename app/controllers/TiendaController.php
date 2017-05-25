@@ -65,4 +65,19 @@ class TiendaController extends \BaseController {
 		return View::make('Tienda.productos',compact('maiz','categorias','mensaje','titulo'));
 	}
 
+	public function cart(){
+		return View::make('Tienda.cart');
+	}
+
+	public function ProductsCart(){
+		$data=Input::all();
+
+		 foreach ($data as $key => $value) {
+
+		 	$producto = Productos::find($value);
+		 	return json_encode($producto);
+        }
+		
+	}
+
 }
