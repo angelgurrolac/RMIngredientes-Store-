@@ -65,4 +65,8 @@ class TiendaController extends \BaseController {
 		return View::make('Tienda.productos',compact('maiz','categorias','mensaje','titulo'));
 	}
 
+	public function email(){
+		return View::make('emails.email');
+	}
+
 }

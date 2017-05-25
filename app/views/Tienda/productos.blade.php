@@ -213,13 +213,13 @@
                         <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value3->imagen)}}"/> 
                     </div>
-                   
+                    </a>
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value3->nombre}}</p> 
                     <p class="corta-producto">{{$value3->descripcion_corta}}</p> 
                     <p class="unitario-producto">${{$value3->precio_unitario}}</p> 
                     </div>
-                     </a>
+                    
                     </div> 
                 @endforeach 
           @endif
@@ -234,13 +234,13 @@
                         <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value4->imagen)}}"/> 
                     </div>
-                    
+                    </a>
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value4->nombre}}</p> 
                     <p class="corta-producto">{{$value4->descripcion_corta}}</p> 
                     <p class="unitario-producto">${{$value4->precio_unitario}}</p> 
                     </div> 
-                    </a>
+                    
                     </div>
                 @endforeach 
           @endif
@@ -255,13 +255,13 @@
                        <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value5->imagen)}}"/> 
                     </div>
-                  
+                    </a>
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value5->nombre}}</p> 
                     <p class="corta-producto">{{$value5->descripcion_corta}}</p> 
                     <p  class="unitario-producto">${{$value5->precio_unitario}}</p> 
                     </div>
-                      </a>
+                    
                     </div> 
                 @endforeach 
           @endif
@@ -276,13 +276,13 @@
                              <div class="fondo-imagenes">
                     <img class="img-responsive centrar" src="{{asset($value6->imagen)}}"/> 
                     </div>
-                    
+                      </a>
                     <div class="informacion-producto">
                     <p class="nombre-producto">{{$value6->nombre}}</p> 
                     <p class="corta-producto">{{$value6->descripcion_corta}}</p> 
                     <p class="unitario-producto">${{$value6->precio_unitario}}</p> 
                     </div>
-                    </a>
+                  
                     </div> 
                 @endforeach 
           @endif
@@ -303,8 +303,8 @@
         <div class="modal-body cuerpo-modal-elimnar">
           <div class="container-fluid">
             <div class="row">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <button type="button" class="close2" data-dismiss="modal" aria-label="Close">
+              <span class="close2" aria-hidden="true">&times;</span>
             </div>
             <div class="row">
               <div class="col-xs-2"></div>
@@ -312,10 +312,10 @@
               <div class="col-xs-2"></div>
             </div>
             <div class="row">
-              <div class="col-xs-6">
-               <div class="fondo-imagenes pull-right">
+              <div class="col-xs-6 fondo-imagen ">
+               <br>
                 <img id="imagen" class="img-responsive centrar" src=""/>
-                </div>
+               
               </div>
               <div class="col-xs-6">
                   <p class="texto-descrip" id="desc"></p>
@@ -324,21 +324,33 @@
                  
                   <p class="texto-presen"><b>Precio:</b></p>
                   <p class="texto-precio" id="precio"></p>
-                  <div class="input-group">
+                  <br>
+                  <div class="row">
+                    <div class="col-xs-7">
+                        <div class="input-group">
                     <span class="input-group-btn">
                       <button style="background-color: #A4BD31; color: white; " type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
                         <span class="glyphicon glyphicon-minus"></span>
                       </button>
                     </span>
-                    <input id="cantidad" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                    <input id="cantidad" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="50">
                     <span class="input-group-btn">
                       <button style="background-color: #A4BD31; color: white; "  type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
                         <span class="glyphicon glyphicon-plus"></span>
                       </button>
                     </span>
                   </div>
+                    </div>
+                    <div class="col-xs-5"></div>
+                  </div>
                   <br>
-                  <button id="agregar" type="button" class="btn btn-naranja-modal">AGREGAR AL CARRITO</button>
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <button id="agregar" type="button" class="btn Btn-Nar-mod-tienda">AGREGAR AL CARRITO</button>
+                    </div>
+                    <div class="col-xs-9"></div>
+                  </div>
+                  
               </div>
             </div>
             <div class="row">
