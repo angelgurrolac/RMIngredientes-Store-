@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TIENDA - RMIngredientes</title>
+  <title>Emails - RMIngredientes</title>
 
   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
   <!-- Bootstrap Core CSS -->
@@ -119,69 +119,31 @@
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
           <br>
-          <p class="mensaje-general">Muchas gracias por su compra en RM Ingredientes. A continuación te mostramos los detalles de tu pedido:</p>
+          <p class="mensaje-general">Hola</p>
+          <p class="mensaje-general">Ahora que ya recibiste tus productos queremos darte las gracias por confiar RM Ingredientes. Nos interesa saber cómo fue tu experiencia con nosotros para poder seguir mejorando nuestro servicio.
+            <p class="mensaje-general">
+              Estaríamos muy contentos si nos regalas unos minutos de tu tiempo enviando tu opinión de RM Ingredientes al siguiente correo:<a href=""> ventas@rmingredientes.com</a>
+            </p>
+            <p class="mensaje-general">Atentamente,</p>
+            <p class="detalles-pedido" >RM Ingredientes</p>
+          </p>
           <br> 
-          <p class="detalles-pedido" style="display: inline-block;" >Fecha de realización:</p><p class="mensaje-general" style="display: inline-block;" >&nbsp; 03/Mayo/2017</p>
-          <br>
-          <p class="detalles-pedido" style="display: inline-block;" >No. de Pedido:</p><p style="display: inline-block;" class="mensaje-general">&nbsp;1</p>
-          <br>
-          <p class="detalles-pedido" style="display: inline-block;" >Cliente:</p><p style="display: inline-block;" class="mensaje-general">&nbsp; Manuel Israel Soto Ortega</p>
-          <br>
-          <p class="detalles-pedido">Resumen del Pedido:</p>
-          <br>
-
-          <div class="table-responsive" style="border:  10px solid #ffffff;" >
-            <table id="table" class="table table-striped">
-              <thead class="encabezados-tabla">
-                <tr>
-                  <th class="text-center">CANTIDAD</th>
-                  <th class="text-center">NOMBRE DEL PRODUCTO</th>
-                  <th class="text-center">PRESENTACIÓN</th>
-                  <th class="text-center">PRECIO TOTAL <br> <span style="font-size: 12px; ">(IVA y Envío incluidos)</span></th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <td style="background-color: white;   border-bottom: 5px solid #ffffff;"></td>
-                  <td style="background-color: white; border-bottom: 5px solid #ffffff;"></td>
-                  <td style="font-weight: bold;">Total</td>
-                  <td>$180</td>
-                </tr>
-              </tfoot>
-              <tbody>
-
-                <tr>
-                 <td>1</td>
-                 <td>Blancoplus</td>
-                 <td>Bidón de 25kg</td>
-                 <td>$4,000</td>
-
-               </tr>
-
-             </tbody>
-           </table>
-         </div>
-         <!-- /.table-responsive -->
-         <br>
-         <p class="detalles-pedido" >Domicilio de envío:</p><p class="mensaje-general">Calle 20 de Noviembre #454 Col. Valle del Sur Durango, Dgo. 34120</p>
-         <br>
-         <p class="mensaje-general">
-          En aproximadamente 24 horas recibirás un correo electrónico con el número de tu guía para que puedas rastrear tu pedido y saber qué día vas a recibirlo. Nuevamente te agradecemos por tu compra.
-
-
-          <p>
-
-          </div>
-          <div class="col-xs-2"></div>
+          
 
         </div>
+        <div class="col-xs-2"></div>
+        <br>
+        <br>
 
-        <!-- Footer -->
-        <footer class="text-center">
-          <div class="footer-above">
-            <!-- <div class="container"> -->
-            <div class="row-footer row">
-              <div class="footer-col col-xs-3">
+      </div>
+      <br>
+
+      <!-- Footer -->
+      <footer class="text-center">
+        <div class="footer-above">
+          <!-- <div class="container"> -->
+          <div class="row-footer row">
+            <div class="footer-col col-xs-3">
                             <!-- <h3>Location</h3>
                             <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                           </div>

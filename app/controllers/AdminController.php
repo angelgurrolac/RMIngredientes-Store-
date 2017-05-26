@@ -28,7 +28,7 @@ class AdminController extends \BaseController {
 	}
 	public function ShowUsuarios()
 	{
-		$usuarios=User::where('rol','=','2')->get();
+		$usuarios=User::where('rol','=','2')->orderBy('created_at','desc')->get();
 		return View::make('Admin.usuarios',compact('usuarios'));
 	}	
 	public function ShowEstadisticas()

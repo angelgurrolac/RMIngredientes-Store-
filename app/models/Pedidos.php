@@ -22,7 +22,8 @@ class Pedidos extends Eloquent
 			 GROUP_CONCAT(productos.nombre) as pnombre, p.total, p.domicilio as domicilio, DATE(p.created_at) as fecha,
 			 p.estatus'))
 
-		->orderBy('p.id','asc')
+		
+		->orderBy('p.created_at', 'desc')
 		->groupBy('u.id');
 
 

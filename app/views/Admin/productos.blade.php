@@ -72,6 +72,9 @@
           table td:last-child {
             border-right: none;
           }
+          .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: white;
+}
 
           .btn-verde-modal input[type=file] {
     color: #ffffff;
