@@ -7,13 +7,17 @@ class Productos extends Eloquent
 
 	public function scopeProductos(){
 		$productos = DB::table('productos as p')
+		  
 
 		->join('categorias as cat',function($join){
 							$join->on('p.id_categoria','=','cat.id');
 					})
 
 		->select('p.id','p.descripcion_corta','p.presentacion','p.nombre','p.descripcion_completa','p.modo_empleo','p.beneficios','p.precio_unitario',
-			'p.imagen','cat.nombre as nombreC','cat.id as idC','p.id_categoria2');
+			'p.imagen','cat.nombre as nombreC','cat.id as idC','p.id_categoria2')
+		
+         ->orderBy('p.created_at', 'desc');
+            
 
 		return $productos;
 	}

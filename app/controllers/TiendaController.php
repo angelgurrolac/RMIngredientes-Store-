@@ -81,7 +81,12 @@ class TiendaController extends \BaseController {
 	
 	public function email(){
 		return View::make('emails.email');
-
+	}
+	public function emailEnvio(){
+		return View::make('emails.emailEnvio');
+	}
+	public function emailEntregado(){
+		return View::make('emails.emailEntregado');
 	}
 
 	public function ConfirmacionPedido(){
