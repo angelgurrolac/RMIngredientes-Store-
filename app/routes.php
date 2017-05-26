@@ -52,4 +52,5 @@ Route::post('Tienda/especializado','TiendaController@especializado');
 // rutas para proceso de compras 
 Route::get('Tienda/cart','TiendaController@cart'); //ruta del carrito de compras
 Route::post('Tienda/ProductsCart','TiendaController@ProductsCart'); //ruta del carrito de compras
+Route::post('Tienda/ConfirmacionPedido','TiendaController@ConfirmacionPedido'); //ruta del carrito de compras
 

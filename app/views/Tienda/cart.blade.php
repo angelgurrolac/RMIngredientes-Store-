@@ -139,7 +139,7 @@
 
       <div class="container">
         <div class="row">
-            <div class="col-md-offset-1">
+            <div class="col-md-12">
                 <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Carrito de compras</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos para envió</h3></a>
@@ -151,7 +151,8 @@
         </div> 
         <br>
         <div class="row">
-            <div class="col-md-offset-2 col-md-8">
+          <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <div class="table-responsive" style="overflow: hidden;">
                     <table id="table" class="table">
                       <thead>
@@ -162,16 +163,43 @@
                           <th></th>
                         </tr>
                       </thead>
-                      <tbody>
-                          <tr class="products">
-                              <th><img src="" alt=""></th>
-                          </tr>
+                      <tbody class="products">
                       </tbody>
                     </table>
                 </div>
             <!-- /.table-responsive -->
             </div>
+            <div class="col-md-2"></div>
         </div>
+      
+
+      <div class="row">
+          <div class="col-md-6">
+          </div>
+          <div class="col-md-3">
+             <p class="display">Subtotal</p>
+             <p class="subtotal display"></p>
+             <br>
+             <p class="display">I.V.A.</p>
+             <p class="iva display"></p>
+             <br>
+             <p class="display">Gastos de envío</p>
+             <p class="envio display"></p>
+             <br>
+             <hr>
+             <p class="display">Total</p>
+             <p class="total display"></p>
+          </div>
+          <div class="col-md-3">
+            <input id="comprar" name="Comprar" class="btn btn-naranja-modal" type="submit" value="HACER PEDIDO">
+            <br>
+            <br>
+            <p>Seguir comprando</p>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
       </div>
 
 <div  id="fixed-bar"> </div>
@@ -191,7 +219,9 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-
+    
+    var contador = 0;
+    var envio = 0;
     for (x=0; x<=localStorage.length-1; x++)  {  
         clave = localStorage.key(x); 
         console.log(clave + "=" + localStorage.getItem(clave));  
@@ -206,29 +236,68 @@ $(document).ready(function(){
               console.log(data);
                 // $.each(data, function(i, item) {
                 //     console.log(item);
-                $(".products").append("<th>"+data.nombre+"</th>");
+                contador = contador + (data.precio_unitario * localStorage.getItem(data.id));
+                envio = envio + parseInt(localStorage.getItem(data.id));
+                console.log(localStorage.getItem(data.id));
+                $(".products").append("<tr>");
+                $(".products").append("<th><img width='100px' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='display'>"+data.nombre+"</h2><p>"+data.descripcion_corta+"</p></th>");
                 $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
                 $(".products").append("<th> $"+data.precio_unitario+"</th>");
-                $(".products").append("<th> <input type='button' class='lista-menu-tienda estilo-input' value='x' name='guardar'> </th>");
+                $(".products").append("<th> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></th>");
+                $(".products").append("</tr>");
+                // console.log(contador);
+                $(".subtotal").text("$" + contador.toFixed(2));
+                var subtotal = parseInt(contador);
+                localStorage.setItem('subtotal',subtotal);
+                $(".iva").text("$" + (contador * .16).toFixed(2));
+                var iva = parseInt(contador * .16);
+                localStorage.setItem('iva',iva);
+                $(".envio").text("$" + (envio * 70).toFixed(2));
+                var envio1 = parseInt(envio * 70);
+                localStorage.setItem('envio1',envio1);
+                $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
                 // });
+                
+                $("."+data.id).click(function(){
+                  alert("hola");
+                  var id = $("#"+data.id).val();
+                  console.log(id);
+                  localStorage.removeItem(data.id);
+                  window.location.reload();
+                });
+
               },
             error: function (data) {
-                console.error(data);
+                $(".products").append("<tr>Ocurrio un error. ¡Intentalo de nuevo!</tr>");
+              }
+            });
+      };
+
+
+      $("#comprar").click(function(){
+        for (x=0; x<=localStorage.length-1; x++)  {  
+        clave = localStorage.key(x); 
+        console.log(clave + "=" + localStorage.getItem(clave)); 
+
+                 $.ajax({
+        type: "post", 
+        url: "ConfirmacionPedido", 
+        data: ({id : clave, subtotal : localStorage.getItem('subtotal'), iva : localStorage.getItem('iva'),
+          Total : localStorage.getItem('total')}),
+        cache: false,
+        dataType: "json",
+            success: function (data) { 
+              console.log(data);
+              },
+            error: function (data) {
+                
               }
             });
 
-}
+        };
 
 
-
-
-
-
-
-
-
-
-
+      });
   // seccion de conocenos
   $("#conocenos").hover(function(){
     $("#hr-conocenos").removeClass("menutext");

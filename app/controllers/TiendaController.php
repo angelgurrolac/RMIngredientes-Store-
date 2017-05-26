@@ -84,4 +84,14 @@ class TiendaController extends \BaseController {
 
 	}
 
+	public function ConfirmacionPedido(){
+			$data=Input::all();
+
+		 foreach ($data as $key => $value) {
+
+		 	return json_encode($value);
+        }
+
+	}
+
 }
