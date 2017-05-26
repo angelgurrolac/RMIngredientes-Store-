@@ -140,13 +140,13 @@
       <div class="container">
         <div class="row">
             <div class="col-md-offset-1">
-                <h3 class="display bold">Carrito de compras</h3>
+                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Carrito de compras</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <h3 class="display">Datos para envió</h3>
+                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos para envió</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <h3 class="display">Datos del pago</h3>
+                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos del pago</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <h3 class="display">Confirmación de pedido</h3>
+                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Confirmación de pedido</h3></a>
             </div>
         </div> 
         <br>
@@ -162,13 +162,10 @@
                           <th></th>
                         </tr>
                       </thead>
-                      <tbody class="products">
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
+                      <tbody>
+                          <tr class="products">
+                              <th><img src="" alt=""></th>
+                          </tr>
                       </tbody>
                     </table>
                 </div>
@@ -206,7 +203,14 @@ $(document).ready(function(){
         cache: false,
         dataType: "json",
             success: function (data) { 
-                console.log(data);
+              console.log(data);
+                // $.each(data, function(i, item) {
+                //     console.log(item);
+                $(".products").append("<th>"+data.nombre+"</th>");
+                $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
+                $(".products").append("<th> $"+data.precio_unitario+"</th>");
+                $(".products").append("<th> <input type='button' class='lista-menu-tienda estilo-input' value='x' name='guardar'> </th>");
+                // });
               },
             error: function (data) {
                 console.error(data);

@@ -77,6 +77,7 @@ class TiendaController extends \BaseController {
 		 	$producto = Productos::find($value);
 		 	return json_encode($producto);
         }
+    }
 	
 	public function email(){
 		return View::make('emails.email');
