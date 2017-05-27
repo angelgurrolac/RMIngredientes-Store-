@@ -14,36 +14,36 @@ p{
     background-color: transparent !important;
 }
 .lista-menu-tienda{
-   text-align: center !important;
-   color: #444444;
-   font-size: 18px;
-  padding: 5px 14px !important;
-  border: none !important;
+ text-align: center !important;
+ color: #444444;
+ font-size: 18px;
+ padding: 5px 14px !important;
+ border: none !important;
 }
 .lista-menu-tienda:hover{
-   text-align: center !important;
-   font-weight: bold ;
-   color: #444444;
-    font-size: 18px;
-   padding: 5px 14px !important;
-   border: none !important;
+ text-align: center !important;
+ font-weight: bold ;
+ color: #444444;
+ font-size: 18px;
+ padding: 5px 14px !important;
+ border: none !important;
 }
 .lista-menu-tienda:active{
-   text-align: center !important;
-   font-weight: bold !important;
-   color: #444444;
-    font-size: 18px;
-   padding: 5px 14px !important;
-   border: none !important;
+ text-align: center !important;
+ font-weight: bold !important;
+ color: #444444;
+ font-size: 18px;
+ padding: 5px 14px !important;
+ border: none !important;
 }
 .lista-menu-tienda:focus{
-   text-align: center !important;
-   font-weight: bold;
-   color: #444444;
-    font-size: 18px;
-   padding: 5px 14px !important;
-   border: none !important;
-    outline-color: transparent !important;
+ text-align: center !important;
+ font-weight: bold;
+ color: #444444;
+ font-size: 18px;
+ padding: 5px 14px !important;
+ border: none !important;
+ outline-color: transparent !important;
 }
 .size-cart{
     font-size: 26px !important;
@@ -101,10 +101,10 @@ p{
 /*Fin menu tienda*/
 /*Grid productos*/
 .titulo-m-producto{
-color: #FD9C1C !important;
-font-size: 30px !important;
- font-family: Tahoma, Verdana, Segoe, sans-serif !important;
- font-weight: bold !important;
+    color: #FD9C1C !important;
+    font-size: 30px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
 }
 .texto-descrip{
     font-size: 16px !important;
@@ -123,21 +123,20 @@ font-size: 30px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
 }
 .fondo-imagen{
-width: 200px;
-height: 250px;
-background-color: #F9F9F9 !important;
-  
+    width: 200px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
+
 }
 .fondo-imagenes{
-width: 200px;
-height: 250px;
-background-color: #F9F9F9 !important;
-  
+    width: 200px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
 }
 .fondo-imagenes:hover{
-width: 200px;
-height: 250px;
-background-color: white !important;
+    width: 200px;
+    height: 250px;
+    background-color: white !important;
 }
 
 
@@ -152,8 +151,8 @@ background-color: white !important;
   padding-bottom: 10px;
 }
 .informacion-producto{
-width: 200px;
-text-align: center;
+    width: 200px;
+    text-align: center;
 }
 .nombre-producto{
     font-size: 16px !important;
@@ -200,10 +199,10 @@ text-align: center;
 }
 
 .estilo-estadistica{
-font-family: Tahoma, Verdana, Segoe, sans-serif;
-color: #444444 !important;
-font-size: 18px;
-text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #444444 !important;
+    font-size: 18px;
+    text-align: center;
 }
 .fondo-paneles{
   background-color: #F9F9F9 !important;
@@ -236,21 +235,21 @@ text-align: center;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .type-font{
-   font-family: Tahoma, Verdana, Segoe, sans-serif;
+ font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .titulos-secciones{
-   font-family: Tahoma, Verdana, Segoe, sans-serif;
-   color: #A4BD31;
-   font-weight: bold;
-   font-size: 48px !important;
+ font-family: Tahoma, Verdana, Segoe, sans-serif;
+ color: #A4BD31;
+ font-weight: bold;
+ font-size: 48px !important;
 }
 .titulo-categorias-tienda{
-   font-family: Tahoma, Verdana, Segoe, sans-serif;
-   color: #444444;
-   font-weight: bold;
-   font-size: 28px !important;
-   text-align: center;
-   margin-top: 10px;
+ font-family: Tahoma, Verdana, Segoe, sans-serif;
+ color: #444444;
+ font-weight: bold;
+ font-size: 28px !important;
+ text-align: center;
+ margin-top: 10px;
 }
 .menutext{
     background-color: white !important;
@@ -301,7 +300,7 @@ text-align: center;
     background: linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB300', endColorstr='#FD9C1C',GradientType=1 ); /* ie6-9 */
 }
-    #fixed-bar {
+#fixed-bar {
     background: -moz-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* ff3.6+ */
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(253,156,28,1)), color-stop(57%, rgba(253,156,28,1)), color-stop(100%, rgba(139,179,0,1))); /* safari4+,chrome */
     background: -webkit-linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%); /* safari5.1+,chrome10+ */
@@ -344,11 +343,11 @@ text-align: center;
     padding: 20px 15px !important;
 }
 .titulo-categoria{
- font-family: Tahoma, Verdana, Segoe, sans-serif;
- font-size: 25px !important;
- color: #FD9C1C !important;
- font-weight: bold !important;
-  padding: 10px 10px !important;
+   font-family: Tahoma, Verdana, Segoe, sans-serif;
+   font-size: 25px !important;
+   color: #FD9C1C !important;
+   font-weight: bold !important;
+   padding: 10px 10px !important;
 }
 
 .lista-menu:hover{
@@ -377,8 +376,8 @@ text-align: center;
 }
 
 .tabla-est{
-font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
-font-size: 10px;
+    font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 10px;
 }
 .tabla-estadisticas{
     background-color: #FD9C1C;
@@ -435,13 +434,13 @@ font-size: 10px;
     font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .bajar-barra{
-        margin-top: 40px !important;
+    margin-top: 40px !important;
 }
 .bajar-barra2{
-        margin-top: -17px !important;
+    margin-top: -17px !important;
 }
 .bajar-barra-nav2{
-        margin-top: 100px !important;
+    margin-top: 100px !important;
 }
 .estilo-lista:hover{
     background-color: #FD9C1C !important;
@@ -459,13 +458,13 @@ font-size: 10px;
     font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .inferior-modal{
-     background-color: #FD9C1C !important;
-    border-top: 1px solid #FD9C1C !important;
+   background-color: #FD9C1C !important;
+   border-top: 1px solid #FD9C1C !important;
 }
 .inferior-modal-eliminar{
-     background-color: #ffffff !important;
-    border-top: 1px solid #ffffff !important;
-    text-align: center !important;
+   background-color: #ffffff !important;
+   border-top: 1px solid #ffffff !important;
+   text-align: center !important;
 }
 .encabezado-modal{
     background-color: #444444 !important;
@@ -505,8 +504,8 @@ font-size: 10px;
 }
 .close2:hover {
     color: #444444 !important;
-     font-size: 32px;
-     padding: 0 !important;
+    font-size: 32px;
+    padding: 0 !important;
     cursor: pointer !important;
     background: 0 0 !important;
     border: 0 !important;
@@ -700,3 +699,484 @@ font-size: 10px;
     background-color: #eaeaea !important;
     color: #FD9C1C !important;
 }
+/*Queries */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+    .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }
+    .width-cel{
+        width: 44px !important;
+    }
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+    .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+  /*  .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }*/
+    /*.width-cel{
+        width: 44px !important;
+    }*/
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+        /* Styles */
+    .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+    .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }
+    .width-cel{
+        width: 44px !important;
+    }
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+  .move-more{
+        margin-left: -44px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    /* Styles */
+             .carro-cel{
+  display: none !important;
+}
+ .desaparecer{
+      display: block;
+  }
+  .bajar-barra2 {
+    margin-top: -32px !important;
+}
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    /* Styles */
+             .carro-cel{
+  display: none !important;
+}
+.desaparecer{
+      display: block;
+  }
+  .bajar-barra2 {
+    margin-top: -32px !important;
+}
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+    .move-more{
+        margin-left: -44px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    /* Styles */
+    .move-more{
+        margin-left: -44px;
+    }
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+    .move-more{
+    margin-right: 20px;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+    .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+    .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }
+    .width-cel{
+        width: 44px !important;
+    }
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+}
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+    .move-more{
+    margin-right: 35px;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+    .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+    .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }
+    .width-cel{
+        width: 44px !important;
+    }
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+    /* .move-more2{
+    margin-right: 55px !important;
+    }*/
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+        html { 
+            min-width:100% !important;
+         }
+        .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none !important;
+        margin: 0 auto !important;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+    .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }
+    .width-cel{
+        width: 44px !important;
+    }
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+        .fondo-imagenes{
+        width: 200px;
+        height: 250px;
+        background-color: #F9F9F9 !important;
+        float: none !important;
+        margin: 0 auto !important;
+    }
+    .fondo-imagenes:hover{
+        width: 200px;
+        height: 250px;
+        background-color: white !important;
+        float: none;
+        margin: 0 auto;
+    }
+    .informacion-producto{
+        width: 200px;
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .menu-tienda{
+        display: none;
+    }
+    .texto-descrip {
+        font-size: 12px !important;
+
+    }
+    .texto-presen {
+        font-size: 14px !important;
+    }
+    .texto-precio {
+        font-size: 20px;
+
+    }
+    .Btn-Nar-mod-tienda {
+        font-size: 9px !important;
+    }
+    .width-cel{
+        width: 44px !important;
+    }
+    .carro-cel{
+      display: inline-block;
+  }
+
+  .desaparecer{
+      display: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    /* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    /* Styles */
+}
+
