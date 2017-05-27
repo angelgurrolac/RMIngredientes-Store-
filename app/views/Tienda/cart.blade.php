@@ -52,7 +52,7 @@
               font-size: 14px;
               font-family: Tahoma, Verdana, Segoe, sans-serif;
           }
-          tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
+          /*tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
           table {
             border:none;
             border-collapse: collapse;
@@ -70,7 +70,29 @@
 
         table td:last-child {
             border-right: none;
-        }
+        }*/
+        tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
+          table {
+            border:none;
+            border-collapse: collapse;
+          }
+
+          table td {
+            border-left: 5px solid #ffffff;
+            border-right: 5px solid #ffffff;
+            border-bottom: 5px solid #eaeaea;
+          }
+
+          table td:first-child {
+            border-left: none;
+          }
+
+          table td:last-child {
+            border-right: none;
+          }
+          .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: white;
+}
         .display{
             display: inline-block;
         }
@@ -85,7 +107,7 @@
 
 </head>
 
-    <body>
+    <body style="background-color: white;">
         <div id="wrapper">
 
           <!-- Navigation -->
@@ -153,7 +175,7 @@
         <div class="row">
           <div class="col-md-2"></div>
             <div class="col-md-8">
-                <div class="table-responsive" style="overflow: hidden;">
+                <div class="table-responsive" >
                     <table id="table" class="table">
                       <thead>
                         <tr>
@@ -194,7 +216,7 @@
             <input id="comprar" name="Comprar" class="btn btn-naranja-modal" type="submit" value="HACER PEDIDO">
             <br>
             <br>
-            <p>Seguir comprando</p>
+            <p style="color:#FD9C1C;">Seguir comprando</p>
           </div>
       </div>
       <br>
@@ -240,7 +262,7 @@ $(document).ready(function(){
                 envio = envio + parseInt(localStorage.getItem(data.id));
                 console.log(localStorage.getItem(data.id));
                 $(".products").append("<tr>");
-                $(".products").append("<th><img width='100px' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='display'>"+data.nombre+"</h2><p>"+data.descripcion_corta+"</p></th>");
+                $(".products").append("<th><img width='50px' style='background-color:#F9F9F9;     padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='text-center' style='font-size:24px;     margin-top: -56px; color:#FD9C1C;' class='display'>"+data.nombre+"</h2><p class='text-center' style='font-size:10px;'>"+data.descripcion_corta+"</p></th>");
                 $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
                 $(".products").append("<th> $"+data.precio_unitario+"</th>");
                 $(".products").append("<th> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></th>");
