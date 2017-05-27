@@ -98,5 +98,37 @@ class TiendaController extends \BaseController {
         }
 
 	}
+	public function RegistroUser(){
+		 return View::make('Tienda.registro');
+	}
+	public function AddUser(){
+		$nombre = Input::get('nombre');
+		$a_paterno = Input::get('a_paterno');
+		$a_materno = Input::get('a_materno');
+		$direccion = Input::get('direccion');
+		$cp = Input::get('cp');
+		$telefono = Input::get('telefono');
+		$edad = Input::get('edad');
+		$sexo = Input::get('sexo');
+		$correo = Input::get('correo');
+
+
+		$user = new User;
+		$user->nombre = $nombre;
+		$user->ap_paterno = $a_paterno;
+		$user->ap_materno = $a_materno;
+		$user->direccion = $direccion;
+		$user->codigo_postal = $cp;
+		$user->edad = $edad;
+		$user->sexo = $sexo;
+		$user->telefono = $telefono;
+		$user->correo = $correo;
+		$user->rol = 2;
+		$user->estatus = 1;
+		$user->save();
+
+		return Redirect::to('/Tienda/Pago');
+
+	}
 
 }

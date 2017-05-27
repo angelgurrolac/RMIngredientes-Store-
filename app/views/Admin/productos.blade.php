@@ -276,7 +276,7 @@
                   
                   <br>
                   <select name="categoria" class="form-control without-radius" >
-                    @foreach($categorias as $key1 => $value1)
+                    @foreach($categorias1 as $key1 => $value1)
                      <option value="{{$value1->id}}">{{$value1->nombre}}</option>
                      @endforeach
                   </select>
@@ -379,7 +379,7 @@
         </div>
         <div class="modal-footer inferior-modal">
           <button type="button" class="btn btn-verde-modal" data-dismiss="modal">CANCELAR</button>
-          {{ Form::submit('GUARDAR', array('name'=> 'Editar','class' => 'btn btn-verde-modal')) }}</td> 
+          {{ Form::submit('GUARDAR', array('name'=> 'Editar','class' => 'btn btn-verde-modal')) }}
                 <input id="value2" type="hidden" name="id_productoE">
         </div>
       </div>

@@ -18,8 +18,9 @@ class AdminController extends \BaseController {
 	public function ShowProductos()
 	{
 		$productos=Productos::Productos()->get();
+		$categorias1 = Categorias::where('id','!=','0')->get();
 		$categorias = Categorias::All();
-		return View::make('Admin.productos',compact('productos','categorias'));
+		return View::make('Admin.productos',compact('productos','categorias1','categorias'));
 	}
 	public function ShowPedidos()
 	{

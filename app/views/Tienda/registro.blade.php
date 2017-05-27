@@ -81,6 +81,13 @@
             font-weight: bold;
             font-size: 26px;
         }
+        .regresar-carrito{
+          margin-right: 6%; 
+          margin-top: 2%;
+          text-decoration: none !important;
+          cursor: pointer;
+          color: #FD9C1C;
+        }
     </style>
 
 </head>
@@ -140,9 +147,9 @@
       <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Carrito de compras</h3></a>
+                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Carrito de compras</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos para envió</h3></a>
+                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Datos para envió</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos del pago</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -151,59 +158,65 @@
         </div> 
         <br>
         <div class="row">
-          <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="table-responsive" style="overflow: hidden;">
-                    <table id="table" class="table">
-                      <thead>
-                        <tr>
-                          <th>Producto</th>
-                          <th>Cantidad</th>
-                          <th>Precio</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody class="products">
-                      </tbody>
-                    </table>
-                </div>
-            <!-- /.table-responsive -->
-            </div>
-            <div class="col-md-2"></div>
+          {{Form::open(array('url'=>'/Tienda/AddUser'))}}
+          <div class="col-md-4">
+              <h4>Nombre</h4>
+              <input class="form-control without-radius" type="text" name="nombre">
+          </div>
+          <div class="col-md-4">
+              <h4>Apellido Paterno</h4>
+              <input class="form-control without-radius" type="text" name="a_paterno">
+          </div>
+          <div class="col-md-4"> 
+              <h4>Apellido Materno</h4> 
+              <input class="form-control without-radius" type="text" name="a_materno">
+          </div>
         </div>
-      
-
-      <div class="row">
+        <div class="row">
+            <row class="col-md-6">
+                <h4>Dirección</h4>
+                <input class="form-control without-radius" type="text" name="direccion">
+            </row>
+            <row class="col-md-6">
+                <h4>Teléfono</h4>
+                <input class="form-control without-radius" type="text" name="telefono">
+            </row>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <h4>C.P.</h4>
+              <input class="form-control without-radius" type="number" name="cp">
+          </div>
+          <div class="col-md-4">
+              <h4>Edad</h4>
+              <input class="form-control without-radius" type="number" name="edad">
+          </div>
+          <div class="col-md-4"> 
+              <h4>Sexo</h4> 
+              <select class="form-control without-radius" name="sexo">
+                      <option value="volvo">FEMENINO</option>
+                      <option value="saab">MASCULINO</option>
+                    </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Correo Electrónico</h4> 
+            <input class="form-control without-radius" type="email" name="correo">
+          </div>
+        </div>
+        <br>
+        <div class="row">
           <div class="col-md-6">
+              <p class="display">¿Tienes alguna duda? 618 126 8430&nbsp;</p><img src="http://tienda.rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px">
           </div>
-          <div class="col-md-3">
-             <p class="display">Subtotal</p>
-             <p class="subtotal display"></p>
-             <br>
-             <p class="display">I.V.A.</p>
-             <p class="iva display"></p>
-             <br>
-             <p class="display">Gastos de envío</p>
-             <p class="envio display"></p>
-             <br>
-             <hr>
-             <p class="display">Total</p>
-             <p class="total display"></p>
-          </div>
-          <div class="col-md-3">
-            <!-- <input id="comprar" name="Comprar" class="btn btn-naranja-modal" type="submit" value="HACER PEDIDO"> -->
-             {{Form::open(array('url'=>'/Tienda/RegistroUser'))}}
-                {{ Form::submit('HACER PEDIDO', array('name'=> 'Comprar','class' => 'btn btn-naranja-modal')) }}
+          <div class="col-md-6">
+                {{ Form::submit('CONTINUAR: PAGO', array('name'=> 'add','class' => 'display btn btn-naranja-modal pull-right')) }}
                 {{Form::close()}}
-            <br>
-            <br>
-            <a href=""><p>Seguir comprando</p></a>
+                <a class="display pull-right regresar-carrito" href="">Regresar al carrito</a>
           </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      </div>
+        </div>
+      </div> 
 
 <div  id="fixed-bar"> </div>
 <!-- /#wrapper -->
@@ -222,61 +235,6 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-    
-    var contador = 0;
-    var envio = 0;
-    for (x=0; x<=localStorage.length-1; x++)  {  
-        clave = localStorage.key(x); 
-        console.log(clave + "=" + localStorage.getItem(clave));  
-
-    $.ajax({
-        type: "post", 
-        url: "ProductsCart", 
-        data: ({id : clave, cantidad : localStorage.getItem(clave)}),
-        cache: false,
-        dataType: "json",
-            success: function (data) { 
-              console.log(data);
-                // $.each(data, function(i, item) {
-                //     console.log(item);
-                contador = contador + (data.precio_unitario * localStorage.getItem(data.id));
-                envio = envio + parseInt(localStorage.getItem(data.id));
-                console.log(localStorage.getItem(data.id));
-                $(".products").append("<tr>");
-                $(".products").append("<th><img width='100px' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='display'>"+data.nombre+"</h2><p>"+data.descripcion_corta+"</p></th>");
-                $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
-                $(".products").append("<th> $"+data.precio_unitario+"</th>");
-                $(".products").append("<th> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></th>");
-                $(".products").append("</tr>");
-                // console.log(contador);
-                $(".subtotal").text("$" + contador.toFixed(2));
-                var subtotal = parseInt(contador);
-                localStorage.setItem('subtotal',subtotal);
-                $(".iva").text("$" + (contador * .16).toFixed(2));
-                var iva = parseInt(contador * .16);
-                localStorage.setItem('iva',iva);
-                $(".envio").text("$" + (envio * 70).toFixed(2));
-                var envio1 = parseInt(envio * 70);
-                localStorage.setItem('envio1',envio1);
-                $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
-                var total = subtotal + iva + envio1;
-                localStorage.setItem('total',total);
-                // });
-                
-                $("."+data.id).click(function(){
-                  alert("hola");
-                  var id = $("#"+data.id).val();
-                  console.log(id);
-                  localStorage.removeItem(data.id);
-                  window.location.reload();
-                });
-
-              },
-            error: function (data) {
-                $(".products").append("<tr>Ocurrio un error. ¡Intentalo de nuevo!</tr>");
-              }
-            });
-      };
 
   // seccion de conocenos
   $("#conocenos").hover(function(){

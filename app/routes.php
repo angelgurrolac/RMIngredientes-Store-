@@ -53,6 +53,13 @@ Route::post('Tienda/especializado','TiendaController@especializado');
 
 // rutas para proceso de compras 
 Route::get('Tienda/cart','TiendaController@cart'); //ruta del carrito de compras
-Route::post('Tienda/ProductsCart','TiendaController@ProductsCart'); //ruta del carrito de compras
-Route::post('Tienda/ConfirmacionPedido','TiendaController@ConfirmacionPedido'); //ruta del carrito de compras
+Route::post('Tienda/ProductsCart','TiendaController@ProductsCart'); //ruta de los productos del carrito de compras
+Route::post('Tienda/ConfirmacionPedido','TiendaController@ConfirmacionPedido'); //ruta para confirmar pedido
+Route::get('Tienda/RegistroUser','TiendaController@RegistroUser'); //ruta para registro de cliente
+Route::post('Tienda/AddUser','TiendaController@AddUser'); //ruta para registro de cliente
+Route::get('Tienda/Pago',function()
+{
+     return View::make('Tienda.pago');
+}); //ruta para pago con tarjeta
+Route::post('Tienda/PagoFinal','TiendaController@PagoFinal');
 

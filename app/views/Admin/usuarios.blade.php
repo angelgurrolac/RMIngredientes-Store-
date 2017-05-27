@@ -257,7 +257,6 @@
                     <select class="form-control without-radius" placeholder="SEXO" name="sexo">
                       <option value="volvo">FEMENINO</option>
                       <option value="saab">MASCULINO</option>
-                    tion>
                     </select>
                   </div>
                 </div>
