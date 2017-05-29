@@ -202,7 +202,7 @@
         <div class="row">
           <div class="col-md-12">
             <h4>Correo Electrónico</h4> 
-            <input class="form-control without-radius" type="email" name="correo">
+            <input id="correo" class="form-control without-radius" type="email" name="correo">
           </div>
         </div>
         <br>
@@ -211,7 +211,7 @@
               <p class="display">¿Tienes alguna duda? 618 126 8430&nbsp;</p><img src="http://tienda.rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px">
           </div>
           <div class="col-md-6">
-                {{ Form::submit('CONTINUAR: PAGO', array('name'=> 'add','class' => 'display btn btn-naranja-modal pull-right')) }}
+                {{ Form::submit('CONTINUAR: PAGO', array('id'=>'aceptar','name'=> 'add','class' => 'display btn btn-naranja-modal pull-right')) }}
                 {{Form::close()}}
                 <a class="display pull-right regresar-carrito" href="">Regresar al carrito</a>
           </div>
@@ -235,6 +235,11 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+
+  $("#aceptar").click(function(){
+      var correo =  $("#correo").val();
+      localStorage.setItem('correo',correo);
+  })
 
   // seccion de conocenos
   $("#conocenos").hover(function(){

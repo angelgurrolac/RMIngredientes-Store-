@@ -111,6 +111,8 @@ class TiendaController extends \BaseController {
 		$edad = Input::get('edad');
 		$sexo = Input::get('sexo');
 		$correo = Input::get('correo');
+		date_default_timezone_set('America/Mexico_City');
+        $hora = date('H:i:s');
 
 		$user = new User;
 		$user->nombre = $nombre;
@@ -128,6 +130,8 @@ class TiendaController extends \BaseController {
 
 		$pedido = new Pedidos;
 		$pedido->id_user = $user->id;
+		$pedido->domicilio = $direccion;
+		$pedido->hora = $hora;
 		$pedido->save();
 
 		return Redirect::to('/Tienda/Pago');
@@ -135,7 +139,51 @@ class TiendaController extends \BaseController {
 	}
 
 	public function PagoFinal(){
-		
+		$numeroT = Input::get('number');
+		$correo = Input::get('correo');
+		$nameC = Input::get('name');
+		$fechaExpiracion = Input::get('expiry');
+		$cvc = Input::get('cvc');
+		$subtotal = Input::get('subtotal');
+		$iva = Input::get('iva');
+		$envio1 = Input::get('envio1');
+		$total = Input::get('total');
+		$tipo_pago1 = substr($numeroT, 0,1);
+		if ($tipo_pago1 == 4) {
+			$tipo_pago = 'visa';
+		}
+		if ($tipo_pago1 == 5) {
+			$tipo_pago = 'mastercard';
+		}
+		$producto = Input::get('productos');
+		$cantidad = Input::get('cantidad');
+		$b = explode( ',', $producto);
+		$a = array();
+		array_push($a,$b);
+		$cantidades = explode( ',', $cantidad);	
+
+		$user = User::where('correo','=',$correo)->first();
+		$pedido = Pedidos::where('id_user','=',$user->id)->first();
+        $pedido->subtotal = $subtotal;
+        $pedido->iva = $iva;
+        $pedido->costo_envio = $envio1;
+        $pedido->total = $total;
+        $pedido->tipo_pago = $tipo_pago;
+        $pedido->save();
+
+		 foreach ($a as $key => $value) {
+		 	$producto = Productos::find($value)->first();
+		 	$detalles = new DetallesPedidos;
+		 	$detalles->id_pedido = $pedido->id;
+		 	$detalles->id_producto = $producto->id;
+		 	$detalles->cantidad = $cantidad;
+		 	$detalles->subtotal = $producto->precio_unitario;
+		 	$detalles->save();
+        }
+
+        return json_encode('hola');
+
+       
 	}
 
 }

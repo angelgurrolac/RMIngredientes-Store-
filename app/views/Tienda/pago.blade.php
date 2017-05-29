@@ -217,7 +217,13 @@
                         <input class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
                       </div>
                       <br>
-                      <input type="text">
+                      <input type="hidden" name="subtotal" id="subtotal">
+                      <input type="hidden" name="iva" id="iva">
+                      <input type="hidden" name="envio1" id="envio1">
+                      <input type="hidden" name="total" id="total">
+                      <input type="hidden" name="productos" id="products">
+                      <input type="hidden" name="cantidad" id="cantidad">
+                      <input type="hidden" name="correo" id="correo">
                       <br>
                       <br>
                       <div class="col-md-12 mm">
@@ -292,13 +298,18 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+  var array1 = [];
+  var array2 = [];
 
   for (x=0; x<=localStorage.length-1; x++)  {  
         if (localStorage.key(x) != 'contador' && localStorage.key(x) != 'envio1'
             && localStorage.key(x) != 'iva' && localStorage.key(x) != 'subtotal'
-            && localStorage.key(x) != 'total') {
-          clave = localStorage.key(x); 
+            && localStorage.key(x) != 'total'  && localStorage.key(x) != 'correo') {
+          clave = localStorage.key(x);
+          array1.push(clave);
+          array2.push(localStorage.getItem(clave));
           console.log(clave + "=" + localStorage.getItem(clave)); 
+          $("#cantidad").val(localStorage.getItem(clave));
 
     $.ajax({
         type: "post", 
@@ -308,9 +319,10 @@ $(document).ready(function(){
         dataType: "json",
             success: function (data) { 
               console.log(data);
+              console.log(localStorage.getItem(clave));
                 $(".products").append("<div class='row'>");
                 $(".products").append("<th><img width='50px' style='background-color:#F9F9F9; padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'>");
-                $(".products").append("<p class='display'>"+localStorage.getItem(clave)+"</p><span>"+data.nombre+"</span>");
+                $(".products").append("<p class='display'>"+localStorage.getItem(data.id)+"&nbsp;</p><span>"+data.nombre+"</span>");
                 $(".products").append("</div>");
               },
             error: function (data) {
@@ -320,6 +332,11 @@ $(document).ready(function(){
       };  
           };  
 
+          console.log(array1);
+          $("#products").val(array1);
+          console.log(array2);
+          $("#cantidad").val(array2);
+
     $(".visa-card").css('display','none');
    $("#tarjeta-visa").click(function(){
         $(".visa-card").toggle(800);
@@ -328,12 +345,18 @@ $(document).ready(function(){
 
   var subtotal = parseInt(localStorage.getItem('subtotal'));
   $(".subtotal").text('$'+ (subtotal).toFixed(2));
+  $("#subtotal").val(subtotal);
   var iva = parseInt(localStorage.getItem('iva'));
   $(".iva").text('$'+ (iva).toFixed(2));
+  $("#iva").val(iva);
   var envio = parseInt(localStorage.getItem('envio1'));
   $(".envio").text('$'+ (envio).toFixed(2));
+  $("#envio1").val(envio);
   var total = parseInt(localStorage.getItem('total'));
   $(".total").text('$'+ (total).toFixed(2));
+  $("#total").val(total);
+  var correo = localStorage.getItem('correo');
+  $("#correo").val(correo);
    
 
   // seccion de conocenos
