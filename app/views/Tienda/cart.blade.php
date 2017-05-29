@@ -110,53 +110,93 @@
     <body style="background-color: white;">
         <div id="wrapper">
 
-          <!-- Navigation -->
-          <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+           <!-- Navigation -->
+          <nav class=" navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border-color: white;">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
               </button>
+          
               <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
+          
+         
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right bajar-barra2">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll li-separation ">
-                        <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
-                        <hr id="hr-conocenos" class="menutext">
+            <ul class="desaparecer nav navbar-top-links navbar-right bajar-barra2">
+              <li class="hidden">
+                <a href="#page-top"></a>
+              </li>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                <hr id="hr-conocenos" class="menutext">
 
-                    </li>
-                    <li class="page-scroll li-separation active">
-                        <a class="menu-tienda" id="productos" href="#portfolio">PRODUCTOS</a>
-                        <hr id="hr-productos" class="menutext">
-                    </li>
-                    <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
-                        <hr id="hr-demostraciones" class="menutext">
-                    </li>
-                    <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
-                        <hr id="hr-contacto" class="menutext">
-                    </li>
-                      <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-                        <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}"><span id="contador" class="badge"></span></a>
-                        
-                    </li>
-                <li>
-                <!-- /.dropdown-user -->
+              </li>
+              <li class="page-scroll li-separation active desaparecer">
+                <a class="menu-tienda" id="productos" href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                <hr id="hr-productos" class="menutext">
+              </li>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+                <hr id="hr-demostraciones" class="menutext">
+              </li>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+                <hr id="hr-contacto" class="menutext">
+              </li>
+               <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}">
+              <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+               <span id="contador" class="badge badge-2"></span></a>
+
               </li>
               <!-- /.dropdown -->
+            </ul>
+            <ul class="carro-cel pull-right" style="display: inline-block;">
+             <a class="" id="cart" href="{{URL::to('Tienda/cart')}}">
+              <li class="li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+               
+                  <span id="contador2" class="badge badge-2"></span></a>
+
+              </li>
             </ul>
             <!-- /.navbar-top-links -->
             <div class="row row-white"></div>
             <div class="row color-degradado"> </div>
-          </nav>
+
+            <div class="navbar-default sidebar sidebar-height" role="navigation">
+              <div class="sidebar-nav navbar-collapse">
+              <ul class="categorias-movil   nav " id="side-menu">
+                  
+                 <li class="sin-borde-li active">
+                  <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                </li>
+                <li class="sin-borde-li active">
+                  
+                   <a class="lista-menu-tienda2 estilo-input"  href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                </li>
+                <li class="sin-borde-li active">
+                  <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+
+                </li>
+                 <li class="sin-borde-li active">
+                
+                   <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+
+                </li>
+                <br>
+                <br>
+              </ul>
+              <!-- Fin categoria movil -->
+           
+            </div>
+            <!-- /.sidebar-collapse -->
+          </div>
+          <!-- /.navbar-static-side -->
+        </nav>
+
       </div>
 
       <div class="container">
@@ -173,32 +213,32 @@
         </div> 
         <br>
         <div class="row">
-          <div class="col-md-2"></div>
-            <div class="col-md-8">
+      
+            <div class="col-xs-12">
                 <div class="table-responsive" >
-                    <table id="table" class="table">
+                    <table id="table" class="table table-striped ">
                       <thead>
                         <tr>
-                          <th>Producto</th>
-                          <th>Cantidad</th>
-                          <th>Precio</th>
-                          <th></th>
+                          <th  >Producto</th>
+                          <th style="text-align: center;">Cantidad</th>
+                          <th style="text-align: center;">Precio</th>
+                          <th style="text-align: center;"></th>
                         </tr>
                       </thead>
-                      <tbody class="products">
+                      <tbody class="products" style="text-align: center;">
                       </tbody>
                     </table>
                 </div>
             <!-- /.table-responsive -->
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-xs-2"></div>
         </div>
       
 
-      <div class="row">
-          <div class="col-md-6">
+      <div class="row" style="background-color: gainsboro;">
+          <div class="col-xs-6">
           </div>
-          <div class="col-md-3">
+          <div class="col-xs-3">
              <p class="display">Subtotal</p>
              <p class="subtotal display"></p>
              <br>
@@ -212,16 +252,17 @@
              <p class="display">Total</p>
              <p class="total display"></p>
           </div>
-          <div class="col-md-3">
+          <div class="col-xs-3">
                 <a href="{{URL::to('Tienda/RegistroUser')}}" id="comprar" class="btn btn-naranja-modal">HACER PEDIDO</a>
             <br>
             <br>
             <a href="{{URL::to('Tienda/productos')}}"><p style="color:#FD9C1C;">Seguir comprando</p></a>
           </div>
+
+      <br>
+      <br>
+      <br>
       </div>
-      <br>
-      <br>
-      <br>
       </div>
 
 <div  id="fixed-bar"> </div>
@@ -296,12 +337,11 @@ $(document).ready(function(){
                 contador = contador + (precio_unitario * localStorage.getItem(data.id));
                 envio = envio + parseInt(localStorage.getItem(data.id));
                 console.log(localStorage.getItem(data.id));
-                $(".products").append("<tr>");
-                $(".products").append("<th><img width='50px' style='background-color:#F9F9F9;     padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='text-center' style='font-size:24px;     margin-top: -56px; color:#FD9C1C;' class='display'>"+data.nombre+"</h2><p class='text-center' style='font-size:10px;'>"+data.descripcion_corta+"</p></th>");
-                $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
-                $(".products").append("<th> $"+data.precio_unitario+"</th>");
-                $(".products").append("<th> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></th>");
-                $(".products").append("</tr>");
+                $(".products").append("<tr><td><img width='50px' style='background-color:#F9F9F9;     padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='text-center' style='font-size:24px;     margin-top: -56px; color:#FD9C1C;' class='display'>"+data.nombre+"</h2><p class='text-center' style='font-size:10px;'>"+data.descripcion_corta+"</p></td><td style='text-align:center;' ><p style='padding:2px; background-color:gray;'>"+localStorage.getItem(data.id)+"</p></td><td> $"+data.precio_unitario+"</td><td> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></td></tr>");
+                // $(".products").append("");
+                // $(".products").append("");
+                // $(".products").append("");
+                // $(".products").append("");
                 // console.log(contador);
                 $(".subtotal").text("$" + contador.toFixed(2));
                 var subtotal = parseInt(contador);

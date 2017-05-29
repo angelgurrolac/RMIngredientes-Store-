@@ -28,6 +28,21 @@ p{
    padding: 5px 14px !important;
    border: none !important;
 }
+.lista-menu-tienda2{
+
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
+}
+.lista-menu-tienda2:hover{
+
+   font-weight: bold ;
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
+}
 .lista-menu-tienda:active{
    text-align: center !important;
    font-weight: bold !important;
@@ -66,7 +81,6 @@ p{
     margin-top: 40px !important;
 
 }
-
 .menu-tienda{
     font-size: 20px !important;
     font-weight: bold !important;
@@ -700,10 +714,53 @@ p{
     background-color: #eaeaea !important;
     color: #FD9C1C !important;
 }
+.badge-2 {
+    padding: 4px 7px !important;
+    color: #ffffff !important;
+    background-color: #444444 !important;
+    border-radius: 7px !important;
+    margin-left: -25px !important;
+    cursor: pointer !important;
+}
+.badge-2:hover {
+    padding: 4px 7px !important;
+    color: #444444 !important;
+    background-color: #ffffff !important;
+    border-radius: 7px !important;
+    margin-left: -25px !important;
+    cursor: pointer !important;
+}
+.badge-2:focus {
+    padding: 4px 7px !important;
+    color: #444444 !important;
+    background-color: #ffffff !important;
+    border-radius: 7px !important;
+    margin-left: -25px !important;
+    cursor: pointer !important;
+}
+.badge-2:visited{
+    padding: 4px 7px !important;
+    color: #444444 !important;
+    background-color: #ffffff !important;
+    border-radius: 7px !important;
+    margin-left: -25px !important;
+    cursor: pointer !important;
+}
+.badge-2:active {
+    padding: 4px 7px !important;
+    color: #444444 !important;
+    background-color: #ffffff !important;
+    border-radius: 7px !important;
+    margin-left: -25px !important;
+    cursor: pointer !important;
+}
 /*Queries */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
+    .categorias-movil{
+display: block !important;
+}
     .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
@@ -733,9 +790,6 @@ p{
         margin: 0 auto;
         cursor: pointer !important;
     }
-    .menu-tienda{
-        display: none;
-    }
     .texto-descrip {
         font-size: 12px !important;
 
@@ -763,11 +817,17 @@ p{
   .desaparecer{
       display: none;
   }
+  .categorias-desktop{
+    display: none !important;
+}
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
@@ -797,9 +857,7 @@ p{
         margin: 0 auto;
         cursor: pointer !important;
     }
-    .menu-tienda{
-        display: none;
-    }
+    
     .texto-descrip {
         font-size: 12px !important;
 
@@ -826,11 +884,17 @@ p{
       .desaparecer{
           display: none;
       }
+        .categorias-desktop{
+    display: none !important;
+}
   }
 
   /* Smartphones (portrait) ----------- */
   @media only screen and (max-width : 320px) {
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
@@ -860,9 +924,7 @@ p{
         margin: 0 auto;
         cursor: pointer !important;
     }
-    .menu-tienda{
-        display: none;
-    }
+    
     .texto-descrip {
         font-size: 12px !important;
 
@@ -890,42 +952,235 @@ p{
   .move-more{
     margin-left: -44px;
     padding: 6px 4px !important;
+}  
+.move-more-menos{
+   
+    padding: 6px 4px !important;
 }
 .categorias-cel{
   display: inline-block !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
+
+
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
+    .li-separation {
+    padding: 0 21px !important;
+}
+    .desaparecer{
+      display: block;
+  }
+      .categorias-movil{
+display: block !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+
+.fondo-imagenes {
+    width: 150px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+
+.nombre-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #FD9C1C !important;
+}
+.corta-producto {
+    font-size: 10px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+    line-height: 0px !important;
+}
+.unitario-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #444444 !important;
+}
+.informacion-producto {
+    width: 150px;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.categorias-movil{
+display: none !important;
+} 
+.menu-tienda {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+    padding: 0 1px !important;
+}
+.carro-cel{
+display: none !important;
+}
+.categorias-desktop{
+display: block !important;
+} 
+.categorias-cel{
+    display: none !important;
 }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     /* Styles */
+        .li-separation {
+    padding: 0 21px !important;
+}
+    .desaparecer{
+      display: block;
+  }
+    .categorias-movil{
+display: none !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+ 
+.fondo-imagenes {
+    width: 150px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+
+.nombre-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #FD9C1C !important;
+}
+.corta-producto {
+    font-size: 10px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+    line-height: 0px !important;
+}
+.unitario-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #444444 !important;
+}
+.informacion-producto {
+    width: 150px;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.menu-tienda {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+    padding: 0 1px !important;
+}
+.carro-cel{
+display: none !important;
+}
+.categorias-desktop{
+display: block !important;
+} 
+.categorias-cel{
+    display: none !important;
 }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+        .li-separation {
+    padding: 0 21px !important;
+}
+    .desaparecer{
+      display: block;
+  }
+    .categorias-movil{
+display: none !important;
+}
+    
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+  
+.fondo-imagenes {
+    width: 150px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+
+.nombre-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #FD9C1C !important;
+}
+.corta-producto {
+    font-size: 10px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+    line-height: 0px !important;
+}
+.unitario-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #444444 !important;
+}
+.informacion-producto {
+    width: 150px;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.menu-tienda {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+    padding: 0 1px !important;
+}
+.carro-cel{
+display: none !important;
+}
+.categorias-desktop{
+display: block !important;
+} 
+.categorias-cel{
+    display: none !important;
 }
 }
 /**********
@@ -933,26 +1188,154 @@ iPad 3
 **********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+        .li-separation {
+    padding: 0 21px !important;
+}
+    .desaparecer{
+      display: block;
+  }
+.categorias-movil{
+display: none !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+
+.fondo-imagenes {
+    width: 150px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+
+.nombre-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #FD9C1C !important;
+}
+.corta-producto {
+    font-size: 10px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+    line-height: 0px !important;
+}
+.unitario-producto {
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #444444 !important;
+}
+.informacion-producto {
+    width: 150px;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.menu-tienda {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+    padding: 0 1px !important;
+}
+.carro-cel{
+display: none !important;
+}
+.categorias-desktop{
+display: block !important;
+} 
+.categorias-cel{
+    display: none !important;
 }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+.categorias-cel{
+    display: none !important;
+}
+
+        .li-separation {
+    padding: 0 21px !important;
+}
+    .desaparecer{
+      display: block;
+  }
+.categorias-movil{
+display: none !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  
+.fondo-imagenes {
+    width: 110px;
+    height: 200px;
+    background-color: #F9F9F9 !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+
+.nombre-producto {
+    font-size: 8px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #FD9C1C !important;
+}
+.corta-producto {
+    font-size: 8px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #444444 !important;
+    line-height: 0px !important;
+}
+.unitario-producto {
+    font-size: 10px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+    color: #444444 !important;
+}
+.informacion-producto {
+    width: 110px;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.menu-tienda {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: white !important;
+    padding: 0 1px !important;
+}
+.carro-cel{
+display: none !important;
+}
+.categorias-desktop{
+display: block !important;
+} 
 }
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
     /* Styles */
+    .producto-cel{
+display: none !important;
+    }
+
+    .categorias-movil{
+display: none !important;
+}
     .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 30px !important;
@@ -977,12 +1360,19 @@ iPad 3
 .texto-descrip{
     font-size: 16px !important;
     color: #7A7A7A !important;
+}
+.categorias-desktop{
+    display: block !important;
 }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
     /* Styles */
+    .producto-cel{
+display: none !important;
+    }
+
     .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 30px !important;
@@ -1008,15 +1398,28 @@ iPad 3
     font-size: 16px !important;
     color: #7A7A7A !important;
 }
+.categorias-desktop{
+    display: block !important;
+}
+.categorias-movil{
+display: none !important;
+}
 }
 
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .move-more{
         margin-left: -44px;
         padding: 6px 4px !important;
     }
+    .move-more-menos{
+   
+    padding: 6px 4px !important;
+}
     .texto-presen {
         font-size: 12px !important;
     }
@@ -1029,15 +1432,25 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
   .move-more{
     margin-left: -44px;
+    padding: 6px 4px !important;
+}
+.move-more-menos{
+   
     padding: 6px 4px !important;
 }
 .texto-presen {
@@ -1049,15 +1462,28 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
+  .categorias-movil{
+display: block !important;
+}
 }
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .move-more{
         margin-right: 20px;
         padding: 6px 4px !important;
     }
+    .move-more-menos{
+   
+    padding: 6px 4px !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
@@ -1067,11 +1493,17 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
 
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
@@ -1104,9 +1536,7 @@ iPad 3
     margin: 0 auto;
     cursor: pointer !important;
 }
-.menu-tienda{
-    display: none;
-}
+
 .texto-descrip {
     font-size: 10px !important;
 
@@ -1131,14 +1561,24 @@ iPad 3
 .desaparecer{
   display: none;
 }
+  .categorias-desktop{
+    display: none !important;
+}
 }
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .move-more{
         margin-right: 35px;
-        padding: 6px 4px !important;
+        padding: 6px 12px !important;
     }
+    .move-more-menos{
+   
+    padding: 6px 12px !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
@@ -1148,10 +1588,16 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
@@ -1181,9 +1627,7 @@ iPad 3
         margin: 0 auto;
         cursor: pointer !important;
     }
-    .menu-tienda{
-        display: none;
-    }
+    
     .texto-descrip {
         font-size: 12px !important;
 
@@ -1211,11 +1655,17 @@ iPad 3
   .categorias-cel{
       display: inline-block !important;
   }
+    .categorias-desktop{
+    display: none !important;
+}
 }
 
 /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     /* .move-more2{
     margin-right: 55px !important;
     }*/
@@ -1228,10 +1678,16 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     html { 
         min-width:100% !important;
     }
@@ -1258,9 +1714,7 @@ iPad 3
         margin: 0 auto;
         cursor: pointer !important;
     }
-    .menu-tienda{
-        display: none;
-    }
+    
     .texto-descrip {
         font-size: 12px !important;
 
@@ -1294,11 +1748,17 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
+  .categorias-desktop{
+    display: none !important;
+}
 }
 
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
        .titulo-m-producto {
     color: #FD9C1C !important;
     font-size: 20px !important;
@@ -1328,9 +1788,7 @@ iPad 3
         margin: 0 auto;
         cursor: pointer !important;
     }
-    .menu-tienda{
-        display: none;
-    }
+    
     .texto-descrip {
         font-size: 12px !important;
 
@@ -1358,10 +1816,16 @@ iPad 3
   .categorias-cel{
       display: inline-block !important;
   }
+    .categorias-desktop{
+    display: none !important;
+}
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
@@ -1370,12 +1834,18 @@ iPad 3
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+  .categorias-desktop{
+    display: none !important;
 }
 }
 
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
@@ -1384,11 +1854,17 @@ iPad 3
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+  .categorias-desktop{
+    display: none !important;
 }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
@@ -1397,12 +1873,18 @@ iPad 3
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+  .categorias-desktop{
+    display: none !important;
 }
 }
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+      .categorias-movil{
+display: block !important;
+}
     .categorias-cel{
       display: inline-block !important;
   }
@@ -1412,12 +1894,16 @@ iPad 3
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
 }
-
+  .categorias-desktop{
+    display: none !important;
+}
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
-
+  .categorias-movil{
+display: block !important;
+}
 
     .categorias-cel{
       display: inline-block !important;
@@ -1427,6 +1913,9 @@ iPad 3
     font-size: 20px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif !important;
     font-weight: bold !important;
+}
+  .categorias-desktop{
+    display: none !important;
 }
 }
 
