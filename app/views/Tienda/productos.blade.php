@@ -74,6 +74,9 @@
           .carro-cel{
   display: none;
 }
+          .categorias-cel{
+  display: none;
+}
         
         </style>
 
@@ -129,9 +132,10 @@
               <!-- /.dropdown -->
             </ul>
             <ul class="carro-cel pull-right" style="display: inline-block;">
+             <a class="" id="cart" href="{{URL::to('Tienda/cart')}}">
               <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-                <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}"></a>
-                  <span id="contador2" class="badge"></span>
+               
+                  <span id="contador2" class="badge"></span></a>
 
               </li>
             </ul>
@@ -179,6 +183,44 @@
 
         <div id="page-wrapper">
           <div class="row align-items-center">
+          <!-- nuevo -->
+              
+                <ul class="nav categorias-cel" id="side-menu">
+                  <li class="estilo-categoria-titulo sin-borde-li">
+                   CATEGORÍAS
+                 </li>
+                 <li class="sin-borde-li active">
+                  {{Form::open(array('url'=>'/Tienda/maiz', 'id' => 'maiz'))}}
+                  <input value="1" type="hidden" name="cat" >
+                  {{ Form::submit('Tortillas de Maíz', array('name'=> 'maiz','class' => 'lista-menu-tienda estilo-input ')) }}
+                  {{Form::close()}}
+                </li>
+                <li class="sin-borde-li">
+                  {{Form::open(array('url'=>'/Tienda/harina', 'id' => 'harina'))}}
+                  <input value="2" type="hidden" name="cat"  >
+                  {{ Form::submit('Tortillas de Harina', array('name'=> 'harina','class' => 'lista-menu-tienda estilo-input')) }}
+                  {{Form::close()}}
+                </li>
+                <li class="sin-borde-li">
+                  {{Form::open(array('url'=>'/Tienda/panificadoras', 'id' => 'panificadoras'))}}
+                  <input value="3" type="hidden" name="cat" >
+                  {{ Form::submit('Panificadoras', array('name'=> 'panificadoras','class' => 'lista-menu-tienda estilo-input')) }}
+                  {{Form::close()}}
+                </li>
+                <li class="sin-borde-li">
+                  {{Form::open(array('url'=>'/Tienda/especializado', 'id' => 'especializado'))}}
+                  <input value="4" type="hidden" name="cat"  >
+                  {{ Form::submit('Especializado', array('name'=> 'especializado','class' => 'lista-menu-tienda estilo-input')) }}
+                  {{Form::close()}}
+                </li>
+                <br>
+              </ul>
+          
+            <!-- /.sidebar-collapse -->
+          <!-- fin nuevo -->
+
+
+
            <p class=" titulo-categorias-tienda">{{$titulo}} </p>
 
          </div><!-- /.row -->
