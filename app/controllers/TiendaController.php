@@ -181,7 +181,7 @@ class TiendaController extends \BaseController {
 		 	$detalles->save();
         }
 
-        return json_encode('hola');
+        return Redirect::to('/Tienda/productos');
 
        
 	}
