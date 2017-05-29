@@ -74,10 +74,7 @@
           .carro-cel{
   display: none;
 }
-          .categorias-cel{
-  display: none;
-}
-        
+    
         </style>
 
       </head>
@@ -90,11 +87,11 @@
           <!-- Navigation -->
           <nav class=" navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border-color: white;">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
               </button>
           
               <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
@@ -113,7 +110,7 @@
 
               </li>
               <li class="page-scroll li-separation active desaparecer">
-                <a class="menu-tienda" id="productos" href="#portfolio">PRODUCTOS</a>
+                <a class="menu-tienda" id="productos" href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
                 <hr id="hr-productos" class="menutext">
               </li>
               <li class="page-scroll li-separation desaparecer">
@@ -126,16 +123,16 @@
               </li>
                <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}">
               <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-               <span id="contador" class="badge"></span></a>
+               <span id="contador" class="badge badge-2"></span></a>
 
               </li>
               <!-- /.dropdown -->
             </ul>
             <ul class="carro-cel pull-right" style="display: inline-block;">
              <a class="" id="cart" href="{{URL::to('Tienda/cart')}}">
-              <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+              <li class="li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
                
-                  <span id="contador2" class="badge"></span></a>
+                  <span id="contador2" class="badge badge-2"></span></a>
 
               </li>
             </ul>
@@ -145,7 +142,29 @@
 
             <div class="navbar-default sidebar sidebar-height" role="navigation">
               <div class="sidebar-nav navbar-collapse">
-                <ul class="nav " id="side-menu">
+              <ul class="categorias-movil   nav " id="side-menu">
+                  
+                 <li class="sin-borde-li active">
+                  <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                </li>
+                <li class="sin-borde-li active">
+                  
+                   <a class="lista-menu-tienda2 estilo-input"  href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                </li>
+                <li class="sin-borde-li active">
+                  <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+
+                </li>
+                 <li class="sin-borde-li active">
+                
+                   <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+
+                </li>
+                <br>
+                <br>
+              </ul>
+              <!-- Fin categoria movil -->
+                <ul class="categorias-desktop   nav " id="side-menu">
                   <li class="estilo-categoria-titulo sin-borde-li">
                    CATEGORÍAS
                  </li>
@@ -235,7 +254,7 @@
           $vuelta++;
           ?>
           <div class="col-sm-3 "> 
-           <div class="centrarProductos">
+                  <div class="centrarProductos">
             <a data-toggle="modal" data-target="#myModal" data-nombre = "{{$value->nombre}}"
              data-desc = "{{$value->descripcion_completa}}" data-presentacion = "{{$value->presentacion}}"
              data-image = "{{$value->imagen}}" data-modo = "{{$value->modo_empleo}}"
@@ -248,11 +267,11 @@
           <div class="informacion-producto">
             <p class="nombre-producto">{{$value->nombre}}</p> 
             <p class="corta-producto">{{$value->descripcion_corta}}</p> 
-            <p class="unitario-producto" >${{$value->precio_unitario}}</p> 
+            <p class="unitario-producto" >${{number_format($value->precio_unitario,2)}}</p> 
+          
           </div>
         </div>
       </div> 
-
 
       @endforeach 
       @endif
@@ -272,7 +291,7 @@
       <div class="informacion-producto">
         <p class="nombre-producto">{{$value3->nombre}}</p> 
         <p class="corta-producto">{{$value3->descripcion_corta}}</p> 
-        <p class="unitario-producto">${{$value3->precio_unitario}}</p> 
+        <p class="unitario-producto">${{number_format($value3->precio_unitario,2)}}</p> 
       </div>
 
     </div> 
@@ -293,7 +312,7 @@
     <div class="informacion-producto">
       <p class="nombre-producto">{{$value4->nombre}}</p> 
       <p class="corta-producto">{{$value4->descripcion_corta}}</p> 
-      <p class="unitario-producto">${{$value4->precio_unitario}}</p> 
+      <p class="unitario-producto">${{number_format($value4->precio_unitario,2)}}</p> 
     </div> 
 
   </div>
@@ -314,7 +333,7 @@
   <div class="informacion-producto">
     <p class="nombre-producto">{{$value5->nombre}}</p> 
     <p class="corta-producto">{{$value5->descripcion_corta}}</p> 
-    <p  class="unitario-producto">${{$value5->precio_unitario}}</p> 
+    <p  class="unitario-producto">${{number_format($value5->precio_unitario,2)}}</p> 
   </div>
 
 </div> 
@@ -335,7 +354,7 @@
 <div class="informacion-producto">
   <p class="nombre-producto">{{$value6->nombre}}</p> 
   <p class="corta-producto">{{$value6->descripcion_corta}}</p> 
-  <p class="unitario-producto">${{$value6->precio_unitario}}</p> 
+  <p class="unitario-producto">${{number_format($value6->precio_unitario,2)}}</p> 
 </div>
 
 </div> 
@@ -384,7 +403,7 @@
                 <div class="col-xs-7">
                   <div class="input-group">
                     <span class="input-group-btn">
-                      <button style="background-color: #A4BD31; color: white; " type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                      <button style="background-color: #A4BD31; color: white; " type="button" class="btn btn-default btn-number move-more-menos" disabled="disabled" data-type="minus" data-field="quant[1]">
                         <span class="glyphicon glyphicon-minus"></span>
                       </button>
                     </span>
