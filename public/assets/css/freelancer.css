@@ -14,36 +14,36 @@ p{
     background-color: transparent !important;
 }
 .lista-menu-tienda{
- text-align: center !important;
- color: #444444;
- font-size: 18px;
- padding: 5px 14px !important;
- border: none !important;
+   text-align: center !important;
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
 }
 .lista-menu-tienda:hover{
- text-align: center !important;
- font-weight: bold ;
- color: #444444;
- font-size: 18px;
- padding: 5px 14px !important;
- border: none !important;
+   text-align: center !important;
+   font-weight: bold ;
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
 }
 .lista-menu-tienda:active{
- text-align: center !important;
- font-weight: bold !important;
- color: #444444;
- font-size: 18px;
- padding: 5px 14px !important;
- border: none !important;
+   text-align: center !important;
+   font-weight: bold !important;
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
 }
 .lista-menu-tienda:focus{
- text-align: center !important;
- font-weight: bold;
- color: #444444;
- font-size: 18px;
- padding: 5px 14px !important;
- border: none !important;
- outline-color: transparent !important;
+   text-align: center !important;
+   font-weight: bold;
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
+   outline-color: transparent !important;
 }
 .size-cart{
     font-size: 26px !important;
@@ -153,6 +153,7 @@ p{
 .informacion-producto{
     width: 200px;
     text-align: center;
+    cursor: pointer !important;
 }
 .nombre-producto{
     font-size: 16px !important;
@@ -235,21 +236,21 @@ p{
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .type-font{
- font-family: Tahoma, Verdana, Segoe, sans-serif;
+   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .titulos-secciones{
- font-family: Tahoma, Verdana, Segoe, sans-serif;
- color: #A4BD31;
- font-weight: bold;
- font-size: 48px !important;
+   font-family: Tahoma, Verdana, Segoe, sans-serif;
+   color: #A4BD31;
+   font-weight: bold;
+   font-size: 48px !important;
 }
 .titulo-categorias-tienda{
- font-family: Tahoma, Verdana, Segoe, sans-serif;
- color: #444444;
- font-weight: bold;
- font-size: 28px !important;
- text-align: center;
- margin-top: 10px;
+   font-family: Tahoma, Verdana, Segoe, sans-serif;
+   color: #444444;
+   font-weight: bold;
+   font-size: 28px !important;
+   text-align: center;
+   margin-top: 10px;
 }
 .menutext{
     background-color: white !important;
@@ -343,11 +344,11 @@ p{
     padding: 20px 15px !important;
 }
 .titulo-categoria{
-   font-family: Tahoma, Verdana, Segoe, sans-serif;
-   font-size: 25px !important;
-   color: #FD9C1C !important;
-   font-weight: bold !important;
-   padding: 10px 10px !important;
+ font-family: Tahoma, Verdana, Segoe, sans-serif;
+ font-size: 25px !important;
+ color: #FD9C1C !important;
+ font-weight: bold !important;
+ padding: 10px 10px !important;
 }
 
 .lista-menu:hover{
@@ -458,13 +459,13 @@ p{
     font-family: font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 .inferior-modal{
-   background-color: #FD9C1C !important;
-   border-top: 1px solid #FD9C1C !important;
+ background-color: #FD9C1C !important;
+ border-top: 1px solid #FD9C1C !important;
 }
 .inferior-modal-eliminar{
-   background-color: #ffffff !important;
-   border-top: 1px solid #ffffff !important;
-   text-align: center !important;
+ background-color: #ffffff !important;
+ border-top: 1px solid #ffffff !important;
+ text-align: center !important;
 }
 .encabezado-modal{
     background-color: #444444 !important;
@@ -703,12 +704,19 @@ p{
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
+    .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
     .fondo-imagenes{
         width: 200px;
         height: 250px;
         background-color: #F9F9F9 !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .fondo-imagenes:hover{
         width: 200px;
@@ -716,12 +724,14 @@ p{
         background-color: white !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .informacion-producto{
         width: 200px;
         text-align: center;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .menu-tienda{
         display: none;
@@ -731,7 +741,7 @@ p{
 
     }
     .texto-presen {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
     .texto-precio {
         font-size: 20px;
@@ -746,6 +756,9 @@ p{
     .carro-cel{
       display: inline-block;
   }
+  .categorias-cel{
+      display: inline-block !important;
+  }
 
   .desaparecer{
       display: none;
@@ -755,12 +768,19 @@ p{
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
     .fondo-imagenes{
         width: 200px;
         height: 250px;
         background-color: #F9F9F9 !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .fondo-imagenes:hover{
         width: 200px;
@@ -768,12 +788,14 @@ p{
         background-color: white !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .informacion-producto{
         width: 200px;
         text-align: center;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .menu-tienda{
         display: none;
@@ -783,7 +805,7 @@ p{
 
     }
     .texto-presen {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
     .texto-precio {
         font-size: 20px;
@@ -791,29 +813,37 @@ p{
     }
   /*  .Btn-Nar-mod-tienda {
         font-size: 9px !important;
-    }*/
+        }*/
     /*.width-cel{
         width: 44px !important;
-    }*/
-    .carro-cel{
-      display: inline-block;
+        }*/
+        .carro-cel{
+          display: inline-block;
+      }
+      .categorias-cel{
+          display: inline-block !important;
+      }
+      .desaparecer{
+          display: none;
+      }
   }
 
-  .desaparecer{
-      display: none;
-  }
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 320px) {
     /* Styles */
-        /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
     .fondo-imagenes{
         width: 200px;
         height: 250px;
         background-color: #F9F9F9 !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .fondo-imagenes:hover{
         width: 200px;
@@ -821,12 +851,14 @@ p{
         background-color: white !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .informacion-producto{
         width: 200px;
         text-align: center;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .menu-tienda{
         display: none;
@@ -856,59 +888,125 @@ p{
       display: none;
   }
   .move-more{
-        margin-left: -44px;
-    }
+    margin-left: -44px;
+    padding: 6px 4px !important;
+}
+.categorias-cel{
+  display: inline-block !important;
+}
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 /**********
 iPad 3
 **********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
     /* Styles */
-             .carro-cel{
-  display: none !important;
+    .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 30px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
 }
- .desaparecer{
+    .texto-presen {
+        font-size: 16px !important;
+    }
+    .carro-cel{
+      display: none !important;
+  }
+  .categorias-cel{
+      display: none !important;
+  }
+  .desaparecer{
       display: block;
   }
   .bajar-barra2 {
     margin-top: -32px !important;
+}
+.texto-descrip{
+    font-size: 16px !important;
+    color: #7A7A7A !important;
 }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
     /* Styles */
-             .carro-cel{
-  display: none !important;
+    .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 30px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
 }
-.desaparecer{
+    .texto-presen {
+        font-size: 16px !important;
+    }
+    .carro-cel{
+      display: none !important;
+  }
+  .categorias-cel{
+      display: none !important;
+  }
+  .desaparecer{
       display: block;
   }
   .bajar-barra2 {
     margin-top: -32px !important;
+}
+.texto-descrip{
+    font-size: 16px !important;
+    color: #7A7A7A !important;
 }
 }
 
@@ -917,90 +1015,156 @@ iPad 3
     /* Styles */
     .move-more{
         margin-left: -44px;
+        padding: 6px 4px !important;
     }
+    .texto-presen {
+        font-size: 12px !important;
+    }
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
-    .move-more{
-        margin-left: -44px;
-    }
+    .categorias-cel{
+      display: inline-block !important;
+  }
+  .move-more{
+    margin-left: -44px;
+    padding: 6px 4px !important;
+}
+.texto-presen {
+    font-size: 12px !important;
+}
+   .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
     .move-more{
-    margin-right: 20px;
+        margin-right: 20px;
+        padding: 6px 4px !important;
     }
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
+
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
-    .fondo-imagenes{
-        width: 200px;
-        height: 250px;
-        background-color: #F9F9F9 !important;
-        float: none;
-        margin: 0 auto;
-    }
-    .fondo-imagenes:hover{
-        width: 200px;
-        height: 250px;
-        background-color: white !important;
-        float: none;
-        margin: 0 auto;
-    }
-    .informacion-producto{
-        width: 200px;
-        text-align: center;
-        float: none;
-        margin: 0 auto;
-    }
-    .menu-tienda{
-        display: none;
-    }
-    .texto-descrip {
-        font-size: 12px !important;
-
-    }
-    .texto-presen {
-        font-size: 14px !important;
-    }
-    .texto-precio {
-        font-size: 20px;
-
-    }
-    .Btn-Nar-mod-tienda {
-        font-size: 9px !important;
-    }
-    .width-cel{
-        width: 44px !important;
-    }
-    .carro-cel{
-      display: inline-block;
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
+    .categorias-cel{
+      display: inline-block !important;
   }
+  .fondo-imagenes{
+    width: 200px;
+    height: 250px;
+    background-color: #F9F9F9 !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.fondo-imagenes:hover{
+    width: 200px;
+    height: 250px;
+    background-color: white !important;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.informacion-producto{
+    width: 200px;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    cursor: pointer !important;
+}
+.menu-tienda{
+    display: none;
+}
+.texto-descrip {
+    font-size: 10px !important;
 
-  .desaparecer{
-      display: none;
-  }
+}
+.texto-presen {
+    font-size: 12px !important;
+}
+.texto-precio {
+    font-size: 20px;
+
+}
+.Btn-Nar-mod-tienda {
+    font-size: 9px !important;
+}
+.width-cel{
+    width: 44px !important;
+}
+.carro-cel{
+  display: inline-block;
+}
+
+.desaparecer{
+  display: none;
+}
 }
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
     .move-more{
-    margin-right: 35px;
+        margin-right: 35px;
+        padding: 6px 4px !important;
     }
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
     .fondo-imagenes{
         width: 200px;
         height: 250px;
         background-color: #F9F9F9 !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .fondo-imagenes:hover{
         width: 200px;
@@ -1008,12 +1172,14 @@ iPad 3
         background-color: white !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .informacion-producto{
         width: 200px;
         text-align: center;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .menu-tienda{
         display: none;
@@ -1023,7 +1189,7 @@ iPad 3
 
     }
     .texto-presen {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
     .texto-precio {
         font-size: 20px;
@@ -1041,6 +1207,9 @@ iPad 3
 
   .desaparecer{
       display: none;
+  }
+  .categorias-cel{
+      display: inline-block !important;
   }
 }
 
@@ -1050,19 +1219,29 @@ iPad 3
     /* .move-more2{
     margin-right: 55px !important;
     }*/
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
-        html { 
-            min-width:100% !important;
-         }
-        .fondo-imagenes{
+    html { 
+        min-width:100% !important;
+    }
+    .fondo-imagenes{
         width: 200px;
         height: 250px;
         background-color: #F9F9F9 !important;
         float: none !important;
         margin: 0 auto !important;
+        cursor: pointer !important;
     }
     .fondo-imagenes:hover{
         width: 200px;
@@ -1070,12 +1249,14 @@ iPad 3
         background-color: white !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .informacion-producto{
         width: 200px;
         text-align: center;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .menu-tienda{
         display: none;
@@ -1085,7 +1266,7 @@ iPad 3
 
     }
     .texto-presen {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
     .texto-precio {
         font-size: 20px;
@@ -1104,17 +1285,33 @@ iPad 3
   .desaparecer{
       display: none;
   }
+  .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
-        .fondo-imagenes{
+       .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
+    .fondo-imagenes{
         width: 200px;
         height: 250px;
         background-color: #F9F9F9 !important;
         float: none !important;
         margin: 0 auto !important;
+        cursor: pointer !important;
     }
     .fondo-imagenes:hover{
         width: 200px;
@@ -1122,12 +1319,14 @@ iPad 3
         background-color: white !important;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .informacion-producto{
         width: 200px;
         text-align: center;
         float: none;
         margin: 0 auto;
+        cursor: pointer !important;
     }
     .menu-tienda{
         display: none;
@@ -1137,7 +1336,7 @@ iPad 3
 
     }
     .texto-presen {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
     .texto-precio {
         font-size: 20px;
@@ -1156,27 +1355,78 @@ iPad 3
   .desaparecer{
       display: none;
   }
+  .categorias-cel{
+      display: inline-block !important;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
+
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+
+
+    .categorias-cel{
+      display: inline-block !important;
+  }
+     .titulo-m-producto {
+    color: #FD9C1C !important;
+    font-size: 20px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-weight: bold !important;
+}
 }
 
