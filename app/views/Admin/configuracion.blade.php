@@ -146,9 +146,6 @@
       <div class="col-md-5 fondo-paneles">
       <br>
         <p class="estilo-estadistica">CAMBIAR CONTRASEÑA</p>
-          @if($respuesta == 0)
-            <h1>Nada</h1>
-        @endif
         @if($respuesta == 1)
             <h1>Correcto</h1>
         @endif
