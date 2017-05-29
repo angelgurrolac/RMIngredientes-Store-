@@ -112,7 +112,6 @@ class TiendaController extends \BaseController {
 		$sexo = Input::get('sexo');
 		$correo = Input::get('correo');
 
-
 		$user = new User;
 		$user->nombre = $nombre;
 		$user->ap_paterno = $a_paterno;
@@ -127,8 +126,16 @@ class TiendaController extends \BaseController {
 		$user->estatus = 1;
 		$user->save();
 
+		$pedido = new Pedidos;
+		$pedido->id_user = $user->id;
+		$pedido->save();
+
 		return Redirect::to('/Tienda/Pago');
 
+	}
+
+	public function PagoFinal(){
+		
 	}
 
 }

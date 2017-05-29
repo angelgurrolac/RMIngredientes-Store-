@@ -108,7 +108,10 @@
           width: 100%;
         }
         .visa{
-              margin-left: 4%;
+          margin-left: 4%;
+        }
+        .mastercard{
+          margin-top: 1%;
         }
         .mm{
           padding-left: 0 !important;
@@ -190,7 +193,10 @@
         <br> 
         <div class="row">
             <div class="col-md-offset-2 col-md-4">
-                <button id="tarjeta-visa" class="button-e width"><img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/visa.png"><p class="display">Visa</p></button>
+                <button id="tarjeta-visa" class="button-e width">
+                  <img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/visa.png">
+                  <img class="mastercard visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/mastercard.png">
+                  <p class="display">Visa y MasterCard</p></button>
                 <br>
                 <br>
                 <div class"visa-card tarjeta">
@@ -211,6 +217,7 @@
                         <input class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
                       </div>
                       <br>
+                      <input type="text">
                       <br>
                       <br>
                       <div class="col-md-12 mm">
@@ -225,50 +232,12 @@
                 <br class="visa-card">
                 <br class="visa-card">
                 <br class="visa-card">
-                <button id="tarjeta-master" class="button-e width"><img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/mastercard.png"><p class="display">MasterCard</p></button>
-                <br>
-                <br>
-                <div class"master-card tarjeta">
-                 <div class="demo-container master-card">
-                  <div class="card-wrapper master-card"></div>
-                  <br>
-                  <br>
-                  <div class="form-container active">
-                    {{Form::open(array('url'=>'/Tienda/PagoFinal'))}}
-                  <div class="form-container active master-card">
-                      <input class="form-control without-radius" placeholder="Número Tarjeta" type="tel" name="number">
-                      <br>
-                      <input class="form-control without-radius" placeholder="Nombre" type="text" name="name">
-                      <br>
-                      <div class="col-md-6 mm">
-                        <input class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry">
-                      </div>
-                      <div class="col-md-6 cvc">
-                        <input class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
-                      </div>
-                      <br>
-                      <br>
-                      <br>
-                      <div class="col-md-12 mm">
-                         {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
-                         <a class="display pull-right regresar-carrito" href="">Regresar</a>
-                      </div>
-                    {{Form::close()}}
-                  </div>
-                </div>
-              </div>
-                <br class="master-card">
-                <br class="master-card">
-                <br class="master-card">
-                <br class="master-card">
-                <button class="button-e width"><img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/oxxo.png"><p class="display">Oxxo</p></button>
+                  <button class="button-e width"><img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/oxxo.png"><p class="display">Oxxo</p></button>
             </div>
-
-        </div>
         <div class="col-md-6">
           <div class="text-center resumen">
             <h3>Resumen de tu compra</h3>
-            <div class="productos">
+            <div class="products">
             </div>
             <div class="col-md-offset-2 col-md-8">
               <div class="row">
@@ -319,19 +288,44 @@
             form: document.querySelector('form'),
             container: '.card-wrapper'
         });
-    </script>
+</script>
 
 <script type="text/javascript">
 $(document).ready(function(){
 
+  for (x=0; x<=localStorage.length-1; x++)  {  
+        if (localStorage.key(x) != 'contador' && localStorage.key(x) != 'envio1'
+            && localStorage.key(x) != 'iva' && localStorage.key(x) != 'subtotal'
+            && localStorage.key(x) != 'total') {
+          clave = localStorage.key(x); 
+          console.log(clave + "=" + localStorage.getItem(clave)); 
+
+    $.ajax({
+        type: "post", 
+        url: "ProductsCart", 
+        data: ({id : clave, cantidad : localStorage.getItem(clave)}),
+        cache: false,
+        dataType: "json",
+            success: function (data) { 
+              console.log(data);
+                $(".products").append("<div class='row'>");
+                $(".products").append("<th><img width='50px' style='background-color:#F9F9F9; padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'>");
+                $(".products").append("<p class='display'>"+localStorage.getItem(clave)+"</p><span>"+data.nombre+"</span>");
+                $(".products").append("</div>");
+              },
+            error: function (data) {
+                $(".products").append("<p>Ocurrio un error. ¡Intentalo de nuevo!</p>");
+              }
+            });
+      };  
+          };  
+
     $(".visa-card").css('display','none');
-    $(".master-card").css('display','none');
    $("#tarjeta-visa").click(function(){
         $(".visa-card").toggle(800);
     });
-$("#tarjeta-master").click(function(){
-        $(".master-card").toggle(800);
-    });
+
+
   var subtotal = parseInt(localStorage.getItem('subtotal'));
   $(".subtotal").text('$'+ (subtotal).toFixed(2));
   var iva = parseInt(localStorage.getItem('iva'));

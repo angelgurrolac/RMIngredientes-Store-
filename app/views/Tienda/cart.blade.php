@@ -213,13 +213,10 @@
              <p class="total display"></p>
           </div>
           <div class="col-md-3">
-            <!-- <input id="comprar" name="Comprar" class="btn btn-naranja-modal" type="submit" value="HACER PEDIDO"> -->
-             {{Form::open(array('url'=>'/Tienda/RegistroUser'))}}
-                {{ Form::submit('HACER PEDIDO', array('name'=> 'Comprar','class' => 'btn btn-naranja-modal')) }}
-                {{Form::close()}}
+                <a href="{{URL::to('Tienda/RegistroUser')}}" id="comprar" class="btn btn-naranja-modal">HACER PEDIDO</a>
             <br>
             <br>
-            <a href=""><p style="color:#FD9C1C;">Seguir comprando</p></a>
+            <a href="{{URL::to('Tienda/productos')}}"><p style="color:#FD9C1C;">Seguir comprando</p></a>
           </div>
       </div>
       <br>
@@ -245,61 +242,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
     
-    var contador = 0;
-    var envio = 0;
-    for (x=0; x<=localStorage.length-1; x++)  {  
-        clave = localStorage.key(x); 
-        console.log(clave + "=" + localStorage.getItem(clave));  
-
-    $.ajax({
-        type: "post", 
-        url: "ProductsCart", 
-        data: ({id : clave, cantidad : localStorage.getItem(clave)}),
-        cache: false,
-        dataType: "json",
-            success: function (data) { 
-              console.log(data);
-                // $.each(data, function(i, item) {
-                //     console.log(item);
-                contador = contador + (data.precio_unitario * localStorage.getItem(data.id));
-                envio = envio + parseInt(localStorage.getItem(data.id));
-                console.log(localStorage.getItem(data.id));
-                $(".products").append("<tr>");
-                $(".products").append("<th><img width='50px' style='background-color:#F9F9F9;     padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='text-center' style='font-size:24px;     margin-top: -56px; color:#FD9C1C;' class='display'>"+data.nombre+"</h2><p class='text-center' style='font-size:10px;'>"+data.descripcion_corta+"</p></th>");
-                $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
-                $(".products").append("<th> $"+data.precio_unitario+"</th>");
-                $(".products").append("<th> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></th>");
-                $(".products").append("</tr>");
-                // console.log(contador);
-                $(".subtotal").text("$" + contador.toFixed(2));
-                var subtotal = parseInt(contador);
-                localStorage.setItem('subtotal',subtotal);
-                $(".iva").text("$" + (contador * .16).toFixed(2));
-                var iva = parseInt(contador * .16);
-                localStorage.setItem('iva',iva);
-                $(".envio").text("$" + (envio * 70).toFixed(2));
-                var envio1 = parseInt(envio * 70);
-                localStorage.setItem('envio1',envio1);
-                $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
-                var total = subtotal + iva + envio1;
-                localStorage.setItem('total',total);
-                // });
-                
-                $("."+data.id).click(function(){
-                  alert("hola");
-                  var id = $("#"+data.id).val();
-                  console.log(id);
-                  localStorage.removeItem(data.id);
-                  window.location.reload();
-                });
-
-              },
-            error: function (data) {
-                $(".products").append("<tr>Ocurrio un error. ¡Intentalo de nuevo!</tr>");
-              }
-            });
-      };
-
   // seccion de conocenos
   $("#conocenos").hover(function(){
     $("#hr-conocenos").removeClass("menutext");
@@ -333,6 +275,63 @@ $(document).ready(function(){
     $("#hr-contacto").removeClass("menutext2");
   });
 
+   
+    var contador = 0;
+    var envio = 0;
+    for (x=0; x<=localStorage.length-1; x++)  {  
+        clave = localStorage.key(x); 
+        console.log(clave + "=" + localStorage.getItem(clave));  
+
+    $.ajax({
+        type: "post", 
+        url: "ProductsCart", 
+        data: ({id : clave, cantidad : localStorage.getItem(clave)}),
+        cache: false,
+        dataType: "json",
+            success: function (data) { 
+              console.log(data);
+                // $.each(data, function(i, item) {
+                //     console.log(item);
+                var precio_unitario = parseInt(data.precio_unitario);
+                contador = contador + (precio_unitario * localStorage.getItem(data.id));
+                envio = envio + parseInt(localStorage.getItem(data.id));
+                console.log(localStorage.getItem(data.id));
+                $(".products").append("<tr>");
+                $(".products").append("<th><img width='50px' style='background-color:#F9F9F9;     padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'><h2 class='text-center' style='font-size:24px;     margin-top: -56px; color:#FD9C1C;' class='display'>"+data.nombre+"</h2><p class='text-center' style='font-size:10px;'>"+data.descripcion_corta+"</p></th>");
+                $(".products").append("<th>"+localStorage.getItem(data.id)+"</th>");
+                $(".products").append("<th> $"+data.precio_unitario+"</th>");
+                $(".products").append("<th> <input type='button' class='"+data.id+" lista-menu-tienda estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></th>");
+                $(".products").append("</tr>");
+                // console.log(contador);
+                $(".subtotal").text("$" + contador.toFixed(2));
+                var subtotal = parseInt(contador);
+                localStorage.setItem('subtotal',subtotal);
+                $(".iva").text("$" + (contador * .16).toFixed(2));
+                var iva = parseInt(contador * .16);
+                localStorage.setItem('iva',iva);
+                $(".envio").text("$" + (envio * 70).toFixed(2));
+                var envio1 = parseInt(envio * 70);
+                localStorage.setItem('envio1',envio1);
+                $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
+                var total = subtotal + iva + envio1;
+                localStorage.setItem('total',total);
+                // });
+                
+                $("."+data.id).click(function(){
+                  alert("hola");
+                  var id = $("#"+data.id).val();
+                  console.log(id);
+                  localStorage.removeItem(data.id);
+                  window.location.reload();
+                });
+              // });
+
+              },
+            error: function (data) {
+                $(".products").append("<tr>Ocurrio un error. ¡Intentalo de nuevo!</tr>");
+              }
+            });
+      };
 });
 
 
