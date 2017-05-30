@@ -83,8 +83,28 @@ Route::filter('guest', function()
 
 Route::filter('csrf', function()
 {
-	if (Session::token() != Input::get('_token'))
+	if (Session::token() !== Input::get('_token'))
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+Route::filter('admin', function()
+{ 
+	if (Auth::user()->id_nivel !==1) {
+		if(Auth::user()->id_nivel ==2){
+			return Redirect::to('/restaurante/hogar'); 	
+		}
+		
+	}
+}); 
+
+Route::filter('restaurante', function()
+{ 
+	if (Auth::user()->id_nivel !==2) {
+		if(Auth::user()->id_nivel ==1){
+			return Redirect::to('/admin/pedidos'); 	
+		}
+		
+	}
+}); 

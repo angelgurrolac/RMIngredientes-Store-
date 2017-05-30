@@ -204,17 +204,18 @@
                   <div class="card-wrapper visa-card"></div>
                   <br>
                   <br>
-                  {{Form::open(array('url'=>'/Tienda/PagoFinal'))}}
+                  {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
+                  <span class="card-errors"></span>
                   <div class="form-container active visa-card">
-                      <input class="form-control without-radius" placeholder="Número Tarjeta" type="tel" name="number">
+                      <input data-conekta="card[number]" class="form-control without-radius" placeholder="Número Tarjeta" type="tel" name="number">
                       <br>
-                      <input class="form-control without-radius" placeholder="Nombre" type="text" name="name">
+                      <input data-conekta="card[name]" class="form-control without-radius" placeholder="Nombre" type="text" name="name">
                       <br>
                       <div class="col-md-6 mm">
-                        <input class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry">
+                        <input data-conekta="card[exp_month]" class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry">
                       </div>
                       <div class="col-md-6 cvc">
-                        <input class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
+                        <input data-conekta="card[cvc]" class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
                       </div>
                       <br>
                       <input type="hidden" name="subtotal" id="subtotal">
@@ -224,6 +225,7 @@
                       <input type="hidden" name="productos" id="products">
                       <input type="hidden" name="cantidad" id="cantidad">
                       <input type="hidden" name="correo" id="correo">
+                      <input type="hidden" name="prueba" id="prueba">
                       <br>
                       <br>
                       <div class="col-md-12 mm">
@@ -280,6 +282,7 @@
 <!-- jQuery -->
 <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
+<script src="{{ URL::asset('assets/js/conekta.js') }}"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 
@@ -294,6 +297,34 @@
             form: document.querySelector('form'),
             container: '.card-wrapper'
         });
+</script>
+
+<script type="text/javascript" >
+
+  Conekta.setPublishableKey('key_EbYxsWv74txNNyrJsWTwr3g');
+
+  var conektaSuccessResponseHandler = function(token) {
+    var $form = $("#card-form");
+    //Inserta el token_id en la forma para que se envíe al servidor
+    $form.append($("<input type="hidden" id="conektaTokenId">").val(token.id));
+    $form.get(0).submit(); //Hace submit
+  };
+  var conektaErrorResponseHandler = function(response) {
+    var $form = $("#card-form");
+    $form.find(".card-errors").text(response.message_to_purchaser);
+    $form.find("button").prop("disabled", false);
+  };
+
+  //jQuery para que genere el token después de dar click en submit
+  $(function () {
+    $("#card-form").submit(function(event) {
+      var $form = $(this);
+      // Previene hacer submit más de una vez
+      $form.find("button").prop("disabled", true);
+      Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+      return false;
+    });
+  });
 </script>
 
 <script type="text/javascript">
@@ -333,9 +364,11 @@ $(document).ready(function(){
           };  
 
           console.log(array1);
-          $("#products").val(array1);
+          var myJsonString = JSON.stringify(array1);
+          $("#products").val(myJsonString);
           console.log(array2);
-          $("#cantidad").val(array2);
+          var myJsonString2 = JSON.stringify(array2);
+          $("#cantidad").val(myJsonString2);
 
     $(".visa-card").css('display','none');
    $("#tarjeta-visa").click(function(){
@@ -357,6 +390,7 @@ $(document).ready(function(){
   $("#total").val(total);
   var correo = localStorage.getItem('correo');
   $("#correo").val(correo);
+  $("#prueba").val("tok_test_visa_4242");
    
 
   // seccion de conocenos

@@ -2,6 +2,8 @@
 
 class AdminController extends \BaseController {
 
+	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
