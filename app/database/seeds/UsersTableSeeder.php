@@ -8,16 +8,16 @@ class UsersTableSeeder extends Seeder {
     {
         User::create(
         [
-            'nombre'        => 'Zayra',
-            'ap_paterno'    => 'Chávez',
-            'ap_materno'    => 'Bautista',
-            'direccion'     => 'San Francisco 150 San José 1',
-            'codigo_postal' =>  34204,
-            'edad'          =>  22,
-            'sexo'          => 'Femenino',
-            'telefono'      => '618 110 6616',
-            'correo'        => 'zayra@hotmail.com',
-            'password'      =>  Hash::make('admin'),
+            'nombre'        => 'Rigoberto',
+            'ap_paterno'    => 'Medina',
+            'ap_materno'    => 'Rodriguez',
+            'direccion'     => 'C. de la Centella 211 Fracc. Los Remedios',
+            'codigo_postal' =>  34100,
+            'edad'          =>  28,
+            'sexo'          => 'Masculino',
+            'telefono'      => '6181268438',
+            'correo'        => 'rmingredientes1989@hotmail.com',
+            'password'      =>  Hash::make('Windowsxp1989@'),
             'rol'           =>  '2',
             'estatus'       =>  '1'
         ]
