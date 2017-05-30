@@ -7,7 +7,22 @@ p{
     font-size: 20px;
     padding: 10px;
 }
-
+.tachita-cart{
+    text-align: center !important;
+    font-weight: bold;
+   color: #444444;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
+}
+.tachita-cart:hover{
+    text-align: center !important;
+    font-weight: bold;
+   color: #FD9C1C;
+   font-size: 18px;
+   padding: 5px 14px !important;
+   border: none !important;
+}
 /*menu tienda*/
 .estilo-input{
     border: none !important;
@@ -573,6 +588,46 @@ p{
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 
 }
+.btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 18px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 18px;
+    cursor: pointer !important;
+    text-align: center;
+}
+a.seguir-c:link   
+{   
+ text-decoration:none;   
+}   
 .btn-verde-confi{
     margin-bottom: 20px !important;
     color: #ffffff;
@@ -754,10 +809,28 @@ p{
     margin-left: -25px !important;
     cursor: pointer !important;
 }
+.encabezados-table-cart{
+    font-size: 20px !important;
+}
 /*Queries */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        color: #444444;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
     .categorias-movil{
 display: block !important;
 }
@@ -820,11 +893,98 @@ display: block !important;
   .categorias-desktop{
     display: none !important;
 }
+.btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+       .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -892,6 +1052,57 @@ display: block !important;
   /* Smartphones (portrait) ----------- */
   @media only screen and (max-width : 320px) {
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+       .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -964,12 +1175,12 @@ display: block !important;
     display: none !important;
 }
 
-
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
+
     .li-separation {
     padding: 0 21px !important;
 }
@@ -1115,6 +1326,7 @@ display: block !important;
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+
         .li-separation {
     padding: 0 21px !important;
 }
@@ -1329,6 +1541,57 @@ display: block !important;
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
     /* Styles */
+    .categoria-cart{
+        color: #444444;
+        font-size: 30px;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 20px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 17px;
+    }
+    .interlineado-cart{
+        line-height: 5px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 18px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 18px;
+    cursor: pointer !important;
+    text-align: center;
+}
     .producto-cel{
 display: none !important;
     }
@@ -1369,6 +1632,57 @@ display: none !important;
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
     /* Styles */
+    .categoria-cart{
+        font-size: 30px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 20px;
+        color: #7A7A7A;
+    }
+    .fuente-cart{
+        font-size: 17px;
+    }
+      .interlineado-cart{
+        line-height: 5px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 18px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 18px;
+    cursor: pointer !important;
+    text-align: center;
+}
     .producto-cel{
 display: none !important;
     }
@@ -1409,6 +1723,57 @@ display: none !important;
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+       .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1439,6 +1804,57 @@ display: block !important;
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+       .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1473,6 +1889,57 @@ display: block !important;
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        color: #444444;
+        font-size: 20px;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+       .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1501,6 +1968,57 @@ display: block !important;
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1568,6 +2086,57 @@ display: block !important;
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        color: #444444;
+        font-size: 20px;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1595,6 +2164,57 @@ display: block !important;
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1663,6 +2283,57 @@ display: block !important;
 /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1685,6 +2356,57 @@ display: block !important;
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1756,6 +2478,57 @@ display: block !important;
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1823,6 +2596,57 @@ display: block !important;
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1843,6 +2667,57 @@ display: block !important;
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1862,6 +2737,57 @@ display: block !important;
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1882,6 +2808,57 @@ display: block !important;
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
       .categorias-movil{
 display: block !important;
 }
@@ -1901,6 +2878,57 @@ display: block !important;
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .categoria-cart{
+        font-size: 20px;
+        color: #444444;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+    }
+    .subcategoria-cart{
+        font-size: 14px;
+        color: #7A7A7A;
+    }
+      .fuente-cart{
+        font-size: 12px;
+    }
+    .interlineado-cart{
+        line-height: 1px;
+      }
+    .btn-naranja-cart{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #FD9C1C !important;
+    border-color: #FD9C1C !important;
+    border-radius: 0px !important;
+    padding: 4px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+
+.btn-naranja-cart:hover{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background-color: #EA881E !important;
+    border-color: #EA881E !important;
+    border-radius: 0px !important;
+    padding: 8px 11px !important;
+    font-size: 12px !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+
+}
+.seguir-comprando{
+    color: #FD9C1C !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+
+}
+.seguir-comprando:hover{
+    color: #444444 !important;
+    font-size: 14px;
+    cursor: pointer !important;
+    text-align: center;
+}
   .categorias-movil{
 display: block !important;
 }
