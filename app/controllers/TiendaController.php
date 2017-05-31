@@ -223,7 +223,7 @@ class TiendaController extends \BaseController {
             			"unit_price" => 35000,
             			"quantity"=> 1,
             			"parent_id" => "ord_2fw8EWJusiRrxdPzT"
-            	))
+            	)),
             	"charges" => array(
             		"object" => "list",
             		"has_more" => false,
@@ -237,7 +237,7 @@ class TiendaController extends \BaseController {
             			"amount" => 35000,
             			"paid_at" => 1485842112,
             			"currency" => "MXN",
-            			"fee": 1467,
+            			"fee" => 1467,
             			"customer_id" => "",
             			"order_id" => "ord_2fw8EWJusiRrxdPzT",
             			"payment_method" => array(
@@ -256,7 +256,7 @@ class TiendaController extends \BaseController {
             			)
             		)
             	)
-  ));
+  ));}
          catch (Conekta_Error $e) {
 
            return Response::json($e->getMessage());
