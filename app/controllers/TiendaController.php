@@ -198,15 +198,15 @@ class TiendaController extends \BaseController {
         
             $charge = Conekta_Charge::create(array(
             
-            "description" => "Conekta tastyfoods",
-            "amount" => 1000,
+            "description" => "Conekta rmingredientes",
+            "amount" => $total,
             "currency" => "MXN",
            "reference_id"=> null,
            "card" => $conektaTokenId,
            'details'=> array(
-                'name'=> 'agel',
-                'phone' => '618-110-66-16',                
-                'email'=> 'hola',
+                'name'=> $user->nombre,
+                'phone' => $user->telefono,                
+                'email'=> $user->correo,
                 'customer'=> array(
                   'corporation_name'=> 'Conekta Inc.',
                   'logged_in'=> true                  
@@ -214,24 +214,22 @@ class TiendaController extends \BaseController {
                     'line_items'=> array(
                       array(    
                         'name'=> 'cobro de reservacion',
-                        'description'=> 'Conekta tastyfoods',
+                        'description'=> 'Conekta rmingredientes',
                         'unit_price'=> 1000,
                         'quantity'=> 1,
                         'type'=> 'food'
                       )
                     ),
                     'shipment'=> array(
-      'carrier'=> 'estafeta',
-      'service'=> 'international',
-      'price'=> 20000,
+      'carrier'=> 'fedex',
+      'service'=> 'nacional',
+      'price'=> 240,
       'address'=> array(
-        'street1'=> '250 Alexis St',
-        'street2'=> null,
-        'street3'=> null,
-        'city'=> 'Red Deer',
-        'state'=> 'Alberta',
+        'street1'=> $user->direccion,
+        'city'=> 'Durango',
+        'state'=> 'Durango',
         'zip'=> 'T4N 0B8',
-        'country'=> 'Canada'
+        'country'=> 'Mexico'
       )
     )
                 )
