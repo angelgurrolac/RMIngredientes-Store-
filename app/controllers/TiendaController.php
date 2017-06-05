@@ -144,14 +144,15 @@ class TiendaController extends \BaseController {
 		$numeroT = Input::get('number');
 		$correo = Input::get('correo');
 		$nameC = Input::get('name');
-		$fechaExpiracion = Input::get('expiry');
+		$month = Input::get('month');
+		$year = Input::get('year');
 		$cvc = Input::get('cvc');
 		$subtotal = Input::get('subtotal');
 		$iva = Input::get('iva');
 		$envio1 = Input::get('envio1');
 		$total = Input::get('total');
 		$number = Input::get('number');
-		$prueba = Input::get('prueba');
+		$conektaTokenId = Input::get('conektaTokenId');
 		$tipo_pago1 = substr($numeroT, 0,1);
 		if ($tipo_pago1 == 4) {
 			$tipo_pago = 'visa';
@@ -189,74 +190,55 @@ class TiendaController extends \BaseController {
         }
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
-        Conekta::setLocale('ES');
+        Conekta::setLocale('es');
+
 
  
         try {
         
-            $charge = Conekta_Charge::create(
-            	array(
-            	"id" => "ord_2fw8EWJusiRrxdPzT",
-            	"object" => "order",
-            	"livemode" => false,
-            	"amount" => 35000,
-            	"amount_refunded" => 0,
-            	"payment_status" => "paid",
-            	"currency" => "MXN",
-            	"customer_info" => array(
-            		"object" => "customer_info",
-            		"customer_id" => "cus_zzmjKsnM9oacyCwV3",
-            		"name" => "Mario Perez",
-            		"email" => "usuario@example.com",
-            		"phone" => "+5215555555555"
-            	),
-            	"created_at" => 1485842107,
-            	"updated_at" => 1485842112,
-            	"line_items" => array(
-            		"object" => "list",
-            		"has_more" => false,
-            		"total" => 1,
-            		"data" => array(
-            			"id" => "line_item_2fw8EWJusiRrxdPzR",
-            			"object" => "line_item",
-            			"name" => "Box of Cohiba S1s",
-            			"unit_price" => 35000,
-            			"quantity"=> 1,
-            			"parent_id" => "ord_2fw8EWJusiRrxdPzT"
-            	)),
-            	"charges" => array(
-            		"object" => "list",
-            		"has_more" => false,
-            		"total" => 1,
-            		"data" => array(
-            			"id" => "589026bbedbb6e56430016ad",
-            			"object" => "charge",
-            			"livemode" => false,
-            			"created_at" => 1485842107,
-            			"status" => "paid",
-            			"amount" => 35000,
-            			"paid_at" => 1485842112,
-            			"currency" => "MXN",
-            			"fee" => 1467,
-            			"customer_id" => "",
-            			"order_id" => "ord_2fw8EWJusiRrxdPzT",
-            			"payment_method" => array(
-            				"object" => "card_payment",
-            				"type" => "credit",
-            				"name" => "Jorge Lopez",
-            				"exp_month" => "12",
-            				"exp_year" => "19",
-            				"auth_code" => "490884",
-            				"last4" => "4242",
-            				"brand" => "visa",
-            				"issuer" => "",
-            				"account_type" => "",
-            				"country" => "US",
-            				"fraud_score" => 29
-            			)
-            		)
-            	)
-  ));}
+            $charge = Conekta_Charge::create(array(
+            
+            "description" => "Conekta tastyfoods",
+            "amount" => 1000,
+            "currency" => "MXN",
+           "reference_id"=> null,
+           "card" => $conektaTokenId,
+           'details'=> array(
+                'name'=> 'agel',
+                'phone' => '618-110-66-16',                
+                'email'=> 'hola',
+                'customer'=> array(
+                  'corporation_name'=> 'Conekta Inc.',
+                  'logged_in'=> true                  
+                    ),
+                    'line_items'=> array(
+                      array(    
+                        'name'=> 'cobro de reservacion',
+                        'description'=> 'Conekta tastyfoods',
+                        'unit_price'=> 1000,
+                        'quantity'=> 1,
+                        'type'=> 'food'
+                      )
+                    ),
+                    'shipment'=> array(
+      'carrier'=> 'estafeta',
+      'service'=> 'international',
+      'price'=> 20000,
+      'address'=> array(
+        'street1'=> '250 Alexis St',
+        'street2'=> null,
+        'street3'=> null,
+        'city'=> 'Red Deer',
+        'state'=> 'Alberta',
+        'zip'=> 'T4N 0B8',
+        'country'=> 'Canada'
+      )
+    )
+                )
+            ));
+
+
+        }
          catch (Conekta_Error $e) {
 
            return Response::json($e->getMessage());

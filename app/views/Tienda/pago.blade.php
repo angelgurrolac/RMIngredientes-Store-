@@ -204,7 +204,7 @@
                   <div class="card-wrapper visa-card"></div>
                   <br>
                   <br>
-                  {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
+                <!--   {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
                   <span class="card-errors"></span>
                   <div class="form-container active visa-card">
                       <input data-conekta="card[number]" class="form-control without-radius" placeholder="Número Tarjeta" type="tel" name="number">
@@ -213,6 +213,7 @@
                       <br>
                       <div class="col-md-6 mm">
                         <input data-conekta="card[exp_month]" class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry">
+                        <input data-conekta="card[exp_year]" class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry1">
                       </div>
                       <div class="col-md-6 cvc">
                         <input data-conekta="card[cvc]" class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
@@ -232,7 +233,54 @@
                          {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
                          <a class="display pull-right regresar-carrito" href="">Regresar</a>
                       </div>
-                    {{Form::close()}}
+                    {{Form::close()}} -->
+
+
+
+
+                    {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
+  <span class="card-errors"></span>
+  <div>
+    <label>
+      <span>Nombre del tarjetahabiente</span>
+      <input type="text" size="20" data-conekta="card[name]" name="name">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Número de tarjeta de crédito</span>
+      <input type="tel" size="20" data-conekta="card[number]" name="number">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-conekta="card[cvc]" name="cvc">
+        <input type="hidden" name="subtotal" id="subtotal">
+                      <input type="hidden" name="iva" id="iva">
+                      <input type="hidden" name="envio1" id="envio1">
+                      <input type="hidden" name="total" id="total">
+                      <input type="hidden" name="productos" id="products">
+                      <input type="hidden" name="cantidad" id="cantidad">
+                      <input type="hidden" name="correo" id="correo">
+                      <input type="hidden" name="tarjeta" id="tarjeta">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Fecha de expiración (MM/AAAA)</span>
+      <input type="text" size="2" data-conekta="card[exp_month]" name="month">
+    </label>
+    <span>/</span>
+    <input type="text" size="4" data-conekta="card[exp_year]" name="year">
+  </div>
+  <!-- <button type="submit">Crear token</button> -->
+  {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
+{{Form::close()}}
+
+
+
+
                   </div>
                 </div>
               </div>
@@ -280,6 +328,9 @@
 
 
 <!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
+
 <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
 <script src="{{ URL::asset('assets/js/conekta.js') }}"></script>
@@ -291,22 +342,18 @@
 
 <script src="{{ URL::asset('assets/js/notiny-master/notiny-master/dist/notiny.js') }}"></script>
 
-<script src="{{ URL::asset('assets/js/jquery.card.js') }}"></script>
- <script>
-        new Card({
-            form: document.querySelector('form'),
-            container: '.card-wrapper'
-        });
-</script>
+<!-- <script src="{{ URL::asset('assets/js/jquery.card.js') }}"></script> -->
+
 
 <script type="text/javascript" >
-
   Conekta.setPublishableKey('key_EbYxsWv74txNNyrJsWTwr3g');
+  // Conekta.setLanguage("es");  
 
   var conektaSuccessResponseHandler = function(token) {
     var $form = $("#card-form");
     //Inserta el token_id en la forma para que se envíe al servidor
-    $form.append($("<input type="hidden" id="conektaTokenId">").val(token.id));
+    $form.append($("<input type='hidden' name='conektaTokenId' id='conektaTokenId'>").val(token.id));
+    localStorage.setItem('tarjeta',token.id);
     $form.get(0).submit(); //Hace submit
   };
   var conektaErrorResponseHandler = function(response) {
@@ -322,10 +369,12 @@
       // Previene hacer submit más de una vez
       $form.find("button").prop("disabled", true);
       Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+      //localStorage.setItem('tarjeta',token.id);
       return false;
     });
   });
 </script>
+
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -350,7 +399,7 @@ $(document).ready(function(){
         dataType: "json",
             success: function (data) { 
               console.log(data);
-              console.log(localStorage.getItem(clave));
+              // console.log(localStorage.getItem(clave));
                 $(".products").append("<div class='row'>");
                 $(".products").append("<th><img width='50px' style='background-color:#F9F9F9; padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'>");
                 $(".products").append("<p class='display'>"+localStorage.getItem(data.id)+"&nbsp;</p><span>"+data.nombre+"</span>");
