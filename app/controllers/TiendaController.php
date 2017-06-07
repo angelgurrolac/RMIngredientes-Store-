@@ -293,49 +293,45 @@ class TiendaController extends \BaseController {
         Conekta::setLocale('es');
 
 
- 
-        try {
+   try {
         
             $charge = Conekta_Charge::create(array(
-      "line_items" => array(
-        array(
-          "name" => "Tacos",
-          "unit_price" => 1000,
-          "quantity" => 12
-        )//first line_item
-      ), //line_items
-      "shipping_lines" => array(
-        array(
-          "amount" => 1500,
-          "carrier" => "mi compañia"
-        )
-      ), //shipping_lines
-      "currency" => "MXN",
-      "customer_info" => array(
-        "name" => "Fulanito Pérez",
-        "email" => "fulanito@conekta.com",
-        "phone" => "+5218181818181"
-      ), //customer_info
-      "shipping_contact" => array(
-        "phone" => "5555555555",
-        "receiver" => "Bruce Wayne",
-        "address" => array(
-          "street1" => "Calle 123 int 2 Col. Chida",
-          "city" => "Cuahutemoc",
-          "state" => "Ciudad de Mexico",
-          "country" => "MX",
-          "postal_code" => "06100",
-          "residential" => true
-        )//address
-      ), //shipping_contact
-      "charges" => array(
-          array(
-              "payment_method" => array(
-                "type" => "oxxo"
-              )//payment_method
-          ) //first charge
-      ) //charges);
-));	
+            
+            "description" => "Conekta rmingredientes",
+            "amount" => 1000,
+            "currency" => "MXN",
+           "reference_id"=> null,
+           'details'=> array(
+                'name'=> 'zayra',
+                'phone' => '6188064903',                
+                'email'=> 'angel_gurrolac@outlook.com',
+                'customer'=> array(
+                  'corporation_name'=> 'Conekta Inc.',
+                  'logged_in'=> true                  
+                    ),
+                    'line_items'=> array(
+                      array(    
+                        'name'=> 'cobro de reservacion',
+                        'description'=> 'Conekta rmingredientes',
+                        'unit_price'=> 10000,
+                        'quantity'=> 1,
+                        'type'=> 'food'
+                      )
+                    ),
+                    'shipment'=> array(
+      'carrier'=> 'fedex',
+      'service'=> 'nacional',
+      'price'=> 240,
+      'address'=> array(
+        'street1'=> 'calle',
+        'city'=> 'Durango',
+        'state'=> 'Durango',
+        'zip'=> 'T4N 0B8',
+        'country'=> 'Mexico'
+      )
+    )
+                )
+            ));
 
 
         }
@@ -355,6 +351,8 @@ class TiendaController extends \BaseController {
 
        
 	}
+
+
 
 
 
