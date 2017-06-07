@@ -204,59 +204,25 @@
                   <div class="card-wrapper visa-card"></div>
                   <br>
                   <br>
-                <!--   {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
-                  <span class="card-errors"></span>
-                  <div class="form-container active visa-card">
-                      <input data-conekta="card[number]" class="form-control without-radius" placeholder="Número Tarjeta" type="tel" name="number">
-                      <br>
-                      <input data-conekta="card[name]" class="form-control without-radius" placeholder="Nombre" type="text" name="name">
-                      <br>
-                      <div class="col-md-6 mm">
-                        <input data-conekta="card[exp_month]" class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry">
-                        <input data-conekta="card[exp_year]" class="form-control without-radius" placeholder="MM/YY" type="tel" name="expiry1">
-                      </div>
-                      <div class="col-md-6 cvc">
-                        <input data-conekta="card[cvc]" class="form-control without-radius" placeholder="CVC" type="number" name="cvc">
-                      </div>
-                      <br>
-                      <input type="hidden" name="subtotal" id="subtotal">
-                      <input type="hidden" name="iva" id="iva">
-                      <input type="hidden" name="envio1" id="envio1">
-                      <input type="hidden" name="total" id="total">
-                      <input type="hidden" name="productos" id="products">
-                      <input type="hidden" name="cantidad" id="cantidad">
-                      <input type="hidden" name="correo" id="correo">
-                      <input type="hidden" name="prueba" id="prueba">
-                      <br>
-                      <br>
-                      <div class="col-md-12 mm">
-                         {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
-                         <a class="display pull-right regresar-carrito" href="">Regresar</a>
-                      </div>
-                    {{Form::close()}} -->
-
-
-
-
                     {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
-  <span class="card-errors"></span>
-  <div>
-    <label>
-      <span>Nombre del tarjetahabiente</span>
-      <input type="text" size="20" data-conekta="card[name]" name="name">
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>Número de tarjeta de crédito</span>
-      <input type="tel" size="20" data-conekta="card[number]" name="number">
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>CVC</span>
-      <input type="text" size="4" data-conekta="card[cvc]" name="cvc">
-        <input type="hidden" name="subtotal" id="subtotal">
+                      <span class="card-errors"></span>
+                      <div>
+                        <label>
+                          <span>Nombre del tarjetahabiente</span>
+                          <input type="text" size="20" data-conekta="card[name]" name="name">
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <span>Número de tarjeta de crédito</span>
+                          <input type="tel" size="20" data-conekta="card[number]" name="number">
+                        </label>
+                      </div>
+                      <div>
+                        <label>
+                          <span>CVC</span>
+                          <input type="text" size="4" data-conekta="card[cvc]" name="cvc">
+                            <input type="hidden" name="subtotal" id="subtotal">
                       <input type="hidden" name="iva" id="iva">
                       <input type="hidden" name="envio1" id="envio1">
                       <input type="hidden" name="total" id="total">

@@ -61,5 +61,9 @@ Route::get('Tienda/Pago',function()
 {
      return View::make('Tienda.pago');
 }); //ruta para pago con tarjeta
+Route::get('Tienda/success',function()
+{
+     return View::make('Tienda.success');
+}); //ruta para pago con tarjeta
 Route::post('Tienda/PagoFinal','TiendaController@PagoFinal');
 

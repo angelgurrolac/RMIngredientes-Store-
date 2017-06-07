@@ -244,7 +244,12 @@ class TiendaController extends \BaseController {
            return Response::json($e->getMessage());
 
         }
-        return Response::json($charge->status);
+
+        if ($charge->status == "paid") {
+
+        	return Redirect::to('/Tienda/success');
+        }
+        // return Response::json($charge->status);
 
         // return Redirect::to('/Tienda/productos');
 
