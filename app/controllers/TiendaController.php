@@ -215,7 +215,7 @@ class TiendaController extends \BaseController {
                       array(    
                         'name'=> 'cobro de reservacion',
                         'description'=> 'Conekta rmingredientes',
-                        'unit_price'=> 1000,
+                        'unit_price'=> 10000,
                         'quantity'=> 1,
                         'type'=> 'food'
                       )
@@ -253,5 +253,109 @@ class TiendaController extends \BaseController {
 
        
 	}
+
+
+
+
+
+	public function PagoFinal1(){
+		// $correo = Input::get('correo');
+		// $nameC = Input::get('name');
+		// $subtotal = Input::get('subtotal');
+		// $iva = Input::get('iva');
+		// $envio1 = Input::get('envio1');
+		// $total = Input::get('total');
+		// $number = Input::get('number');
+		// $producto = Input::get('productos');
+		// $cantidad = Input::get('cantidad');
+		// $productos = json_decode($producto);
+		// $cantidades = json_decode($cantidad);
+
+		// $user = User::where('correo','=',$correo)->first();
+		// $pedido = Pedidos::where('id_user','=',$user->id)->first();
+  //       $pedido->subtotal = $subtotal;
+  //       $pedido->iva = $iva;
+  //       $pedido->costo_envio = $envio1;
+  //       $pedido->total = $total;
+  //       $pedido->tipo_pago = 'oxxo';
+  //       $pedido->save();
+		
+  //       for ($i=0; $i < count($productos); $i++) { 
+		//  	$detalles = new DetallesPedidos;
+		//  	$detalles->id_pedido = $pedido->id;
+		//  	$detalles->id_producto = $productos[$i];
+		// 	$detalles->cantidad = $cantidades[$i];
+		//  	$detalles->subtotal = $pedido->subtotal;
+		//  	$detalles->save();
+  //       }
+
+        Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
+        Conekta::setLocale('es');
+
+
+ 
+        try {
+        
+            $charge = Conekta_Charge::create(array(
+      "line_items" => array(
+        array(
+          "name" => "Tacos",
+          "unit_price" => 1000,
+          "quantity" => 12
+        )//first line_item
+      ), //line_items
+      "shipping_lines" => array(
+        array(
+          "amount" => 1500,
+          "carrier" => "mi compañia"
+        )
+      ), //shipping_lines
+      "currency" => "MXN",
+      "customer_info" => array(
+        "name" => "Fulanito Pérez",
+        "email" => "fulanito@conekta.com",
+        "phone" => "+5218181818181"
+      ), //customer_info
+      "shipping_contact" => array(
+        "phone" => "5555555555",
+        "receiver" => "Bruce Wayne",
+        "address" => array(
+          "street1" => "Calle 123 int 2 Col. Chida",
+          "city" => "Cuahutemoc",
+          "state" => "Ciudad de Mexico",
+          "country" => "MX",
+          "postal_code" => "06100",
+          "residential" => true
+        )//address
+      ), //shipping_contact
+      "charges" => array(
+          array(
+              "payment_method" => array(
+                "type" => "oxxo"
+              )//payment_method
+          ) //first charge
+      ) //charges);
+));	
+
+
+        }
+         catch (Conekta_Error $e) {
+
+           return Response::json($e->getMessage());
+
+        }
+
+        if ($charge->status == "paid") {
+
+        	return Redirect::to('/Tienda/success');
+        }
+        // return Response::json($charge->status);
+
+        // return Redirect::to('/Tienda/productos');
+
+       
+	}
+
+
 
 	}

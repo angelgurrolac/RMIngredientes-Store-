@@ -64,6 +64,7 @@ Route::get('Tienda/Pago',function()
 Route::get('Tienda/success',function()
 {
      return View::make('Tienda.success');
-}); //ruta para pago con tarjeta
-Route::post('Tienda/PagoFinal','TiendaController@PagoFinal');
+}); //ruta para caso exitoso de pago
+Route::post('Tienda/PagoFinal','TiendaController@PagoFinal');//cargo con tarjeta
+Route::post('Tienda/PagoFinal1','TiendaController@PagoFinal1');//cargo con oxxo
 

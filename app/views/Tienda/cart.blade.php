@@ -405,19 +405,28 @@
                 $(".subtotal").text("$" + contador.toFixed(2));
                 var subtotal = parseInt(contador);
                 localStorage.setItem('subtotal',subtotal);
+
                 $(".iva").text("$" + (contador * .16).toFixed(2));
                 var iva = parseInt(contador * .16);
                 localStorage.setItem('iva',iva);
-                $(".envio").text("$" + (envio * 70).toFixed(2));
-                var envio1 = parseInt(envio * 70);
+
+                var producto = localStorage.getItem(data.id);
+                if (producto == 17) {
+                  $(".envio").text("$" + (envio * 325).toFixed(2));
+                  var envio1 = parseInt(envio * 325);
+                };
+
+                $(".envio").text("$" + (envio * 230).toFixed(2));
+                var envio1 = parseInt(envio * 230);
                 localStorage.setItem('envio1',envio1);
+
                 $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
                 var total = subtotal + iva + envio1;
                 localStorage.setItem('total',total);
                 // });
                 
                 $("."+data.id).click(function(){
-                  alert("hola");
+                  // alert("hola");
                   var id = $("#"+data.id).val();
                   console.log(id);
                   localStorage.removeItem(data.id);
