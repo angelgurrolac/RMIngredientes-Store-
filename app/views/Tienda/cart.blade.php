@@ -240,7 +240,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 col-xs-12 col-lg-12">
       <a class="estilo-input" href=""><p class="display categoria-cart">Carrito de compras</p></a>
       <span class="glyphicon glyphicon-chevron-right"></span>
       <a class=" estilo-input" href=""><p class="display subcategoria-cart">Datos para envió</p></a>
@@ -253,7 +253,7 @@
   <br>
   <div class="row">
 
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-12 col-lg-12">
       <div class="table-responsive" >
         <table id="table" class="table table-striped ">
           <thead class="encabezados-table-cart">
@@ -277,12 +277,12 @@
 
   <div class="row" style="background-color: #f9f9f9;">
 
-    <div class="col-xs-3" >
+    <div class="col-md-3 col-lg-3 col-xs-1" >
     </div>
     
-    <div class="col-xs-5" >
+    <div class="col-md-5 col-lg-5 col-xs-11" >
     <div class="row fuente-cart">
-      <div class="col-xs-6">
+      <div class="col-md-6 col-lg-6 col-xs-8">
          <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Subtotal</p>
          <br>
  <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">I.V.A.</p>
@@ -292,7 +292,7 @@
  <hr class="separador-cart">
 <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Total</p>
       </div>
-      <div class="col-xs-6">
+      <div class="col-md-6 col-lg-6 col-xs-4">
         <p class="subtotal display interlineado-cart" style="text-align: right;"></p>
      <br>
     
@@ -308,7 +308,7 @@
     </div>
    </div>
  
-   <div class="col-xs-4" style="background-color: white;">
+   <div class="col-md-4 col-lg-4 col-xs-12" style="background-color: white;">
    <center>
     <a href="{{URL::to('Tienda/RegistroUser')}}" id="comprar" class="btn btn-naranja-cart">HACER PEDIDO</a>
     </center> 
