@@ -91,8 +91,8 @@
           border-right: none;
         }
         table tr {
-  text-align: center;
-}
+          text-align: center;
+        }
         .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
          background-color: white;
        }
@@ -135,19 +135,19 @@
       }
       .separador-cart{
         margin-top: 1px;
-    margin-bottom: 1px;
-    border: 0;
-    border-top: 3px solid #7A7A7A;
-    margin-left: -20px;
-    margin-right: -10px;
+        margin-bottom: 1px;
+        border: 0;
+        border-top: 3px solid #7A7A7A;
+        margin-left: -20px;
+        margin-right: -10px;
       }
-    
+
     </style>
 
   </head>
 
   <body style="background-color: white;">
-    <div id="wrapper">
+  <div id="wrapper" >
 
      <!-- Navigation -->
      <nav class=" navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -240,14 +240,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 col-xs-12 col-lg-12">
-      <a class="estilo-input" href=""><p class="display categoria-cart">Carrito de compras</p></a>
+    <div class="col-md-12 col-xs-12 col-lg-12 centrar-subtitulos">
+      <p class="display categoria-cart ">Carrito de compras</p>
       <span class="glyphicon glyphicon-chevron-right"></span>
-      <a class=" estilo-input" href=""><p class="display subcategoria-cart">Datos para envió</p></a>
+      <p class="display subcategoria-cart ">Datos para envío</p>
       <span class="glyphicon glyphicon-chevron-right"></span>
-      <a class=" estilo-input" href=""><p class="display subcategoria-cart">Datos del pago</p></a>
+      <p class="display subcategoria-cart ">Datos del pago</p>
       <span class="glyphicon glyphicon-chevron-right"></span>
-      <a class="estilo-input" href=""><p class="display subcategoria-cart">Confirmación de pedido</p></a>
+      <p class="display subcategoria-cart ">Confirmación de pedido</p>
     </div>
   </div> 
   <br>
@@ -277,49 +277,49 @@
 
   <div class="row" style="background-color: #f9f9f9;">
 
-    <div class="col-md-3 col-lg-3 col-xs-1" >
+    <div class="col-md-3 col-lg-4 col-xs-1" >
     </div>
     
     <div class="col-md-5 col-lg-5 col-xs-11" >
-    <div class="row fuente-cart">
-      <div class="col-md-6 col-lg-6 col-xs-8">
+      <div class="row fuente-cart">
+        <div class="col-md-6 col-lg-6 col-xs-8">
          <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Subtotal</p>
          <br>
- <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">I.V.A.</p>
- <br>
- <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Gastos de envío</p>
- <br>
- <hr class="separador-cart">
-<p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Total</p>
-      </div>
-      <div class="col-md-6 col-lg-6 col-xs-4">
+         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">I.V.A.</p>
+         <br>
+         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Gastos de envío</p>
+         <br>
+         <hr class="separador-cart">
+         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Total</p>
+       </div>
+       <div class="col-md-6 col-lg-6 col-xs-4">
         <p class="subtotal display interlineado-cart" style="text-align: right;"></p>
-     <br>
-    
-     <p class="iva display interlineado-cart" style="text-align: right;"></p>
-     <br>
-    
-     <p class="envio display interlineado-cart" style="text-align: right;"></p>
-     <br>
-    
-     <hr class="separador-cart">
-     <p class="total display interlineado-cart" style="text-align: right; font-weight: bold;"></p>
+        <br>
+
+        <p class="iva display interlineado-cart" style="text-align: right;"></p>
+        <br>
+
+        <p class="envio display interlineado-cart" style="text-align: right;"></p>
+        <br>
+
+        <hr class="separador-cart">
+        <p class="total display interlineado-cart" style="text-align: right; font-weight: bold;"></p>
       </div>
     </div>
-   </div>
- 
-   <div class="col-md-4 col-lg-4 col-xs-12" style="background-color: white;">
-   <center>
-    <a href="{{URL::to('Tienda/RegistroUser')}}" id="comprar" class="btn btn-naranja-cart">HACER PEDIDO</a>
-    </center> 
-    <br>
-    <br>
-    <a class="seguir-c" href="{{URL::to('Tienda/productos')}}"><p class="seguir-comprando">Seguir comprando</p></a>
   </div>
 
+  <div class="col-md-4 col-lg-3 col-xs-12" style="background-color: white;">
+   <center>
+    <a href="{{URL::to('Tienda/RegistroUser')}}" id="comprar" class="btn btn-naranja-cart">HACER PEDIDO</a>
+  </center> 
   <br>
   <br>
-  <br>
+  <a class="seguir-c" href="{{URL::to('Tienda/productos')}}"><p class="seguir-comprando">Seguir comprando</p></a>
+</div>
+
+<br>
+<br>
+<br>
 </div>
 </div>
 <br>
