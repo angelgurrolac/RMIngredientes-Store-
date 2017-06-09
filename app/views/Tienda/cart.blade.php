@@ -276,39 +276,14 @@
 
 
   <div class="row" style="background-color: #f9f9f9;">
-
-    <div class="col-md-3 col-lg-4 col-xs-1" >
-    </div>
     
-    <div class="col-md-5 col-lg-5 col-xs-11" >
+    <div class="col-md-8 col-lg-8 col-xs-12" style="text-align: right;" >
       <div class="row fuente-cart">
-        <div class="col-md-6 col-lg-6 col-xs-8">
-         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Subtotal</p>
-         <br>
-         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">I.V.A.</p>
-         <br>
-         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Gastos de envío</p>
-         <br>
-         <hr class="separador-cart">
-         <p class="display interlineado-cart" style="text-align: left; font-weight: bold;">Total</p>
-       </div>
-       <div class="col-md-6 col-lg-6 col-xs-4">
-        <p class="subtotal display interlineado-cart" style="text-align: right;"></p>
-        <br>
-
-        <p class="iva display interlineado-cart" style="text-align: right;"></p>
-        <br>
-
-        <p class="envio display interlineado-cart" style="text-align: right;"></p>
-        <br>
-
-        <hr class="separador-cart">
-        <p class="total display interlineado-cart" style="text-align: right; font-weight: bold;"></p>
-      </div>
+         <p class="display interlineado-cart" style="text-align: right; font-weight: bold;">Total</p> &nbsp;<p class="total display interlineado-cart" style="text-align: left; font-weight: bold;"></p>  
     </div>
   </div>
 
-  <div class="col-md-4 col-lg-3 col-xs-12" style="background-color: white;">
+  <div class="col-md-4 col-lg-4 col-xs-12" style="background-color: white;">
    <center>
     <a href="{{URL::to('Tienda/RegistroUser')}}" id="comprar" class="btn btn-naranja-cart">HACER PEDIDO</a>
   </center> 
