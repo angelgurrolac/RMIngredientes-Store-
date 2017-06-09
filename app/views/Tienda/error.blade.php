@@ -158,7 +158,7 @@
         </div>
         <br> 
         <div class="row">
-            <h1>¡Muchas gracias! Tu pedido se ha realizado.</h1>
+            <h1>{{$error}}</h1>
             <p>Tu pedido se ha procesado correctamente recibirás una confirmación de compra a tu correo
             electrónico con los detalles de tu compra y del envío. Si tienes alguna duda o inquietud no
             dudes en contactarnos al telefono <b>(618 126 8438.)</b></p>

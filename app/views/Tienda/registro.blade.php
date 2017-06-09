@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TIENDA - RMIngredientes</title>
+  <title>Tienda - RMIngredientes - Registro</title>
 
   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
   <!-- Bootstrap Core CSS -->

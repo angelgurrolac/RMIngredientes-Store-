@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TIENDA - RMIngredientes</title>
+  <title>Tienda - RMIngredientes - Pago</title>
 
   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
   <!-- Bootstrap Core CSS -->
@@ -268,22 +268,6 @@
                 </div>
                 <div class="col-md-offset-2 col-md-8">
                   <div class="row">
-                    <p class="display pull-left">Subtotal</p>
-                    <p class="subtotal display pull-right"></p>
-                  </div>
-                  <br>
-                  <div class="row">
-                    <p class="display pull-left">I.V.A.</p>
-                    <p class="iva display pull-right"></p>
-                  </div>
-                  <br>
-                  <div class="row">
-                    <p class="display pull-left">Gastos de envío</p>
-                    <p class="envio display pull-right"></p>
-                  </div>
-                  <br>
-                  <hr>
-                  <div class="row">
                     <p class="display pull-left">Total</p>
                     <p class="total display pull-right"></p>
                   </div>
@@ -353,9 +337,8 @@
     var array2 = [];
 
     for (x=0; x<=localStorage.length-1; x++)  {  
-      if (localStorage.key(x) != 'contador' && localStorage.key(x) != 'envio1'
-        && localStorage.key(x) != 'iva' && localStorage.key(x) != 'subtotal'
-        && localStorage.key(x) != 'total'  && localStorage.key(x) != 'correo') {
+      if (localStorage.key(x) != 'contador' && localStorage.key(x) != 'total'
+          && localStorage.key(x) != 'correo') {
         clave = localStorage.key(x);
       array1.push(clave);
       array2.push(localStorage.getItem(clave));
@@ -401,22 +384,12 @@
     $(".oxxo-card").toggle(800);
   });
 
-
-  var subtotal = parseInt(localStorage.getItem('subtotal'));
-  $(".subtotal").text('$'+ (subtotal).toFixed(2));
-  $("#subtotal").val(subtotal);
-  var iva = parseInt(localStorage.getItem('iva'));
-  $(".iva").text('$'+ (iva).toFixed(2));
-  $("#iva").val(iva);
-  var envio = parseInt(localStorage.getItem('envio1'));
-  $(".envio").text('$'+ (envio).toFixed(2));
-  $("#envio1").val(envio);
-  var total = parseInt(localStorage.getItem('total'));
+  var total = parseFloat(localStorage.getItem('total'));
   $(".total").text('$'+ (total).toFixed(2));
   $("#total").val(total);
   var correo = localStorage.getItem('correo');
   $("#correo").val(correo);
-  $("#prueba").val("tok_test_visa_4242");
+
 
 
   // seccion de conocenos

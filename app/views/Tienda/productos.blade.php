@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TIENDA - RMIngredientes</title>
+  <title>Tienda - RMIngredientes - Productos</title>
 
   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
   <!-- Bootstrap Core CSS -->
@@ -501,7 +501,7 @@
     $("#myModal #id").text(id);
     $("#myModal #beneficios").text(beneficios);
     $("#myModal #presentacion").text(presentacion);
-    $("#myModal #precio").text('$' + precio);
+    $("#myModal #precio").text('$' + parseFloat(precio).toFixed(2));
     $("#myModal #imagen").attr('src','http://tienda.rmingredientes.com/'+imagen);
   });
 

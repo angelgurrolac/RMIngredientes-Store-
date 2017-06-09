@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TIENDA - RMIngredientes</title>
+  <title>Tienda - RMIngredientes - Carrito</title>
 
   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
   <!-- Bootstrap Core CSS -->
@@ -391,38 +391,33 @@
         console.log(data);
                 // $.each(data, function(i, item) {
                 //     console.log(item);
-                var precio_unitario = parseInt(data.precio_unitario);
+                var precio_unitario = parseFloat(data.precio_unitario);
                 var conDecimal = precio_unitario.toFixed(2); 
                 contador = contador + (precio_unitario * localStorage.getItem(data.id));
                 envio = envio + parseInt(localStorage.getItem(data.id));
                 console.log(localStorage.getItem(data.id));
-                $(".products").append("<tr><td><img width='50px' style='background-color:#F9F9F9;   display:inline-block;  padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'></td><td style='text-align:left;'><p class='producto-table'>"+data.nombre+"</p><p class='producto-t-cart'>"+data.descripcion_corta+"</p></td><td style='text-align:center;' ><p  class='cantidad-cart'>&nbsp;"+localStorage.getItem(data.id)+"</p></td><td class='precio-table-cart'> $"+(data.precio_unitario).toFixed(2)+"</td><td> <input type='button' class='"+data.id+" tachita-cart estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></td></tr>");
-                // $(".products").append("");
-                // $(".products").append("");
-                // $(".products").append("");
-                // $(".products").append("");
-                // console.log(contador);
-                $(".subtotal").text("$" + contador.toFixed(2));
-                var subtotal = parseInt(contador);
-                localStorage.setItem('subtotal',subtotal);
-
-                $(".iva").text("$" + (contador * .16).toFixed(2));
-                var iva = parseInt(contador * .16);
-                localStorage.setItem('iva',iva);
-
-                var producto = localStorage.getItem(data.id);
-                if (producto == 17) {
-                  $(".envio").text("$" + (envio * 325).toFixed(2));
-                  var envio1 = parseInt(envio * 325);
-                };
-
-                $(".envio").text("$" + (envio * 230).toFixed(2));
-                var envio1 = parseInt(envio * 230);
-                localStorage.setItem('envio1',envio1);
-
-                $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
-                var total = subtotal + iva + envio1;
+                $(".products").append("<tr><td><img width='50px' style='background-color:#F9F9F9;   display:inline-block;  padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'></td><td style='text-align:left;'><p class='producto-table'>"+data.nombre+"</p><p class='producto-t-cart'>"+data.descripcion_corta+"</p></td><td style='text-align:center;' ><p  class='cantidad-cart'>&nbsp;"+localStorage.getItem(data.id)+"</p></td><td class='precio-table-cart'> $"+conDecimal+"</td><td> <input type='button' class='"+data.id+" tachita-cart estilo-input' value='x' name='eliminar'><input id='"+data.id+"' value='"+data.id+"' type='hidden' name='valor'></td></tr>");
+                $(".total").text("$" + contador.toFixed(2));
+                var total = parseFloat(contador.toFixed(2));
                 localStorage.setItem('total',total);
+
+                // $(".iva").text("$" + (contador * .16).toFixed(2));
+                // var iva = parseInt(contador * .16);
+                // localStorage.setItem('iva',iva);
+
+                // var producto = localStorage.getItem(data.id);
+                // if (producto == 17) {
+                //   $(".envio").text("$" + (envio * 325).toFixed(2));
+                //   var envio1 = parseInt(envio * 325);
+                // };
+
+                // $(".envio").text("$" + (envio * 230).toFixed(2));
+                // var envio1 = parseInt(envio * 230);
+                // localStorage.setItem('envio1',envio1);
+
+                // $(".total").text("$" + (subtotal + iva + envio1).toFixed(2));
+                // var total = subtotal + iva + envio1;
+                // localStorage.setItem('total',total);
                 // });
                 
                 $("."+data.id).click(function(){

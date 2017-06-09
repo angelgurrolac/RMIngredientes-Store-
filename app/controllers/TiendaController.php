@@ -228,7 +228,7 @@ class TiendaController extends \BaseController {
         'street1'=> $user->direccion,
         'city'=> 'Durango',
         'state'=> 'Durango',
-        'zip'=> 'T4N 0B8',
+        'zip'=> $user->codigo_postal,
         'country'=> 'Mexico'
       )
     )
@@ -239,7 +239,10 @@ class TiendaController extends \BaseController {
         }
          catch (Conekta_Error $e) {
 
-           return Response::json($e->getMessage());
+         	$error = $e->getMessage();
+
+           // return Response::json($e->getMessage());
+         	return View::make('/Tienda/error',compact('error'));
 
         }
 

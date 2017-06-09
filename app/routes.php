@@ -65,6 +65,10 @@ Route::get('Tienda/success',function()
 {
      return View::make('Tienda.success');
 }); //ruta para caso exitoso de pago
+Route::get('Tienda/error',function()
+{
+     return View::make('Tienda.error');
+}); //ruta para caso fallo de pago
 Route::post('Tienda/PagoFinal','TiendaController@PagoFinal');//cargo con tarjeta
 Route::post('Tienda/PagoFinal1','TiendaController@PagoFinal1');//cargo con oxxo
 
