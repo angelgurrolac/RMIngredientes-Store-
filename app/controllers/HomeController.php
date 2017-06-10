@@ -17,7 +17,8 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		 return Redirect::to('/login');
+		 // return Redirect::to('/index');
+		return View::make('principal');
 	}
 
 }

@@ -147,13 +147,13 @@
       <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Carrito de compras</h3></a>
+                <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/cart')}}"><h3 class="display">Carrito de compras</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos para envió</h3></a>
+                <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/RegistroUser')}}"><h3 class="display">Datos para envió</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos del pago</h3></a>
+                <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/Pago')}}"><h3 class="display">Datos del pago</h3></a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Confirmación de pedido</h3></a>
+                <a class="lista-menu-tienda estilo-input" href="#"><h3 class="display bold">Confirmación de pedido</h3></a>
             </div>
         </div>
         <br> 

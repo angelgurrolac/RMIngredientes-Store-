@@ -181,9 +181,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Carrito de compras</h3></a>
+              <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/cart')}}"><h3 class="display">Carrito de compras</h3></a>
               <span class="glyphicon glyphicon-chevron-right"></span>
-              <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos para envió</h3></a>
+              <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/RegistroUser')}}"><h3 class="display">Datos para envió</h3></a>
               <span class="glyphicon glyphicon-chevron-right"></span>
               <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Datos del pago</h3></a>
               <span class="glyphicon glyphicon-chevron-right"></span>
@@ -209,19 +209,19 @@
                   <div>
                     <label>
                       <span>Nombre del tarjetahabiente</span>
-                      <input type="text" size="20" data-conekta="card[name]" name="name">
+                      <input class="form-control" type="text" size="20" data-conekta="card[name]" name="name" required>
                     </label>
                   </div>
                   <div>
                     <label>
                       <span>Número de tarjeta de crédito</span>
-                      <input type="tel" size="20" data-conekta="card[number]" name="number">
+                      <input class="form-control" type="tel" size="20" data-conekta="card[number]" name="number" required>
                     </label>
                   </div>
                   <div>
                     <label>
                       <span>CVC</span>
-                      <input type="text" size="4" data-conekta="card[cvc]" name="cvc">
+                      <input class="form-control" type="text" size="4" data-conekta="card[cvc]" name="cvc" required>
                       <input type="hidden" name="subtotal" id="subtotal">
                       <input type="hidden" name="iva" id="iva">
                       <input type="hidden" name="envio1" id="envio1">
@@ -235,10 +235,36 @@
                   <div>
                     <label>
                       <span>Fecha de expiración (MM/AAAA)</span>
-                      <input type="text" size="2" data-conekta="card[exp_month]" name="month">
+                      <!-- <input type="text" size="2" data-conekta="card[exp_month]" name="month" required> -->
+
+                      <select class="form-control col-sm-2" data-conekta="card[exp_month]" name="month" id="expiry-month" required>
+                <option>Month</option>
+                <option value="01">Jan (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Apr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">June (06)</option>
+                <option value="07">July (07)</option>
+                <option value="08">Aug (08)</option>
+                <option value="09">Sep (09)</option>
+                <option value="10">Oct (10)</option>
+                <option value="11">Nov (11)</option>
+                <option value="12">Dec (12)</option>
+              </select>
                     </label>
-                    <span>/</span>
-                    <input type="text" size="4" data-conekta="card[exp_year]" name="year">
+                    <select class="form-control" data-conekta="card[exp_year]" name="year" required>
+                <option value="16">year</option>
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+                <option value="23">2024</option>
+                <option value="23">2025</option>
+              </select>
                   </div>
                   {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
                   {{Form::close()}}

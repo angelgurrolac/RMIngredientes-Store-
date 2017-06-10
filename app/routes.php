@@ -20,6 +20,10 @@ Route::get('/','HomeController@showWelcome');
 Route::get('login', 'AuthController@showLogin'); // Mostrar login
 Route::post('login', 'AuthController@postLogin'); // Verificar datos
 Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+Route::get('/index',function()
+{   
+     return View::make('principal');
+}); 
 
  
 /*Rutas privadas solo para usuarios autenticados*/

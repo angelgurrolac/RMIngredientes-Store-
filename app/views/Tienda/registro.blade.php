@@ -142,9 +142,7 @@
        <ul class="carro-cel pull-right" style="display: inline-block;">
          <a class="" id="cart" href="{{URL::to('Tienda/cart')}}">
           <li class="li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-
             <span id="contador2" class="badge badge-2"></span></a>
-
           </li>
         </ul>
         <!-- /.navbar-top-links -->
@@ -201,35 +199,35 @@
             {{Form::open(array('url'=>'/Tienda/AddUser'))}}
             <div class="col-md-4 col-xs-12 col-lg-4">
               <p class="datos-formulario">Nombre</p>
-              <input class="form-control without-radius fondo-cajas-texto" type="text" name="nombre">
+              <input class="form-control without-radius fondo-cajas-texto" type="text" name="nombre" required>
             </div>
             <div class="col-md-4 col-xs-12 col-lg-4">
               <p class="datos-formulario">Apellido Paterno</p>
-              <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_paterno">
+              <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_paterno" required>
             </div>
             <div class="col-md-4 col-xs-12 col-lg-4"> 
               <p class="datos-formulario">Apellido Materno</p> 
-              <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_materno">
+              <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_materno" required>
             </div>
           </div>
           <div class="row">
             <row class="col-md-6 col-xs-12 col-lg-6">
               <p class="datos-formulario">Dirección</p>
-              <input class="form-control without-radius fondo-cajas-texto" type="text" name="direccion">
+              <input class="form-control without-radius fondo-cajas-texto" type="text" name="direccion" required>
             </row>
             <row class="col-md-6 col-xs-12 col-lg-6">
               <p class="datos-formulario">Teléfono</p>
-              <input class="form-control without-radius fondo-cajas-texto" type="text" name="telefono">
+              <input class="form-control without-radius fondo-cajas-texto" type="text" name="telefono" required>
             </row>
           </div>
           <div class="row">
             <div class="col-md-4 col-xs-6 col-lg-4" >
               <p class="datos-formulario ">C.P.</p>
-              <input class="form-control without-radius fondo-cajas-texto" type="number" name="cp">
+              <input class="form-control without-radius fondo-cajas-texto" type="number" name="cp" required>
             </div>
             <div class="col-md-4 col-xs-6 col-lg-4">
               <p class="datos-formulario">Edad</p>
-              <input class="form-control without-radius fondo-cajas-texto" type="number" name="edad">
+              <input class="form-control without-radius fondo-cajas-texto" type="number" name="edad" required>
             </div>
             <div class="col-md-4 col-xs-12 col-lg-4"> 
               <p class="datos-formulario">Sexo</p> 
@@ -242,7 +240,7 @@
           <div class="row">
             <div class="col-md-12 col-xs-12 col-lg-12">
               <p class="datos-formulario">Correo Electrónico</p> 
-              <input id="correo" class="form-control without-radius fondo-cajas-texto" type="email" name="correo">
+              <input id="correo" class="form-control without-radius fondo-cajas-texto" type="email" name="correo" required>
             </div>
           </div>
           <br>
