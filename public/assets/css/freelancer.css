@@ -818,6 +818,9 @@ a.seguir-c:link
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
+    .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -926,6 +929,7 @@ a.seguir-c:link
     padding: 4px 11px !important;
     font-size: 12px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
+    margin-top: 10px !important;
 
 }
 
@@ -938,6 +942,7 @@ a.seguir-c:link
     padding: 8px 11px !important;
     font-size: 12px !important;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
+     margin-top: 10px !important;
 
 }
 .seguir-comprando{
@@ -958,6 +963,9 @@ a.seguir-c:link
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -992,9 +1000,7 @@ a.seguir-c:link
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
-
     }
-
     .btn-naranja-cart:hover{
         color: #ffffff !important;
         font-weight: bold !important;
@@ -1004,7 +1010,6 @@ a.seguir-c:link
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
-
     }
     .seguir-comprando{
         color: #FD9C1C !important;
@@ -1086,6 +1091,9 @@ a.seguir-c:link
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1120,6 +1128,7 @@ a.seguir-c:link
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -1132,6 +1141,7 @@ a.seguir-c:link
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -1236,6 +1246,9 @@ a.seguir-c:link
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1321,6 +1334,9 @@ a.seguir-c:link
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1402,6 +1418,9 @@ a.seguir-c:link
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1486,6 +1505,9 @@ iPad 3
 **********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1566,6 +1588,9 @@ iPad 3
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1647,6 +1672,9 @@ iPad 3
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
     /* Styles */
+    .mover-texto{
+        text-align: right !important;
+    }
    .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1682,6 +1710,7 @@ iPad 3
         padding: 8px 22px !important;
         font-size: 16px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+       
 
     }
 
@@ -1694,6 +1723,7 @@ iPad 3
         padding: 8px 22px !important;
         font-size: 16px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+
 
     }
     .seguir-comprando{
@@ -1749,6 +1779,9 @@ iPad 3
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
     /* Styles */
+    .mover-texto{
+        text-align: right !important;
+    }
     .fondo-cajas-texto{
         background-color: #f9f9f9 !important;
     border: none !important;
@@ -1852,6 +1885,9 @@ iPad 3
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1886,6 +1922,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -1898,6 +1935,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -1943,6 +1981,9 @@ iPad 3
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -1977,6 +2018,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -1989,6 +2031,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2038,6 +2081,9 @@ iPad 3
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2072,6 +2118,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2084,6 +2131,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2127,6 +2175,9 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2161,6 +2212,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2173,6 +2225,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2267,6 +2320,9 @@ iPad 3
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2301,6 +2357,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2313,6 +2370,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2355,6 +2413,9 @@ iPad 3
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2389,6 +2450,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2401,6 +2463,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2496,6 +2559,9 @@ iPad 3
 /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2530,6 +2596,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2542,6 +2609,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2579,6 +2647,9 @@ iPad 3
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2613,6 +2684,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2625,6 +2697,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2723,6 +2796,9 @@ iPad 3
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2757,6 +2833,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2769,6 +2846,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2863,6 +2941,9 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2897,6 +2978,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2909,6 +2991,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -2944,6 +3027,9 @@ iPad 3
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -2978,6 +3064,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -2990,6 +3077,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -3024,6 +3112,9 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -3058,6 +3149,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -3070,6 +3162,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -3105,6 +3198,9 @@ iPad 3
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+     .mover-texto{
+        text-align: center !important;
+    }
     .fondo-cajas-texto{
     background-color: #f9f9f9 !important;
     border: none !important;
@@ -3139,6 +3235,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -3151,6 +3248,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -3219,6 +3317,7 @@ iPad 3
         padding: 4px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
 
@@ -3231,6 +3330,7 @@ iPad 3
         padding: 8px 11px !important;
         font-size: 12px !important;
         font-family: Tahoma, Verdana, Segoe, sans-serif;
+        margin-top: 10px !important;
 
     }
     .seguir-comprando{
@@ -3238,6 +3338,8 @@ iPad 3
         font-size: 14px;
         cursor: pointer !important;
         text-align: center;
+
+        
 
     }
     .seguir-comprando:hover{
