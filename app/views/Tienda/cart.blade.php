@@ -277,9 +277,9 @@
 
   <div class="row" style="background-color: #f9f9f9;">
     
-    <div class="col-md-8 col-lg-8 col-xs-12" style="text-align: right;" >
+    <div class="col-md-8 col-lg-8 col-xs-12 mover-texto">
       <div class="row fuente-cart">
-         <p class="display interlineado-cart" style="text-align: right; font-weight: bold;">Total</p> &nbsp;<p class="total display interlineado-cart" style="text-align: left; font-weight: bold;"></p>  
+         <p class="display interlineado-cart" style="text-align: right; font-weight: bold;">Total</p> &nbsp;<p class="total display interlineado-cart" style=" font-weight: bold;"></p>  
     </div>
   </div>
 

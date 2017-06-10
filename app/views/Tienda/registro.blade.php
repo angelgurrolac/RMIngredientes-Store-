@@ -203,11 +203,11 @@
               <p class="datos-formulario">Nombre</p>
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="nombre">
             </div>
-            <div class="col-md-4 col-xs-12 col-lg-4">
+            <div class="col-md-3 col-xs-12 col-lg-3">
               <p class="datos-formulario">Apellido Paterno</p>
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_paterno">
             </div>
-            <div class="col-md-4 col-xs-12 col-lg-4"> 
+            <div class="col-md-3 col-xs-12 col-lg-3"> 
               <p class="datos-formulario">Apellido Materno</p> 
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_materno">
             </div>
@@ -247,13 +247,14 @@
           </div>
           <br>
           <div class="row">
-            <div class="col-md-6 col-xs-12 col-lg-6">
+            <div class="col-md-7 col-xs-12 col-lg-7">
               <p class="display">¿Tienes alguna duda? 618 126 8430&nbsp;</p><img src="http://tienda.rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px">
             </div>
-            <div class="col-md-3 col-xs-12 col-lg-3">
-              <a class="display  regresar-carrito" href="">Regresar al carrito</a>
-            </div>
-            <div class="col-md-3 col-xs-12 col-lg-3">
+          <!--   <div class="col-md-2 col-xs-12 col-lg-2">
+              
+            </div> -->
+            <div class="col-md-5 col-xs-12 col-lg-5">
+            <a class="display  regresar-carrito" href="">Regresar al carrito</a>
               {{ Form::submit('CONTINUAR: PAGO', array('id'=>'aceptar','name'=> 'add','class' => 'display btn btn-naranja-modal pull-right')) }}
               {{Form::close()}}
               
