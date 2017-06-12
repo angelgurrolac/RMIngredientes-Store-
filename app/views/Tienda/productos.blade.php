@@ -105,20 +105,20 @@
                 <a href="#page-top"></a>
               </li>
               <li class="page-scroll li-separation desaparecer">
-                <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                <a class="menu-tienda" id="conocenos" href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
                 <hr id="hr-conocenos" class="menutext">
 
               </li>
               <li class="page-scroll li-separation active desaparecer">
-                <a class="menu-tienda" id="productos" href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                <a class="menu-tienda" id="productos" href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
                 <hr id="hr-productos" class="menutext">
               </li>
               <li class="page-scroll li-separation desaparecer">
-                <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+                <a class="menu-tienda" id="demostraciones" href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
                 <hr id="hr-demostraciones" class="menutext">
               </li>
               <li class="page-scroll li-separation desaparecer">
-                <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+                <a class="menu-tienda" id="contacto" href="https://rmingredientes.com/#contactanos">CONTACTO</a>
                 <hr id="hr-contacto" class="menutext">
               </li>
                <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}">
@@ -145,19 +145,19 @@
               <ul class="categorias-movil   nav " id="side-menu">
                   
                  <li class="sin-borde-li active">
-                  <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                  <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
                 </li>
                 <li class="sin-borde-li active">
                   
-                   <a class="lista-menu-tienda2 estilo-input"  href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
                 </li>
                 <li class="sin-borde-li active">
-                  <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+                  <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
 
                 </li>
                  <li class="sin-borde-li active">
                 
-                   <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#contactanos">CONTACTO</a>
 
                 </li>
                 <br>
@@ -502,7 +502,7 @@
     $("#myModal #beneficios").text(beneficios);
     $("#myModal #presentacion").text(presentacion);
     $("#myModal #precio").text('$' + parseFloat(precio).toFixed(2));
-    $("#myModal #imagen").attr('src','http://tienda.rmingredientes.com/'+imagen);
+    $("#myModal #imagen").attr('src','https://rmingredientes.com/public/'+imagen);
   });
 
 

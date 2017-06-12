@@ -32,265 +32,351 @@
         <![endif]-->
 
         <style>
-        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-          color: #7A7A7A !important;
-          font-size: 14px;
-          font-family: Tahoma, Verdana, Segoe, sans-serif;
-        }
-        ::-moz-placeholder { /* Firefox 19+ */
-          color: #7A7A7A !important;
-          font-size: 14px;
-          font-family: Tahoma, Verdana, Segoe, sans-serif;
-        }
-        :-ms-input-placeholder { /* IE 10+ */
-          color: #7A7A7A !important;
-          font-size: 14px;
-          font-family: Tahoma, Verdana, Segoe, sans-serif;
-        }
-        :-moz-placeholder { /* Firefox 18- */
-          color: #7A7A7A !important;
-          font-size: 14px;
-          font-family: Tahoma, Verdana, Segoe, sans-serif;
-        }
-        tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
-        table {
-          border:none;
-          border-collapse: collapse;
-        }
+          ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #7A7A7A !important;
+            font-size: 14px;
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          ::-moz-placeholder { /* Firefox 19+ */
+            color: #7A7A7A !important;
+            font-size: 14px;
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          :-ms-input-placeholder { /* IE 10+ */
+            color: #7A7A7A !important;
+            font-size: 14px;
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          :-moz-placeholder { /* Firefox 18- */
+            color: #7A7A7A !important;
+            font-size: 14px;
+            font-family: Tahoma, Verdana, Segoe, sans-serif;
+          }
+          tr:nth-child(even){background-color: #F9F9F9; border-top: 5px solid #EAEAEA; border-bottom: : 5px solid #EAEAEA; border-right: 5px solid white;}   
+          table {
+            border:none;
+            border-collapse: collapse;
+          }
 
-        table td {
-          border-left: 5px solid #ffffff;
-          border-right: 5px solid #ffffff;
-          border-bottom: 5px solid #eaeaea;
-        }
+          table td {
+            border-left: 5px solid #ffffff;
+            border-right: 5px solid #ffffff;
+            border-bottom: 5px solid #eaeaea;
+          }
 
-        table td:first-child {
-          border-left: none;
-        }
+          table td:first-child {
+            border-left: none;
+          }
 
-        table td:last-child {
-          border-right: none;
-        }
-        .display{
-          display: inline-block;
-        }
-        .glyphicon-chevron-right{
-          margin: 0 1%;
-        }
-        .bold{
-          font-weight: bold;
-          font-size: 26px;
-        }
-        .regresar-carrito{
-          margin-right: 6%; 
-          margin-top: 2%;
-          text-decoration: none !important;
-          cursor: pointer;
-          color: #FD9C1C;
-        }
-        .button-e {
-          background-color: transparent;
-          background-repeat: no-repeat;
-          cursor: pointer;
-          overflow: hidden;
-          outline: none;
-          height: 45px;
-          line-height: 40px;
-          border: 2px solid #EAEAEA;
-          display: inline-block;
-          float: none;
-          text-align: center;
-          padding: 0px!important;
-          font-size: 14px;
-          color: #000;
-        }
-        .width{
-          width: 100%;
-        }
-        .visa{
-          margin-left: 4%;
-        }
-        .mastercard{
-          margin-top: 1%;
-        }
-        .mm{
-          padding-left: 0 !important;
-        }
-        .cvc{
-          padding-right: 0 !important;
-        }
-        .realizar{
-          font-size: 16px !important;
-        }
+          table td:last-child {
+            border-right: none;
+          }
+          .display{
+            display: inline-block;
+          }
+          .glyphicon-chevron-right{
+            margin: 0 1%;
+          }
+          .bold{
+            font-weight: bold;
+            font-size: 26px;
+          }
+          .regresar-carrito{
+            margin-right: 6%; 
+            margin-top: 2%;
+            text-decoration: none !important;
+            cursor: pointer;
+            color: #FD9C1C;
+          }
+          .button-e {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            height: 45px;
+            line-height: 40px;
+            border: 2px solid #EAEAEA;
+            display: inline-block;
+            float: none;
+            text-align: center;
+            padding: 0px!important;
+            font-size: 14px;
+            color: #000;
+          }
+          .width{
+            width: 100%;
+          }
+          .visa{
+            margin-left: 4%;
+          }
+          .mastercard{
+            margin-top: 1%;
+          }
+          .mm{
+            padding-left: 0 !important;
+          }
+          .cvc{
+            padding-right: 0 !important;
+          }
+          .realizar{
+            font-size: 16px !important;
+          }
         </style>
 
       </head>
 
-      <body>
+      <body style="background-color: white;">
         <div id="wrapper">
-
           <!-- Navigation -->
-          <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <nav class=" navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border-color: white;">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
               </button>
+
               <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
+
+
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right bajar-barra2">
+            <ul class="desaparecer nav navbar-top-links navbar-right bajar-barra2">
               <li class="hidden">
                 <a href="#page-top"></a>
               </li>
-              <li class="page-scroll li-separation ">
-                <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="conocenos" href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
                 <hr id="hr-conocenos" class="menutext">
 
               </li>
-              <li class="page-scroll li-separation active">
-                <a class="menu-tienda" id="productos" href="#portfolio">PRODUCTOS</a>
+              <li class="page-scroll li-separation active desaparecer">
+                <a class="menu-tienda" id="productos" href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
                 <hr id="hr-productos" class="menutext">
               </li>
-              <li class="page-scroll li-separation">
-                <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="demostraciones" href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
                 <hr id="hr-demostraciones" class="menutext">
               </li>
-              <li class="page-scroll li-separation">
-                <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="contacto" href="https://rmingredientes.com/#contactanos">CONTACTO</a>
                 <hr id="hr-contacto" class="menutext">
               </li>
-              <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-                <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}"><span id="contador" class="badge"></span></a>
+              <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}">
+                <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+                 <span id="contador" class="badge badge-2"></span></a>
 
-              </li>
-              <li>
-                <!-- /.dropdown-user -->
-              </li>
-              <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-            <div class="row row-white"></div>
-            <div class="row color-degradado"> </div>
-          </nav>
+               </li>
+               <!-- /.dropdown -->
+             </ul>
+             <ul class="carro-cel pull-right" style="display: inline-block;">
+               <a class="" id="cart" href="{{URL::to('Tienda/cart')}}">
+                <li class="li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+
+                  <span id="contador2" class="badge badge-2"></span></a>
+
+                </li>
+              </ul>
+              <!-- /.navbar-top-links -->
+              <div class="row row-white"></div>
+              <div class="row color-degradado"> </div>
+
+              <div class="navbar-default sidebar sidebar-height" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="categorias-movil   nav " id="side-menu">
+
+                   <li class="sin-borde-li active">
+                    <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                  </li>
+                  <li class="sin-borde-li active">
+
+                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                 </li>
+                 <li class="sin-borde-li active">
+                  <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+
+                </li>
+                <li class="sin-borde-li active">
+
+                 <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#contactanos">CONTACTO</a>
+
+               </li>
+               <br>
+               <br>
+             </ul>
+             <!-- Fin categoria movil -->
+
+           </div>
+           <!-- /.sidebar-collapse -->
+         </div>
+         <!-- /.navbar-static-side -->
+       </nav>
+     </div>
+
+     <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12 col-lg-12 centrar-subtitulos">
+          <p class="display subcategoria-cart ">Carrito de compras</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <p class="display subcategoria-cart ">Datos para envío</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <p class="display categoria-cart ">Datos del pago</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <p class="display subcategoria-cart ">Confirmación de pedido</p>
         </div>
+      </div> 
+      <br>
 
-        <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-xs-12"></div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+         <button id="tarjeta-visa" class="button-e width">
+           <img class="visa img-responsive display pull-left" src="https://rmingredientes.com/public/assets/img/visa.png">
+           <img class="mastercard visa img-responsive display pull-left" src="https://rmingredientes.com/public/assets/img/mastercard.png">
+           <p class="display">Visa y MasterCard</p>
+         </button>
+         <div class="visa-card tarjeta" style="
+         border: 2px solid #EAEAEA; ">
+         <div class="visa-card">
+          {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
+          <span class="card-errors"></span>
           <div class="row">
-            <div class="col-md-12">
-              <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/cart')}}"><h3 class="display">Carrito de compras</h3></a>
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <a class="lista-menu-tienda estilo-input" href="{{URL::to('Tienda/RegistroUser')}}"><h3 class="display">Datos para envió</h3></a>
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Datos del pago</h3></a>
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Confirmación de pedido</h3></a>
+            <div class="col-md-1 col-lg-1 col-xs-12"></div>
+            <div class="col-md-7 col-lg-7 col-xs-12">
+              <label>
+                <span>Número de la tarjeta</span>
+                <input class="form-control without-radius" type="tel" size="20" data-conekta="card[number]" name="number" required>
+              </label>
             </div>
+            <div class="col-md-4 col-lg-4 col-xs-12"></div>
           </div>
-          <br> 
           <div class="row">
-            <div class="col-md-offset-2 col-md-4">
-              <button id="tarjeta-visa" class="button-e width">
-                <img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/visa.png">
-                <img class="mastercard visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/mastercard.png">
-                <p class="display">Visa y MasterCard</p></button>
-                <br>
-                <br>
-                <div class"visa-card tarjeta">
-                 <div class="demo-container visa-card">
-                  <div class="card-wrapper visa-card"></div>
-                  <br>
-                  <br>
-                  {{Form::open(array('url'=>'/Tienda/PagoFinal','id' => 'card-form'))}}
-                  <span class="card-errors"></span>
-                  <div>
-                    <label>
-                      <span>Nombre del tarjetahabiente</span>
-                      <input class="form-control" type="text" size="20" data-conekta="card[name]" name="name" required>
-                    </label>
-                  </div>
-                  <div>
-                    <label>
-                      <span>Número de tarjeta de crédito</span>
-                      <input class="form-control" type="tel" size="20" data-conekta="card[number]" name="number" required>
-                    </label>
-                  </div>
-                  <div>
-                    <label>
-                      <span>CVC</span>
-                      <input class="form-control" type="text" size="4" data-conekta="card[cvc]" name="cvc" required>
-                      <input type="hidden" name="subtotal" id="subtotal">
-                      <input type="hidden" name="iva" id="iva">
-                      <input type="hidden" name="envio1" id="envio1">
-                      <input type="hidden" name="total" id="total">
-                      <input type="hidden" name="productos" id="products">
-                      <input type="hidden" name="cantidad" id="cantidad">
-                      <input type="hidden" name="correo" id="correo">
-                      <input type="hidden" name="tarjeta" id="tarjeta">
-                    </label>
-                  </div>
-                  <div>
-                    <label>
-                      <span>Fecha de expiración (MM/AAAA)</span>
-                      <!-- <input type="text" size="2" data-conekta="card[exp_month]" name="month" required> -->
+            <div class="col-md-1 col-lg-1 col-xs-12"></div>
+            <div class="col-md-11 col-lg-11 col-xs-12">
+             <span>Fecha de caducidad</span>
+           </div>
+           <div class="col-md-1 col-lg-1 col-xs-12"></div>
+           <div class="col-md-4 col-lg-4 col-xs-12">
+            <label>
+              <select class="form-control without-radius" data-conekta="card[exp_month]" name="month" id="expiry-month" required>
+                <option>Mes</option>
+                <option value="01">Ene</option>
+                <option value="02">Feb</option>
+                <option value="03">Mar</option>
+                <option value="04">Abr</option>
+                <option value="05">May</option>
+                <option value="06">Jun</option>
+                <option value="07">Jul</option>
+                <option value="08">Ago</option>
+                <option value="09">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dic</option>
+              </select>
+            </label>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xs-12">
+           <select class="form-control without-radius" data-conekta="card[exp_year]" name="year" required>
+            <option value="16">Año</option>
+            <option value="17">2017</option>
+            <option value="18">2018</option>
+            <option value="19">2019</option>
+            <option value="20">2020</option>
+            <option value="21">2021</option>
+            <option value="22">2022</option>
+            <option value="23">2023</option>
+            <option value="23">2024</option>
+            <option value="23">2025</option>
+          </select>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xs-12"></div>
+      </div>
+      <div class="row">
+       <div class="col-md-1 col-lg-1 col-xs-12"></div>
+       <div class="col-md-11 col-lg-11 col-xs-12">
+         <span>Código de seguridad(CVC)</span>
+       </div>
+       <div class="col-md-1 col-lg-1 col-xs-12"></div>
+       <div class="col-md-4 col-lg-4 col-xs-6">
+        <label>
 
-                      <select class="form-control col-sm-2" data-conekta="card[exp_month]" name="month" id="expiry-month" required>
-                <option>Month</option>
-                <option value="01">Jan (01)</option>
-                <option value="02">Feb (02)</option>
-                <option value="03">Mar (03)</option>
-                <option value="04">Apr (04)</option>
-                <option value="05">May (05)</option>
-                <option value="06">June (06)</option>
-                <option value="07">July (07)</option>
-                <option value="08">Aug (08)</option>
-                <option value="09">Sep (09)</option>
-                <option value="10">Oct (10)</option>
-                <option value="11">Nov (11)</option>
-                <option value="12">Dec (12)</option>
-              </select>
-                    </label>
-                    <select class="form-control" data-conekta="card[exp_year]" name="year" required>
-                <option value="16">year</option>
-                <option value="17">2017</option>
-                <option value="18">2018</option>
-                <option value="19">2019</option>
-                <option value="20">2020</option>
-                <option value="21">2021</option>
-                <option value="22">2022</option>
-                <option value="23">2023</option>
-                <option value="23">2024</option>
-                <option value="23">2025</option>
-              </select>
-                  </div>
-                  {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
-                  {{Form::close()}}
-                </div>
-              </div>
-              
-              <br class="visa-card">
-              <br class="visa-card">
-              <br class="visa-card">
-              <br class="visa-card">
-              <button id="tarjeta-oxxo" class="button-e width">
-                <img class="visa img-responsive display pull-left" src="http://tienda.rmingredientes.com/assets/img/oxxo.png">
-                <p class="display">Oxxo</p></button>
-                <div class"oxxo-card tarjeta">
-                 <div class="demo-container oxxo-card">
-                  {{Form::open(array('url'=>'/Tienda/PagoFinal1','id' => 'card-form1'))}}
-                  {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
-                  {{Form::close()}}
-                </div>
-              </div>
-              
-            </div>
-            <div class="col-md-6">
-              <div class="text-center resumen">
+          <input class="form-control without-radius" type="text" size="4" data-conekta="card[cvc]" name="cvc" required>
+          <input type="hidden" name="subtotal" id="subtotal">
+          <input type="hidden" name="iva" id="iva">
+          <input type="hidden" name="envio1" id="envio1">
+          <input type="hidden" name="total" id="total">
+          <input type="hidden" name="productos" id="products">
+          <input type="hidden" name="cantidad" id="cantidad">
+          <input type="hidden" name="correo" id="correo">
+          <input type="hidden" name="tarjeta" id="tarjeta">
+        </label>
+      </div>
+      <div class="col-md-3 col-lg-3 col-xs-6">
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Son los 3 últimos dígitos del número impreso, en el reverso de la tarjeta.">¿Qué es?</a>
+      </div>
+      <div class="col-md-4 col-lg-4 col-xs-12"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 col-lg-1 col-xs-12"></div>
+      <div class="col-md-9 col-lg-9 col-xs-12">
+        <label>
+          <span>Titular de la tarjeta</span>
+          <input class="form-control without-radius" type="text" size="20" data-conekta="card[name]" name="name" required>
+        </label>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xs-12"></div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-1 col-lg-1 col-xs-12"></div>
+        <div class="col-md-6 col-lg-6 col-xs-12">
+           {{ Form::submit('REALIZAR PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
+    {{Form::close()}}
+
+        </div>
+        <div class="col-md-5 col-lg-5 col-xs-12">
+          <a class="seguir-c" href="{{URL::to('Tienda/RegistroUser')}}"><p class="seguir-comprando">Regresar</p></a>
+        </div>
+    </div>
+   
+    <br>
+  </div>
+</div>
+<br>
+<br>
+<button id="tarjeta-oxxo" class="button-e width">
+  <img class="visa img-responsive display pull-left" src="https://rmingredientes.com/public/assets/img/oxxo.png">
+  <p class="display">Oxxo</p>
+</button>
+
+<div class="oxxo-card tarjeta" style="border: 2px solid #EAEAEA; ">
+<div class="oxxo-card">
+  <div class="row">
+        <div class="col-md-1 col-lg-1 col-xs-12"></div>
+        <div class="col-md-6 col-lg-6 col-xs-12">
+        <br>
+          {{Form::open(array('url'=>'/Tienda/PagoFinal1','id' => 'card-form1'))}}
+     {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
+     {{Form::close()}}
+
+        </div>
+        <div class="col-md-5 col-lg-5 col-xs-12">
+          <a class="seguir-c" href="{{URL::to('Tienda/RegistroUser')}}"><p class="seguir-comprando">Regresar</p></a>
+        </div>
+    </div>
+   
+    <br>
+</div>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-4 col-xs-12" style="background-color: #F9F9F9;">
+<div class="text-center resumen">
                 <h3>Resumen de tu compra</h3>
-                <div class="products">
+                <div class="products" style="background-color: white;">
                 </div>
                 <div class="col-md-offset-2 col-md-8">
                   <div class="row">
@@ -299,35 +385,39 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div> 
-        </div> 
-        <br>
-        <br>
-        <div  id="fixed-bar"> </div>
-        <!-- /#wrapper -->
+</div>
+<div class="col-lg-2 col-md-2 col-xs-12"></div>
+</div>
 
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
+</div> <!-- Fin Container -->
 
-        <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-
-        <script src="{{ URL::asset('assets/js/conekta.js') }}"></script>
-        <!-- Bootstrap Core JavaScript -->
-        <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-
-        <!-- Custom Theme JavaScript -->
-        <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
-
-        <script src="{{ URL::asset('assets/js/notiny-master/notiny-master/dist/notiny.js') }}"></script>
-
-        <!-- <script src="{{ URL::asset('assets/js/jquery.card.js') }}"></script> -->
+<br>
+<br>
+<div  id="fixed-bar"> </div>
+<!-- /#wrapper -->
 
 
-        <script type="text/javascript" >
-        Conekta.setPublishableKey('key_EbYxsWv74txNNyrJsWTwr3g');
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
+
+<script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+
+<script src="{{ URL::asset('assets/js/conekta.js') }}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+
+<script src="{{ URL::asset('assets/js/notiny-master/notiny-master/dist/notiny.js') }}"></script>
+
+<!-- <script src="{{ URL::asset('assets/js/jquery.card.js') }}"></script> -->
+
+
+<script type="text/javascript" >
+  Conekta.setPublishableKey('key_EbYxsWv74txNNyrJsWTwr3g');
   // Conekta.setLanguage("es");  
 
   var conektaSuccessResponseHandler = function(token) {
@@ -354,17 +444,18 @@
       return false;
     });
   });
-  </script>
+</script>
 
 
-  <script type="text/javascript">
+<script type="text/javascript">
   $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
     var array1 = [];
     var array2 = [];
 
     for (x=0; x<=localStorage.length-1; x++)  {  
       if (localStorage.key(x) != 'contador' && localStorage.key(x) != 'total'
-          && localStorage.key(x) != 'correo') {
+        && localStorage.key(x) != 'correo') {
         clave = localStorage.key(x);
       array1.push(clave);
       array2.push(localStorage.getItem(clave));
@@ -381,8 +472,16 @@
           console.log(data);
               // console.log(localStorage.getItem(clave));
               $(".products").append("<div class='row'>");
-              $(".products").append("<th><img width='50px' style='background-color:#F9F9F9; padding: 5px;' src='http://tienda.rmingredientes.com/"+data.imagen+"'>");
+               $(".products").append("<div class='col-md-1 col-lg-1 col-xs-12'>");
+                $(".products").append("</div>");
+                $(".products").append("<div class='col-md-2 col-lg-2 col-xs-3'>");
+
+              $(".products").append("<img width='40px' style='background-color:#F9F9F9; padding: 5px;' src='https://rmingredientes.com/public/"+data.imagen+"'>");
+              $(".products").append("</div>");
+               $(".products").append("<div class='col-md-6 col-lg-6 col-xs-9'>");
               $(".products").append("<p class='display'>"+localStorage.getItem(data.id)+"&nbsp;</p><span>"+data.nombre+"</span>");
+                  $(".products").append("</div>");
+              
               $(".products").append("</div>");
             },
             error: function (data) {

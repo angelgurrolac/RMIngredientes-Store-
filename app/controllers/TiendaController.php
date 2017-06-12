@@ -189,6 +189,21 @@ class TiendaController extends \BaseController {
 		 	$detalles->save();
         }
 
+        // $data = date("d-m-Y");
+        // $user1 = $user->name;
+
+
+
+Mail::send('emails.email', array($data = date("d-m-Y"),$user1 = $user->name), function ($message) use ($user){
+
+    $message->subject('Mensaje del sistema RM ingredientes');
+
+    $message->to('angelhyuuga94@gmail.com');
+
+});
+
+
+
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
         Conekta::setLocale('es');
 

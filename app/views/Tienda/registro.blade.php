@@ -116,20 +116,20 @@
           <a href="#page-top"></a>
         </li>
         <li class="page-scroll li-separation desaparecer">
-          <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+          <a class="menu-tienda" id="conocenos" href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
           <hr id="hr-conocenos" class="menutext">
 
         </li>
         <li class="page-scroll li-separation active desaparecer">
-          <a class="menu-tienda" id="productos" href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+          <a class="menu-tienda" id="productos" href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
           <hr id="hr-productos" class="menutext">
         </li>
         <li class="page-scroll li-separation desaparecer">
-          <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+          <a class="menu-tienda" id="demostraciones" href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
           <hr id="hr-demostraciones" class="menutext">
         </li>
         <li class="page-scroll li-separation desaparecer">
-          <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+          <a class="menu-tienda" id="contacto" href="https://rmingredientes.com/#contactanos">CONTACTO</a>
           <hr id="hr-contacto" class="menutext">
         </li>
         <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}">
@@ -154,19 +154,19 @@
             <ul class="categorias-movil   nav " id="side-menu">
 
              <li class="sin-borde-li active">
-              <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+              <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
             </li>
             <li class="sin-borde-li active">
 
-             <a class="lista-menu-tienda2 estilo-input"  href="http://tienda.rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+             <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
            </li>
            <li class="sin-borde-li active">
-            <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+            <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
 
           </li>
           <li class="sin-borde-li active">
 
-           <a class="lista-menu-tienda2 estilo-input"  href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+           <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#contactanos">CONTACTO</a>
 
          </li>
          <br>
@@ -197,6 +197,7 @@
           <br>
           <div class="row">
             {{Form::open(array('url'=>'/Tienda/AddUser'))}}
+            <div class="col-md-1 col-xs-12 col-lg-1" ></div>
             <div class="col-md-4 col-xs-12 col-lg-4">
               <p class="datos-formulario">Nombre</p>
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="nombre" required>
@@ -209,23 +210,27 @@
               <p class="datos-formulario">Apellido Materno</p> 
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="a_materno" required>
             </div>
+            <div class="col-md-1 col-xs-12 col-lg-1" ></div>
           </div>
           <div class="row">
-            <row class="col-md-6 col-xs-12 col-lg-6">
+          <div class="col-md-1 col-xs-12 col-lg-1" ></div>
+            <div class="col-md-5 col-xs-12 col-lg-5">
               <p class="datos-formulario">Dirección</p>
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="direccion" required>
-            </row>
-            <row class="col-md-6 col-xs-12 col-lg-6">
+            </div>
+            <div class="col-md-5 ol-xs-12 col-lg-5">
               <p class="datos-formulario">Teléfono</p>
               <input class="form-control without-radius fondo-cajas-texto" type="text" name="telefono" required>
-            </row>
+            </div>
+             <div class="col-md-1 col-xs-12 col-lg-1" ></div>
           </div>
           <div class="row">
-            <div class="col-md-4 col-xs-6 col-lg-4" >
+           <div class="col-md-1 col-xs-12 col-lg-1" ></div>
+            <div class="col-md-3 col-xs-6 col-lg-3" >
               <p class="datos-formulario ">C.P.</p>
               <input class="form-control without-radius fondo-cajas-texto" type="number" name="cp" required>
             </div>
-            <div class="col-md-4 col-xs-6 col-lg-4">
+            <div class="col-md-3 col-xs-6 col-lg-3">
               <p class="datos-formulario">Edad</p>
               <input class="form-control without-radius fondo-cajas-texto" type="number" name="edad" required>
             </div>
@@ -236,30 +241,36 @@
                 <option value="saab">MASCULINO</option>
               </select>
             </div>
+             <div class="col-md-1 col-xs-12 col-lg-1" ></div>
           </div>
           <div class="row">
-            <div class="col-md-12 col-xs-12 col-lg-12">
+          <div class="col-md-1 col-xs-12 col-lg-1" ></div>
+            <div class="col-md-10 col-xs-12 col-lg-10">
               <p class="datos-formulario">Correo Electrónico</p> 
               <input id="correo" class="form-control without-radius fondo-cajas-texto" type="email" name="correo" required>
             </div>
+            <div class="col-md-1 col-xs-12 col-lg-1" ></div>
           </div>
           <br>
           <div class="row">
-            <div class="col-md-7 col-xs-12 col-lg-7">
-              <p class="display">¿Tienes alguna duda? 618 126 8430&nbsp;</p><img src="http://tienda.rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px">
+          <div class="col-md-1 col-xs-12 col-lg-1" ></div>
+            <div class="col-md-6 col-xs-12 col-lg-6">
+              <p class="display">¿Tienes alguna duda? 618 126 8430&nbsp;</p><img src="https://rmingredientes.com/public/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px">
             </div>
           <!--   <div class="col-md-2 col-xs-12 col-lg-2">
               
             </div> -->
-            <div class="col-md-5 col-xs-12 col-lg-5">
+            <div class="col-md-4 col-xs-12 col-lg-4">
             <a class="display  regresar-carrito" href="">Regresar al carrito</a>
               {{ Form::submit('CONTINUAR: PAGO', array('id'=>'aceptar','name'=> 'add','class' => 'display btn btn-naranja-modal pull-right')) }}
               {{Form::close()}}
               
             </div>
+            <div class="col-md-1 col-xs-12 col-lg-1" ></div>
           </div>
         </div> 
-
+<br>
+<br>
         <div  id="fixed-bar"> </div>
         <!-- /#wrapper -->
 

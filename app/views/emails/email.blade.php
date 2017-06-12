@@ -107,7 +107,7 @@
       <div class="row">
         <div class="col xs-12" style="background-color: #FD9C1C;">
 
-          <img class=" img-responsive center-block" width="183px" src="http://tienda.rmingredientes.com/assets/img/logo-rmingredientes.png" alt="RM Ingredientes">
+          <img class=" img-responsive center-block" width="183px" src="http://rmingredientes.com/assets/img/logo-rmingredientes.png" alt="RM Ingredientes">
 
         </div>
         <div class="row gris"> </div>
@@ -186,7 +186,7 @@
                             <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                           </div>
                           <div class="footer-col col-md-6">
-                            <img src="http://tienda.rmingredientes.com/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
+                            <img src="http://rmingredientes.com/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
                             
                             
                           </div>
@@ -202,7 +202,7 @@
                             </p>
                           </li>
                           <li>
-                            <p class="parrafo-footer"  style="display: inline-block;"><img src="http://tienda.rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
+                            <p class="parrafo-footer"  style="display: inline-block;"><img src="http://rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
                           </li>
                           <li>
                             <p class="parrafo-footer"  style="display: inline-block;">rigo880821@gmail.com</p>
