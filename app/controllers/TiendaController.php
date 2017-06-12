@@ -189,6 +189,26 @@ class TiendaController extends \BaseController {
 		 	$detalles->save();
         }
 
+        date_default_timezone_set('America/Mexico_City');
+        $usuario = $user->id;
+        $ProductosCorreo = Pedidos::ProductosCorreo($usuario)->get();
+
+
+
+
+	Mail::send('emails.email', array('data' => date("d-m-Y"),
+	 'user1' => $user->nombre, 'pedido' => $pedido->id,
+	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+	 'total' => $pedido->total), function ($message) use ($user){
+
+    $message->subject('Mensaje del sistema RM ingredientes');
+
+    $message->to('zaychaba@gmail.com');
+
+});
+
+
+
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
         Conekta::setLocale('es');
 

@@ -31,6 +31,26 @@ class Pedidos extends Eloquent
 	}
 
 
+
+	public function scopeProductosCorreo($pedidos, $usuario1){
+
+		$pedidos = DB::table('pedidos as p')
+		
+
+		->select('detalle.cantidad','productos.nombre','productos.presentacion', 'productos.precio_unitario')
+
+		->join('detalle_pedidos as detalle', 'detalle.id_pedido', '=' ,'p.id')
+		->join('productos as productos', 'detalle.id_producto', '=', 'productos.id')
+		// ->where('detalle.id_pedido', '=' ,'pedidos.id')
+		// ->where('detalle.id_producto', '=', 'p.id');
+
+		->where('p.id_user','=',$usuario1);
+		return $pedidos;
+	}
+
+
+
+
 	public function scopeVentas(){
 
 		$pedidos = DB::table('pedidos')

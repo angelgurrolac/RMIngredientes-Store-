@@ -603,7 +603,7 @@
 </html>
 <?php
 
-$con = mysqli_connect("localhost", "root", "admin","rmingredientes");
+$con = mysqli_connect('localhost', 'rmingredientes', 'ZU4@$wuceJu5','rmingredientes');
 $hoy = date("Y-m-d");
 
 $consulta_visita_real = "SELECT * FROM visitas WHERE fecha='$hoy' AND ip='".$_SERVER['REMOTE_ADDR']."'";

@@ -28,9 +28,9 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.gmail.com',
 
-	/*
+	/*	
 	|--------------------------------------------------------------------------
 	| SMTP Host Port
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => 587,
+	'port' => 465,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,8 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => rigo880821@gmail.com, 'name' => Rigoberto Medina Rodriguez),
+	// 'from' => array('address' => rigo880821@gmail.com, 'name' => Rigoberto Medina Rodriguez),
+	'from' => array('address' => 'angelhyuuga94@gmail.com', 'name' => 'Angel Gurrola'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return array(
 	|
 	*/
 
-	'username' => RM Ingredientes RM Ingredientes,
+	'username' => 'angelhyuuga94@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return array(
 	|
 	*/
 
-	'password' => medina1989,
+	'password' => 'thegazettE2',
 
 	/*
 	|--------------------------------------------------------------------------
