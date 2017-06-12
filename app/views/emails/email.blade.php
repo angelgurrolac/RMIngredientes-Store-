@@ -106,9 +106,7 @@
      <body style="overflow-x: hidden;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin: 0;font-family: &quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;background-color: #f8f8f8;">
       <div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;">
         <div class="col xs-12" style="background-color: #FD9C1C;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-
           <img class=" img-responsive center-block" width="183px" src="https://rmingredientes.com/public/assets/img/logo-rmingredientes.png" alt="RM Ingredientes" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 0;vertical-align: middle;page-break-inside: avoid;display: block;max-width: 100%!important;height: auto;margin-right: auto;margin-left: auto;">
-
         </div>
         <div class="row gris" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;background-color: #F4F4F4;padding: 7px 0 !important;"> </div>
         <div class="row deg" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;background: linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB300', endColorstr='#FD9C1C',GradientType=1 );padding: 10px 0 !important;"> </div>
@@ -184,8 +182,13 @@
                             <!-- <h3>Location</h3>
                             <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                           </div>
+<<<<<<< HEAD
                           <div class="footer-col col-md-6" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;width: 50%;">
                             <img src="https://www.rmingredientes.com/public/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 0;vertical-align: middle;page-break-inside: avoid;max-width: 100%!important;">
+=======
+                          <div class="footer-col col-md-6">
+                            <img src="http://rmingredientes.com/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
+>>>>>>> master
                             
                             
                           </div>
@@ -200,8 +203,13 @@
                             <p class="parrafo-footer-naranja" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 18px;color: #FD9C1C;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">Para cualquier duda, estamos para servirte.
                             </p>
                           </li>
+<<<<<<< HEAD
                           <li style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: inline-block;padding-right: 5px;padding-left: 5px;">
                             <p class="parrafo-footer" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 18px;color: #A4BD32;font-family: Tahoma, Verdana, Segoe, sans-serif !important;"><img src="https://www.rmingredientes.com/public/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 0;vertical-align: middle;page-break-inside: avoid;max-width: 100%!important;"> 618 126 8438</p>
+=======
+                          <li>
+                            <p class="parrafo-footer"  style="display: inline-block;"><img src="http://rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
+>>>>>>> master
                           </li>
                           <li style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: inline-block;padding-right: 5px;padding-left: 5px;">
                             <p class="parrafo-footer" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 18px;color: #A4BD32;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">rigo880821@gmail.com</p>

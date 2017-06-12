@@ -57,6 +57,7 @@ return array(
 	// 'from' => array('address' => rigo880821@gmail.com, 'name' => Rigoberto Medina Rodriguez),
 	'from' => array('address' => 'angelhyuuga94@gmail.com', 'name' => 'Angel Gurrola'),
 
+
 	/*
 	|--------------------------------------------------------------------------
 	| E-Mail Encryption Protocol
@@ -82,6 +83,7 @@ return array(
 	*/
 
 	'username' => 'angelhyuuga94@gmail.com',
+
 
 	/*
 	|--------------------------------------------------------------------------

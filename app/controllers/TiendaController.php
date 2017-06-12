@@ -189,6 +189,7 @@ class TiendaController extends \BaseController {
 		 	$detalles->save();
         }
 
+
         date_default_timezone_set('America/Mexico_City');
         $usuario = $user->id;
         $ProductosCorreo = Pedidos::ProductosCorreo($usuario)->get();
@@ -204,7 +205,6 @@ class TiendaController extends \BaseController {
     $message->subject('Mensaje del sistema RM ingredientes');
 
     $message->to('zaychaba@gmail.com');
-
 });
 
 

@@ -113,7 +113,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll li-separation ">
-                        <a class="menu-tienda" id="conocenos" href="http://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                        <a class="menu-tienda" id="conocenos" href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
                         <hr id="hr-conocenos" class="menutext">
 
                     </li>
@@ -122,11 +122,11 @@
                         <hr id="hr-productos" class="menutext">
                     </li>
                     <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="demostraciones" href="http://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+                        <a class="menu-tienda" id="demostraciones" href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
                         <hr id="hr-demostraciones" class="menutext">
                     </li>
                     <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="contacto" href="http://rmingredientes.com/#contactanos">CONTACTO</a>
+                        <a class="menu-tienda" id="contacto" href="https://rmingredientes.com/#contactanos">CONTACTO</a>
                         <hr id="hr-contacto" class="menutext">
                     </li>
                       <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
