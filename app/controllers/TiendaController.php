@@ -320,47 +320,20 @@ class TiendaController extends \BaseController {
    try {
         
             $charge = Conekta_Charge::create(array(
-      "line_items" => array(
-        array(
-          "name" => "Tacos",
-          "unit_price" => 1000,
-          "quantity" => 12
-        )//first line_item
-      ), //line_items
-      "shipping_lines" => array(
-        array(
-          "amount" => 1500,
-          "carrier" => "mi compañia"
+    'line_items'=> array(
+      array(
+        'name'=> 'Box of Cohiba S1s',
+        'description'=> 'Imported From Mex.',
+        'unit_price'=> 20000,
+        'quantity'=> 1,
+        'sku'=> 'cohb_s1',
+        'category'=> 'food',
+        'tags' => array('food', 'mexican food')
         )
-      ), //shipping_lines
-      "currency" => "MXN",
-      "customer_info" => array(
-        "name" => "Fulanito Pérez",
-        "email" => "fulanito@conekta.com",
-        "phone" => "+5218181818181"
-      ), //customer_info
-      "shipping_contact" => array(
-        "phone" => "5555555555",
-        "receiver" => "Bruce Wayne",
-        "address" => array(
-          "street1" => "Calle 123 int 2 Col. Chida",
-          "city" => "Cuahutemoc",
-          "state" => "Ciudad de Mexico",
-          "country" => "MX",
-          "postal_code" => "06100",
-          "residential" => true
-        )//address
-      ), //shipping_contact
-      "charges" => array(
-          array(
-              "payment_method" => array(
-                "type" => "oxxo_cash"
-              )//payment_method
-          ) //first charge
-      ) //charges
-    ));//order);
-
-
+      ),
+    'currency'    => 'mxn',
+    'metadata'    => array('test' => 'extra info')
+    ));
         }
          catch (Conekta_Error $e) {
 
