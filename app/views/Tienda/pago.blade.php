@@ -338,6 +338,7 @@
 
         </div>
         <div class="col-md-5 col-lg-5 col-xs-12">
+        <br>
           <a class="seguir-c" href="{{URL::to('Tienda/RegistroUser')}}"><p class="seguir-comprando">Regresar</p></a>
         </div>
     </div>
@@ -364,6 +365,7 @@
 
         </div>
         <div class="col-md-5 col-lg-5 col-xs-12">
+        <br>
           <a class="seguir-c" href="{{URL::to('Tienda/RegistroUser')}}"><p class="seguir-comprando">Regresar</p></a>
         </div>
     </div>
@@ -373,13 +375,16 @@
 </div>
 
 </div>
+
 <div class="col-lg-4 col-md-4 col-xs-12" style="background-color: #F9F9F9;">
-<div class="text-center resumen">
-                <h3>Resumen de tu compra</h3>
+<div class="text-center ">
+                <p class="text-resumen">Resumen de tu compra</p>
                 <div class="products" style="background-color: white;">
+                <br>
                 </div>
-                <div class="col-md-offset-2 col-md-8">
-                  <div class="row">
+                <div class="col-md-offset-2 col-md-8 col-lg-8 col-xs-12">
+                  <div class="row total-pago">
+                  <br>
                     <p class="display pull-left">Total</p>
                     <p class="total display pull-right"></p>
                   </div>
@@ -388,7 +393,15 @@
 </div>
 <div class="col-lg-2 col-md-2 col-xs-12"></div>
 </div>
-
+<div class="row">
+  <div class="col-lg-2 col-md-2 col-xs-12"></div>
+  <div class="col-lg-4 col-md-4 col-xs-12"></div>
+  <div class="col-lg-4 col-md-4 col-xs-12" style="text-align: right;">
+  <br>
+    <p class="display">¿Tienes alguna duda? 618 126 8430&nbsp;</p>&nbsp;<img src="https://rmingredientes.com/public/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px">
+  </div>
+  <div class="col-lg-2 col-md-2 col-xs-12"></div>
+</div>
 
 </div> <!-- Fin Container -->
 
@@ -471,18 +484,18 @@
         success: function (data) { 
           console.log(data);
               // console.log(localStorage.getItem(clave));
+           
               $(".products").append("<div class='row'>");
-               $(".products").append("<div class='col-md-1 col-lg-1 col-xs-12'>");
-                $(".products").append("</div>");
-                $(".products").append("<div class='col-md-2 col-lg-2 col-xs-3'>");
+               $(".products").append("<div class='col-md-1 col-lg-1 col-xs-12'></div>");
+                $(".products").append("<div class='col-md-2 col-lg-2 col-xs-4'><img width='40px' style='background-color:#F9F9F9; padding: 5px;' src='https://rmingredientes.com/public/"+data.imagen+"'></div><br>");
 
-              $(".products").append("<img width='40px' style='background-color:#F9F9F9; padding: 5px;' src='https://rmingredientes.com/public/"+data.imagen+"'>");
-              $(".products").append("</div>");
-               $(".products").append("<div class='col-md-6 col-lg-6 col-xs-9'>");
-              $(".products").append("<p class='display'>"+localStorage.getItem(data.id)+"&nbsp;</p><span>"+data.nombre+"</span>");
-                  $(".products").append("</div>");
+              // $(".products").append("<img width='40px' style='background-color:#F9F9F9; padding: 5px;' src='https://rmingredientes.com/public/"+data.imagen+"'>");
+              // $(".products").append("</div>");
+               $(".products").append("<div class='col-md-2 col-lg-2 col-xs-2'><p class='display'>"+localStorage.getItem(data.id)+"</p></div>");
+              $(".products").append("<div class='col-md-7 col-lg-7 col-xs-6'><span><b>"+data.nombre+"</b></span></div><br>");
+                  // $(".products").append("</div>");
               
-              $(".products").append("</div>");
+              $(".products").append("</div><br>");
             },
             error: function (data) {
               $(".products").append("<p>Ocurrio un error. ¡Intentalo de nuevo!</p>");
