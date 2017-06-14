@@ -287,7 +287,7 @@ class TiendaController extends \BaseController {
 		// $subtotal = Input::get('subtotal');
 		// $iva = Input::get('iva');
 		// $envio1 = Input::get('envio1');
-		// $total = Input::get('total');
+	 	$total = Input::get('total1');
 		// $number = Input::get('number');
 		// $producto = Input::get('productos');
 		// $cantidad = Input::get('cantidad');
@@ -338,7 +338,8 @@ class TiendaController extends \BaseController {
 
         // 	return Redirect::to('/Tienda/success');
         // }
-        return Response::json($charge->payment_method->barcode);
+        $barcode = $charge->payment_method->barcode;
+        return View::make('Tienda.reciboxxo',compact('barcode'));
 
         // return Redirect::to('/Tienda/productos');
 

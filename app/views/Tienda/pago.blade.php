@@ -334,7 +334,7 @@
         <div class="col-md-1 col-lg-1 col-xs-12"></div>
         <div class="col-md-6 col-lg-6 col-xs-12">
            {{ Form::submit('REALIZAR PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
-    {{Form::close()}}
+           {{Form::close()}}
 
         </div>
         <div class="col-md-5 col-lg-5 col-xs-12">
@@ -360,6 +360,7 @@
         <div class="col-md-6 col-lg-6 col-xs-12">
         <br>
           {{Form::open(array('url'=>'/Tienda/PagoFinal1','id' => 'card-form1'))}}
+          <input type="hidden" name="total1" id="total1">
      {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
      {{Form::close()}}
 
@@ -525,6 +526,7 @@
   var total = parseFloat(localStorage.getItem('total'));
   $(".total").text('$'+ (total).toFixed(2));
   $("#total").val(total);
+  $("#total1").val(total);
   var correo = localStorage.getItem('correo');
   $("#correo").val(correo);
 
