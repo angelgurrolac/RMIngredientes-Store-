@@ -197,15 +197,15 @@ class TiendaController extends \BaseController {
 
 
 
-	Mail::send('emails.email', array('data' => date("d-m-Y"),
-	 'user1' => $user->nombre, 'pedido' => $pedido->id,
-	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
-	 'total' => $pedido->total), function ($message) use ($user){
+// 	Mail::send('emails.email', array('data' => date("d-m-Y"),
+// 	 'user1' => $user->nombre, 'pedido' => $pedido->id,
+// 	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+// 	 'total' => $pedido->total), function ($message) use ($user){
 
-    $message->subject('Mensaje del sistema RM ingredientes');
+//     $message->subject('Mensaje del sistema RM ingredientes');
 
-    $message->to('zaychaba@gmail.com');
-});
+//     $message->to('zaychaba@gmail.com');
+// });
 
 
 
@@ -318,22 +318,15 @@ class TiendaController extends \BaseController {
 
 
    try {
-        
-            $charge = Conekta_Charge::create(array(
-    'line_items'=> array(
-      array(
-        'name'=> 'Box of Cohiba S1s',
-        'description'=> 'Imported From Mex.',
-        'unit_price'=> 20000,
-        'quantity'=> 1,
-        'sku'=> 'cohb_s1',
-        'category'=> 'food',
-        'tags' => array('food', 'mexican food')
-        )
-      ),
-    'currency'    => 'mxn',
-    'metadata'    => array('test' => 'extra info')
-    ));
+        $charge = Conekta_Charge::create(array(
+            "amount" => 10000,
+            "currency" => "MXN",
+            "description" => "Example of OXXO Payment",
+            "reference_id"=> "orden_de_id_interno",
+            'cash'=>array(
+              'type'=>'oxxo'
+              )
+            ));
         }
          catch (Conekta_Error $e) {
 
@@ -341,19 +334,15 @@ class TiendaController extends \BaseController {
 
         }
 
-        if ($charge->status == "paid") {
+        // if ($charge->status == "paid") {
 
-        	return Redirect::to('/Tienda/success');
-        }
-        // return Response::json($charge->status);
+        // 	return Redirect::to('/Tienda/success');
+        // }
+        return Response::json($charge->payment_method->barcode);
 
         // return Redirect::to('/Tienda/productos');
 
        
 	}
-
-
-
-
 
 	}
