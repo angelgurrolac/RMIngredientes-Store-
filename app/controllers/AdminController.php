@@ -96,7 +96,7 @@ class AdminController extends \BaseController {
 			});
 			}
 			if ($estatus == 'entregado' || 'Entregado') {
-				Mail::send('emails.emailEntregado',array('data' => date("d-m-Y"))),
+				Mail::send('emails.emailEntregado',array('data' => date("d-m-Y")),
 				function ($message) use ($user){
 			    $message->subject('Mensaje del sistema RM ingredientes');
 			    $message->to('zaychaba@gmail.com');
