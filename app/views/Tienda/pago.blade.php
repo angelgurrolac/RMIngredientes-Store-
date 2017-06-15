@@ -437,7 +437,8 @@
 
 
 <script type="text/javascript" >
-  Conekta.setPublishableKey('key_EbYxsWv74txNNyrJsWTwr3g');
+  Conekta.setPublishableKey('key_EbYxsWv74txNNyrJsWTwr3g'); //desarrollo
+  // Conekta.setPublishableKey('key_c1ytyUss234sge5oeiCmeqQ'); //producción
   // Conekta.setLanguage("es");  
 
   var conektaSuccessResponseHandler = function(token) {

@@ -207,7 +207,8 @@ class TiendaController extends \BaseController {
     $message->to($user->correo);
 });
 
-        Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
+        Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g"); //desarrollo
+        // Conekta::setApiKey("key_bzAdekh8PqnSfwECeXQ6jA"); //producción
         Conekta::setLocale('es');
 
         try {
@@ -326,7 +327,8 @@ class TiendaController extends \BaseController {
 	});
 
 
-        Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
+        Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g"); //desarrollo
+        // Conekta::setApiKey("key_bzAdekh8PqnSfwECeXQ6jA"); //producción
         Conekta::setLocale('es');
  
 
