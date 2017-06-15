@@ -360,7 +360,13 @@
         <div class="col-md-6 col-lg-6 col-xs-12">
         <br>
           {{Form::open(array('url'=>'/Tienda/PagoFinal1','id' => 'card-form1'))}}
-          <input type="hidden" name="total1" id="total1">
+          <input type="hidden" name="totaloxxo" id="total1">
+          <input type="hidden" name="subtotal1" id="subtotal1">
+          <input type="hidden" name="iva1" id="iva1">
+          <input type="hidden" name="envio11" id="envio11">
+          <input type="hidden" name="productos1" id="products1">
+          <input type="hidden" name="cantidad1" id="cantidad1">
+          <input type="hidden" name="correo1" id="correo1">
      {{ Form::submit('REALIZAR: PAGO', array('name'=> 'pago','class' => 'display btn btn-naranja-modal realizar')) }}
      {{Form::close()}}
 
@@ -475,6 +481,7 @@
       array2.push(localStorage.getItem(clave));
       console.log(clave + "=" + localStorage.getItem(clave)); 
       $("#cantidad").val(localStorage.getItem(clave));
+      $("#cantidad1").val(localStorage.getItem(clave));
 
       $.ajax({
         type: "post", 
@@ -508,9 +515,11 @@
   console.log(array1);
   var myJsonString = JSON.stringify(array1);
   $("#products").val(myJsonString);
+  $("#products1").val(myJsonString);
   console.log(array2);
   var myJsonString2 = JSON.stringify(array2);
   $("#cantidad").val(myJsonString2);
+  $("#cantidad1").val(myJsonString2);
 
   $(".visa-card").css('display','none');
   $("#tarjeta-visa").click(function(){
@@ -529,6 +538,7 @@
   $("#total1").val(total);
   var correo = localStorage.getItem('correo');
   $("#correo").val(correo);
+  $("#correo1").val(correo);
 
 
 

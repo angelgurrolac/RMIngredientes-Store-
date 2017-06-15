@@ -75,4 +75,7 @@ Route::get('Tienda/error',function()
 }); //ruta para caso fallo de pago
 Route::post('Tienda/PagoFinal','TiendaController@PagoFinal');//cargo con tarjeta
 Route::post('Tienda/PagoFinal1','TiendaController@PagoFinal1');//cargo con oxxo
-
+Route::get('Tienda/oxxo',function()
+{
+     return View::make('Tienda.reciboxxo');
+}); //vista para el cargo con oxxo

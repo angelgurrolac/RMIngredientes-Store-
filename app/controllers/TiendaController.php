@@ -219,9 +219,9 @@ class TiendaController extends \BaseController {
             $charge = Conekta_Charge::create(array(
             
             "description" => "Conekta rmingredientes",
-            "amount" => $total + 00,
+            "amount" => $total . 0 . 0,
             "currency" => "MXN",
-           "reference_id"=> null,
+           "reference_id"=> "orden_de_id_interno",
            "card" => $conektaTokenId,
            'details'=> array(
                 'name'=> $user->nombre,
@@ -235,7 +235,7 @@ class TiendaController extends \BaseController {
                       array(    
                         'name'=> 'cobro de reservacion',
                         'description'=> 'Conekta rmingredientes',
-                        'unit_price'=> 10000,
+                        'unit_price'=> $total . 0 . 0,
                         'quantity'=> 1,
                         'type'=> 'food'
                       )
@@ -282,50 +282,96 @@ class TiendaController extends \BaseController {
 
 
 	public function PagoFinal1(){
-		// $correo = Input::get('correo');
+		$correo = Input::get('correo1');
 		// $nameC = Input::get('name');
-		// $subtotal = Input::get('subtotal');
-		// $iva = Input::get('iva');
-		// $envio1 = Input::get('envio1');
-	 	$total = Input::get('total1');
+		$subtotal = Input::get('subtotal1');
+		$iva = Input::get('iva1');
+		$envio1 = Input::get('envio11');
+	 	$total = Input::get('totaloxxo');
 		// $number = Input::get('number');
-		// $producto = Input::get('productos');
-		// $cantidad = Input::get('cantidad');
-		// $productos = json_decode($producto);
-		// $cantidades = json_decode($cantidad);
+		$producto = Input::get('productos1');
+		$cantidad = Input::get('cantidad1');
+		$productos = json_decode($producto);
+		$cantidades = json_decode($cantidad);
 
-		// $user = User::where('correo','=',$correo)->first();
-		// $pedido = Pedidos::where('id_user','=',$user->id)->first();
-  //       $pedido->subtotal = $subtotal;
-  //       $pedido->iva = $iva;
-  //       $pedido->costo_envio = $envio1;
-  //       $pedido->total = $total;
-  //       $pedido->tipo_pago = 'oxxo';
-  //       $pedido->save();
+		$user = User::where('correo','=',$correo)->first();
+		$pedido = Pedidos::where('id_user','=',$user->id)->first();
+        $pedido->subtotal = $subtotal;
+        $pedido->iva = $iva;
+        $pedido->costo_envio = $envio1;
+        $pedido->total = $total;
+        $pedido->tipo_pago = 'oxxo';
+        $pedido->save();
 		
-  //       for ($i=0; $i < count($productos); $i++) { 
-		//  	$detalles = new DetallesPedidos;
-		//  	$detalles->id_pedido = $pedido->id;
-		//  	$detalles->id_producto = $productos[$i];
-		// 	$detalles->cantidad = $cantidades[$i];
-		//  	$detalles->subtotal = $pedido->subtotal;
-		//  	$detalles->save();
-  //       }
+        for ($i=0; $i < count($productos); $i++) { 
+		 	$detalles = new DetallesPedidos;
+		 	$detalles->id_pedido = $pedido->id;
+		 	$detalles->id_producto = $productos[$i];
+			$detalles->cantidad = $cantidades[$i];
+		 	$detalles->subtotal = $pedido->subtotal;
+		 	$detalles->save();
+        }
+
+
+        date_default_timezone_set('America/Mexico_City');
+        $usuario = $user->id;
+        $ProductosCorreo = Pedidos::ProductosCorreo($usuario)->get();
+
+        // 	Mail::send('emails.email', array('data' => date("d-m-Y"),
+// 	 'user1' => $user->nombre, 'pedido' => $pedido->id,
+// 	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+// 	 'total' => $pedido->total), function ($message) use ($user){
+
+//     $message->subject('Mensaje del sistema RM ingredientes');
+
+//     $message->to('zaychaba@gmail.com');
+// });
+
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
         Conekta::setLocale('es');
-        // Conekta::setApiVersion("2.0.0");
+ 
 
 
    try {
         $charge = Conekta_Charge::create(array(
-            "amount" => 10000,
+            "amount" => $total . 0 . 0,
             "currency" => "MXN",
-            "description" => "Example of OXXO Payment",
+            "description" => "Conekta rmingredientes",
             "reference_id"=> "orden_de_id_interno",
             'cash'=>array(
               'type'=>'oxxo'
-              )
+              ),
+             'details'=> array(
+                'name'=> $user->nombre,
+                'phone' => $user->telefono,                
+                'email'=> $user->correo,
+                'customer'=> array(
+                  'corporation_name'=> 'Conekta Inc.',
+                  'logged_in'=> true                  
+                    ),
+                    'line_items'=> array(
+                      array(    
+                        'name'=> 'cobro de reservacion',
+                        'description'=> 'Conekta rmingredientes',
+                        'unit_price'=> $total . 0 . 0,
+                        'quantity'=> 1,
+                        'type'=> 'food'
+                      )
+                    ),
+                    'shipment'=> array(
+      'carrier'=> 'fedex',
+      'service'=> 'nacional',
+      'price'=> 240,
+      'address'=> array(
+        'street1'=> $user->direccion,
+        'city'=> 'Durango',
+        'state'=> 'Durango',
+        'zip'=> $user->codigo_postal,
+        'country'=> 'Mexico'
+      )
+    )
+                )
             ));
         }
          catch (Conekta_Error $e) {
@@ -339,7 +385,7 @@ class TiendaController extends \BaseController {
         // 	return Redirect::to('/Tienda/success');
         // }
         $barcode = $charge->payment_method->barcode;
-        return View::make('Tienda.reciboxxo',compact('barcode'));
+        return View::make('Tienda.reciboxxo',compact('barcode','total'));
 
         // return Redirect::to('/Tienda/productos');
 
