@@ -78,4 +78,4 @@ Route::post('Tienda/PagoFinal1','TiendaController@PagoFinal1');//cargo con oxxo
 Route::get('Tienda/oxxo',function()
 {
      return View::make('Tienda.reciboxxo');
-}); //vista para el cargo con oxxo
+}); //vista para el recibo con cargo a oxxo
