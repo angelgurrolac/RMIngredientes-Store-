@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('email', 'TiendaController@email');
-Route::get('emailEnvio', 'TiendaController@emailEnvio');
-Route::get('emailEntregado', 'TiendaController@emailEntregado');
+// Route::get('email', 'TiendaController@email');
+// Route::get('emailEnvio', 'TiendaController@emailEnvio');
+// Route::get('emailEntregado', 'TiendaController@emailEntregado');
 
 /*Llamadas al controlador Auth*/
 Route::get('/','HomeController@showWelcome');

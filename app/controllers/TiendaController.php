@@ -204,16 +204,12 @@ class TiendaController extends \BaseController {
 
     $message->subject('Mensaje del sistema RM ingredientes');
 
-    $message->to('zaychaba@gmail.com');
+    $message->to($user->correo);
 });
-
-
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
         Conekta::setLocale('es');
 
-
- 
         try {
         
             $charge = Conekta_Charge::create(array(
@@ -326,7 +322,7 @@ class TiendaController extends \BaseController {
 
     $message->subject('Mensaje del sistema RM ingredientes');
 
-    $message->to('zaychaba@gmail.com');
+    $message->to($user->correo);
 	});
 
 
