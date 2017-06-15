@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family: sans-serif;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-size: 10px;-webkit-tap-highlight-color: rgba(0,0,0,0);">
+<html lang="en" >
 
-<head style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+<head>
 
-  <meta charset="utf-8" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-  <meta name="viewport" content="width=device-width, initial-scale=1" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-  <meta name="description" content="" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-  <meta name="author" content="" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
   <title style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">TIENDA - RMIngredientes</title>
 
@@ -31,7 +31,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <style style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+        <style>
           footer .footer-above {
             padding-top: 50px;
             /* background-color: #2c3e50; Original */
@@ -103,8 +103,8 @@
 
      </head>
 
-     <body style="overflow-x: hidden;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin: 0;font-family: &quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 1.42857143;color: #333;background-color: #f8f8f8;">
-      <div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;">
+     <body style="overflow-x: hidden;">
+      <div class="row" )>
         <div class="col xs-12" style="background-color: #FD9C1C;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
           <img class=" img-responsive center-block" width="183px" src="https://rmingredientes.com/public/assets/img/logo-rmingredientes.png" alt="RM Ingredientes" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 0;vertical-align: middle;page-break-inside: avoid;display: block;max-width: 100%!important;height: auto;margin-right: auto;margin-left: auto;">
         </div>
@@ -113,19 +113,19 @@
       </div>
 
 
-      <div class="row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;">
+      <div class="row" )>
         <div class="col-xs-2" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;float: left;width: 16.66666667%;"></div>
         <div class="col-xs-8" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;float: left;width: 66.66666667%;">
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
           <p class="mensaje-general" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">Muchas gracias por su compra en RM Ingredientes. A continuación te mostramos los detalles de tu pedido:</p>
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;"> 
-          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Fecha de realización:</p><p class="mensaje-general" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">&nbsp;{{$data}}</p>
+          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Fecha de realización:</p><p class="mensaje-general" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">&nbsp;</p>
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">No. de Pedido:</p><p style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;" class="mensaje-general">&nbsp;{{$pedido}}</p>
+          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">No. de Pedido:</p><p style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;" class="mensaje-general">&nbsp;</p>
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Cliente:</p><p style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;" class="mensaje-general">&nbsp; {{$user1}}</p>
+          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Cliente:</p><p style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;" class="mensaje-general">&nbsp; </p>
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Tipo de Pago:</p><p style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;" class="mensaje-general">&nbsp; {{$tipo_pago}}</p>
+          <p class="detalles-pedido" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Tipo de Pago:</p><p style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;" class="mensaje-general">&nbsp; </p>
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
           <p class="detalles-pedido" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Resumen del Pedido:</p>
           <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
@@ -145,24 +145,24 @@
                   <td style="background-color: white;border-bottom: 5px solid #ffffff;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: none;border-right: 5px solid #ffffff;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;"></td>
                   <td style="background-color: white;border-bottom: 5px solid #ffffff;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: 5px solid #ffffff;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;"></td>
                   <td style="font-weight: bold;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">Total</td>
-                  <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: none;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">${{$total}}</td>
+                  <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: none;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">$1000</td>
                 </tr>
               </tfoot>
               <tbody style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-                @foreach($ProductosCor as $key => $value)
+                
                 <tr style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;page-break-inside: avoid;">
-                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: none;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">{{$value->cantidad}}</td>
-                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">{{$value->nombre}}</td>
-                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">{{$value->presentacion}}</td>
-                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: none;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">${{$value->precio_unitario}}</td>
+                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: none;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;"></td>
+                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;"></td>
+                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: 5px solid #ffffff;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;"></td>
+                 <td style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 8px;border-left: 5px solid #ffffff;border-right: none;border-bottom: 5px solid #eaeaea;line-height: 1.42857143;vertical-align: top;border-top: 1px solid #ddd;white-space: nowrap;background-color: #fff!important;">$</td>
                </tr>
-               @endforeach
+               
              </tbody>
            </table>
          </div>
          <!-- /.table-responsive -->
          <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
-         <p class="detalles-pedido" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Domicilio de envío:</p><p class="mensaje-general" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">{{$domicilio}}</p>
+         <p class="detalles-pedido" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;font-weight: bold;">Domicilio de envío:</p><p class="mensaje-general" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;"></p>
          <br style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
          <p class="mensaje-general" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">
           En aproximadamente 24 horas recibirás un correo electrónico con el número de tu guía para que puedas rastrear tu pedido y saber qué día vas a recibirlo. Nuevamente te agradecemos por tu compra.
@@ -179,39 +179,27 @@
         <footer class="text-center" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: block;text-align: center;">
           <div class="footer-above" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding-top: 50px;background-color: #444444;">
             <!-- <div class="container"> -->
-            <div class="row-footer row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;">
+            <div class="row-footer row" )>
               <div class="footer-col col-xs-3" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;float: left;width: 25%;">
                             <!-- <h3>Location</h3>
                             <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                           </div>
-<<<<<<< HEAD
                           <div class="footer-col col-md-6" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;width: 50%;">
                             <img src="https://www.rmingredientes.com/public/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 0;vertical-align: middle;page-break-inside: avoid;max-width: 100%!important;">
-=======
-                          <div class="footer-col col-md-6">
-                            <img src="http://rmingredientes.com/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
->>>>>>> master
-                            
-                            
                           </div>
                           <div class="footer-col col-md-3  espacio-columna" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;width: 25%;">
 
 
                           </div>
                         </div>
-                        <div class="row-footer row" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;">
+                        <div class="row-footer row" )>
                          <ul class="list-inline espacio-lista" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-top: 0;margin-bottom: 10px;padding-left: 0;margin-left: -5px;list-style: none;">
                            <li style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: inline-block;padding-right: 5px;padding-left: 5px;">
                             <p class="parrafo-footer-naranja" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 18px;color: #FD9C1C;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">Para cualquier duda, estamos para servirte.
                             </p>
                           </li>
-<<<<<<< HEAD
                           <li style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: inline-block;padding-right: 5px;padding-left: 5px;">
                             <p class="parrafo-footer" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 18px;color: #A4BD32;font-family: Tahoma, Verdana, Segoe, sans-serif !important;"><img src="https://www.rmingredientes.com/public/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border: 0;vertical-align: middle;page-break-inside: avoid;max-width: 100%!important;"> 618 126 8438</p>
-=======
-                          <li>
-                            <p class="parrafo-footer"  style="display: inline-block;"><img src="http://rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
->>>>>>> master
                           </li>
                           <li style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: inline-block;padding-right: 5px;padding-left: 5px;">
                             <p class="parrafo-footer" style="display: inline-block;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;font-size: 18px;color: #A4BD32;font-family: Tahoma, Verdana, Segoe, sans-serif !important;">rigo880821@gmail.com</p>

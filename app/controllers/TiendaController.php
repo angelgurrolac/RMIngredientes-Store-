@@ -319,15 +319,15 @@ class TiendaController extends \BaseController {
         $ProductosCorreo = Pedidos::ProductosCorreo($usuario)->get();
 
 
-	// Mail::send('emails.email', array('data' => date("d-m-Y"),
-	//  'user1' => $user->nombre, 'pedido' => $pedido->id,
-	//  'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
-	//  'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
+	Mail::send('emails.email', array('data' => date("d-m-Y"),
+	 'user1' => $user->nombre, 'pedido' => $pedido->id,
+	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+	 'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
 
- //    $message->subject('Mensaje del sistema RM ingredientes');
+    $message->subject('Mensaje del sistema RM ingredientes');
 
- //    $message->to('zaychaba@gmail.com');
-	// });
+    $message->to('zaychaba@gmail.com');
+	});
 
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");

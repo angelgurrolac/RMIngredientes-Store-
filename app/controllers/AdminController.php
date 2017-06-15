@@ -90,14 +90,14 @@ class AdminController extends \BaseController {
 			$estatus = Input::get('estatus2');
 			if ($estatus == 'enviado' || 'Enviado') {
 				Mail::send('emails.emailEnvio', array('data' => date("d-m-Y"),
-				 'pedido' => $pedido->id), function ($message) use ($user){
+				 'pedido' => $pedidos->id), function ($message){
 			    $message->subject('Mensaje del sistema RM ingredientes');
 			    $message->to('zaychaba@gmail.com');
 			});
 			}
 			if ($estatus == 'entregado' || 'Entregado') {
 				Mail::send('emails.emailEntregado',array('data' => date("d-m-Y")),
-				function ($message) use ($user){
+				function ($message){
 			    $message->subject('Mensaje del sistema RM ingredientes');
 			    $message->to('zaychaba@gmail.com');
 			});
