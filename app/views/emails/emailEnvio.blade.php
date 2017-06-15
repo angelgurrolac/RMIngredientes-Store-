@@ -11,18 +11,18 @@
 
   <title>TIENDA - RMIngredientes</title>
 
-  <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
+  <link rel="icon" type="image/png" href="{{asset('public/assets/img/favicon-rmingredientes.png')}}">
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('public/assets/css/freelancer.css') }}">
 
-  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="{{ asset('assets/dist/css/sb-admin-2.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/js/notiny-master/notiny-master/dist/notiny.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/dist/css/sb-admin-2.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/js/notiny-master/notiny-master/dist/notiny.css') }}" rel="stylesheet">
 
   <!-- Custom Fonts -->
-  <link href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('public/assets/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -107,11 +107,11 @@
       <div class="row">
         <div class="col xs-12" style="background-color: #FD9C1C;">
 
-          <img class=" img-responsive center-block" width="183px" src="http://rmingredientes.com/assets/img/logo-rmingredientes.png" alt="RM Ingredientes">
+          <img class=" img-responsive center-block" width="183px" src="http://rmingredientes.com/public/assets/img/logo-rmingredientes.png" alt="RM Ingredientes">
 
         </div>
-        <div class="row gris"> </div>
-        <div class="row deg"> </div>
+        <div class="row gris" style="background-color: #F4F4F4;padding: 7px 0 !important;"> </div>
+        <div class="row deg" style="background: linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB300', endColorstr='#FD9C1C',GradientType=1 );padding: 10px 0 !important;"> </div>
       </div>
 
 
@@ -119,17 +119,17 @@
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
           <br>
-          <p class="mensaje-general">Buen día, tenemos buenas noticias para ti. Muy pronto estarás recibiendo tu pedido realizado en RM Ingredientes. A continuación te proporcionamos la información que necesitas para rastrear tu envío.
+          <p class="mensaje-general" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">Buen día, tenemos buenas noticias para ti. Muy pronto estarás recibiendo tu pedido realizado en RM Ingredientes. A continuación te proporcionamos la información que necesitas para rastrear tu envío.
           </p>
           <br> 
-          <p class="detalles-pedido" style="display: inline-block;" >Fecha de Envío:</p><p class="mensaje-general" style="display: inline-block;" >&nbsp;  03/Mayo/2017</p>
+          <p class="detalles-pedido" style="display: inline-block;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;font-weight: bold;">Fecha de Envío:</p><p class="mensaje-general" style="display: inline-block;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">&nbsp; {{$data}}</p>
           <br>
-          <p class="detalles-pedido" style="display: inline-block;" > No. de Pedido:</p><p style="display: inline-block;" class="mensaje-general"> &nbsp;1</p>
+          <p class="detalles-pedido" style="display: inline-block;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;font-weight: bold;"> No. de Pedido:</p><p style="display: inline-block;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;" class="mensaje-general"> &nbsp;{{$pedido}}</p>
           <br>
-          <p class="detalles-pedido" style="display: inline-block;" >Envío por:</p><p style="display: inline-block;" class="mensaje-general">&nbsp;FEDEX</p>
+          <p class="detalles-pedido" style="display: inline-block;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;font-weight: bold;">Envío por:</p><p style="display: inline-block;font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;" class="mensaje-general">&nbsp;FEDEX</p>
           <br>
           <br>
-          <p class="mensaje-general">
+          <p class="mensaje-general" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">
             Muchas gracias por confiar en RM Ingredientes.</p>
 
           </div>
@@ -142,7 +142,7 @@
 
         <!-- Footer -->
         <footer class="text-center">
-          <div class="footer-above">
+          <div class="footer-above" style="padding-top: 50px;background-color: #444444;">
             <!-- <div class="container"> -->
             <div class="row-footer row">
               <div class="footer-col col-xs-3">
@@ -150,7 +150,7 @@
                             <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                           </div>
                           <div class="footer-col col-md-6">
-                            <img src="http://rmingredientes.com/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
+                            <img src="http://rmingredientes.com/public/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
                             
                             
                           </div>
@@ -162,14 +162,14 @@
                         <div class="row-footer row">
                          <ul class="list-inline espacio-lista">
                            <li>
-                            <p class="parrafo-footer-naranja" style="display: inline-block;">Para cualquier duda, estamos para servirte.
+                            <p class="parrafo-footer-naranja" style="display: inline-block;font-size: 18px;color: #FD9C1C;">Para cualquier duda, estamos para servirte.
                             </p>
                           </li>
                           <li>
-                            <p class="parrafo-footer"  style="display: inline-block;"><img src="http://rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
+                            <p class="parrafo-footer" style="display: inline-block;font-size: 18px;color: #A4BD32;"><img src="http://rmingredientes.com/public/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
                           </li>
                           <li>
-                            <p class="parrafo-footer"  style="display: inline-block;">rigo880821@gmail.com</p>
+                            <p class="parrafo-footer" style="display: inline-block;font-size: 18px;color: #A4BD32;">rigo880821@gmail.com</p>
                           </li>
 
                         </ul>
@@ -184,17 +184,17 @@
 
 
                   <!-- jQuery -->
-                  <script src="{{ URL::asset('assets/vendor/jquery/jquery.min.js') }}"></script>
+                  <script src="{{ URL::asset('public/assets/vendor/jquery/jquery.min.js') }}"></script>
 
                   <!-- Bootstrap Core JavaScript -->
-                  <script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+                  <script src="{{ URL::asset('public/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
                   <!-- Latest compiled and minified JavaScript -->
                   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
                   <!-- Custom Theme JavaScript -->
-                  <script src="{{ URL::asset('assets/dist/js/sb-admin-2.js') }}"></script>
+                  <script src="{{ URL::asset('public/assets/dist/js/sb-admin-2.js') }}"></script>
 
-                  <script src="{{ URL::asset('assets/js/notiny-master/notiny-master/dist/notiny.js') }}"></script>
+                  <script src="{{ URL::asset('public/assets/js/notiny-master/notiny-master/dist/notiny.js') }}"></script>
 
 
                 </body>

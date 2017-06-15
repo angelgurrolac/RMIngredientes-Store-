@@ -88,6 +88,20 @@ class AdminController extends \BaseController {
 		{
 			$pedidos = Pedidos::find(Input::get('id_pedido'));
 			$estatus = Input::get('estatus2');
+			if ($estatus == 'enviado' || 'Enviado') {
+				Mail::send('emails.emailEnvio', array('data' => date("d-m-Y"),
+				 'pedido' => $pedido->id), function ($message) use ($user){
+			    $message->subject('Mensaje del sistema RM ingredientes');
+			    $message->to('zaychaba@gmail.com');
+			});
+			}
+			if ($estatus == 'entregado' || 'Entregado') {
+				Mail::send('emails.emailEntregado',array('data' => date("d-m-Y"))),
+				function ($message) use ($user){
+			    $message->subject('Mensaje del sistema RM ingredientes');
+			    $message->to('zaychaba@gmail.com');
+			});
+			}
 			$pedidos->estatus = $estatus;
 			$pedidos->save();
 			return Redirect::to('/Admin/pedidos');

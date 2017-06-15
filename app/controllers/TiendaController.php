@@ -197,15 +197,15 @@ class TiendaController extends \BaseController {
 
 
 
-// 	Mail::send('emails.email', array('data' => date("d-m-Y"),
-// 	 'user1' => $user->nombre, 'pedido' => $pedido->id,
-// 	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
-// 	 'total' => $pedido->total), function ($message) use ($user){
+	Mail::send('emails.email', array('data' => date("d-m-Y"),
+	 'user1' => $user->nombre, 'pedido' => $pedido->id,
+	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+	 'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
 
-//     $message->subject('Mensaje del sistema RM ingredientes');
+    $message->subject('Mensaje del sistema RM ingredientes');
 
-//     $message->to('zaychaba@gmail.com');
-// });
+    $message->to('zaychaba@gmail.com');
+});
 
 
 
@@ -287,7 +287,8 @@ class TiendaController extends \BaseController {
 		$subtotal = Input::get('subtotal1');
 		$iva = Input::get('iva1');
 		$envio1 = Input::get('envio11');
-	 	$total = Input::get('totaloxxo');
+	 	$totaloxxo = Input::get('totaloxxo');
+	 	$total = round((floatval($totaloxxo)),0);
 		// $number = Input::get('number');
 		$producto = Input::get('productos1');
 		$cantidad = Input::get('cantidad1');
@@ -317,15 +318,16 @@ class TiendaController extends \BaseController {
         $usuario = $user->id;
         $ProductosCorreo = Pedidos::ProductosCorreo($usuario)->get();
 
-        // 	Mail::send('emails.email', array('data' => date("d-m-Y"),
-// 	 'user1' => $user->nombre, 'pedido' => $pedido->id,
-// 	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
-// 	 'total' => $pedido->total), function ($message) use ($user){
 
-//     $message->subject('Mensaje del sistema RM ingredientes');
+	// Mail::send('emails.email', array('data' => date("d-m-Y"),
+	//  'user1' => $user->nombre, 'pedido' => $pedido->id,
+	//  'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+	//  'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
 
-//     $message->to('zaychaba@gmail.com');
-// });
+ //    $message->subject('Mensaje del sistema RM ingredientes');
+
+ //    $message->to('zaychaba@gmail.com');
+	// });
 
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g");
@@ -374,22 +376,18 @@ class TiendaController extends \BaseController {
                 )
             ));
         }
-         catch (Conekta_Error $e) {
+               catch (Conekta_Error $e) {
 
-           return Response::json($e->getMessage());
+         	$error = $e->message_to_purchaser;
+
+           // return Response::json($e->getMessage());
+         	return View::make('/Tienda/error',compact('error'));
 
         }
 
-        // if ($charge->status == "paid") {
-
-        // 	return Redirect::to('/Tienda/success');
-        // }
         $barcode = $charge->payment_method->barcode;
         return View::make('Tienda.reciboxxo',compact('barcode','total'));
-
-        // return Redirect::to('/Tienda/productos');
-
-       
+   
 	}
 
 	}

@@ -315,7 +315,7 @@
         </label>
       </div>
       <div class="col-md-3 col-lg-3 col-xs-6">
-        <a href="#" data-toggle="tooltip" data-placement="top" title="Son los 3 últimos dígitos del número impreso, en el reverso de la tarjeta.">¿Qué es?</a>
+        <a href="#" data-toggle="tooltip" data-placement="top" title="Son los 3 últimos dígitos del número impreso en el reverso de la tarjeta.">¿Qué es?</a>
       </div>
       <div class="col-md-4 col-lg-4 col-xs-12"></div>
     </div>

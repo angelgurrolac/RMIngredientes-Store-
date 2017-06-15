@@ -11,7 +11,7 @@
 
   <title>Emails - RMIngredientes</title>
 
-  <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
+  <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}">
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="{{ URL::asset('assets/css/freelancer.css') }}">
 
@@ -107,11 +107,11 @@
       <div class="row">
         <div class="col xs-12" style="background-color: #FD9C1C;">
 
-          <img class=" img-responsive center-block" width="183px" src="http://rmingredientes.com/assets/img/logo-rmingredientes.png" alt="RM Ingredientes">
+          <img class=" img-responsive center-block" width="183px" src="http://rmingredientes.com/public/assets/img/logo-rmingredientes.png" alt="RM Ingredientes">
 
         </div>
-        <div class="row gris"> </div>
-        <div class="row deg"> </div>
+        <div class="row gris" style="background-color: #F4F4F4;padding: 7px 0 !important;"> </div>
+        <div class="row deg" style="background: linear-gradient(45deg, rgba(253,156,28,1) 0%, rgba(253,156,28,1) 57%, rgba(139,179,0,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8BB300', endColorstr='#FD9C1C',GradientType=1 );padding: 10px 0 !important;"> </div>
       </div>
 
 
@@ -119,14 +119,14 @@
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
           <br>
-          <p class="mensaje-general">Hola</p>
-          <p class="mensaje-general">Ahora que ya recibiste tus productos queremos darte las gracias por confiar RM Ingredientes. Nos interesa saber cómo fue tu experiencia con nosotros para poder seguir mejorando nuestro servicio.
-            <p class="mensaje-general">
+          <p class="mensaje-general" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">Hola</p>
+          <p class="mensaje-general" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">Ahora que ya recibiste tus productos queremos darte las gracias por confiar RM Ingredientes. Nos interesa saber cómo fue tu experiencia con nosotros para poder seguir mejorando nuestro servicio.
+            </p><p class="mensaje-general" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">
               Estaríamos muy contentos si nos regalas unos minutos de tu tiempo enviando tu opinión de RM Ingredientes al siguiente correo:<a href=""> ventas@rmingredientes.com</a>
             </p>
-            <p class="mensaje-general">Atentamente,</p>
-            <p class="detalles-pedido" >RM Ingredientes</p>
-          </p>
+            <p class="mensaje-general" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;">Atentamente,</p>
+            <p class="detalles-pedido" style="font-size: 20px;font-family: Tahoma, Verdana, Segoe, sans-serif;font-weight: bold;">RM Ingredientes</p>
+          
           <br> 
           
 
@@ -140,7 +140,7 @@
 
       <!-- Footer -->
       <footer class="text-center">
-        <div class="footer-above">
+        <div class="footer-above" style="padding-top: 50px;background-color: #444444;">
           <!-- <div class="container"> -->
           <div class="row-footer row">
             <div class="footer-col col-xs-3">
@@ -148,7 +148,7 @@
                             <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                           </div>
                           <div class="footer-col col-md-6">
-                            <img src="http://rmingredientes.com/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
+                            <img src="http://rmingredientes.com/public/assets/img/logo-rmingredientes-footer.png" alt="Logo RM Ingredientes" width="40%">
                             
                             
                           </div>
@@ -160,14 +160,14 @@
                         <div class="row-footer row">
                          <ul class="list-inline espacio-lista">
                            <li>
-                            <p class="parrafo-footer-naranja" style="display: inline-block;">Para cualquier duda, estamos para servirte.
+                            <p class="parrafo-footer-naranja" style="display: inline-block;font-size: 18px;color: #FD9C1C;">Para cualquier duda, estamos para servirte.
                             </p>
                           </li>
                           <li>
-                            <p class="parrafo-footer"  style="display: inline-block;"><img src="http://rmingredientes.com/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
+                            <p class="parrafo-footer" style="display: inline-block;font-size: 18px;color: #A4BD32;"><img src="http://rmingredientes.com/public/assets/img/whatsapp-rmingredientes.png" alt="WhatsApp RM Ingredientes" width="30px"> 618 126 8438</p>
                           </li>
                           <li>
-                            <p class="parrafo-footer"  style="display: inline-block;">rigo880821@gmail.com</p>
+                            <p class="parrafo-footer" style="display: inline-block;font-size: 18px;color: #A4BD32;">rigo880821@gmail.com</p>
                           </li>
 
                         </ul>
