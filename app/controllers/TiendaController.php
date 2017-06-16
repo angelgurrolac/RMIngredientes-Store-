@@ -197,15 +197,15 @@ class TiendaController extends \BaseController {
 
 
 
-	Mail::send('emails.email', array('data' => date("d-m-Y"),
-	 'user1' => $user->nombre, 'pedido' => $pedido->id,
-	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
-	 'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
+// 	Mail::send('emails.email', array('data' => date("d-m-Y"),
+// 	 'user1' => $user->nombre, 'pedido' => $pedido->id,
+// 	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+// 	 'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
 
-    $message->subject('Mensaje del sistema RM ingredientes');
+//     $message->subject('Mensaje del sistema RM ingredientes');
 
-    $message->to($user->correo);
-});
+//     $message->to($user->correo);
+// });
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g"); //desarrollo
         // Conekta::setApiKey("key_bzAdekh8PqnSfwECeXQ6jA"); //producción
@@ -316,15 +316,15 @@ class TiendaController extends \BaseController {
         $ProductosCorreo = Pedidos::ProductosCorreo($usuario)->get();
 
 
-	Mail::send('emails.email', array('data' => date("d-m-Y"),
-	 'user1' => $user->nombre, 'pedido' => $pedido->id,
-	 'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
-	 'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
+	// Mail::send('emails.email', array('data' => date("d-m-Y"),
+	//  'user1' => $user->nombre, 'pedido' => $pedido->id,
+	//  'domicilio' => $user->domicilio, 'ProductosCor' => $ProductosCorreo,
+	//  'total' => $pedido->total, 'tipo_pago' => $pedido->tipo_pago), function ($message) use ($user){
 
-    $message->subject('Mensaje del sistema RM ingredientes');
+ //    $message->subject('Mensaje del sistema RM ingredientes');
 
-    $message->to($user->correo);
-	});
+ //    $message->to($user->correo);
+	// });
 
 
         Conekta::setApiKey("key_yE35Jxrq4zyFT6yJ6hbj7g"); //desarrollo
@@ -384,7 +384,8 @@ class TiendaController extends \BaseController {
         }
 
         $barcode = $charge->payment_method->barcode;
-        return View::make('Tienda.reciboxxo',compact('barcode','total'));
+        $barcode_url = $charge->payment_method->barcode_url;
+        return View::make('Tienda.reciboxxo',compact('barcode','total','barcode_url'));
    
 	}
 

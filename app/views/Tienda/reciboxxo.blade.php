@@ -108,13 +108,14 @@
 					<img src="https://rmingredientes.com/public/index/img/logo-rmingredientes.png" alt="RM Ingredientes" style="width: 10%; ">
 					<div class="opps-ammount">
 						<h3>Monto a pagar</h3>
-						<h2>$10000.00 <sup>MXN</sup></h2>
+						<h2>${{$total}}.00 <sup>MXN</sup></h2>
 						<p>OXXO cobrará una comisión adicional al momento de realizar el pago.</p>
 					</div>
 				</div>
-				<div class="opps-reference">
+				<div class="opps-reference text-center">
 					<h3>Referencia</h3>
-					<h1>codigodebarras</h1>
+					<img src="{{$barcode_url}}" alt="barras">
+					<p class="codigo text-center">{{$barcode}}</p>
 				</div>
 			</div>
 			<div class="opps-instructions">
