@@ -818,6 +818,18 @@ a.seguir-c:link
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -968,6 +980,18 @@ a.seguir-c:link
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .mover-texto{
         text-align: center !important;
     }
@@ -1097,6 +1121,18 @@ a.seguir-c:link
 @media only screen and (max-width : 320px) {
 
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -1257,6 +1293,18 @@ a.seguir-c:link
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -1350,6 +1398,18 @@ a.seguir-c:link
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -1439,6 +1499,18 @@ a.seguir-c:link
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -1531,6 +1603,18 @@ iPad 3
 **********/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -1619,6 +1703,18 @@ iPad 3
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -1707,6 +1803,18 @@ iPad 3
 }
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
+    .cuerpo-error{
+    font-size: 26px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
     .text-resumen{
     font-size: 22px;
     font-weight: bold;
@@ -1820,6 +1928,18 @@ iPad 3
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 26px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
     .text-resumen{
     font-size: 22px;
     font-weight: bold;
@@ -1932,6 +2052,18 @@ iPad 3
 /* iPhone 4 ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2033,6 +2165,18 @@ iPad 3
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2138,6 +2282,18 @@ iPad 3
 /* iPhone 5 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2237,6 +2393,18 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2387,6 +2555,18 @@ iPad 3
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2485,6 +2665,18 @@ iPad 3
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2636,6 +2828,18 @@ iPad 3
 /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2729,6 +2933,18 @@ iPad 3
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -2883,6 +3099,18 @@ iPad 3
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -3033,6 +3261,18 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -3124,6 +3364,18 @@ iPad 3
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -3214,6 +3466,18 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -3305,6 +3569,18 @@ iPad 3
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -3395,6 +3671,18 @@ iPad 3
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
     /* Styles */
+    .cuerpo-error{
+    font-size: 16px;
+    color: #444444;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    }
+    .titulo-error{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    color: #FD9C1C;
+    }
      .text-resumen{
     font-size: 16px;
     font-weight: bold;
@@ -3481,5 +3769,6 @@ iPad 3
 .categorias-desktop{
     display: none !important;
 }
+
 }
 

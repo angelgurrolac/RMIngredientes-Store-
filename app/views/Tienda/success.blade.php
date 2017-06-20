@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tienda - RMIngredientes - Success</title>
+    <title>Tienda - RMIngredientes - Correcto</title>
 
    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-rmingredientes.png')}}" />
     <!-- Bootstrap Core CSS -->
@@ -92,74 +92,112 @@
 
 </head>
 
-    <body>
-        <div id="wrapper">
-
-          <!-- Navigation -->
-          <nav class="navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+   <body style="background-color: white;">
+        <!-- Navigation -->
+          <nav class=" navbar-width  navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="border-color: white;">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
+                <span style="background-color: white;" class="icon-bar"></span>
               </button>
+
               <a class="navbar-brand" href="index.html"><img class="estilo-logo" src="{{asset('assets/img/logo-rmingredientes.png')}}" alt="RM Ingredientes"></a>
+
+
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right bajar-barra2">
-                    <li class="hidden">|
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll li-separation ">
-                        <a class="menu-tienda" id="conocenos" href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
-                        <hr id="hr-conocenos" class="menutext">
-
-                    </li>
-                    <li class="page-scroll li-separation active">
-                        <a class="menu-tienda" id="productos" href="#portfolio">PRODUCTOS</a>
-                        <hr id="hr-productos" class="menutext">
-                    </li>
-                    <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="demostraciones" href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
-                        <hr id="hr-demostraciones" class="menutext">
-                    </li>
-                    <li class="page-scroll li-separation">
-                        <a class="menu-tienda" id="contacto" href="https://rmingredientes.com/#contactanos">CONTACTO</a>
-                        <hr id="hr-contacto" class="menutext">
-                    </li>
-                      <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
-                        <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}"><span id="contador" class="badge"></span></a>
-                        
-                    </li>
-                <li>
-                <!-- /.dropdown-user -->
+            <ul class="desaparecer nav navbar-top-links navbar-right bajar-barra2">
+              <li class="hidden">
+                <a href="#page-top"></a>
               </li>
-              <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
-            <div class="row row-white"></div>
-            <div class="row color-degradado"> </div>
-          </nav>
-      </div>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="conocenos" href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                <hr id="hr-conocenos" class="menutext">
+
+              </li>
+              <li class="page-scroll li-separation active desaparecer">
+                <a class="menu-tienda" id="productos" href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                <hr id="hr-productos" class="menutext">
+              </li>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="demostraciones" href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+                <hr id="hr-demostraciones" class="menutext">
+              </li>
+              <li class="page-scroll li-separation desaparecer">
+                <a class="menu-tienda" id="contacto" href="https://rmingredientes.com/#contactanos">CONTACTO</a>
+                <hr id="hr-contacto" class="menutext">
+              </li>
+              <a class="menu-tienda" id="cart" href="{{URL::to('Tienda/cart')}}">
+                <li class="page-scroll li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+                 <span id="contador" class="badge badge-2"></span></a>
+
+               </li>
+               <!-- /.dropdown -->
+             </ul>
+             <ul class="carro-cel pull-right" style="display: inline-block;">
+               <a class="" id="cart" href="{{URL::to('Tienda/cart')}}">
+                <li class="li-separation-cart glyphicon glyphicon-shopping-cart size-cart">
+
+                  <span id="contador2" class="badge badge-2"></span></a>
+
+                </li>
+              </ul>
+              <!-- /.navbar-top-links -->
+              <div class="row row-white"></div>
+              <div class="row color-degradado"> </div>
+
+              <div class="navbar-default sidebar sidebar-height" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                  <ul class="categorias-movil   nav " id="side-menu">
+
+                   <li class="sin-borde-li active">
+                    <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#conocenos2">CONÓCENOS</a>
+                  </li>
+                  <li class="sin-borde-li active">
+
+                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                 </li>
+                 <li class="sin-borde-li active">
+                  <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
+
+                </li>
+                <li class="sin-borde-li active">
+
+                 <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#contactanos">CONTACTO</a>
+
+               </li>
+               <br>
+               <br>
+             </ul>
+             <!-- Fin categoria movil -->
+
+           </div>
+           <!-- /.sidebar-collapse -->
+         </div>
+         <!-- /.navbar-static-side -->
+       </nav>
+     </div>
+
 
       <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Carrito de compras</h3></a>
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos para envió</h3></a>
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display">Datos del pago</h3></a>
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <a class="lista-menu-tienda estilo-input" href=""><h3 class="display bold">Confirmación de pedido</h3></a>
-            </div>
+            <div class="col-md-12 col-xs-12 col-lg-12 centrar-subtitulos">
+          <p class="display subcategoria-cart ">Carrito de compras</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <p class="display subcategoria-cart ">Datos para envío</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <p class="display subcategoria-cart ">Datos del pago</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <p class="display categoria-cart ">Confirmación de pedido</p>
+        </div>
         </div>
         <br> 
         <div class="row">
-            <h1>¡Muchas gracias! Tu pedido se ha realizado.</h1>
-            <p>Tu pedido se ha procesado correctamente recibirás una confirmación de compra a tu correo
+            <p class="titulo-error">¡Muchas gracias! Tu pedido se ha realizado.</p>
+            <p class="cuerpo-error">Tu pedido se ha procesado correctamente recibirás una confirmación de compra a tu correo
             electrónico con los detalles de tu compra y del envío. Si tienes alguna duda o inquietud no
             dudes en contactarnos al telefono <b>(618 126 8438.)</b></p>
         </div>
