@@ -220,6 +220,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+  localStorage.clear();
 
   $("#aceptar").click(function(){
       var correo =  $("#correo").val();

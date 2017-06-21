@@ -35,6 +35,9 @@ class TiendaController extends \BaseController {
 
 	public function maiz(){
 		$categoria = Input::get('cat');
+		$guardar = Categorias::find(Input::get('cat'));
+		$guardar->contador = ($guardar->contador + 1); 
+		$guardar->save();
 		$maiz = Productos::maiz()->get();
 		$categorias = Categorias::All();
 		$mensaje = 1;
@@ -44,6 +47,9 @@ class TiendaController extends \BaseController {
 
 		public function harina(){
 		$categoria = Input::get('cat');
+		$guardar = Categorias::find(Input::get('cat'));
+		$guardar->contador = ($guardar->contador + 1);
+		$guardar->save();
 		$maiz = Productos::harina()->get();
 		$categorias = Categorias::All();
 		$mensaje = 2;
@@ -52,6 +58,9 @@ class TiendaController extends \BaseController {
 	}
 	public function panificadoras(){
 		$categoria = Input::get('cat');
+		$guardar = Categorias::find(Input::get('cat'));
+		$guardar->contador = ($guardar->contador + 1);
+		$guardar->save();
 		$maiz = Productos::panificadoras()->get();
 		$categorias = Categorias::All();
 		$mensaje = 3;
@@ -60,6 +69,9 @@ class TiendaController extends \BaseController {
 	}
 	public function especializado(){
 		$categoria = Input::get('cat');
+		$guardar = Categorias::find(Input::get('cat'));
+		$guardar->contador = ($guardar->contador + 1);
+		$guardar->save();
 		$maiz = Productos::especializado()->get();
 		$categorias = Categorias::All();
 		$mensaje = 4;

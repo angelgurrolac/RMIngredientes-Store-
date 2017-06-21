@@ -160,6 +160,7 @@ Con esto nosotros podremos checar cuando se vea reflejado el pago y continuar co
 		<script type="text/javascript">
 		 // seccion de conocenos
 		  $(document).ready(function(){
+        localStorage.clear();
   $("#conocenos").hover(function(){
     $("#hr-conocenos").removeClass("menutext");
     $("#hr-conocenos").addClass("menutext2");

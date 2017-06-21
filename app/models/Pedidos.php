@@ -19,11 +19,11 @@ class Pedidos extends Eloquent
 					}) 
 
 		->select(DB::raw('p.id as id, u.nombre, u.ap_paterno , u.ap_materno, 
-			 GROUP_CONCAT(productos.nombre) as pnombre, p.total, p.domicilio as domicilio, DATE(p.created_at) as fecha,
-			 p.estatus'))
+			 GROUP_CONCAT(productos.nombre) as pnombre,p.tipo_pago as tipo, p.total, p.domicilio as domicilio, DATE(p.created_at) as fecha, p.estatus'))
 
 		
 		->orderBy('p.created_at', 'desc')
+		->orderBy(DB::raw('p.estatus <> "pendiente"'), 'desc')
 		->groupBy('u.id');
 
 

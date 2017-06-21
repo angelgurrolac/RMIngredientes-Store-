@@ -167,6 +167,7 @@
                         <th class="text-center">CLIENTE</th>
                         <th class="text-center">PRECIO TOTAL</th>
                         <th class="text-center">DIRECCIÓN</th>
+                        <th class="text-center">TIPO DE PAGO</th>
                         <th class="text-center">FECHA</th>
                         <th class="text-center">ESTATUS</th>
                         <th class="text-center">ACCIÓN</th>
@@ -180,6 +181,7 @@
                               <td>{{$value->nombre}} {{$value->ap_paterno}} {{$value->ap_materno}}</td>
                               <td>{{$value->total}}</td>
                               <td>{{$value->domicilio}}</td>
+                              <td>{{$value->tipo}}</td>
                               <td>{{$value->fecha}}</td>
                               <td>{{$value->estatus}}</td>
                               <td><input data-toggle="modal" data-target="#myModal"
