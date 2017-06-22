@@ -110,7 +110,7 @@
 
               </li>
               <li class="page-scroll li-separation active desaparecer">
-                <a class="menu-tienda" id="productos" href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                <a class="menu-tienda" id="productos" href="https://rmingredientes.com/public/Tienda/productos">PRODUCTOS</a>
                 <hr id="hr-productos" class="menutext">
               </li>
               <li class="page-scroll li-separation desaparecer">
@@ -149,7 +149,7 @@
                 </li>
                 <li class="sin-borde-li active">
                   
-                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/Tienda/productos">PRODUCTOS</a>
+                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/public/Tienda/productos">PRODUCTOS</a>
                 </li>
                 <li class="sin-borde-li active">
                   <a class="lista-menu-tienda2 estilo-input"  href="https://rmingredientes.com/#demostracion">DEMOSTRACIONES</a>
@@ -268,6 +268,7 @@
             <p class="nombre-producto">{{$value->nombre}}</p> 
             <p class="corta-producto">{{$value->descripcion_corta}}</p> 
             <p class="unitario-producto" >${{number_format($value->precio_unitario,2)}}</p> 
+              <p style="font-size: 10px;  color: #444444;">IVA y envío incluidos</p>
           
           </div>
         </div>
@@ -292,6 +293,7 @@
         <p class="nombre-producto">{{$value3->nombre}}</p> 
         <p class="corta-producto">{{$value3->descripcion_corta}}</p> 
         <p class="unitario-producto">${{number_format($value3->precio_unitario,2)}}</p> 
+        <p style="font-size: 10px;  color: #444444;">IVA y envío incluidos</p>
       </div>
 
     </div> 
@@ -313,6 +315,7 @@
       <p class="nombre-producto">{{$value4->nombre}}</p> 
       <p class="corta-producto">{{$value4->descripcion_corta}}</p> 
       <p class="unitario-producto">${{number_format($value4->precio_unitario,2)}}</p> 
+      <p style="font-size: 10px;  color: #444444;">IVA y envío incluidos</p>
     </div> 
 
   </div>
@@ -334,6 +337,8 @@
     <p class="nombre-producto">{{$value5->nombre}}</p> 
     <p class="corta-producto">{{$value5->descripcion_corta}}</p> 
     <p  class="unitario-producto">${{number_format($value5->precio_unitario,2)}}</p> 
+    <p style="font-size: 10px;  color: #444444;">IVA y envío incluidos</p>
+
   </div>
 
 </div> 
@@ -354,7 +359,8 @@
 <div class="informacion-producto">
   <p class="nombre-producto">{{$value6->nombre}}</p> 
   <p class="corta-producto">{{$value6->descripcion_corta}}</p> 
-  <p class="unitario-producto">${{number_format($value6->precio_unitario,2)}}</p> 
+  <p class="unitario-producto">${{number_format($value6->precio_unitario,2)}}</p>
+  <p style="font-size: 10px;  color: #444444;">IVA y envío incluidos</p> 
 </div>
 
 </div> 
